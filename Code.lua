@@ -507,6 +507,8 @@ local function SetupLayout(layout)
 	E.db["actionbar"]["bar3"]["buttonsPerRow"] = 12
 	E.db["actionbar"]["bar3"]["backdrop"] = true
 	E.db["actionbar"]["bar3"]["buttons"] = 12
+	E.db["actionbar"]["bar3"]["buttonsize"] = 32
+	E.db["actionbar"]["bar3"]["buttonspacing"] = 2
 	E.db["actionbar"]["bar6"]["visibility"] = "[overridebar] hide; [petbattle] hide; show"
 	E.db["actionbar"]["fontColor"]["r"] = 0.68235294117647
 	E.db["actionbar"]["fontColor"]["g"] = 0.68235294117647
@@ -526,11 +528,16 @@ local function SetupLayout(layout)
 	E.db["actionbar"]["noPowerColor"]["g"] = 0.56862745098039
 	E.db["actionbar"]["noPowerColor"]["b"] = 0.67450980392157
 	E.db["actionbar"]["bar2"]["enabled"] = true
+	E.db["actionbar"]["bar2"]["buttons"] = 12
 	E.db["actionbar"]["bar2"]["inheritGlobalFade"] = true
 	E.db["actionbar"]["bar2"]["buttonsPerRow"] = 6
 	E.db["actionbar"]["bar2"]["backdrop"] = true
 	E.db["actionbar"]["bar2"]["buttonsize"] = 25
+	E.db["actionbar"]["bar1"]["buttonsPerRow"] = 12
 	E.db["actionbar"]["bar1"]["backdrop"] = true
+	E.db["actionbar"]["bar1"]["buttons"] = 12
+	E.db["actionbar"]["bar1"]["buttonsize"] = 32
+	E.db["actionbar"]["bar1"]["buttonspacing"] = 2
 	E.db["actionbar"]["bar5"]["enabled"] = true
 	E.db["actionbar"]["bar5"]["inheritGlobalFade"] = true
 	E.db["actionbar"]["bar5"]["buttons"] = 12
@@ -840,7 +847,7 @@ end
 local InstallerData = {
 	Title = format("|cff4beb2c%s %s|r", MyPluginName, "Installation"),
 	Name = MyPluginName,
-	--tutorialImage = "Interface\\AddOns\\MyAddOn\\logo.tga", --If you have a logo you want to use, otherwise it uses the one from ElvUI
+	tutorialImage = "Interface\\AddOns\\NoobTacoUI\\assets\\noobtaco.tga", --If you have a logo you want to use, otherwise it uses the one from ElvUI
 	Pages = {
 		[1] = function()
 			PluginInstallFrame.SubTitle:SetFormattedText("Welcome to the installation for %s.", MyPluginName)
@@ -866,8 +873,8 @@ local InstallerData = {
 		end,
 		[3] = function()
 			PluginInstallFrame.SubTitle:SetText("Installation Complete")
-			PluginInstallFrame.Desc1:SetText("You have completed the installation process.")
-			PluginInstallFrame.Desc2:SetText("Please click the button below in order to finalize the process and automatically reload your UI.")
+			PluginInstallFrame.Desc1:SetText("You have completed the installation process.\nIf you need help or wish to report a bug, please go to http://tukui.org")
+			PluginInstallFrame.Desc2:SetText("Please click the button below in order to finalize the process and automatically reload your UI. \nLog out of character is needed for all fonts to update.")
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", InstallComplete)
 			PluginInstallFrame.Option1:SetText("Finished")
