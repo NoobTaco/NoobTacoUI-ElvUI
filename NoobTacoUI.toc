@@ -1,0 +1,10 @@
+## Interface: 90001
+## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
+## Author: NoobTaco
+## Version: 1.00
+## Notes: Contains layouts from NoobTaco
+## RequiredDeps: ElvUI
+## OptionalDeps: SharedMedia, NoobTacoUI-Media
+## DefaultState: enabled
+
+Code.lua
