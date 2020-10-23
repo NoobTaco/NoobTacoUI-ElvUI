@@ -11,12 +11,17 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v1
 
+    - name: Run luacheck
+      uses: BigWigsMods/actions/luacheck@master
+      with:
+        args: -q --ignore 113 631 211 212 112
+
     - name: Package Retail
       uses: BigWigsMods/packager@master
       with:
         args: -d
 
-    # - name: Package Classic
-    #   uses: BigWigsMods/packager@master
-    #   with:
-    #     args: -d -g classic
+    - name: Package Classic
+      uses: BigWigsMods/packager@master
+      with:
+        args: -d -g classic
