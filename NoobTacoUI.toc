@@ -13,5 +13,7 @@
 ## DefaultState: enabled
 ## X-Tukui-ProjectID: 187
 ## X-Tukui-ProjectFolders: NoobTacoUI
+## X-WoWI-ID: 25744
+## X-Curse-Project-ID: 414874
 
 Code.lua
