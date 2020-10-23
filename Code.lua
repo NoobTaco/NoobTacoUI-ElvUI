@@ -150,11 +150,6 @@ local function SetupLayout(layout)
 	E.db["databars"]["experience"]["hideInCombat"] = true
 	E.db["databars"]["experience"]["showBubbles"] = true
 	E.db["databars"]["experience"]["width"] = 415
-
-	
-
-
-
 	E.db["databars"]["reputation"]["font"] = "Montserrat-Regular"
 	E.db["databars"]["reputation"]["height"] = 12
 	E.db["databars"]["reputation"]["hideInCombat"] = true
@@ -164,12 +159,10 @@ local function SetupLayout(layout)
 	E.db["databars"]["colors"]["experience"]["r"] = 0.14901960784314
 	E.db["databars"]["colors"]["experience"]["g"] = 0.49411764705882
 	E.db["databars"]["colors"]["experience"]["b"] = 0.83529411764706
-	
 	E.db["databars"]["colors"]["rested"]["a"] = 1
 	E.db["databars"]["colors"]["rested"]["r"] = 0.70588235294118
 	E.db["databars"]["colors"]["rested"]["g"] = 0.29803921568627
 	E.db["databars"]["colors"]["rested"]["b"] = 0.56078431372549
-
 	E.db["general"]["totems"]["size"] = 30
 	E.db["general"]["fontSize"] = 14
 	E.db["general"]["autoTrackReputation"] = true
