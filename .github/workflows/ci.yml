@@ -7,13 +7,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
     - name: Checkout repository
       uses: actions/checkout@v1
+
     - name: Package Retail
       uses: BigWigsMods/packager@master
       with:
         args: -d
-    - name: Package Classic
-      uses: BigWigsMods/packager@master
-      with:
-        args: -d -g classic
+
+    # - name: Package Classic
+    #   uses: BigWigsMods/packager@master
+    #   with:
+    #     args: -d -g classic
