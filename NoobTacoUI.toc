@@ -1,7 +1,12 @@
+#@retail@
 ## Interface: 90001
+#@end-retail@
+#@non-retail@
+# ## Interface: 11305
+#@end-non-retail@
 ## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
 ## Author: NoobTaco
-## Version: 1.01
+## Version: 1.0.2
 ## Notes: Contains layouts from NoobTaco
 ## RequiredDeps: ElvUI
 ## OptionalDeps: SharedMedia, NoobTacoUI-Media
