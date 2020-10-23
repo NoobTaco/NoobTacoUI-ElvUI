@@ -1,0 +1,10 @@
+package-as: NoobTacoUI
+enable-nolib-creation: no
+
+ignore:
+  - README.md
+  - CHANGELOG.md
+
+manual-changelog:
+  filename: RECENT_CHANGES.md
+  markup-type: markdown
