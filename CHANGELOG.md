@@ -4,6 +4,9 @@
 ### Changed
 - Cleaned up Actionbar code
 
+### Added
+- Logic to allow the use of the installer in Classic.
+
 ## [1.0.2] - 2020-10-23
 ### Changed
 - Cleaning up for packager

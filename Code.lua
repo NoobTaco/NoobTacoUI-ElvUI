@@ -43,7 +43,7 @@ local function SetupLayout(layout)
 	if E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"] == nil then
 		E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"] = {}
 	end
-	
+
 	-- -- Party Unit Frames
 	if not E.db.unitframe.units.party.customTexts then E.db.unitframe.units.party.customTexts = {} end
 	if E.db["unitframe"]["units"]["party"]["customTexts"]["PartyHealth"] == nil then
@@ -85,16 +85,56 @@ local function SetupLayout(layout)
 	if E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"] == nil then
 		E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"] = {}
 	end
-	
+
 	-- Extra Options not Exported by base profile
 	E.db["unitframe"]["units"]["player"]["infoPanel"]["enable"] = false
 	E.db["unitframe"]["units"]["target"]["infoPanel"]["enable"] = false
 	E.db["unitframe"]["units"]["target"]["orientation"] = "RIGHT"
-	
-	--	PrivateDB - 
+
+	--	PrivateDB
 	E.private["skins"]["parchmentRemoverEnable"] = true
 	E.private["general"]["namefont"] = "Montserrat-Bold"
 	E.private["general"]["dmgfont"] = "Montserrat-Bold"
+
+	-- ################################################
+	-- ACTIONBARS
+	-- ################################################
+
+	-- Main Actionbar
+	E.db["actionbar"]["bar1"]["enabled"] = true
+	E.db["actionbar"]["bar1"]["buttons"] = 12
+	E.db["actionbar"]["bar1"]["buttonsPerRow"] = 12
+	E.db["actionbar"]["bar1"]["buttonsize"] = 32
+	E.db["actionbar"]["bar1"]["buttonspacing"] = 2
+	E.db["actionbar"]["bar1"]["backdrop"] = true
+
+	-- Top Actionbar
+	E.db["actionbar"]["bar3"]["enabled"] = true
+	E.db["actionbar"]["bar3"]["buttons"] = 12
+	E.db["actionbar"]["bar3"]["buttonsPerRow"] = 12
+	E.db["actionbar"]["bar3"]["buttonsize"] = 32
+	E.db["actionbar"]["bar3"]["buttonspacing"] = 2
+	E.db["actionbar"]["bar3"]["backdrop"] = true
+
+	-- Left Actionbar Cluster
+	E.db["actionbar"]["bar5"]["enabled"] = true
+	E.db["actionbar"]["bar5"]["buttons"] = 12
+	E.db["actionbar"]["bar5"]["buttonsPerRow"] = 6
+	E.db["actionbar"]["bar5"]["buttonsize"] = 25
+	E.db["actionbar"]["bar5"]["inheritGlobalFade"] = true
+	E.db["actionbar"]["bar5"]["backdrop"] = true
+
+	-- Right Actionbar Cluster
+	E.db["actionbar"]["bar2"]["enabled"] = true
+	E.db["actionbar"]["bar2"]["buttons"] = 12
+	E.db["actionbar"]["bar2"]["buttonsPerRow"] = 6
+	E.db["actionbar"]["bar2"]["buttonsize"] = 25
+	E.db["actionbar"]["bar2"]["inheritGlobalFade"] = true
+	E.db["actionbar"]["bar2"]["backdrop"] = true
+
+	-- Disabled Actionbars
+	E.db["actionbar"]["bar4"]["enabled"] = false
+	E.db["actionbar"]["bar6"]["visibility"] = "[overridebar] hide; [petbattle] hide; show"
 
 	-- ################################################
 	-- Main Profile Import
@@ -110,7 +150,11 @@ local function SetupLayout(layout)
 	E.db["databars"]["experience"]["hideInCombat"] = true
 	E.db["databars"]["experience"]["showBubbles"] = true
 	E.db["databars"]["experience"]["width"] = 415
-	E.db["databars"]["honor"]["enable"] = false
+
+	
+
+
+
 	E.db["databars"]["reputation"]["font"] = "Montserrat-Regular"
 	E.db["databars"]["reputation"]["height"] = 12
 	E.db["databars"]["reputation"]["hideInCombat"] = true
@@ -120,18 +164,12 @@ local function SetupLayout(layout)
 	E.db["databars"]["colors"]["experience"]["r"] = 0.14901960784314
 	E.db["databars"]["colors"]["experience"]["g"] = 0.49411764705882
 	E.db["databars"]["colors"]["experience"]["b"] = 0.83529411764706
-	E.db["databars"]["colors"]["quest"]["a"] = 0.99000000022352
-	E.db["databars"]["colors"]["quest"]["r"] = 0.27450980392157
-	E.db["databars"]["colors"]["quest"]["g"] = 0.74509803921569
-	E.db["databars"]["colors"]["quest"]["b"] = 0.33725490196078
+	
 	E.db["databars"]["colors"]["rested"]["a"] = 1
 	E.db["databars"]["colors"]["rested"]["r"] = 0.70588235294118
 	E.db["databars"]["colors"]["rested"]["g"] = 0.29803921568627
 	E.db["databars"]["colors"]["rested"]["b"] = 0.56078431372549
-	E.db["databars"]["azerite"]["orientation"] = "VERTICAL"
-	E.db["databars"]["azerite"]["height"] = 247
-	E.db["databars"]["azerite"]["enable"] = false
-	E.db["databars"]["azerite"]["width"] = 12
+
 	E.db["general"]["totems"]["size"] = 30
 	E.db["general"]["fontSize"] = 14
 	E.db["general"]["autoTrackReputation"] = true
@@ -163,6 +201,11 @@ local function SetupLayout(layout)
 	E.db["general"]["valuecolor"]["b"] = 0.8156862745098
 	E.db["general"]["interruptAnnounce"] = "RAID"
 	E.db["general"]["bottomPanel"] = false
+
+	-- ################################################
+	-- MOVERS
+	-- ################################################
+
 	E.db["movers"]["ElvAB_8"] = "BOTTOM,ElvUIParent,BOTTOM,27,300"
 	E.db["movers"]["RaidMarkerBarAnchor"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,223"
 	E.db["movers"]["BuffsMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-224,-4"
@@ -185,7 +228,7 @@ local function SetupLayout(layout)
 	E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,576,4"
 	E.db["movers"]["RaidUtility_Mover"] = "TOPLEFT,ElvUIParent,TOPLEFT,459,-4"
 	E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,253"
-	E.db["movers"]["ElvUIBagMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-68,249"
+	E.db["movers"]["ElvUIBagMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,232"
 	E.db["movers"]["NB_LocationLiteMover"] = "TOP,ElvUIParent,TOP,0,0"
 	E.db["movers"]["RightChatMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,4"
 	E.db["movers"]["ElvUF_AssistMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,4,-370"
@@ -234,6 +277,7 @@ local function SetupLayout(layout)
 	E.db["movers"]["TimeManagerFrameMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-247"
 	E.db["movers"]["DebuffsMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-224,-150"
 	E.db["movers"]["MinimapMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-4"
+
 	E.db["tooltip"]["textFontSize"] = 14
 	E.db["tooltip"]["font"] = "Montserrat-Bold"
 	E.db["tooltip"]["healthBar"]["height"] = 10
@@ -251,7 +295,7 @@ local function SetupLayout(layout)
 	E.db["auras"]["debuffs"]["countFontSize"] = 14
 	E.db["auras"]["debuffs"]["durationFontSize"] = 14
 	E.db["v11NamePlateReset"] = true
-	E.db["unitframe"]["targetSound"] = true
+	E.db["unitframe"]["fontSize"] = 13
 	E.db["unitframe"]["units"]["player"]["debuffs"]["anchorPoint"] = "TOPRIGHT"
 	E.db["unitframe"]["units"]["player"]["debuffs"]["sizeOverride"] = 40
 	E.db["unitframe"]["units"]["player"]["debuffs"]["perrow"] = 6
@@ -491,7 +535,7 @@ local function SetupLayout(layout)
 	E.db["unitframe"]["colors"]["castNoInterrupt"]["r"] = 0.74901960784314
 	E.db["unitframe"]["fontOutline"] = "NONE"
 	E.db["unitframe"]["smoothbars"] = true
-	E.db["unitframe"]["fontSize"] = 13
+	E.db["unitframe"]["targetSound"] = true
 	E.db["unitframe"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
 	E.db["unitframe"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
 	E.db["unitframe"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
@@ -503,13 +547,6 @@ local function SetupLayout(layout)
 	E.db["datatexts"]["panels"]["LeftChatDataPanel"]["right"] = "Mana Regen"
 	E.db["datatexts"]["panels"]["LeftChatDataPanel"]["left"] = "Broker_RunSpeed"
 	E.db["datatexts"]["fontSize"] = 14
-	E.db["actionbar"]["bar3"]["enabled"] = true
-	E.db["actionbar"]["bar3"]["buttonsPerRow"] = 12
-	E.db["actionbar"]["bar3"]["backdrop"] = true
-	E.db["actionbar"]["bar3"]["buttons"] = 12
-	E.db["actionbar"]["bar3"]["buttonsize"] = 32
-	E.db["actionbar"]["bar3"]["buttonspacing"] = 2
-	E.db["actionbar"]["bar6"]["visibility"] = "[overridebar] hide; [petbattle] hide; show"
 	E.db["actionbar"]["fontColor"]["r"] = 0.68235294117647
 	E.db["actionbar"]["fontColor"]["g"] = 0.68235294117647
 	E.db["actionbar"]["fontColor"]["b"] = 0.68235294117647
@@ -527,22 +564,6 @@ local function SetupLayout(layout)
 	E.db["actionbar"]["noPowerColor"]["r"] = 0.36862745098039
 	E.db["actionbar"]["noPowerColor"]["g"] = 0.56862745098039
 	E.db["actionbar"]["noPowerColor"]["b"] = 0.67450980392157
-	E.db["actionbar"]["bar2"]["enabled"] = true
-	E.db["actionbar"]["bar2"]["buttons"] = 12
-	E.db["actionbar"]["bar2"]["inheritGlobalFade"] = true
-	E.db["actionbar"]["bar2"]["buttonsPerRow"] = 6
-	E.db["actionbar"]["bar2"]["backdrop"] = true
-	E.db["actionbar"]["bar2"]["buttonsize"] = 25
-	E.db["actionbar"]["bar1"]["buttonsPerRow"] = 12
-	E.db["actionbar"]["bar1"]["backdrop"] = true
-	E.db["actionbar"]["bar1"]["buttons"] = 12
-	E.db["actionbar"]["bar1"]["buttonsize"] = 32
-	E.db["actionbar"]["bar1"]["buttonspacing"] = 2
-	E.db["actionbar"]["bar5"]["enabled"] = true
-	E.db["actionbar"]["bar5"]["inheritGlobalFade"] = true
-	E.db["actionbar"]["bar5"]["buttons"] = 12
-	E.db["actionbar"]["bar5"]["backdrop"] = true
-	E.db["actionbar"]["bar5"]["buttonsize"] = 25
 	E.db["actionbar"]["usableColor"]["r"] = 0.92549019607843
 	E.db["actionbar"]["usableColor"]["g"] = 0.93725490196078
 	E.db["actionbar"]["usableColor"]["b"] = 0.95686274509804
@@ -553,7 +574,6 @@ local function SetupLayout(layout)
 	E.db["actionbar"]["barPet"]["buttonsPerRow"] = 10
 	E.db["actionbar"]["barPet"]["buttonsize"] = 25
 	E.db["actionbar"]["barPet"]["point"] = "TOPLEFT"
-	E.db["actionbar"]["bar4"]["enabled"] = false
 	E.db["nameplates"]["threat"]["indicator"] = true
 	E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["countFontOutline"] = "NONE"
 	E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["priority"] = "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
@@ -607,6 +627,11 @@ local function SetupLayout(layout)
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["raidTargetIndicator"]["size"] = 30
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["buffs"]["countFontOutline"] = "NONE"
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["buffs"]["countFont"] = "Montserrat-SemiBold"
+	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["title"]["format"] = "[guild]"
+	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["format"] = "[namecolor][name:abbrev:short]"
+	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["fontSize"] = 14
+	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["font"] = "Montserrat-Bold"
+	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["yOffset"] = 0
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["height"] = 16
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["font"] = "Montserrat-Bold"
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["fontOutline"] = "NONE"
@@ -615,11 +640,6 @@ local function SetupLayout(layout)
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["format"] = "[health:current-percent-nostatus]"
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["fontSize"] = 10
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["yOffset"] = -14
-	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["format"] = "[namecolor][name:abbrev:short]"
-	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["fontSize"] = 14
-	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["font"] = "Montserrat-Bold"
-	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["yOffset"] = 0
-	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["title"]["format"] = "[guild]"
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["format"] = "[difficultycolor][level]"
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["fontSize"] = 12
 	E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["font"] = "Montserrat-Bold"
@@ -725,14 +745,14 @@ local function SetupLayout(layout)
 	E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["fontSize"] = 14
 	E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["font"] = "Montserrat-Bold"
 	E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["yOffset"] = 0
-	E.db["nameplates"]["units"]["ENEMY_NPC"]["buffs"]["priority"] = "Blacklist,blockNoDuration,Personal,TurtleBuffs"
-	E.db["nameplates"]["units"]["ENEMY_NPC"]["buffs"]["countFont"] = "Montserrat-SemiBold"
-	E.db["nameplates"]["units"]["ENEMY_NPC"]["buffs"]["countFontOutline"] = "NONE"
-	E.db["nameplates"]["units"]["ENEMY_NPC"]["title"]["format"] = "[guild]"
 	E.db["nameplates"]["units"]["ENEMY_NPC"]["level"]["format"] = "[difficultycolor][level]"
 	E.db["nameplates"]["units"]["ENEMY_NPC"]["level"]["fontSize"] = 12
 	E.db["nameplates"]["units"]["ENEMY_NPC"]["level"]["font"] = "Montserrat-Bold"
 	E.db["nameplates"]["units"]["ENEMY_NPC"]["level"]["yOffset"] = 0
+	E.db["nameplates"]["units"]["ENEMY_NPC"]["title"]["format"] = "[guild]"
+	E.db["nameplates"]["units"]["ENEMY_NPC"]["buffs"]["priority"] = "Blacklist,blockNoDuration,Personal,TurtleBuffs"
+	E.db["nameplates"]["units"]["ENEMY_NPC"]["buffs"]["countFont"] = "Montserrat-SemiBold"
+	E.db["nameplates"]["units"]["ENEMY_NPC"]["buffs"]["countFontOutline"] = "NONE"
 	E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["height"] = 16
 	E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["font"] = "Montserrat-Bold"
 	E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["fontOutline"] = "NONE"
@@ -763,18 +783,18 @@ local function SetupLayout(layout)
 	E.db["bags"]["bagWidth"] = 521
 	E.db["bags"]["countFont"] = "Montserrat-Bold"
 	E.db["bags"]["transparent"] = true
+	E.db["bags"]["clearSearchOnClose"] = true
 	E.db["bags"]["vendorGrays"]["details"] = true
 	E.db["bags"]["vendorGrays"]["enable"] = true
-	E.db["bags"]["clearSearchOnClose"] = true
 	E.db["bags"]["bankSize"] = 40
 	E.db["bags"]["scrapIcon"] = true
 	E.db["bags"]["bankWidth"] = 692
-	E.db["bags"]["itemLevelFontOutline"] = "OUTLINE"
+	E.db["bags"]["moneyFormat"] = "FULL"
 	E.db["bags"]["reverseSlots"] = true
 	E.db["bags"]["showBindType"] = true
 	E.db["bags"]["itemLevelCustomColor"]["r"] = 0.96862745098039
 	E.db["bags"]["itemLevelCustomColor"]["b"] = 0.38823529411765
-	E.db["bags"]["moneyFormat"] = "FULL"
+	E.db["bags"]["itemLevelFontOutline"] = "OUTLINE"
 	E.db["cooldown"]["secondsColor"]["r"] = 0.92156862745098
 	E.db["cooldown"]["secondsColor"]["g"] = 0.79607843137255
 	E.db["cooldown"]["secondsColor"]["b"] = 0.54509803921569
@@ -807,6 +827,20 @@ local function SetupLayout(layout)
 	E.db["chat"]["tabSelector"] = "BOX1"
 	E.db["chat"]["panelWidth"] = 570
 
+	-- Exlude from Classic Installs
+	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+		E.db["databars"]["honor"]["enable"] = false
+		E.db["databars"]["colors"]["quest"]["a"] = 0.99000000022352
+		E.db["databars"]["colors"]["quest"]["r"] = 0.27450980392157
+		E.db["databars"]["colors"]["quest"]["g"] = 0.74509803921569
+		E.db["databars"]["colors"]["quest"]["b"] = 0.33725490196078
+		E.db["databars"]["azerite"]["orientation"] = "VERTICAL"
+		E.db["databars"]["azerite"]["height"] = 247
+		E.db["databars"]["azerite"]["enable"] = false
+		E.db["databars"]["azerite"]["width"] = 12
+	end
+
+
 		--[[
 		--If you want to modify the base layout according to
 		-- certain conditions then this is how you could do it
@@ -838,7 +872,6 @@ local function InstallComplete()
 
 	--Set a variable tracking the version of the addon when layout was installed
 	E.db[MyPluginName].install_version = Version
-
 	ReloadUI()
 end
 
@@ -949,7 +982,7 @@ function mod:Initialize()
 	if E.private.install_complete and E.db[MyPluginName].install_version == nil then
 		E:GetModule("PluginInstaller"):Queue(InstallerData)
 	end
-	
+
 	--Insert our options table when ElvUI config is loaded
 	EP:RegisterPlugin(addon, InsertOptions)
 end
