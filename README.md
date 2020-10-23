@@ -1,5 +1,7 @@
 # NoobTacoUI
 
+![CI Status](https://github.com/NoobTaco/NoobTacoUI/workflows/CI/badge.svg) ![Release Status](https://github.com/NoobTaco/NoobTacoUI/workflows/Release/badge.svg) 
+
 NoobTacoUI is an ElvUI Profile that uses the [Nord Theme](https://www.nordtheme.com/) Color scheme of web development. The theme is dark, but not as dark as default ElvUI.
 
 ## Installation
