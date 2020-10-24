@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.4] - 2020-10-23
+### Fixed
+- Secondary actionbars were visible while in a vehicle. They now disappear. Check the visibility of individual action bars to change to your preference. 
+
 ## [1.0.3] - 2020-10-23
 ### Changed
 - Cleaned up Actionbar code
