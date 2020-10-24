@@ -115,6 +115,7 @@ local function SetupLayout(layout)
 	E.db["actionbar"]["bar3"]["buttonsize"] = 32
 	E.db["actionbar"]["bar3"]["buttonspacing"] = 2
 	E.db["actionbar"]["bar3"]["backdrop"] = true
+	E.db["actionbar"]["bar3"]["visibility"] = "[vehicleui] hide; [overridebar] hide; [petbattle] hide; show"
 
 	-- Left Actionbar Cluster
 	E.db["actionbar"]["bar5"]["enabled"] = true
@@ -123,6 +124,7 @@ local function SetupLayout(layout)
 	E.db["actionbar"]["bar5"]["buttonsize"] = 25
 	E.db["actionbar"]["bar5"]["inheritGlobalFade"] = true
 	E.db["actionbar"]["bar5"]["backdrop"] = true
+	E.db["actionbar"]["bar5"]["visibility"] = "[vehicleui] hide; [overridebar] hide; [petbattle] hide; show"
 
 	-- Right Actionbar Cluster
 	E.db["actionbar"]["bar2"]["enabled"] = true
@@ -131,6 +133,7 @@ local function SetupLayout(layout)
 	E.db["actionbar"]["bar2"]["buttonsize"] = 25
 	E.db["actionbar"]["bar2"]["inheritGlobalFade"] = true
 	E.db["actionbar"]["bar2"]["backdrop"] = true
+	E.db["actionbar"]["bar2"]["visibility"] = "[vehicleui] hide; [overridebar] hide; [petbattle] hide; show"
 
 	-- Disabled Actionbars
 	E.db["actionbar"]["bar4"]["enabled"] = false
