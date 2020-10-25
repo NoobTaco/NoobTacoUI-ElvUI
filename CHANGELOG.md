@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.1] - 2020-10-25
+### Fixed
+- Media font's where still pointing to NoobTacoUI-Media, causing an exception/error.
+
 ## [1.1.0] - 2020-10-25
 ### Added
 - Included NoobTacoUI-Media into core profile addon.
