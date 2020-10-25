@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0] - 2020-10-25
+### Added
+- Included NoobTacoUI-Media into core profile addon.
+  - Added Elite Overlay
+  - Added Google fonts
+    - Montserrat
+    - Lato
+    - Roboto
+
 ## [1.0.4] - 2020-10-23
 ### Fixed
 - Secondary actionbars were visible while in a vehicle. They now disappear. Check the visibility of individual action bars to change to your preference. 
