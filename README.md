@@ -13,7 +13,7 @@ NoobTacoUI is an ElvUI Profile that uses the [Nord Theme](https://www.nordtheme.
 1. **[REQUIRED]** Download and install [ElvUI](https://www.tukui.org/download.php?ui=elvui) 
 2. Download and install NoobTacoUI
 
-Once installed start wow and follow the instructions for ElvUI. When ElvUI is finished it will reload the UI and NoobTacoUI will start it's installation. Accept the options and reload.
+Once installed start wow and follow the instructions for ElvUI. When ElvUI is finished it will reload the UI and NoobTacoUI will start its installation. Accept the options and reload.
 
 For best results log out of your character and then back in. This will allow the nameplate text to show the correct font. 
 
