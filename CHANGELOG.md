@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.2] - 2020-10-25
+### Fixed
+- Missed a directory for overlay. Should display properly now. 
+
 ## [1.1.1] - 2020-10-25
 ### Fixed
 - Media font's where still pointing to NoobTacoUI-Media, causing an exception/error.

@@ -1,10 +1,13 @@
 local SimpleRareElite = CreateFrame('Frame', 'SimpleRareElite', UIParent)
 local TargetFrame
 
+-- Load Elvui settings
+-- local mod = E:NewModule(MyPluginName, "AceHook-3.0", "AceEvent-3.0", "AceTimer-3.0");
+
 -- Set Textures
 local function SetSimpleRareElite(Texture)
 
-	SimpleRareElite.Texture:SetTexture('Interface\\AddOns\\NoobTacoUI-Media\\Media\\Textures\\'..Texture)
+	SimpleRareElite.Texture:SetTexture('Interface\\AddOns\\NoobTacoUI\\Media\\Textures\\'..Texture)
 	SimpleRareElite.Texture:SetTexCoord(0, 1, 0, 1)
 	SimpleRareElite:ClearAllPoints()
 
