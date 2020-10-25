@@ -4,12 +4,16 @@
 
 NoobTacoUI is an ElvUI Profile that uses the [Nord Theme](https://www.nordtheme.com/) Color palette. The theme is dark, just not as dark as default ElvUI. Download for Retail or Classic
 
-# Installation
-* Download and install [ElvUI](https://www.tukui.org/download.php?ui=elvui) 
-* Download and install NoobTacoUI
-* Download and install [NoobTacoUI-Media](https://github.com/NoobTaco/NoobTacoUI-Media) (for fonts and elite overlay)
+# Features
+* NoobTacoUI is a dark theme based off of the popular Nord Theme. It is not as contrasty as the default profile in an attempt to reduce eye strain from prolonged WoW sessions. 
+* Modern font's making it easier to read information text and game text.
+* Elite unitframe overlay. The default elite dragon fits perfectly with NoobTacoUI's target unitframe.
 
-Once installed start wow and follow the instructions for ElvUI. Once Elv is done it will reload the UI and NoobTacoUI will start it's installation. Accept the options and reload.
+# Installation
+1. **[REQUIRED]** Download and install [ElvUI](https://www.tukui.org/download.php?ui=elvui) 
+2. Download and install NoobTacoUI
+
+Once installed start wow and follow the instructions for ElvUI. When ElvUI is finished it will reload the UI and NoobTacoUI will start it's installation. Accept the options and reload.
 
 For best results log out of your character and then back in. This will allow the nameplate text to show the correct font. 
 
