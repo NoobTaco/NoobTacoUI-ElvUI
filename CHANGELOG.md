@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3] - 2020-10-26
+### Added
+- Options to turn the elite dragon overlay on or off.
+
+### Fixed
+- Added ElvUI Norm bar texture on install to fix any other profile that changed bar textures.
+
 ## [1.1.2] - 2020-10-25
 ### Fixed
 - Missed a directory for overlay. Should display properly now. 

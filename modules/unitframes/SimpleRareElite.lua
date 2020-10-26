@@ -1,10 +1,18 @@
 local SimpleRareElite = CreateFrame('Frame', 'SimpleRareElite', UIParent)
 local TargetFrame
 
--- Load Elvui settings
--- local mod = E:NewModule(MyPluginName, "AceHook-3.0", "AceEvent-3.0", "AceTimer-3.0");
+--Change this line and use a unique name for your plugin.
+local MyPluginName = "|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r"
 
--- Set Textures
+--Create references to ElvUI internals
+local E = unpack(ElvUI)
+
+-- Sanity check for fresh profiles
+if E.db[MyPluginName] == nil then
+	E.db[MyPluginName] = {}
+end
+
+	-- Set Textures
 local function SetSimpleRareElite(Texture)
 
 	SimpleRareElite.Texture:SetTexture('Interface\\AddOns\\NoobTacoUI\\Media\\Textures\\'..Texture)
@@ -21,6 +29,12 @@ end
 
 -- Load and Show Textures
 local function CreateSimpleRareElite()
+
+	-- Check if overlay is enabled
+	if E.db[MyPluginName].overlay == false then
+		print(MyPluginName .. " - overlay disabled")
+		return
+	end
 
 	SimpleRareElite:RegisterEvent('PLAYER_LOGIN')
 	SimpleRareElite:RegisterEvent("ADDON_LOADED")
