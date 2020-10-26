@@ -14,7 +14,8 @@ jobs:
     - name: Run luacheck
       uses: BigWigsMods/actions/luacheck@master
       with:
-        args: -q --ignore 113 631 211 212 112 311
+        # args: -q --ignore 113 631 211 212 112 311
+        args: -q 
 
     - name: "Generate recent changes"
       uses: kemayo/actions-recent-changelog@v1
