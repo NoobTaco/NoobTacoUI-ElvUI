@@ -6,9 +6,13 @@ local MyPluginName = "|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r"
 
 --Create references to ElvUI internals
 local E = unpack(ElvUI)
-local overlay = E.db[MyPluginName].overlay
 
--- Set Textures
+-- Sanity check for fresh profiles
+if E.db[MyPluginName] == nil then
+	E.db[MyPluginName] = {}
+end
+
+	-- Set Textures
 local function SetSimpleRareElite(Texture)
 
 	SimpleRareElite.Texture:SetTexture('Interface\\AddOns\\NoobTacoUI\\Media\\Textures\\'..Texture)
@@ -27,7 +31,7 @@ end
 local function CreateSimpleRareElite()
 
 	-- Check if overlay is enabled
-	if overlay == false then
+	if E.db[MyPluginName].overlay == false then
 		print(MyPluginName .. " - overlay disabled")
 		return
 	end
