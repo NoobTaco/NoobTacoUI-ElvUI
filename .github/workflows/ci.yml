@@ -14,8 +14,7 @@ jobs:
     - name: Run luacheck
       uses: BigWigsMods/actions/luacheck@master
       with:
-        # args: -q --ignore 113 631 211 212 112 311
-        args: -q 
+        args: -q --ignore 113 631 211 212 112 311
 
     - name: Package Retail
       uses: BigWigsMods/packager@master
