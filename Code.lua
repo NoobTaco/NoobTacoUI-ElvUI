@@ -95,11 +95,23 @@ local function SetupLayout(layout)
 	E.private["skins"]["parchmentRemoverEnable"] = true
 	E.private["general"]["namefont"] = "Montserrat-Bold"
 	E.private["general"]["dmgfont"] = "Montserrat-Bold"
+	E.private["general"]["normTex"] = "ElvUI Norm"
+	E.private["general"]["glossTex"] = "ElvUI Norm"
 
+	-- Exlude from Classic Installs
+	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+		E.db["databars"]["honor"]["enable"] = false
+		E.db["databars"]["colors"]["quest"]["a"] = 0.99000000022352
+		E.db["databars"]["colors"]["quest"]["r"] = 0.27450980392157
+		E.db["databars"]["colors"]["quest"]["g"] = 0.74509803921569
+		E.db["databars"]["colors"]["quest"]["b"] = 0.33725490196078
+		E.db["databars"]["azerite"]["orientation"] = "VERTICAL"
+		E.db["databars"]["azerite"]["height"] = 247
+		E.db["databars"]["azerite"]["enable"] = false
+		E.db["databars"]["azerite"]["width"] = 12
+	end
 
-	-- ################################################
-	-- ACTIONBARS
-	-- ################################################
+	-- ACTIONBARS ------------------------------------------------------
 
 	-- Main Actionbar
 	E.db["actionbar"]["bar1"]["enabled"] = true
@@ -140,10 +152,36 @@ local function SetupLayout(layout)
 	E.db["actionbar"]["bar4"]["enabled"] = false
 	E.db["actionbar"]["bar6"]["visibility"] = "[overridebar] hide; [petbattle] hide; show"
 
-	-- ################################################
-	-- Main Profile Import
-	-- ################################################
+	-- Actionbar Options from import
+	E.db["actionbar"]["fontColor"]["r"] = 0.68235294117647
+	E.db["actionbar"]["fontColor"]["g"] = 0.68235294117647
+	E.db["actionbar"]["fontColor"]["b"] = 0.68235294117647
+	E.db["actionbar"]["flashAnimation"] = true
+	E.db["actionbar"]["fontOutline"] = "NONE"
+	E.db["actionbar"]["noRangeColor"]["r"] = 0.74901960784314
+	E.db["actionbar"]["noRangeColor"]["g"] = 0.38039215686275
+	E.db["actionbar"]["noRangeColor"]["b"] = 0.4156862745098
+	E.db["actionbar"]["notUsableColor"]["r"] = 0.26274509803922
+	E.db["actionbar"]["notUsableColor"]["g"] = 0.29803921568627
+	E.db["actionbar"]["notUsableColor"]["b"] = 0.36862745098039
+	E.db["actionbar"]["microbar"]["enabled"] = true
+	E.db["actionbar"]["microbar"]["mouseover"] = true
+	E.db["actionbar"]["font"] = "Montserrat-Bold"
+	E.db["actionbar"]["noPowerColor"]["r"] = 0.36862745098039
+	E.db["actionbar"]["noPowerColor"]["g"] = 0.56862745098039
+	E.db["actionbar"]["noPowerColor"]["b"] = 0.67450980392157
+	E.db["actionbar"]["usableColor"]["r"] = 0.92549019607843
+	E.db["actionbar"]["usableColor"]["g"] = 0.93725490196078
+	E.db["actionbar"]["usableColor"]["b"] = 0.95686274509804
+	E.db["actionbar"]["transparent"] = true
+	E.db["actionbar"]["addNewSpells"] = true
+	E.db["actionbar"]["stanceBar"]["buttonsize"] = 30
+	E.db["actionbar"]["stanceBar"]["buttonsPerRow"] = 1
+	E.db["actionbar"]["barPet"]["buttonsPerRow"] = 10
+	E.db["actionbar"]["barPet"]["buttonsize"] = 25
+	E.db["actionbar"]["barPet"]["point"] = "TOPLEFT"
 
+	-- DATABARS ------------------------------------------
 	E.db["databars"]["threat"]["enable"] = false
 	E.db["databars"]["threat"]["font"] = "Montserrat-Bold"
 	E.db["databars"]["threat"]["height"] = 12
@@ -167,6 +205,8 @@ local function SetupLayout(layout)
 	E.db["databars"]["colors"]["rested"]["r"] = 0.70588235294118
 	E.db["databars"]["colors"]["rested"]["g"] = 0.29803921568627
 	E.db["databars"]["colors"]["rested"]["b"] = 0.56078431372549
+	
+	-- GENERAL---------------------------------------------
 	E.db["general"]["totems"]["size"] = 30
 	E.db["general"]["fontSize"] = 14
 	E.db["general"]["autoTrackReputation"] = true
@@ -198,11 +238,9 @@ local function SetupLayout(layout)
 	E.db["general"]["valuecolor"]["b"] = 0.8156862745098
 	E.db["general"]["interruptAnnounce"] = "RAID"
 	E.db["general"]["bottomPanel"] = false
+	
 
-	-- ################################################
-	-- MOVERS
-	-- ################################################
-
+	-- MOVERS -----------------------------------------------------------------
 	E.db["movers"]["ElvAB_8"] = "BOTTOM,ElvUIParent,BOTTOM,27,300"
 	E.db["movers"]["RaidMarkerBarAnchor"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,223"
 	E.db["movers"]["BuffsMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-224,-4"
@@ -275,6 +313,7 @@ local function SetupLayout(layout)
 	E.db["movers"]["DebuffsMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-224,-150"
 	E.db["movers"]["MinimapMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-4"
 
+	-- TOOLTIPS ---------------------------------------------------------------
 	E.db["tooltip"]["textFontSize"] = 14
 	E.db["tooltip"]["font"] = "Montserrat-Bold"
 	E.db["tooltip"]["healthBar"]["height"] = 10
@@ -283,6 +322,8 @@ local function SetupLayout(layout)
 	E.db["tooltip"]["smallTextFontSize"] = 14
 	E.db["tooltip"]["colorAlpha"] = 1
 	E.db["tooltip"]["headerFontSize"] = 14
+
+	-- AURAS -------------------------------------------------------------------
 	E.db["auras"]["font"] = "Montserrat-Bold"
 	E.db["auras"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
 	E.db["auras"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
@@ -291,7 +332,8 @@ local function SetupLayout(layout)
 	E.db["auras"]["buffs"]["durationFontSize"] = 14
 	E.db["auras"]["debuffs"]["countFontSize"] = 14
 	E.db["auras"]["debuffs"]["durationFontSize"] = 14
-	E.db["v11NamePlateReset"] = true
+
+	-- UNITFRAME ----------------------------------------------------------------
 	E.db["unitframe"]["fontSize"] = 13
 	E.db["unitframe"]["units"]["player"]["debuffs"]["anchorPoint"] = "TOPRIGHT"
 	E.db["unitframe"]["units"]["player"]["debuffs"]["sizeOverride"] = 40
@@ -536,6 +578,8 @@ local function SetupLayout(layout)
 	E.db["unitframe"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
 	E.db["unitframe"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
 	E.db["unitframe"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
+
+	-- DATATEXT ------------------------------------------------------------------
 	E.db["datatexts"]["font"] = "Montserrat-Bold"
 	E.db["datatexts"]["panels"]["RightMiniPanel"] = "Bags"
 	E.db["datatexts"]["panels"]["LeftCoordDtPanel"] = "Coords"
@@ -544,33 +588,9 @@ local function SetupLayout(layout)
 	E.db["datatexts"]["panels"]["LeftChatDataPanel"]["right"] = "Mana Regen"
 	E.db["datatexts"]["panels"]["LeftChatDataPanel"]["left"] = "Broker_RunSpeed"
 	E.db["datatexts"]["fontSize"] = 14
-	E.db["actionbar"]["fontColor"]["r"] = 0.68235294117647
-	E.db["actionbar"]["fontColor"]["g"] = 0.68235294117647
-	E.db["actionbar"]["fontColor"]["b"] = 0.68235294117647
-	E.db["actionbar"]["flashAnimation"] = true
-	E.db["actionbar"]["fontOutline"] = "NONE"
-	E.db["actionbar"]["noRangeColor"]["r"] = 0.74901960784314
-	E.db["actionbar"]["noRangeColor"]["g"] = 0.38039215686275
-	E.db["actionbar"]["noRangeColor"]["b"] = 0.4156862745098
-	E.db["actionbar"]["notUsableColor"]["r"] = 0.26274509803922
-	E.db["actionbar"]["notUsableColor"]["g"] = 0.29803921568627
-	E.db["actionbar"]["notUsableColor"]["b"] = 0.36862745098039
-	E.db["actionbar"]["microbar"]["enabled"] = true
-	E.db["actionbar"]["microbar"]["mouseover"] = true
-	E.db["actionbar"]["font"] = "Montserrat-Bold"
-	E.db["actionbar"]["noPowerColor"]["r"] = 0.36862745098039
-	E.db["actionbar"]["noPowerColor"]["g"] = 0.56862745098039
-	E.db["actionbar"]["noPowerColor"]["b"] = 0.67450980392157
-	E.db["actionbar"]["usableColor"]["r"] = 0.92549019607843
-	E.db["actionbar"]["usableColor"]["g"] = 0.93725490196078
-	E.db["actionbar"]["usableColor"]["b"] = 0.95686274509804
-	E.db["actionbar"]["transparent"] = true
-	E.db["actionbar"]["addNewSpells"] = true
-	E.db["actionbar"]["stanceBar"]["buttonsize"] = 30
-	E.db["actionbar"]["stanceBar"]["buttonsPerRow"] = 1
-	E.db["actionbar"]["barPet"]["buttonsPerRow"] = 10
-	E.db["actionbar"]["barPet"]["buttonsize"] = 25
-	E.db["actionbar"]["barPet"]["point"] = "TOPLEFT"
+
+	-- NAMEPLATES -------------------------------------------------------------
+	E.db["v11NamePlateReset"] = true
 	E.db["nameplates"]["threat"]["indicator"] = true
 	E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["countFontOutline"] = "NONE"
 	E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["priority"] = "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
@@ -768,6 +788,8 @@ local function SetupLayout(layout)
 	E.db["nameplates"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
 	E.db["nameplates"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
 	E.db["nameplates"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
+
+	-- BAGS --------------------------------------------------------------
 	E.db["bags"]["countFontSize"] = 14
 	E.db["bags"]["itemLevelFont"] = "Montserrat-Bold"
 	E.db["bags"]["split"]["player"] = true
@@ -792,6 +814,8 @@ local function SetupLayout(layout)
 	E.db["bags"]["itemLevelCustomColor"]["r"] = 0.96862745098039
 	E.db["bags"]["itemLevelCustomColor"]["b"] = 0.38823529411765
 	E.db["bags"]["itemLevelFontOutline"] = "OUTLINE"
+
+	-- COOLDOWN --------------------------------------------------------------------
 	E.db["cooldown"]["secondsColor"]["r"] = 0.92156862745098
 	E.db["cooldown"]["secondsColor"]["g"] = 0.79607843137255
 	E.db["cooldown"]["secondsColor"]["b"] = 0.54509803921569
@@ -806,6 +830,8 @@ local function SetupLayout(layout)
 	E.db["cooldown"]["hoursColor"]["r"] = 0.53333333333333
 	E.db["cooldown"]["hoursColor"]["g"] = 0.75294117647059
 	E.db["cooldown"]["hoursColor"]["b"] = 0.8156862745098
+
+	-- CHAT -------------------------------------------------------------------------
 	E.db["chat"]["useCustomTimeColor"] = false
 	E.db["chat"]["fontSize"] = 14
 	E.db["chat"]["keywordSound"] = "Simon Chime"
@@ -824,44 +850,27 @@ local function SetupLayout(layout)
 	E.db["chat"]["tabSelector"] = "BOX1"
 	E.db["chat"]["panelWidth"] = 570
 
-	-- Exlude from Classic Installs
-	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
-		E.db["databars"]["honor"]["enable"] = false
-		E.db["databars"]["colors"]["quest"]["a"] = 0.99000000022352
-		E.db["databars"]["colors"]["quest"]["r"] = 0.27450980392157
-		E.db["databars"]["colors"]["quest"]["g"] = 0.74509803921569
-		E.db["databars"]["colors"]["quest"]["b"] = 0.33725490196078
-		E.db["databars"]["azerite"]["orientation"] = "VERTICAL"
-		E.db["databars"]["azerite"]["height"] = 247
-		E.db["databars"]["azerite"]["enable"] = false
-		E.db["databars"]["azerite"]["width"] = 12
-	end
-
-
-		--[[
-		--If you want to modify the base layout according to
-		-- certain conditions then this is how you could do it
-		if layout == "tank" then
-			--Make some changes to the layout posted above
-		elseif layout == "dps" then
-			--Make some other changes
-		elseif layout == "healer" then
-			--Make some different changes
-		end
-	--]]
-
-
 	--[[
-	--	This section at the bottom is just to update ElvUI and display a message
+	--If you want to modify the base layout according to
+	-- certain conditions then this is how you could do it
+	if layout == "tank" then
+		--Make some changes to the layout posted above
+	elseif layout == "dps" then
+		--Make some other changes
+	elseif layout == "healer" then
+		--Make some different changes
+	end
 	--]]
-	--Update ElvUI
+	
+	-- Update ElvUI --------------------------------------
 	E:UpdateAll(true)
-	--Show message about layout being set
+	
+	-- Show message about layout being set
 	PluginInstallStepComplete.message = "Layout Set"
 	PluginInstallStepComplete:Show()
 end
 
---This function is executed when you press "Skip Process" or "Finished" in the installer.
+-- INSTALATION COMPLETE - Set version and overlay status ------------------------------
 local function InstallComplete()
 	if GetCVarBool("Sound_EnableMusic") then
 		StopMusic()
@@ -875,12 +884,11 @@ local function InstallComplete()
 	ReloadUI()
 end
 
---This is the data we pass on to the ElvUI Plugin Installer.
---The Plugin Installer is reponsible for displaying the install guide for this layout.
+-- PLUGIN INSTALLER -----------------------------------------------------------------
 local InstallerData = {
 	Title = format("|cff4beb2c%s %s|r", MyPluginName, "Installation"),
 	Name = MyPluginName,
-	tutorialImage = "Interface\\AddOns\\NoobTacoUI\\assets\\noobtaco.tga", --If you have a logo you want to use, otherwise it uses the one from ElvUI
+	tutorialImage = "Interface\\AddOns\\NoobTacoUI\\Media\\Textures\\noobtaco.tga",
 	Pages = {
 		[1] = function()
 			PluginInstallFrame.SubTitle:SetFormattedText("Welcome to the installation for %s.", MyPluginName)
@@ -931,6 +939,8 @@ local function InsertOptions()
 		order = 100,
 		type = "group",
 		name = format("|cff4beb2c%s|r", MyPluginName),
+		get = function(info) return E.db[MyPluginName][ info[#info] ] end,
+		set = function(info, value) E.db[MyPluginName][ info[#info] ] = value; E:StaticPopup_Show("PRIVATE_RL"); end,
 		args = {
 			header1 = {
 				order = 1,
@@ -950,20 +960,40 @@ local function InsertOptions()
 			header2 = {
 				order = 4,
 				type = "header",
+				name = "Options",
+			},
+			general = {
+				order = 5,
+				type = "group",
+				-- name = MER:cOption(L["General"]),
+				name = "General",
+				guiInline = true,
+				args = {
+					overlay = {
+						order = 1,
+						type = "toggle",
+						name = L["Elite Overlay"],
+						desc = L["Disable/Enable the elite dragon overlay for the target."],
+					},
+				},
+			},
+			header3 = {
+				order = 6,
+				type = "header",
 				name = "Installation",
 			},
 			description2 = {
-				order = 5,
+				order = 7,
 				type = "description",
 				name = "The installation guide should pop up automatically after you have completed the ElvUI installation. If you wish to re-run the installation process for this layout then please click the button below.",
 			},
 			spacer2 = {
-				order = 6,
+				order = 8,
 				type = "description",
 				name = "",
 			},
 			install = {
-				order = 7,
+				order = 9,
 				type = "execute",
 				name = "Install",
 				desc = "Run the installation process.",
