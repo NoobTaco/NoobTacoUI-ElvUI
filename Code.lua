@@ -205,7 +205,7 @@ local function SetupLayout(layout)
 	E.db["databars"]["colors"]["rested"]["r"] = 0.70588235294118
 	E.db["databars"]["colors"]["rested"]["g"] = 0.29803921568627
 	E.db["databars"]["colors"]["rested"]["b"] = 0.56078431372549
-	
+
 	-- GENERAL---------------------------------------------
 	E.db["general"]["totems"]["size"] = 30
 	E.db["general"]["fontSize"] = 14
@@ -238,7 +238,6 @@ local function SetupLayout(layout)
 	E.db["general"]["valuecolor"]["b"] = 0.8156862745098
 	E.db["general"]["interruptAnnounce"] = "RAID"
 	E.db["general"]["bottomPanel"] = false
-	
 
 	-- MOVERS -----------------------------------------------------------------
 	E.db["movers"]["ElvAB_8"] = "BOTTOM,ElvUIParent,BOTTOM,27,300"
@@ -861,10 +860,10 @@ local function SetupLayout(layout)
 		--Make some different changes
 	end
 	--]]
-	
+
 	-- Update ElvUI --------------------------------------
 	E:UpdateAll(true)
-	
+
 	-- Show message about layout being set
 	PluginInstallStepComplete.message = "Layout Set"
 	PluginInstallStepComplete:Show()
@@ -878,7 +877,7 @@ local function InstallComplete()
 
 	--Set a variable tracking the version of the addon when layout was installed
 	E.db[MyPluginName].install_version = Version
-	
+
 	-- Set the key for Overlay
 	E.db[MyPluginName].overlay = true
 	ReloadUI()
