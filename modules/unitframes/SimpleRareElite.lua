@@ -1,8 +1,12 @@
 local SimpleRareElite = CreateFrame('Frame', 'SimpleRareElite', UIParent)
 local TargetFrame
 
--- Load Elvui settings
--- local mod = E:NewModule(MyPluginName, "AceHook-3.0", "AceEvent-3.0", "AceTimer-3.0");
+--Change this line and use a unique name for your plugin.
+local MyPluginName = "|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r"
+
+--Create references to ElvUI internals
+local E = unpack(ElvUI)
+local overlay = E.db[MyPluginName].overlay
 
 -- Set Textures
 local function SetSimpleRareElite(Texture)
@@ -21,6 +25,12 @@ end
 
 -- Load and Show Textures
 local function CreateSimpleRareElite()
+
+	-- Check if overlay is enabled
+	if overlay == false then
+		print(MyPluginName .. " - overlay disabled")
+		return
+	end
 
 	SimpleRareElite:RegisterEvent('PLAYER_LOGIN')
 	SimpleRareElite:RegisterEvent("ADDON_LOADED")

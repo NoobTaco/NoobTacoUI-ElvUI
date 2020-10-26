@@ -96,6 +96,7 @@ local function SetupLayout(layout)
 	E.private["general"]["namefont"] = "Montserrat-Bold"
 	E.private["general"]["dmgfont"] = "Montserrat-Bold"
 
+
 	-- ################################################
 	-- ACTIONBARS
 	-- ################################################
@@ -868,6 +869,9 @@ local function InstallComplete()
 
 	--Set a variable tracking the version of the addon when layout was installed
 	E.db[MyPluginName].install_version = Version
+	
+	-- Set the key for Overlay
+	E.db[MyPluginName].overlay = true
 	ReloadUI()
 end
 
