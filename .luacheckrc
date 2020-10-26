@@ -17,6 +17,7 @@ globals = {
 	-- NoobTacoUI
 	"NoobTacoUI",
 	"SimpleRareElite",
+  "PluginInstallFrame"
 
 	-- WoW API globals
 	"StaticPopupDialogs"
