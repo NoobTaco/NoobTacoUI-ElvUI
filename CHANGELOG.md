@@ -1,8 +1,8 @@
 # Changelog
 
-## [1.1.4] -
+## [1.1.4] - 2020-10-28
 
-### Changed 2020-10-28
+### Changed
 
 -   Moved the BG score overlay on top of screen
 -   Adjusted the mirror timer bar locations.
