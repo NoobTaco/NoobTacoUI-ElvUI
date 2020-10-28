@@ -476,7 +476,7 @@ local function SetupLayout()
     E.db["general"]["valuecolor"]["b"] = 0.8156862745098
     E.db["general"]["interruptAnnounce"] = "RAID"
     E.db["general"]["bottomPanel"] = false
-       
+
     -- TOOLTIPS ---------------------------------------------------------------
     E.db["tooltip"]["textFontSize"] = 14
     E.db["tooltip"]["font"] = "Montserrat-Bold"
@@ -576,7 +576,7 @@ local function SetupLayout()
     E.db["movers"]["ElvAB_8"] = "BOTTOM,ElvUIParent,BOTTOM,27,300"
     E.db["movers"]["ElvAB_9"] = "BOTTOM,ElvUIParent,BOTTOM,27,269"
 
-    -- GENERAL MOVERS    
+    -- GENERAL MOVERS
     E.db["movers"]["BuffsMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-224,-4"
     E.db["movers"]["GhostFrameMover"] = "TOP,ElvUIParent,TOP,0,-169"
     E.db["movers"]["BossButton"] = "BOTTOM,ElvUIParent,BOTTOM,0,350"
@@ -972,7 +972,7 @@ local function SetupUnitFrames(layout)
         E.db.unitframes = nil
 
         E.db["unitframe"]["units"]["party"]["growthDirection"] = "RIGHT_DOWN"
-        
+
         E.db["unitframe"]["units"]["raid"]["buffIndicator"]["size"] = 10
         E.db["unitframe"]["units"]["raid"]["debuffs"]["sizeOverride"] = 25
         E.db["unitframe"]["units"]["raid"]["debuffs"]["xOffset"] = 24
@@ -1003,7 +1003,7 @@ local function SetupUnitFrames(layout)
         E.db["movers"]["ElvUF_TargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,285"
         E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,576,4"
- 
+
     end
     -- Update ElvUI --------------------------------------
     E:UpdateAll(true)
@@ -1055,7 +1055,7 @@ local InstallerData = {
 			PluginInstallFrame.Option2:Show()
 			PluginInstallFrame.Option2:SetScript("OnClick", function() NewProfile(true, "NoobTacoUI") end)
 			PluginInstallFrame.Option2:SetText("Create New")
-		
+
 			PluginInstallFrame.SubTitle:SetText("Profiles")
 			PluginInstallFrame.Desc1:SetText("Press \"Update Current\" to update your current profile with the new NoobTacoUI changes.")
 			PluginInstallFrame.Desc2:SetText("If you'd like to check out what the changes are, without overwriting your current settings, you can press \"Create New\"")
@@ -1074,7 +1074,7 @@ local InstallerData = {
 			PluginInstallFrame.Desc3:SetFormattedText(L["Importance: |cffFF0000High|r"])
 
 			PluginInstallFrame.Option1:Show()
-			PluginInstallFrame.Option1:SetScript('OnClick', function() SetupLayout(); end) 
+			PluginInstallFrame.Option1:SetScript('OnClick', function() SetupLayout(); end)
 			PluginInstallFrame.Option1:SetText("Set Layout")
 		end,
         [4] = function()
