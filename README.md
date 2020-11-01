@@ -20,7 +20,7 @@ For best results log out of your character and then back in. This will allow the
 # Download and Support
 
 ## Download from your favorite addon hosts 
-* [GitHub](https://github.com/NoobTaco/NoobTacoUI) 
+* [GitHub](https://github.com/NoobTaco/NoobTacoUI/releases/latest) 
 * [Curse/Overwolf](https://www.curseforge.com/wow/addons/noobtacoui) 
 * [WoW Interface](https://www.wowinterface.com/downloads/info25744-NoobTacoUI.html) 
 * [TukUI](https://www.tukui.org/addons.php?id=187) 
