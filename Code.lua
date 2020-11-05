@@ -427,11 +427,13 @@ local function SetupLayout()
     E.db["databars"]["experience"]["textFormat"] = "CURREM"
     E.db["databars"]["experience"]["hideAtMaxLevel"] = false
     E.db["databars"]["experience"]["font"] = "Montserrat-Bold"
-    E.db["databars"]["experience"]["hideInCombat"] = true
+    E.db["databars"]["experience"]["hideInCombat"] = false
+    E.db["databars"]["experience"]["questCompletedOnly"] = true
     E.db["databars"]["experience"]["showBubbles"] = true
-    E.db["databars"]["experience"]["width"] = 405
+    E.db["databars"]["experience"]["width"] = 755
+    E.db["databars"]["experience"]["height"] = 10
     E.db["databars"]["reputation"]["font"] = "Montserrat-Regular"
-    E.db["databars"]["reputation"]["height"] = 12
+    E.db["databars"]["reputation"]["height"] = 13
     E.db["databars"]["reputation"]["hideInCombat"] = true
     E.db["databars"]["reputation"]["enable"] = true
     E.db["databars"]["reputation"]["width"] = 200
@@ -471,6 +473,8 @@ local function SetupLayout()
     E.db["general"]["altPowerBar"]["statusBarColor"]["r"] = 0.36862745098039
     E.db["general"]["altPowerBar"]["font"] = "Montserrat-Medium"
     E.db["general"]["altPowerBar"]["fontOutline"] = "NONE"
+    E.db["general"]["altPowerBar"]["height"] = 25
+    E.db["general"]["altPowerBar"]["width"] = 417
     E.db["general"]["valuecolor"]["r"] = 0.53333333333333
     E.db["general"]["valuecolor"]["g"] = 0.75294117647059
     E.db["general"]["valuecolor"]["b"] = 0.8156862745098
@@ -569,10 +573,10 @@ local function SetupLayout()
     E.db["actionbar"]["barPet"]["point"] = "TOPLEFT"
 
     -- MOVERS -----------------------------------------------------------------
-    E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,12"
-    E.db["movers"]["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,295,20"
-    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,48"
-    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,-295,20"
+    E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,15"
+    E.db["movers"]["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,294,15"
+    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,53"
+    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,-294,15"
     E.db["movers"]["ElvAB_8"] = "BOTTOM,ElvUIParent,BOTTOM,27,300"
     E.db["movers"]["ElvAB_9"] = "BOTTOM,ElvUIParent,BOTTOM,27,269"
 
@@ -602,7 +606,7 @@ local function SetupLayout()
     E.db["movers"]["MirrorTimer3Mover"] = "TOP,ElvUIParent,TOP,0,-101"
     E.db["movers"]["MicrobarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,229"
     E.db["movers"]["OzCooldownsMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,425"
-    E.db["movers"]["ExperienceBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,1"
+    E.db["movers"]["ExperienceBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,2"
     E.db["movers"]["MirrorTimer2Mover"] = "TOP,ElvUIParent,TOP,0,-83"
     E.db["movers"]["BelowMinimapContainerMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-113,-555"
     E.db["movers"]["iFilger_ItemCooldownsMover"] = "BOTTOM,ElvUIParent,BOTTOM,-121,456"
@@ -610,7 +614,7 @@ local function SetupLayout()
     E.db["movers"]["AlertFrameMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-530,-242"
     E.db["movers"]["TotemBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,608,111"
     E.db["movers"]["BigButtonsFarmBar"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-638,-307"
-    E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,87"
+    E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,90"
     E.db["movers"]["BigButtonsSeedBarMover"] = "TOP,ElvUIParent,TOP,0,-300"
     E.db["movers"]["ElvUIBankMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,230"
     E.db["movers"]["LevelUpBossBannerMover"] = "TOP,ElvUIParent,TOP,0,-181"
@@ -686,7 +690,7 @@ local function SetupLayout()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["size"] = 13
     E.db["unitframe"]["units"]["player"]["width"] = 200
     E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
-    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 410
+    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 417
     E.db["unitframe"]["units"]["player"]["name"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["player"]["name"]["xOffset"] = 5
     E.db["unitframe"]["units"]["player"]["name"]["position"] = "BOTTOM"
@@ -950,7 +954,7 @@ local function SetupUnitFrames(layout)
         E.db["unitframe"]["units"]["raid40"]["width"] = 75
 
         -- UNIT FRAME MOVERS -----------------------------------------------------------
-        E.db["movers"]["AltPowerBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,199"
+        E.db["movers"]["AltPowerBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,127"
         E.db["movers"]["ArenaHeaderMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-288,-215"
         E.db["movers"]["BossHeaderMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-289,-227"
         E.db["movers"]["ElvUF_AssistMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,4,-370"
@@ -987,7 +991,7 @@ local function SetupUnitFrames(layout)
 
         E.db["unitframe"]["units"]["raid40"]["width"] = 100
 
-        E.db["movers"]["AltPowerBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,199"
+        E.db["movers"]["AltPowerBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,127"
         E.db["movers"]["ArenaHeaderMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-288,-215"
         E.db["movers"]["BossHeaderMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-289,-227"
         E.db["movers"]["ElvUF_AssistMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,4,-370"
