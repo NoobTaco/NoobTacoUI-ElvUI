@@ -1,13 +1,13 @@
 # Changelog
 
-## [1.1.5]
+## [1.1.5] - 2020-11-05
 
 ### Changed
 
--   XP bar show during combat enabled.
--   Moved side action bars down and closer to main cluster.
+-   XP bar show during combat.
 -   Extended XP bar
--   Alt Powerbar moved.
+-   Moved side action bars down and closer to main cluster.
+-   Alt Power bar moved.
 
 ## [1.1.4] - 2020-10-28
 
