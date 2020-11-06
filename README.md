@@ -11,7 +11,7 @@ NoobTacoUI is an ElvUI Profile that uses the [Nord Theme](https://www.nordtheme.
 -   Elite unitframe overlay. The default elite dragon fits perfectly with NoobTacoUI's target unitframe. _With option to toggle overlay_.
 -   DPS/Tank and Healer profile setup.
 
-## Download from your favorite addon hosts
+### Download from your favorite addon hosts
 
 -   [GitHub](https://github.com/NoobTaco/NoobTacoUI/releases/latest)
 -   [Curse/Overwolf](https://www.curseforge.com/wow/addons/noobtacoui)
@@ -20,7 +20,7 @@ NoobTacoUI is an ElvUI Profile that uses the [Nord Theme](https://www.nordtheme.
 
 Feel free to use any of the supported download managers.
 
-# Installation
+### Installation
 
 1. **[REQUIRED]** Download and install [ElvUI](https://www.tukui.org/download.php?ui=elvui)
 2. Download and install NoobTacoUI
