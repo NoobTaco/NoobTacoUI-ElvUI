@@ -4,6 +4,7 @@ enable-nolib-creation: no
 ignore:
   - README.md
   - CHANGELOG.md
+  - README.bbc
 
 manual-changelog:
   filename: RECENT_CHANGES.md
