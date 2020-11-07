@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.7] - 2020-11-07
+
+### Fixed
+
+-   Added font data for the changes made to ElvUI 12.1 (Thanks Az ;-) )
+
 ## [1.1.6] - 2020-11-05
 
 ### Changed
