@@ -844,6 +844,7 @@ local function SetupLayout()
     E.db["unitframe"]["units"]["target"]["name"]["xOffset"] = 5
     E.db["unitframe"]["units"]["target"]["name"]["text_format"] = ""
     E.db["unitframe"]["units"]["target"]["name"]["yOffset"] = -85
+    E.db["unitframe"]["smartRaidFilter"] = false
 
     -- Basic Raid Frame setup
     E.db["unitframe"]["units"]["raid"]["debuffs"]["anchorPoint"] = "CENTER"
