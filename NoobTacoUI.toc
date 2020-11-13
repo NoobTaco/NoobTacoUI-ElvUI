@@ -6,7 +6,7 @@
 #@end-non-retail@
 ## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
 ## Author: NoobTaco
-## Version: 1.1.7
+## Version: 1.1.8
 ## Notes: Contains layouts from NoobTacoUI
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled

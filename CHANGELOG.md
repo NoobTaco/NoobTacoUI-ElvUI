@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.8] - 2020-11-13
+
+### Fixed
+
+-   Player untiframe power text fixed and staying in the right place!
+-   Added some flags to hopefully fix 40 man raid size. If you happen to see 2 raid frames up in DPS/Tank mode try /rl to fix this issue. Seems the ElvUI Smart Group function can get hung if combat starts before switching.
+-   Adjusted the text on the installer to read "DPS or Tank" to be more clear.
+
 ## [1.1.7] - 2020-11-07
 
 ### Fixed

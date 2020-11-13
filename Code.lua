@@ -686,11 +686,11 @@ local function SetupLayout()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["size"] = 20
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["attachTextTo"] = "Power"
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["xOffset"] = 5
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["xOffset"] = -5
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["text_format"] = "[power:current]"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["yOffset"] = 0
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["font"] = "Montserrat-Medium"
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["justifyH"] = "LEFT"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["justifyH"] = "RIGHT"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["size"] = 13
@@ -844,6 +844,8 @@ local function SetupLayout()
     E.db["unitframe"]["units"]["target"]["name"]["xOffset"] = 5
     E.db["unitframe"]["units"]["target"]["name"]["text_format"] = ""
     E.db["unitframe"]["units"]["target"]["name"]["yOffset"] = -85
+    E.db["unitframe"]["smartRaidFilter"] = true
+    E.db["unitframe"]["units"]["raid40"]["enable"] = true
 
     -- Basic Raid Frame setup
     E.db["unitframe"]["units"]["raid"]["debuffs"]["anchorPoint"] = "CENTER"
@@ -868,7 +870,7 @@ local function SetupLayout()
     E.db["unitframe"]["units"]["raid"]["numGroups"] = 6
     E.db["unitframe"]["units"]["raid"]["name"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["raid"]["name"]["position"] = "CENTER"
-    E.db["unitframe"]["units"]["raid"]["name"]["text_format"] = "[name:medium] [difficultycolor][smartlevel]"
+    E.db["unitframe"]["units"]["raid"]["name"]["text_format"] = "[name:veryshort] [difficultycolor][smartlevel]"
     E.db["unitframe"]["units"]["raid"]["name"]["xOffset"] = 0
     E.db["unitframe"]["units"]["raid"]["name"]["yOffset"] = 10
     E.db["unitframe"]["units"]["raid"]["height"] = 50
@@ -1100,7 +1102,7 @@ local InstallerData = {
                     SetupUnitFrames("v1")
                 end
             )
-            PluginInstallFrame.Option1:SetText("Tank/DPS")
+            PluginInstallFrame.Option1:SetText("DPS or Tank")
             PluginInstallFrame.Option2:Show()
             PluginInstallFrame.Option2:SetScript(
                 "OnClick",
