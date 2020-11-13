@@ -686,11 +686,11 @@ local function SetupLayout()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["size"] = 20
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["attachTextTo"] = "Power"
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["xOffset"] = 5
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["xOffset"] = -5
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["text_format"] = "[power:current]"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["yOffset"] = 0
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["font"] = "Montserrat-Medium"
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["justifyH"] = "LEFT"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["justifyH"] = "RIGHT"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["size"] = 13
