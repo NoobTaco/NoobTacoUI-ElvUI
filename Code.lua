@@ -652,7 +652,7 @@ local function SetupLayout()
 
     E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,15"
     
-    -- Right Fade bar    
+    -- Right Fade bar
     if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
         E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,4"
     end
