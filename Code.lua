@@ -416,7 +416,16 @@ local function SetupLayout()
     E.db["chat"]["tabSelectorColor"]["g"] = 0.75294117647059
     E.db["chat"]["tabSelectorColor"]["b"] = 0.8156862745098
     E.db["chat"]["tabSelector"] = "BOX1"
-    E.db["chat"]["panelWidth"] = 570
+
+    -- Chat Panel Width
+    E.db["chat"]["panelWidth"] = 500
+
+    -- If retail
+    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+        E.db["chat"]["panelWidth"] = 525
+    end
+
+    
 
 
     -- DATABARS ------------------------------------------
@@ -430,7 +439,14 @@ local function SetupLayout()
     E.db["databars"]["experience"]["hideInCombat"] = false
     E.db["databars"]["experience"]["questCompletedOnly"] = true
     E.db["databars"]["experience"]["showBubbles"] = true
-    E.db["databars"]["experience"]["width"] = 755
+    
+    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+        E.db["databars"]["experience"]["width"] = 713
+    end
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+        E.db["databars"]["experience"]["width"] = 740
+    end
+
     E.db["databars"]["experience"]["height"] = 10
     E.db["databars"]["reputation"]["font"] = "Montserrat-Regular"
     E.db["databars"]["reputation"]["height"] = 13
@@ -514,37 +530,89 @@ local function SetupLayout()
     E.db["actionbar"]["bar1"]["enabled"] = true
     E.db["actionbar"]["bar1"]["buttons"] = 12
     E.db["actionbar"]["bar1"]["buttonsPerRow"] = 12
-    E.db["actionbar"]["bar1"]["buttonsize"] = 32
-    E.db["actionbar"]["bar1"]["buttonspacing"] = 2
+    E.db["actionbar"]["bar1"]["buttonSize"] = 32
     E.db["actionbar"]["bar1"]["backdrop"] = true
+    E.db["actionbar"]["bar1"]["hotkeyFont"] = "Montserrat-Bold"
+    E.db["actionbar"]["bar1"]["countFont"] = "Montserrat-Bold"
+    E.db["actionbar"]["bar1"]["hotkeyFontOutline"] = "NONE"
+    E.db["actionbar"]["bar1"]["hotkeyFontSize"] = 12
 
-    -- Top Actionbar
-    E.db["actionbar"]["bar3"]["enabled"] = true
-    E.db["actionbar"]["bar3"]["buttons"] = 12
-    E.db["actionbar"]["bar3"]["buttonsPerRow"] = 12
-    E.db["actionbar"]["bar3"]["buttonsize"] = 32
-    E.db["actionbar"]["bar3"]["buttonspacing"] = 2
-    E.db["actionbar"]["bar3"]["backdrop"] = true
-    E.db["actionbar"]["bar3"]["visibility"] = "[vehicleui] hide; [overridebar] hide; [petbattle] hide; show"
+    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+        E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
+    end
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+        E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
+    end
+
+    -- Top Actionbar - BottomLeft
+    E.db["actionbar"]["bar6"]["enabled"] = true
+    E.db["actionbar"]["bar6"]["buttons"] = 12
+    E.db["actionbar"]["bar6"]["buttonsPerRow"] = 12
+    E.db["actionbar"]["bar6"]["buttonSize"] = 32
+    E.db["actionbar"]["bar6"]["backdrop"] = true
+    E.db["actionbar"]["bar6"]["hotkeyFont"] = "Montserrat-Bold"
+    E.db["actionbar"]["bar6"]["countFont"] = "Montserrat-Bold"
+    E.db["actionbar"]["bar6"]["hotkeyFontOutline"] = "NONE"
+    E.db["actionbar"]["bar6"]["hotkeyFontSize"] = 12
+
+    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+        E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
+    end
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+        E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
+    end
 
     -- Left Actionbar Cluster
+    E.db["actionbar"]["bar3"]["enabled"] = true
+    E.db["actionbar"]["bar3"]["buttons"] = 12
+    E.db["actionbar"]["bar3"]["buttonsPerRow"] = 6
+    E.db["actionbar"]["bar3"]["buttonSize"] = 25
+    E.db["actionbar"]["bar3"]["inheritGlobalFade"] = true
+    E.db["actionbar"]["bar3"]["backdrop"] = true
+    E.db["actionbar"]["bar3"]["visibility"] = "[vehicleui] hide; [overridebar] hide; [petbattle] hide; show"
+    E.db["actionbar"]["bar3"]["hotkeyFont"] = "Montserrat-Bold"
+    E.db["actionbar"]["bar3"]["countFont"] = "Montserrat-Bold"
+    E.db["actionbar"]["bar3"]["hotkeyFontOutline"] = "NONE"
+    E.db["actionbar"]["bar3"]["hotkeyFontSize"] = 10
+
+    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+        E.db["actionbar"]["bar3"]["buttonSpacing"] = 2
+    end
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+        E.db["actionbar"]["bar3"]["buttonSpacing"] = 1
+    end
+    
+
+    -- Right Actionbar Cluster - BottomRight
     E.db["actionbar"]["bar5"]["enabled"] = true
     E.db["actionbar"]["bar5"]["buttons"] = 12
     E.db["actionbar"]["bar5"]["buttonsPerRow"] = 6
-    E.db["actionbar"]["bar5"]["buttonsize"] = 25
+    E.db["actionbar"]["bar5"]["buttonSize"] = 25
     E.db["actionbar"]["bar5"]["inheritGlobalFade"] = true
     E.db["actionbar"]["bar5"]["backdrop"] = true
     E.db["actionbar"]["bar5"]["visibility"] = "[vehicleui] hide; [overridebar] hide; [petbattle] hide; show"
+    E.db["actionbar"]["bar5"]["hotkeyFont"] = "Montserrat-Bold"
+    E.db["actionbar"]["bar5"]["countFont"] = "Montserrat-Bold"
+    E.db["actionbar"]["bar5"]["hotkeyFontOutline"] = "NONE"
+    E.db["actionbar"]["bar5"]["hotkeyFontSize"] = 10
+    
+    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+        E.db["actionbar"]["bar5"]["buttonSpacing"] = 2
+    end
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+        E.db["actionbar"]["bar5"]["buttonSpacing"] = 1
+    end
 
-    -- Right Actionbar Cluster
     E.db["actionbar"]["bar2"]["enabled"] = true
-    E.db["actionbar"]["bar2"]["buttons"] = 12
-    E.db["actionbar"]["bar2"]["buttonsPerRow"] = 6
-    E.db["actionbar"]["bar2"]["buttonsize"] = 25
+    E.db["actionbar"]["bar2"]["mouseover"] = true
     E.db["actionbar"]["bar2"]["inheritGlobalFade"] = true
     E.db["actionbar"]["bar2"]["backdrop"] = true
-    E.db["actionbar"]["bar2"]["visibility"] = "[vehicleui] hide; [overridebar] hide; [petbattle] hide; show"
-
+    E.db["actionbar"]["bar2"]["buttonsPerRow"] = 2
+    E.db["actionbar"]["bar2"]["buttonSize"] = 25
+    E.db["actionbar"]["bar2"]["hotkeyFont"] = "Montserrat-Bold"
+    E.db["actionbar"]["bar2"]["countFont"] = "Montserrat-Bold"
+    E.db["actionbar"]["bar2"]["hotkeyFontOutline"] = "NONE"
+    E.db["actionbar"]["bar2"]["hotkeyFontSize"] = 12
     -- Disabled Actionbars
     E.db["actionbar"]["bar4"]["enabled"] = false
     E.db["actionbar"]["bar6"]["visibility"] = "[overridebar] hide; [petbattle] hide; show"
@@ -572,17 +640,38 @@ local function SetupLayout()
     E.db["actionbar"]["usableColor"]["b"] = 0.95686274509804
     E.db["actionbar"]["transparent"] = true
     E.db["actionbar"]["addNewSpells"] = true
-    E.db["actionbar"]["stanceBar"]["buttonsize"] = 30
+    E.db["actionbar"]["stanceBar"]["buttonSize"] = 30
     E.db["actionbar"]["stanceBar"]["buttonsPerRow"] = 1
+    E.db["actionbar"]["stanceBar"]["hotkeyFont"] = "Montserrat-Bold"
+    E.db["actionbar"]["stanceBar"]["hotkeyFontOutline"] = "NONE"
     E.db["actionbar"]["barPet"]["buttonsPerRow"] = 10
-    E.db["actionbar"]["barPet"]["buttonsize"] = 25
+    E.db["actionbar"]["barPet"]["buttonSize"] = 25
     E.db["actionbar"]["barPet"]["point"] = "TOPLEFT"
 
     -- MOVERS -----------------------------------------------------------------
+
     E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,15"
-    E.db["movers"]["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,294,15"
-    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,53"
-    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,-294,15"
+    
+    -- Right Fade bar    
+    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+        E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,4"
+    end
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+        E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-505,4"
+    end
+
+    -- Right and Left Clusters
+    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+        E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-278,15"
+        E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,278,15"
+    end
+
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+        E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-290,15"
+        E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,290,15"
+    end
+
+    E.db["movers"]["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,49"
     E.db["movers"]["ElvAB_8"] = "BOTTOM,ElvUIParent,BOTTOM,27,300"
     E.db["movers"]["ElvAB_9"] = "BOTTOM,ElvUIParent,BOTTOM,27,269"
 
@@ -977,7 +1066,13 @@ local function SetupUnitFrames(layout)
         E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
         E.db["movers"]["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,192"
         E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
-        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,576,4"
+        
+        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
+        -- Retail Install
+        if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+            E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+        end
+    
 
     -- Heal Layout
     elseif layout == 'v2' then
@@ -1014,7 +1109,12 @@ local function SetupUnitFrames(layout)
         E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
         E.db["movers"]["ElvUF_TargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,285"
         E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
-        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,576,4"
+        
+        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
+        -- Retail Install
+        if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+            E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+        end
 
     end
     -- Update ElvUI --------------------------------------

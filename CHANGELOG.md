@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.9] - 2021-03-25
+
+### Fixed
+
+-   Fixed the scaling issue between retail and classic.
+-   Fixed missing fonts on actionbars
+-   Corrected the order of bars. Top bar is the same as bottom left in wow UI
+
+### Changed
+
+-   A couple of tweaks to the bottom layout.
+-   Added a new mouse over bar left of the right chat frame.
+
 ## [1.1.8] - 2020-11-13
 
 ### Fixed
