@@ -425,9 +425,6 @@ local function SetupLayout()
         E.db["chat"]["panelWidth"] = 525
     end
 
-    
-
-
     -- DATABARS ------------------------------------------
     E.db["databars"]["threat"]["enable"] = false
     E.db["databars"]["threat"]["font"] = "Montserrat-Bold"
@@ -439,7 +436,7 @@ local function SetupLayout()
     E.db["databars"]["experience"]["hideInCombat"] = false
     E.db["databars"]["experience"]["questCompletedOnly"] = true
     E.db["databars"]["experience"]["showBubbles"] = true
-    
+
     if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
         E.db["databars"]["experience"]["width"] = 713
     end
@@ -581,7 +578,6 @@ local function SetupLayout()
     if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
         E.db["actionbar"]["bar3"]["buttonSpacing"] = 1
     end
-    
 
     -- Right Actionbar Cluster - BottomRight
     E.db["actionbar"]["bar5"]["enabled"] = true
@@ -595,7 +591,7 @@ local function SetupLayout()
     E.db["actionbar"]["bar5"]["countFont"] = "Montserrat-Bold"
     E.db["actionbar"]["bar5"]["hotkeyFontOutline"] = "NONE"
     E.db["actionbar"]["bar5"]["hotkeyFontSize"] = 10
-    
+
     if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
         E.db["actionbar"]["bar5"]["buttonSpacing"] = 2
     end
@@ -651,7 +647,7 @@ local function SetupLayout()
     -- MOVERS -----------------------------------------------------------------
 
     E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,15"
-    
+
     -- Right Fade bar
     if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
         E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,4"
@@ -1066,13 +1062,11 @@ local function SetupUnitFrames(layout)
         E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
         E.db["movers"]["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,192"
         E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
-        
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
         -- Retail Install
         if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
             E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
         end
-    
 
     -- Heal Layout
     elseif layout == 'v2' then
@@ -1109,7 +1103,7 @@ local function SetupUnitFrames(layout)
         E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
         E.db["movers"]["ElvUF_TargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,285"
         E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
-        
+
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
         -- Retail Install
         if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
