@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.11]
+
+### Fixed
+
+-   Changed chat font to bold instead of semi-bold
+-   Changed Aura bars to be on.
+
+### Added
+
+-   [Classic] Enabled Energy Mana Regen Tick for player unitframe.
+-   [Classic] Added pet happiness icon. Will not load for retail.
+
 ## [1.1.10] - 2021-03-25
 
 ### Fixed

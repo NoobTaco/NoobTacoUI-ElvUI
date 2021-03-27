@@ -409,7 +409,7 @@ local function SetupLayout()
     E.db["chat"]["panelColor"]["g"] = 0.15294117647059
     E.db["chat"]["panelColor"]["b"] = 0.18823529411765
     E.db["chat"]["tabFontSize"] = 14
-    E.db["chat"]["font"] = "Montserrat-SemiBold"
+    E.db["chat"]["font"] = "Montserrat-Bold"
     E.db["chat"]["panelHeight"] = 200
     E.db["chat"]["editBoxPosition"] = "ABOVE_CHAT"
     E.db["chat"]["tabSelectorColor"]["r"] = 0.53333333333333
@@ -741,7 +741,7 @@ local function SetupLayout()
     E.db["unitframe"]["units"]["player"]["CombatIcon"]["xOffset"] = -70
     E.db["unitframe"]["units"]["player"]["CombatIcon"]["size"] = 60
     E.db["unitframe"]["units"]["player"]["CombatIcon"]["yOffset"] = 19
-    E.db["unitframe"]["units"]["player"]["aurabar"]["enable"] = false
+    E.db["unitframe"]["units"]["player"]["aurabar"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["RestIcon"]["texture"] = "RESTING"
     E.db["unitframe"]["units"]["player"]["RestIcon"]["xOffset"] = 4
     E.db["unitframe"]["units"]["player"]["RestIcon"]["size"] = 49
@@ -751,6 +751,7 @@ local function SetupLayout()
     E.db["unitframe"]["units"]["player"]["power"]["height"] = 20
     E.db["unitframe"]["units"]["player"]["power"]["text_format"] = ""
     E.db["unitframe"]["units"]["player"]["power"]["xOffset"] = -208
+    E.db["unitframe"]["units"]["player"]["power"]["EnergyManaRegen"] = true
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["xOffset"] = 5
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["text_format"] =
@@ -792,21 +793,34 @@ local function SetupLayout()
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["scale"] = 1.5
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["xOffset"] = -75
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["yOffset"] = 27
-    E.db["unitframe"]["units"]["pet"]["portrait"]["overlay"] = true
-    E.db["unitframe"]["units"]["pet"]["castbar"]["width"] = 200
-    E.db["unitframe"]["units"]["pet"]["castbar"]["height"] = 30
     E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["attachTextTo"] = "Frame"
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["xOffset"] = 131
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["enable"] = true
     E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["text_format"] = ""
     E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["yOffset"] = 0
     E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["font"] = "2002"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["fontOutline"] = "THICKOUTLINE"
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["enable"] = true
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["xOffset"] = 131
     E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["size"] = 24
     E.db["unitframe"]["units"]["pet"]["width"] = 200
-    E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[name:medium]"
+    E.db["unitframe"]["units"]["pet"]["infoPanel"]["height"] = 14
+    E.db["unitframe"]["units"]["pet"]["castbar"]["height"] = 30
+    E.db["unitframe"]["units"]["pet"]["castbar"]["iconSize"] = 32
+    E.db["unitframe"]["units"]["pet"]["castbar"]["width"] = 200
+    E.db["unitframe"]["units"]["pet"]["disableTargetGlow"] = false
     E.db["unitframe"]["units"]["pet"]["height"] = 30
+    E.db["unitframe"]["units"]["pet"]["buffs"]["enable"] = true
+    E.db["unitframe"]["units"]["pet"]["buffs"]["yOffset"] = -22
+    E.db["unitframe"]["units"]["pet"]["name"]["xOffset"] = 2
+    E.db["unitframe"]["units"]["pet"]["name"]["position"] = "LEFT"
+
+    -- PET - Use happiness icon for classic only
+    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+        E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[name:medium] - [level]"
+    end
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+        E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
+    end
 
     E.db["unitframe"]["units"]["party"]["horizontalSpacing"] = 2
     E.db["unitframe"]["units"]["party"]["debuffs"]["numrows"] = 2
