@@ -373,12 +373,12 @@ local function SetupLayout()
     E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["r"] = 0.85882352941176
     E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["g"] = 1
     E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["b"] = 0.73725490196078
-    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["r"] = 1
-    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["g"] = 0.78823529411765
-    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["b"] = 0.96078431372549
-    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["r"] = 0.52941176470588
-    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["g"] = 1
-    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["b"] = 0.34509803921569 
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["r"] = 0.47843137254902
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["g"] = 0.90196078431373
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["b"] = 0.30980392156863
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["r"] = 1
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["g"] = 0.78823529411765
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["b"] = 0.96078431372549
 
     -- BAGS --------------------------------------------------------------
     E.db["bags"]["countFontSize"] = 14
