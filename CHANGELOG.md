@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.12]
+
+### Added
+
+-   Combo Class points added to target nameplate.
+
 ## [1.1.11]
 
 ### Fixed

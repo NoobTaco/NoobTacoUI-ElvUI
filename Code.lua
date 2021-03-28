@@ -356,6 +356,10 @@ local function SetupLayout()
     E.db["nameplates"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
     E.db["nameplates"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
     E.db["nameplates"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
+    E.db["nameplates"]["units"]["TARGET"]["classpower"]["enable"] = true
+    E.db["nameplates"]["units"]["TARGET"]["classpower"]["height"] = 10
+    E.db["nameplates"]["units"]["TARGET"]["classpower"]["spacing"] = 1
+    E.db["nameplates"]["units"]["TARGET"]["classpower"]["yOffset"] = -18
 
     -- BAGS --------------------------------------------------------------
     E.db["bags"]["countFontSize"] = 14
