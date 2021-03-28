@@ -361,6 +361,25 @@ local function SetupLayout()
     E.db["nameplates"]["units"]["TARGET"]["classpower"]["spacing"] = 1
     E.db["nameplates"]["units"]["TARGET"]["classpower"]["yOffset"] = -18
 
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["r"] = 1
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["g"] = 0.50980392156863
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["b"] = 0.55686274509804
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][2]["r"] = 1
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][2]["g"] = 0.65098039215686
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][2]["b"] = 0.53725490196078
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][3]["r"] = 1
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][3]["g"] = 0.85882352941176
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][3]["b"] = 0.5921568627451
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["r"] = 0.85882352941176
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["g"] = 1
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["b"] = 0.73725490196078
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["r"] = 1
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["g"] = 0.78823529411765
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["b"] = 0.96078431372549
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["r"] = 0.52941176470588
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["g"] = 1
+    E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["b"] = 0.34509803921569 
+
     -- BAGS --------------------------------------------------------------
     E.db["bags"]["countFontSize"] = 14
     E.db["bags"]["itemLevelFont"] = "Montserrat-Bold"
