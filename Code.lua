@@ -8,6 +8,17 @@ local GetCVarBool = GetCVarBool
 local ReloadUI = ReloadUI
 local StopMusic = StopMusic
 
+-- Check Version of WoW Client
+local function IsClassic()
+    return BackdropTemplateMixin == nil and WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
+end
+local function IsTBC()
+    return BackdropTemplateMixin and WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
+end
+local function IsRetail()
+    return WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
+end
+
 -- Change this line and use a unique name for your plugin.
 local MyPluginName = "|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r"
 
@@ -130,7 +141,7 @@ local function SetupLayout()
     E.private["general"]["glossTex"] = "ElvUI Norm"
 
     -- Exlude from Classic Installs
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    if IsRetail() then
         E.db["databars"]["honor"]["enable"] = false
         E.db["databars"]["colors"]["quest"]["a"] = 0.99000000022352
         E.db["databars"]["colors"]["quest"]["r"] = 0.27450980392157
@@ -444,7 +455,7 @@ local function SetupLayout()
     E.db["chat"]["panelWidth"] = 500
 
     -- If retail
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    if IsRetail() then
         E.db["chat"]["panelWidth"] = 525
     end
 
@@ -460,10 +471,10 @@ local function SetupLayout()
     E.db["databars"]["experience"]["questCompletedOnly"] = true
     E.db["databars"]["experience"]["showBubbles"] = true
 
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    if IsRetail() then
         E.db["databars"]["experience"]["width"] = 713
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+    if IsClassic() then
         E.db["databars"]["experience"]["width"] = 740
     end
 
@@ -557,10 +568,10 @@ local function SetupLayout()
     E.db["actionbar"]["bar1"]["hotkeyFontOutline"] = "NONE"
     E.db["actionbar"]["bar1"]["hotkeyFontSize"] = 12
 
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    if IsRetail() then
         E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+    if IsClassic() then
         E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
     end
 
@@ -575,10 +586,10 @@ local function SetupLayout()
     E.db["actionbar"]["bar6"]["hotkeyFontOutline"] = "NONE"
     E.db["actionbar"]["bar6"]["hotkeyFontSize"] = 12
 
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    if IsRetail() then
         E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+    if IsClassic() then
         E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
     end
 
@@ -595,10 +606,10 @@ local function SetupLayout()
     E.db["actionbar"]["bar3"]["hotkeyFontOutline"] = "NONE"
     E.db["actionbar"]["bar3"]["hotkeyFontSize"] = 10
 
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    if IsRetail() then
         E.db["actionbar"]["bar3"]["buttonSpacing"] = 2
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+    if IsClassic() then
         E.db["actionbar"]["bar3"]["buttonSpacing"] = 1
     end
 
@@ -615,14 +626,15 @@ local function SetupLayout()
     E.db["actionbar"]["bar5"]["hotkeyFontOutline"] = "NONE"
     E.db["actionbar"]["bar5"]["hotkeyFontSize"] = 10
 
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    if IsRetail() then
         E.db["actionbar"]["bar5"]["buttonSpacing"] = 2
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+    if IsClassic() then
         E.db["actionbar"]["bar5"]["buttonSpacing"] = 1
     end
 
     E.db["actionbar"]["bar2"]["enabled"] = true
+    E.db["actionbar"]["bar2"]["buttons"] = 12
     E.db["actionbar"]["bar2"]["mouseover"] = true
     E.db["actionbar"]["bar2"]["inheritGlobalFade"] = true
     E.db["actionbar"]["bar2"]["backdrop"] = true
@@ -672,20 +684,20 @@ local function SetupLayout()
     E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,15"
 
     -- Right Fade bar
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    if IsRetail() then
         E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,4"
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+    if IsClassic() then
         E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-505,4"
     end
 
     -- Right and Left Clusters
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    if IsRetail() then
         E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-278,15"
         E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,278,15"
     end
 
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+    if IsClassic() then
         E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-290,15"
         E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,290,15"
     end
@@ -838,10 +850,13 @@ local function SetupLayout()
     E.db["unitframe"]["units"]["pet"]["name"]["position"] = "LEFT"
 
     -- PET - Use happiness icon for classic only
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    if IsRetail() then
         E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[name:medium] - [level]"
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+    if IsClassic() then
+        E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
+    end
+    if IsTBC() then
         E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
     end
 
@@ -1101,7 +1116,7 @@ local function SetupUnitFrames(layout)
         E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
         -- Retail Install
-        if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+        if IsRetail() then
             E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
         end
 
@@ -1143,7 +1158,7 @@ local function SetupUnitFrames(layout)
 
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
         -- Retail Install
-        if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+        if IsRetail() then
             E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
         end
 

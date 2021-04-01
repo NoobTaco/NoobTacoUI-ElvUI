@@ -1,6 +1,14 @@
 # Changelog
 
-## [1.1.12]
+## [1.2.0]
+
+### Added
+
+-   TBC Classic support
+
+### Fixed
+
+-   Bar 2 now has 12 buttons
 
 ### Added
 
