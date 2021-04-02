@@ -8,16 +8,19 @@ local GetCVarBool = GetCVarBool
 local ReloadUI = ReloadUI
 local StopMusic = StopMusic
 
--- Check Version of WoW Client
-local function IsClassic()
-    return BackdropTemplateMixin == nil and WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
-end
-local function IsTBC()
-    return BackdropTemplateMixin and WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
-end
-local function IsRetail()
-    return WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
-end
+-- Get WoW Client version 1-Classic, 2-TBCc, 9-Retail
+local wowver=floor((floor(select(4, GetBuildInfo()))/10000))
+
+-- -- Check Version of WoW Client
+-- local function IsClassic()
+--     return BackdropTemplateMixin == nil and WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
+-- end
+-- local function IsTBC()
+--     return BackdropTemplateMixin and WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
+-- end
+-- local function IsRetail()
+--     return WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
+-- end
 
 -- Change this line and use a unique name for your plugin.
 local MyPluginName = "|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r"
@@ -141,7 +144,8 @@ local function SetupLayout()
     E.private["general"]["glossTex"] = "ElvUI Norm"
 
     -- Exlude from Classic Installs
-    if IsRetail() then
+    -- if wowver == 9 then -- Retail
+    if wowver == 9 then -- Retail
         E.db["databars"]["honor"]["enable"] = false
         E.db["databars"]["colors"]["quest"]["a"] = 0.99000000022352
         E.db["databars"]["colors"]["quest"]["r"] = 0.27450980392157
@@ -455,7 +459,7 @@ local function SetupLayout()
     E.db["chat"]["panelWidth"] = 500
 
     -- If retail
-    if IsRetail() then
+    if wowver == 9 then -- Retail
         E.db["chat"]["panelWidth"] = 525
     end
 
@@ -471,10 +475,10 @@ local function SetupLayout()
     E.db["databars"]["experience"]["questCompletedOnly"] = true
     E.db["databars"]["experience"]["showBubbles"] = true
 
-    if IsRetail() then
+    if wowver == 9 then -- Retail
         E.db["databars"]["experience"]["width"] = 713
     end
-    if IsClassic() then
+    if wowver == 1 then -- Classic
         E.db["databars"]["experience"]["width"] = 740
     end
 
@@ -568,10 +572,10 @@ local function SetupLayout()
     E.db["actionbar"]["bar1"]["hotkeyFontOutline"] = "NONE"
     E.db["actionbar"]["bar1"]["hotkeyFontSize"] = 12
 
-    if IsRetail() then
+    if wowver == 9 then -- Retail
         E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
     end
-    if IsClassic() then
+    if wowver == 1 then -- Classic
         E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
     end
 
@@ -586,10 +590,10 @@ local function SetupLayout()
     E.db["actionbar"]["bar6"]["hotkeyFontOutline"] = "NONE"
     E.db["actionbar"]["bar6"]["hotkeyFontSize"] = 12
 
-    if IsRetail() then
+    if wowver == 9 then -- Retail
         E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
     end
-    if IsClassic() then
+    if wowver == 1 then -- Classic
         E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
     end
 
@@ -606,10 +610,10 @@ local function SetupLayout()
     E.db["actionbar"]["bar3"]["hotkeyFontOutline"] = "NONE"
     E.db["actionbar"]["bar3"]["hotkeyFontSize"] = 10
 
-    if IsRetail() then
+    if wowver == 9 then -- Retail
         E.db["actionbar"]["bar3"]["buttonSpacing"] = 2
     end
-    if IsClassic() then
+    if wowver == 1 then -- Classic
         E.db["actionbar"]["bar3"]["buttonSpacing"] = 1
     end
 
@@ -626,10 +630,10 @@ local function SetupLayout()
     E.db["actionbar"]["bar5"]["hotkeyFontOutline"] = "NONE"
     E.db["actionbar"]["bar5"]["hotkeyFontSize"] = 10
 
-    if IsRetail() then
+    if wowver == 9 then -- Retail
         E.db["actionbar"]["bar5"]["buttonSpacing"] = 2
     end
-    if IsClassic() then
+    if wowver == 1 then -- Classic
         E.db["actionbar"]["bar5"]["buttonSpacing"] = 1
     end
 
@@ -684,20 +688,20 @@ local function SetupLayout()
     E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,15"
 
     -- Right Fade bar
-    if IsRetail() then
+    if wowver == 9 then -- Retail
         E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,4"
     end
-    if IsClassic() then
+    if wowver == 1 then -- Classic
         E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-505,4"
     end
 
     -- Right and Left Clusters
-    if IsRetail() then
+    if wowver == 9 then -- Retail
         E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-278,15"
         E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,278,15"
     end
 
-    if IsClassic() then
+    if wowver == 1 then -- Classic
         E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-290,15"
         E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,290,15"
     end
@@ -850,13 +854,13 @@ local function SetupLayout()
     E.db["unitframe"]["units"]["pet"]["name"]["position"] = "LEFT"
 
     -- PET - Use happiness icon for classic only
-    if IsRetail() then
+    if wowver == 9 then -- Retail
         E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[name:medium] - [level]"
     end
-    if IsClassic() then
+    if wowver == 1 then -- Classic
         E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
     end
-    if IsTBC() then
+    if wowver == 2 then -- TBCc
         E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
     end
 
@@ -1116,7 +1120,7 @@ local function SetupUnitFrames(layout)
         E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
         -- Retail Install
-        if IsRetail() then
+        if wowver == 9 then -- Retail
             E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
         end
 
@@ -1158,7 +1162,7 @@ local function SetupUnitFrames(layout)
 
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
         -- Retail Install
-        if IsRetail() then
+        if wowver == 9 then -- Retail
             E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
         end
 
