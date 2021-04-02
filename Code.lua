@@ -11,17 +11,6 @@ local StopMusic = StopMusic
 -- Get WoW Client version 1-Classic, 2-TBCc, 9-Retail
 local wowver=floor((floor(select(4, GetBuildInfo()))/10000))
 
--- -- Check Version of WoW Client
--- local function IsClassic()
---     return BackdropTemplateMixin == nil and WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
--- end
--- local function IsTBC()
---     return BackdropTemplateMixin and WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
--- end
--- local function IsRetail()
---     return WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
--- end
-
 -- Change this line and use a unique name for your plugin.
 local MyPluginName = "|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r"
 
@@ -33,7 +22,6 @@ local EP = LibStub("LibElvUIPlugin-1.0")
 
 -- Create a new ElvUI module so ElvUI can handle initialization when ready
 local mod = E:NewModule(MyPluginName, "AceHook-3.0", "AceEvent-3.0", "AceTimer-3.0")
-
 
 -- Runs for the step questioning the user if they want a new ElvUI profile
 local function NewProfile(new)
@@ -92,7 +80,6 @@ local function SetupLayout()
         E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"] = {}
     end
 
-
     -- -- Pet Unit Frame
     if not E.db.unitframe.units.pet.customTexts then
         E.db.unitframe.units.pet.customTexts = {}
@@ -143,7 +130,6 @@ local function SetupLayout()
     E.private["general"]["normTex"] = "ElvUI Norm"
     E.private["general"]["glossTex"] = "ElvUI Norm"
 
-    -- Exlude from Classic Installs
     -- if wowver == 9 then -- Retail
     if wowver == 9 then -- Retail
         E.db["databars"]["honor"]["enable"] = false
@@ -156,7 +142,6 @@ local function SetupLayout()
         E.db["databars"]["azerite"]["enable"] = false
         E.db["databars"]["azerite"]["width"] = 12
     end
-
 
     -- DATATEXT ------------------------------------------------------------------
     E.db["datatexts"]["font"] = "Montserrat-Bold"
