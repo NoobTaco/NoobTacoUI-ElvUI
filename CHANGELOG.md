@@ -9,6 +9,7 @@
 ### Fixed
 
 -   Bar 2 now has 12 buttons
+-   New logic for finding which client we are on.
 
 ### Added
 
