@@ -45,4 +45,17 @@ function NoobTacoUI:SetupGeneral()
   E.db["general"]["valuecolor"]["b"] = 0.8156862745098
   E.db["general"]["interruptAnnounce"] = "RAID"
   E.db["general"]["bottomPanel"] = false
+
+  -- Player totembar
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    E.db["general"]["totems"]["size"] = 25
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    -- E.db["general"]["totems"]["size"] = 25
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["general"]["totems"]["growthDirection"] = "HORIZONTAL"
+    E.db["general"]["totems"]["size"] = 30
+    E.db["general"]["totems"]["sortDirection"] = "DESCENDING"
+  end
 end

@@ -427,12 +427,15 @@ function NoobTacoUI:SetupUnitFrames(layout,wowver)
 
       if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-210,153"
       end
       if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,506,4"
+        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-210,153"
       end
       if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-210,153"
       end
 
   -- Heal Layout
@@ -473,12 +476,15 @@ function NoobTacoUI:SetupUnitFrames(layout,wowver)
 
       if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
       end
       if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,506,4"
+        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
       end
       if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
       end
 
   end
