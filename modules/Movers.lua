@@ -33,7 +33,7 @@ function NoobTacoUI:SetupMovers()
   E.db["movers"]["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,49"
   E.db["movers"]["ElvAB_8"] = "BOTTOM,ElvUIParent,BOTTOM,27,300"
   E.db["movers"]["ElvAB_9"] = "BOTTOM,ElvUIParent,BOTTOM,27,269"
-  
+
   -- GENERAL MOVERS
   E.db["movers"]["BuffsMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-224,-4"
   E.db["movers"]["GhostFrameMover"] = "TOP,ElvUIParent,TOP,0,-169"
