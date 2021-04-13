@@ -1,6 +1,6 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
-function NoobTacoUI:SetupNamePlates()
+function NoobTacoUI:SetupNamePlates(wowver)
 -- NAMEPLATES -------------------------------------------------------------
   E.db["v11NamePlateReset"] = true
   E.db["nameplates"]["threat"]["indicator"] = true
@@ -75,10 +75,20 @@ function NoobTacoUI:SetupNamePlates()
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["fontSize"] = 12
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["font"] = "Montserrat-Bold"
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["yOffset"] = 0
-  E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["size"] = 30
-  E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["font"] = "Montserrat-Bold"
-  E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["position"] = "CENTER"
-  E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["yOffset"] = 35
+
+  if wowver == 9 then -- Retail
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["size"] = 30
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["font"] = "Montserrat-Bold"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["position"] = "CENTER"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["yOffset"] = 35
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["font"] = "Roboto-Black"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["position"] = "LEFT"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["xOffset"] = 5
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textPosition"] = "TOP"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["size"] = 40
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["yOffset"] = 1
+  end
+ 
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["font"] = "Montserrat-SemiBold"
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["height"] = 12
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["iconOffsetX"] = 5
@@ -164,12 +174,6 @@ function NoobTacoUI:SetupNamePlates()
   E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["enable"] = true
   E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["height"] = 5
   E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["yOffset"] = -11
-  E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["font"] = "Roboto-Black"
-  E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["position"] = "LEFT"
-  E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["xOffset"] = 5
-  E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textPosition"] = "TOP"
-  E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["size"] = 40
-  E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["yOffset"] = 1
   E.db["nameplates"]["units"]["ENEMY_NPC"]["raidTargetIndicator"]["size"] = 30
   E.db["nameplates"]["units"]["ENEMY_NPC"]["eliteIcon"]["enable"] = true
   E.db["nameplates"]["units"]["ENEMY_NPC"]["eliteIcon"]["xOffset"] = 6

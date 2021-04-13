@@ -171,13 +171,11 @@ function NoobTacoUI:SetupLayout(wowver)
   E.db["unitframe"]["units"]["party"]["debuffs"]["yOffset"] = 10
   E.db["unitframe"]["units"]["party"]["rdebuffs"]["font"] = "Montserrat-Bold"
   E.db["unitframe"]["units"]["party"]["raidRoleIcons"]["yOffset"] = -2
-  -- E.db["unitframe"]["units"]["party"]["growthDirection"] = "RIGHT_DOWN"
   E.db["unitframe"]["units"]["party"]["resurrectIcon"]["size"] = 40
   E.db["unitframe"]["units"]["party"]["buffIndicator"]["enable"] = true
   E.db["unitframe"]["units"]["party"]["buffIndicator"]["size"] = 15
   E.db["unitframe"]["units"]["party"]["orientation"] = "MIDDLE"
-  E.db["unitframe"]["units"]["party"]["roleIcon"]["damager"] = false
-  E.db["unitframe"]["units"]["party"]["roleIcon"]["combatHide"] = true
+  
   E.db["unitframe"]["units"]["party"]["readycheckIcon"]["yOffset"] = 0
   E.db["unitframe"]["units"]["party"]["readycheckIcon"]["size"] = 30
   E.db["unitframe"]["units"]["party"]["readycheckIcon"]["position"] = "TOPRIGHT"
@@ -196,9 +194,6 @@ function NoobTacoUI:SetupLayout(wowver)
   E.db["unitframe"]["units"]["raid40"]["rdebuffs"]["enable"] = true
   E.db["unitframe"]["units"]["raid40"]["rdebuffs"]["font"] = "Montserrat-Bold"
   E.db["unitframe"]["units"]["raid40"]["growthDirection"] = "RIGHT_UP"
-  E.db["unitframe"]["units"]["raid40"]["roleIcon"]["enable"] = true
-  E.db["unitframe"]["units"]["raid40"]["roleIcon"]["combatHide"] = true
-  E.db["unitframe"]["units"]["raid40"]["roleIcon"]["damager"] = false
   E.db["unitframe"]["units"]["raid40"]["width"] = 100
   E.db["unitframe"]["units"]["raid40"]["height"] = 32
   E.db["unitframe"]["units"]["raid40"]["buffIndicator"]["enable"] = true
@@ -299,9 +294,6 @@ function NoobTacoUI:SetupLayout(wowver)
   E.db["unitframe"]["units"]["raid"]["rdebuffs"]["yOffset"] = 5
   E.db["unitframe"]["units"]["raid"]["growthDirection"] = "RIGHT_UP"
   E.db["unitframe"]["units"]["raid"]["resurrectIcon"]["size"] = 40
-  E.db["unitframe"]["units"]["raid"]["roleIcon"]["xOffset"] = 0
-  E.db["unitframe"]["units"]["raid"]["roleIcon"]["attachTo"] = "InfoPanel"
-  E.db["unitframe"]["units"]["raid"]["roleIcon"]["size"] = 12
   E.db["unitframe"]["units"]["raid"]["width"] = 100
   E.db["unitframe"]["units"]["raid"]["infoPanel"]["enable"] = false
   E.db["unitframe"]["units"]["raid"]["numGroups"] = 6
@@ -313,8 +305,6 @@ function NoobTacoUI:SetupLayout(wowver)
   E.db["unitframe"]["units"]["raid"]["height"] = 50
   E.db["unitframe"]["units"]["raid"]["verticalSpacing"] = -1
   E.db["unitframe"]["units"]["raid"]["visibility"] = "[@raid6,noexists] hide;show"
-  E.db["unitframe"]["units"]["raid"]["roleIcon"]["combatHide"] = true
-  E.db["unitframe"]["units"]["raid"]["roleIcon"]["damager"] = false
   E.db["unitframe"]["units"]["raid"]["health"]["xOffset"] = 0
   E.db["unitframe"]["units"]["raid"]["health"]["yOffset"] = -10
   E.db["unitframe"]["units"]["raid"]["health"]["text_format"] = "[health:current-percent]"
@@ -367,6 +357,20 @@ function NoobTacoUI:SetupLayout(wowver)
   E.db["unitframe"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
   E.db["unitframe"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
   E.db["unitframe"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
+
+  --   Role icon
+  if wowver == 9 then -- Retail
+    E.db["unitframe"]["units"]["party"]["roleIcon"]["damager"] = false
+    E.db["unitframe"]["units"]["party"]["roleIcon"]["combatHide"] = true
+    E.db["unitframe"]["units"]["raid40"]["roleIcon"]["enable"] = true
+    E.db["unitframe"]["units"]["raid40"]["roleIcon"]["combatHide"] = true
+    E.db["unitframe"]["units"]["raid40"]["roleIcon"]["damager"] = false
+    E.db["unitframe"]["units"]["raid"]["roleIcon"]["xOffset"] = 0
+    E.db["unitframe"]["units"]["raid"]["roleIcon"]["attachTo"] = "InfoPanel"
+    E.db["unitframe"]["units"]["raid"]["roleIcon"]["size"] = 12
+    E.db["unitframe"]["units"]["raid"]["roleIcon"]["combatHide"] = true
+    E.db["unitframe"]["units"]["raid"]["roleIcon"]["damager"] = false
+  end
 end
 
 function NoobTacoUI:SetupUnitFrames(layout,wowver)
