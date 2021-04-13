@@ -5,15 +5,18 @@
 ### Added
 
 -   TBC Classic support
+-   Combo Class points added to target nameplate.
 
 ### Fixed
 
 -   Bar 2 now has 12 buttons
 -   New logic for finding which client we are on.
 
-### Added
+### Changed
 
--   Combo Class points added to target nameplate.
+-   Target casting bar is not on the target frame
+-   Player XP bar is now above bars.
+-   Player XP bar will hide once at max level
 
 ## [1.1.11]
 
