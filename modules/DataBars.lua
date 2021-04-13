@@ -36,19 +36,21 @@ function NoobTacoUI:SetupDatabars()
 
   -- Player experience
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-      E.db["databars"]["experience"]["width"] = 730
+      E.db["databars"]["experience"]["width"] = 410
+      E.db["databars"]["experience"]["height"] = 12
       E.db["databars"]["experience"]["hideAtMaxLevel"] = true
   end
   if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-    E.db["databars"]["experience"]["width"] = 720
+    E.db["databars"]["experience"]["width"] = 397
+    E.db["databars"]["experience"]["height"] = 12
     E.db["databars"]["experience"]["hideAtMaxLevel"] = true
   end
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["databars"]["experience"]["width"] = 713
+    E.db["databars"]["experience"]["height"] = 12
     E.db["databars"]["experience"]["hideAtMaxLevel"] = true
   end
 
-  E.db["databars"]["experience"]["height"] = 10
   E.db["databars"]["reputation"]["font"] = "Montserrat-Regular"
   E.db["databars"]["reputation"]["height"] = 13
   E.db["databars"]["reputation"]["hideInCombat"] = true

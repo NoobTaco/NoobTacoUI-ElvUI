@@ -70,6 +70,7 @@ function NoobTacoUI:SetupActionBars()
   -- Right Actionbar Cluster - BottomRight
   E.db["actionbar"]["bar5"]["enabled"] = true
   E.db["actionbar"]["bar5"]["buttons"] = 12
+  E.db["actionbar"]["bar2"]["mouseover"] = false
   E.db["actionbar"]["bar5"]["buttonsPerRow"] = 6
   E.db["actionbar"]["bar5"]["buttonSize"] = 25
   E.db["actionbar"]["bar5"]["inheritGlobalFade"] = true

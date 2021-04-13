@@ -120,7 +120,9 @@ function NoobTacoUI:SetupLayout()
   -- Player castbar
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
     E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
-    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 417
+    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 410
+    E.db["unitframe"]["units"]["player"]["castbar"]["strataAndLevel"]["frameStrata"] = "HIGH"
+    E.db["unitframe"]["units"]["player"]["castbar"]["strataAndLevel"]["useCustomStrata"] = true
   end
   if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
     E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
@@ -426,7 +428,7 @@ function NoobTacoUI:SetupUnitFrames(layout,wowver)
       E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
 
       if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
         E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-210,153"
       end
       if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
@@ -475,7 +477,7 @@ function NoobTacoUI:SetupUnitFrames(layout,wowver)
       E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
 
       if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
         E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
       end
       if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc

@@ -3,7 +3,19 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 function NoobTacoUI:SetupMovers()
   -- MOVERS -----------------------------------------------------------------
 
-  E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,15"
+  -- Center Cluster of Actionbars.
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,4"
+    E.db["movers"]["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,40"
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,4"
+    E.db["movers"]["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,39"
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,4"
+    E.db["movers"]["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,39"
+  end
 
   -- Right Fade bar
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
@@ -18,19 +30,18 @@ function NoobTacoUI:SetupMovers()
 
   -- Right and Left Clusters
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-      E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-286,15"
-      E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,286,15"
+      E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-286,4"
+      E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,286,4"
   end
   if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-280,15"
-    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,280,15"
+    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-280,4"
+    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,280,4"
   end
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-278,15"
     E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,278,15"
   end
 
-  E.db["movers"]["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,49"
   E.db["movers"]["ElvAB_8"] = "BOTTOM,ElvUIParent,BOTTOM,27,300"
   E.db["movers"]["ElvAB_9"] = "BOTTOM,ElvUIParent,BOTTOM,27,269"
 
@@ -60,7 +71,6 @@ function NoobTacoUI:SetupMovers()
   E.db["movers"]["MirrorTimer3Mover"] = "TOP,ElvUIParent,TOP,0,-101"
   E.db["movers"]["MicrobarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,229"
   E.db["movers"]["OzCooldownsMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,425"
-  E.db["movers"]["ExperienceBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,2"
   E.db["movers"]["MirrorTimer2Mover"] = "TOP,ElvUIParent,TOP,0,-83"
   E.db["movers"]["BelowMinimapContainerMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-113,-555"
   E.db["movers"]["iFilger_ItemCooldownsMover"] = "BOTTOM,ElvUIParent,BOTTOM,-121,456"
@@ -71,13 +81,16 @@ function NoobTacoUI:SetupMovers()
 
   -- Player castbar
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-    E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,90"
+    E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,77"
+    E.db["movers"]["ExperienceBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,77"
   end
   if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-    E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,85"
+    E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,76"
+    E.db["movers"]["ExperienceBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,75"
   end
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,90"
+    E.db["movers"]["ExperienceBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,75"
   end
 
   E.db["movers"]["BigButtonsSeedBarMover"] = "TOP,ElvUIParent,TOP,0,-300"
