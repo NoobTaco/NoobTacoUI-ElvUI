@@ -1,27 +1,33 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
-function NoobTacoUI:SetupMovers(wowver)
+function NoobTacoUI:SetupMovers()
   -- MOVERS -----------------------------------------------------------------
   
   E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,15"
   
   -- Right Fade bar
-  if wowver == 9 then -- Retail
-      E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,4"
-  end
-  if wowver == 1 then -- Classic
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
       E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-505,4"
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-506,4"
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,4"
   end
   
   -- Right and Left Clusters
-  if wowver == 9 then -- Retail
-      E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-278,15"
-      E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,278,15"
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+      E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-286,15"
+      E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,286,15"
   end
-  
-  if wowver == 1 then -- Classic
-      E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-290,15"
-      E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,290,15"
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-280,15"
+    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,280,15"
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-278,15"
+    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,278,15"
   end
   
   E.db["movers"]["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,49"
@@ -62,7 +68,18 @@ function NoobTacoUI:SetupMovers(wowver)
   E.db["movers"]["AlertFrameMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-530,-242"
   E.db["movers"]["TotemBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,608,111"
   E.db["movers"]["BigButtonsFarmBar"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-638,-307"
-  E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,90"
+
+  -- Player castbar
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+      E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,90"
+    end
+    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+      E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,85"
+    end
+    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+      E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,90"
+    end
+
   E.db["movers"]["BigButtonsSeedBarMover"] = "TOP,ElvUIParent,TOP,0,-300"
   E.db["movers"]["ElvUIBankMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,230"
   E.db["movers"]["LevelUpBossBannerMover"] = "TOP,ElvUIParent,TOP,0,-181"

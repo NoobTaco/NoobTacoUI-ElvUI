@@ -1,6 +1,6 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
-function NoobTacoUI:SetupCooldowns(wowver)
+function NoobTacoUI:SetupCooldowns()
   -- COOLDOWN --------------------------------------------------------------------
   E.db["cooldown"]["secondsColor"]["r"] = 0.92156862745098
   E.db["cooldown"]["secondsColor"]["g"] = 0.79607843137255

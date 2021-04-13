@@ -1,6 +1,6 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
-function NoobTacoUI:SetupGeneral(wowver)
+function NoobTacoUI:SetupGeneral()
 
   --	PrivateDB
   E.private["skins"]["parchmentRemoverEnable"] = true
@@ -9,7 +9,7 @@ function NoobTacoUI:SetupGeneral(wowver)
   E.private["general"]["normTex"] = "ElvUI Norm"
   E.private["general"]["glossTex"] = "ElvUI Norm"
 
-  if wowver == 9 then -- Retail
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["general"]["totems"]["size"] = 30
     E.db["general"]["itemLevel"]["itemLevelFont"] = "Montserrat-Regular"
     E.db["general"]["altPowerBar"]["statusBarColor"]["b"] = 0.67450980392157

@@ -8,9 +8,6 @@ local GetCVarBool = GetCVarBool
 local ReloadUI = ReloadUI
 local StopMusic = StopMusic
 
--- Get WoW Client version 1-Classic, 2-TBCc, 9-Retail
-local wowver=floor((floor(select(4, GetBuildInfo()))/10000))
-
 -- Change this line and use a unique name for your plugin.
 local MyPluginName = "|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r"
 
@@ -75,18 +72,18 @@ end
 -- Setup the Layout
 local function SetupLayout()
 
-  NoobTacoUI:SetupNamePlates(wowver);
-  NoobTacoUI:SetupLayout(wowver);
-  NoobTacoUI:SetupDatabars(wowver);
-  NoobTacoUI:SetupBags(wowver);
-  NoobTacoUI:SetupChat(wowver);
-  NoobTacoUI:SetupGeneral(wowver);
-  NoobTacoUI:SetupAuras(wowver);
-  NoobTacoUI:SetupCooldowns(wowver);
-  NoobTacoUI:SetupTooltips(wowver);
-  NoobTacoUI:SetupActionBars(wowver);
+  NoobTacoUI:SetupNamePlates();
+  NoobTacoUI:SetupLayout();
+  NoobTacoUI:SetupDatabars();
+  NoobTacoUI:SetupBags();
+  NoobTacoUI:SetupChat();
+  NoobTacoUI:SetupGeneral();
+  NoobTacoUI:SetupAuras();
+  NoobTacoUI:SetupCooldowns();
+  NoobTacoUI:SetupTooltips();
+  NoobTacoUI:SetupActionBars();
 
-  NoobTacoUI:SetupMovers(wowver);
+  NoobTacoUI:SetupMovers();
 
   E:UpdateAll(true)
 
@@ -169,7 +166,7 @@ local InstallerData = {
             PluginInstallFrame.Option1:SetScript(
                 "OnClick",
                 function()
-                    NoobTacoUI:SetupUnitFrames("v1",wowver)
+                    NoobTacoUI:SetupUnitFrames("v1")
                 end
             )
             PluginInstallFrame.Option1:SetText("DPS or Tank")
@@ -177,7 +174,7 @@ local InstallerData = {
             PluginInstallFrame.Option2:SetScript(
                 "OnClick",
                 function()
-                    NoobTacoUI:SetupUnitFrames("v2",wowver)
+                    NoobTacoUI:SetupUnitFrames("v2")
                 end
             )
             PluginInstallFrame.Option2:SetText("Healer")

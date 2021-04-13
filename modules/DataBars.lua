@@ -1,17 +1,16 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
-function NoobTacoUI:SetupDatabars(wowver)
-  -- if wowver == 9 then -- Retail
-    if wowver == 9 then -- Retail
-      E.db["databars"]["honor"]["enable"] = false
-      E.db["databars"]["colors"]["quest"]["a"] = 0.99000000022352
-      E.db["databars"]["colors"]["quest"]["r"] = 0.27450980392157
-      E.db["databars"]["colors"]["quest"]["g"] = 0.74509803921569
-      E.db["databars"]["colors"]["quest"]["b"] = 0.33725490196078
-      E.db["databars"]["azerite"]["orientation"] = "VERTICAL"
-      E.db["databars"]["azerite"]["height"] = 247
-      E.db["databars"]["azerite"]["enable"] = false
-      E.db["databars"]["azerite"]["width"] = 12
+function NoobTacoUI:SetupDatabars()
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["databars"]["honor"]["enable"] = false
+    E.db["databars"]["colors"]["quest"]["a"] = 0.99000000022352
+    E.db["databars"]["colors"]["quest"]["r"] = 0.27450980392157
+    E.db["databars"]["colors"]["quest"]["g"] = 0.74509803921569
+    E.db["databars"]["colors"]["quest"]["b"] = 0.33725490196078
+    E.db["databars"]["azerite"]["orientation"] = "VERTICAL"
+    E.db["databars"]["azerite"]["height"] = 247
+    E.db["databars"]["azerite"]["enable"] = false
+    E.db["databars"]["azerite"]["width"] = 12
   end
 
   -- DATATEXT ------------------------------------------------------------------
@@ -36,11 +35,15 @@ function NoobTacoUI:SetupDatabars(wowver)
   E.db["databars"]["experience"]["questCompletedOnly"] = true
   E.db["databars"]["experience"]["showBubbles"] = true
 
-  if wowver == 9 then -- Retail
-      E.db["databars"]["experience"]["width"] = 713
+  -- Player experience
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+      E.db["databars"]["experience"]["width"] = 730
   end
-  if wowver == 1 then -- Classic
-      E.db["databars"]["experience"]["width"] = 740
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["databars"]["experience"]["width"] = 720
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["databars"]["experience"]["width"] = 713
   end
 
   E.db["databars"]["experience"]["height"] = 10

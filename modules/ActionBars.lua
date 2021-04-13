@@ -1,6 +1,6 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
-function NoobTacoUI:SetupActionBars(wowver)
+function NoobTacoUI:SetupActionBars()
   -- Main Actionbar
   E.db["actionbar"]["bar1"]["enabled"] = true
   E.db["actionbar"]["bar1"]["buttons"] = 12
@@ -12,11 +12,14 @@ function NoobTacoUI:SetupActionBars(wowver)
   E.db["actionbar"]["bar1"]["hotkeyFontOutline"] = "NONE"
   E.db["actionbar"]["bar1"]["hotkeyFontSize"] = 12
 
-  if wowver == 9 then -- Retail
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
       E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
   end
-  if wowver == 1 then -- Classic
-      E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
   end
 
   -- Top Actionbar - BottomLeft
@@ -30,11 +33,15 @@ function NoobTacoUI:SetupActionBars(wowver)
   E.db["actionbar"]["bar6"]["hotkeyFontOutline"] = "NONE"
   E.db["actionbar"]["bar6"]["hotkeyFontSize"] = 12
 
-  if wowver == 9 then -- Retail
+ 
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
       E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
   end
-  if wowver == 1 then -- Classic
-      E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
   end
 
   -- Left Actionbar Cluster
@@ -50,11 +57,15 @@ function NoobTacoUI:SetupActionBars(wowver)
   E.db["actionbar"]["bar3"]["hotkeyFontOutline"] = "NONE"
   E.db["actionbar"]["bar3"]["hotkeyFontSize"] = 10
 
-  if wowver == 9 then -- Retail
-      E.db["actionbar"]["bar3"]["buttonSpacing"] = 2
-  end
-  if wowver == 1 then -- Classic
+
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
       E.db["actionbar"]["bar3"]["buttonSpacing"] = 1
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["actionbar"]["bar3"]["buttonSpacing"] = 2
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["actionbar"]["bar3"]["buttonSpacing"] = 2
   end
 
   -- Right Actionbar Cluster - BottomRight
@@ -70,11 +81,15 @@ function NoobTacoUI:SetupActionBars(wowver)
   E.db["actionbar"]["bar5"]["hotkeyFontOutline"] = "NONE"
   E.db["actionbar"]["bar5"]["hotkeyFontSize"] = 10
 
-  if wowver == 9 then -- Retail
-      E.db["actionbar"]["bar5"]["buttonSpacing"] = 2
-  end
-  if wowver == 1 then -- Classic
+
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
       E.db["actionbar"]["bar5"]["buttonSpacing"] = 1
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["actionbar"]["bar5"]["buttonSpacing"] = 2
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["actionbar"]["bar5"]["buttonSpacing"] = 2
   end
 
   E.db["actionbar"]["bar2"]["enabled"] = true
@@ -115,7 +130,7 @@ function NoobTacoUI:SetupActionBars(wowver)
   E.db["actionbar"]["usableColor"]["b"] = 0.95686274509804
   E.db["actionbar"]["transparent"] = true
   E.db["actionbar"]["addNewSpells"] = true
-  E.db["actionbar"]["stanceBar"]["buttonSize"] = 30
+  E.db["actionbar"]["stanceBar"]["buttonSize"] = 25
   E.db["actionbar"]["stanceBar"]["buttonsPerRow"] = 1
   E.db["actionbar"]["stanceBar"]["hotkeyFont"] = "Montserrat-Bold"
   E.db["actionbar"]["stanceBar"]["hotkeyFontOutline"] = "NONE"

@@ -1,6 +1,6 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
-function NoobTacoUI:SetupNamePlates(wowver)
+function NoobTacoUI:SetupNamePlates()
 -- NAMEPLATES -------------------------------------------------------------
   E.db["v11NamePlateReset"] = true
   E.db["nameplates"]["threat"]["indicator"] = true
@@ -26,7 +26,17 @@ function NoobTacoUI:SetupNamePlates(wowver)
   E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["format"] = "[health:current-percent-nostatus]"
   E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["fontSize"] = 10
   E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["yOffset"] = -14
-  E.db["nameplates"]["units"]["PLAYER"]["power"]["displayAltPower"] = true
+
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    E.db["nameplates"]["units"]["PLAYER"]["power"]["displayAltPower"] = false
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["nameplates"]["units"]["PLAYER"]["power"]["displayAltPower"] = false
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["nameplates"]["units"]["PLAYER"]["power"]["displayAltPower"] = true
+  end
+
   E.db["nameplates"]["units"]["PLAYER"]["power"]["height"] = 5
   E.db["nameplates"]["units"]["PLAYER"]["power"]["hideWhenEmpty"] = true
   E.db["nameplates"]["units"]["PLAYER"]["power"]["yOffset"] = -11
@@ -41,12 +51,23 @@ function NoobTacoUI:SetupNamePlates(wowver)
   E.db["nameplates"]["units"]["PLAYER"]["level"]["font"] = "Montserrat-Bold"
   E.db["nameplates"]["units"]["PLAYER"]["level"]["yOffset"] = 0
   E.db["nameplates"]["units"]["TARGET"]["glowStyle"] = "style7"
+  E.db["nameplates"]["units"]["TARGET"]["arrow"] = "Arrow11"
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["countFontOutline"] = "NONE"
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["priority"] =
       "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["countFont"] = "Montserrat-SemiBold"
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["size"] = 40
-  E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = true
+
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = false
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = false
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = true
+  end
+  
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["hideWhenEmpty"] = true
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["enable"] = true
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["height"] = 5
@@ -76,7 +97,7 @@ function NoobTacoUI:SetupNamePlates(wowver)
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["font"] = "Montserrat-Bold"
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["yOffset"] = 0
 
-  if wowver == 9 then -- Retail
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["size"] = 30
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["font"] = "Montserrat-Bold"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["position"] = "CENTER"
@@ -106,7 +127,17 @@ function NoobTacoUI:SetupNamePlates(wowver)
   E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["countFontOutline"] = "NONE"
   E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["countFont"] = "Montserrat-SemiBold"
   E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["title"]["format"] = "[guild]"
-  E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = true
+
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = false
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = false
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = true
+  end
+  
   E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["hideWhenEmpty"] = true
   E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["enable"] = true
   E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["height"] = 5
@@ -142,7 +173,17 @@ function NoobTacoUI:SetupNamePlates(wowver)
   E.db["nameplates"]["units"]["ENEMY_PLAYER"]["buffs"]["countFont"] = "Montserrat-SemiBold"
   E.db["nameplates"]["units"]["ENEMY_PLAYER"]["buffs"]["countFontOutline"] = "NONE"
   E.db["nameplates"]["units"]["ENEMY_PLAYER"]["title"]["format"] = "[guild]"
-  E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["displayAltPower"] = true
+
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["displayAltPower"] = false
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["displayAltPower"] = false
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["displayAltPower"] = true
+  end
+
   E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["hideWhenEmpty"] = true
   E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["enable"] = true
   E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["height"] = 5
@@ -169,7 +210,17 @@ function NoobTacoUI:SetupNamePlates(wowver)
       "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
   E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["size"] = 30
   E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["yOffset"] = 15
-  E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = true
+
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = false
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = false
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = true
+  end
+ 
   E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["hideWhenEmpty"] = true
   E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["enable"] = true
   E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["height"] = 5
