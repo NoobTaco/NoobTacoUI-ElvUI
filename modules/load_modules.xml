@@ -1,3 +1,14 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
-	<Include file="unitframes\load_SimpleRareElite.xml"/>
+	<Include file="SimpleRareElite\load_SimpleRareElite.xml"/>
+	<Script file="NamePlates.lua"/>
+	<Script file="UnitFrames.lua"/>
+	<Script file="DataBars.lua"/>
+	<Script file="Bags.lua"/>
+	<Script file="Chat.lua"/>
+	<Script file="General.lua"/>
+	<Script file="ActionBars.lua"/>
+	<Script file="Auras.lua"/>
+	<Script file="Cooldowns.lua"/>
+	<Script file="Tooltips.lua"/>
+	<Script file="Movers.lua"/>
 </Ui>
