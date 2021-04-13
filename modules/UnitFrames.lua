@@ -157,6 +157,7 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["pet"]["castbar"]["height"] = 30
   E.db["unitframe"]["units"]["pet"]["castbar"]["iconSize"] = 32
   E.db["unitframe"]["units"]["pet"]["castbar"]["width"] = 200
+  E.db["unitframe"]["units"]["pet"]["castbar"]["overlayOnFrame"] = "Power"
   E.db["unitframe"]["units"]["pet"]["disableTargetGlow"] = false
   E.db["unitframe"]["units"]["pet"]["height"] = 30
   E.db["unitframe"]["units"]["pet"]["buffs"]["enable"] = true
@@ -282,6 +283,7 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["target"]["fader"]["health"] = true
   E.db["unitframe"]["units"]["target"]["castbar"]["height"] = 30
   E.db["unitframe"]["units"]["target"]["castbar"]["width"] = 200
+  E.db["unitframe"]["units"]["target"]["castbar"]["overlayOnFrame"] = "Power"
   E.db["unitframe"]["units"]["target"]["height"] = 60
   E.db["unitframe"]["units"]["target"]["buffs"]["anchorPoint"] = "BOTTOMLEFT"
   E.db["unitframe"]["units"]["target"]["buffs"]["countFont"] = "Montserrat-Bold"
