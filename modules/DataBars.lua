@@ -46,7 +46,7 @@ function NoobTacoUI:SetupDatabars()
     E.db["databars"]["experience"]["hideAtMaxLevel"] = true
   end
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-    E.db["databars"]["experience"]["width"] = 713
+    E.db["databars"]["experience"]["width"] = 395
     E.db["databars"]["experience"]["height"] = 12
     E.db["databars"]["experience"]["hideAtMaxLevel"] = true
   end

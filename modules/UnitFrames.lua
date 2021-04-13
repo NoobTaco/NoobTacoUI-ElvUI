@@ -130,7 +130,7 @@ function NoobTacoUI:SetupLayout()
   end
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
-    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 417
+    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 395
   end
 
   E.db["unitframe"]["units"]["player"]["name"]["attachTextTo"] = "Frame"
