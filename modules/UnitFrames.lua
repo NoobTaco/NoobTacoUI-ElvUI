@@ -1,27 +1,27 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
-function NoobTacoUI:SetupLayout(wowver)
+function NoobTacoUI:SetupLayout()
   -- CUSTOM TEXTS
     -- Player Unit Frame
-    if not E.db.unitframe.units.player.customTexts then
-      E.db.unitframe.units.player.customTexts = {}
+  if not E.db.unitframe.units.player.customTexts then
+    E.db.unitframe.units.player.customTexts = {}
   end
   if E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"] == nil then
-      E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"] = {}
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"] = {}
   end
   if E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"] == nil then
-      E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"] = {}
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"] = {}
   end
   if E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"] == nil then
-      E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"] = {}
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"] = {}
   end
 
   -- -- Pet Unit Frame
   if not E.db.unitframe.units.pet.customTexts then
-      E.db.unitframe.units.pet.customTexts = {}
+    E.db.unitframe.units.pet.customTexts = {}
   end
   if E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"] == nil then
-      E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"] = {}
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"] = {}
   end
 
   -- -- Fix Movers ??
@@ -116,8 +116,22 @@ function NoobTacoUI:SetupLayout(wowver)
   E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["enable"] = true
   E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["size"] = 13
   E.db["unitframe"]["units"]["player"]["width"] = 200
-  E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
-  E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 417
+  
+  -- Player castbar
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
+    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 417
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
+    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 399
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
+    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 417
+  end
+  
+  
   E.db["unitframe"]["units"]["player"]["name"]["attachTextTo"] = "Frame"
   E.db["unitframe"]["units"]["player"]["name"]["xOffset"] = 5
   E.db["unitframe"]["units"]["player"]["name"]["position"] = "BOTTOM"
@@ -150,14 +164,15 @@ function NoobTacoUI:SetupLayout(wowver)
   E.db["unitframe"]["units"]["pet"]["name"]["position"] = "LEFT"
 
   -- PET - Use happiness icon for classic only
-  if wowver == 9 then -- Retail
-      E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[name:medium] - [level]"
-  end
-  if wowver == 1 then -- Classic
+  
+  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
       E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
   end
-  if wowver == 2 then -- TBCc
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
       E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
+  end
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[name:medium] - [level]"
   end
 
   E.db["unitframe"]["units"]["party"]["horizontalSpacing"] = 2
@@ -359,7 +374,7 @@ function NoobTacoUI:SetupLayout(wowver)
   E.db["unitframe"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
 
   --   Role icon
-  if wowver == 9 then -- Retail
+  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["unitframe"]["units"]["party"]["roleIcon"]["damager"] = false
     E.db["unitframe"]["units"]["party"]["roleIcon"]["combatHide"] = true
     E.db["unitframe"]["units"]["raid40"]["roleIcon"]["enable"] = true
@@ -411,11 +426,17 @@ function NoobTacoUI:SetupUnitFrames(layout,wowver)
       E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
       E.db["movers"]["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,192"
       E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
-      E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
-      -- Retail Install
-      if wowver == 9 then -- Retail
-          E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+      
+      if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
       end
+      if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,506,4"
+      end
+      if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+      end
+      
 
   -- Heal Layout
   elseif layout == 'v2' then
@@ -453,10 +474,14 @@ function NoobTacoUI:SetupUnitFrames(layout,wowver)
       E.db["movers"]["ElvUF_TargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,285"
       E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
 
-      E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
-      -- Retail Install
-      if wowver == 9 then -- Retail
-          E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+      if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+      end
+      if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,506,4"
+      end
+      if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
       end
 
   end

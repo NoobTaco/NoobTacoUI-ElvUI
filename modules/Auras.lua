@@ -1,6 +1,6 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
-function NoobTacoUI:SetupAuras(wowver)
+function NoobTacoUI:SetupAuras()
     -- AURAS -------------------------------------------------------------------
     E.db["auras"]["font"] = "Montserrat-Bold"
     E.db["auras"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235

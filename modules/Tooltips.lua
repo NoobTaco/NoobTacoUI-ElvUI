@@ -1,6 +1,6 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
-function NoobTacoUI:SetupTooltips(wowver)
+function NoobTacoUI:SetupTooltips()
   -- TOOLTIPS ---------------------------------------------------------------
   E.db["tooltip"]["textFontSize"] = 14
   E.db["tooltip"]["font"] = "Montserrat-Bold"
