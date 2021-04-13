@@ -116,7 +116,7 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["enable"] = true
   E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["size"] = 13
   E.db["unitframe"]["units"]["player"]["width"] = 200
-  
+
   -- Player castbar
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
     E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
@@ -130,8 +130,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
     E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 417
   end
-  
-  
+
   E.db["unitframe"]["units"]["player"]["name"]["attachTextTo"] = "Frame"
   E.db["unitframe"]["units"]["player"]["name"]["xOffset"] = 5
   E.db["unitframe"]["units"]["player"]["name"]["position"] = "BOTTOM"
@@ -164,7 +163,7 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["pet"]["name"]["position"] = "LEFT"
 
   -- PET - Use happiness icon for classic only
-  
+
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
       E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
   end
@@ -190,7 +189,7 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["party"]["buffIndicator"]["enable"] = true
   E.db["unitframe"]["units"]["party"]["buffIndicator"]["size"] = 15
   E.db["unitframe"]["units"]["party"]["orientation"] = "MIDDLE"
-  
+
   E.db["unitframe"]["units"]["party"]["readycheckIcon"]["yOffset"] = 0
   E.db["unitframe"]["units"]["party"]["readycheckIcon"]["size"] = 30
   E.db["unitframe"]["units"]["party"]["readycheckIcon"]["position"] = "TOPRIGHT"
@@ -335,7 +334,6 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["raid"]["buffIndicator"]["enable"] = true
   E.db["unitframe"]["units"]["raid"]["buffIndicator"]["size"] = 10
 
-
   E.db["unitframe"]["units"]["targettarget"]["portrait"]["overlay"] = true
   E.db["unitframe"]["units"]["targettarget"]["portrait"]["xOffset"] = 0.05
   E.db["unitframe"]["units"]["targettarget"]["portrait"]["camDistanceScale"] = 0.85
@@ -426,7 +424,7 @@ function NoobTacoUI:SetupUnitFrames(layout,wowver)
       E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
       E.db["movers"]["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,192"
       E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
-      
+
       if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
       end
@@ -436,7 +434,6 @@ function NoobTacoUI:SetupUnitFrames(layout,wowver)
       if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
         E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
       end
-      
 
   -- Heal Layout
   elseif layout == 'v2' then

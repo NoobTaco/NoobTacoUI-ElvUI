@@ -2,9 +2,9 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
 function NoobTacoUI:SetupMovers()
   -- MOVERS -----------------------------------------------------------------
-  
+
   E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,15"
-  
+
   -- Right Fade bar
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
       E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-505,4"
@@ -15,7 +15,7 @@ function NoobTacoUI:SetupMovers()
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,4"
   end
-  
+
   -- Right and Left Clusters
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
       E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-286,15"
@@ -29,7 +29,7 @@ function NoobTacoUI:SetupMovers()
     E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-278,15"
     E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,278,15"
   end
-  
+
   E.db["movers"]["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,49"
   E.db["movers"]["ElvAB_8"] = "BOTTOM,ElvUIParent,BOTTOM,27,300"
   E.db["movers"]["ElvAB_9"] = "BOTTOM,ElvUIParent,BOTTOM,27,269"

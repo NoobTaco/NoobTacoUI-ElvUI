@@ -33,7 +33,6 @@ function NoobTacoUI:SetupActionBars()
   E.db["actionbar"]["bar6"]["hotkeyFontOutline"] = "NONE"
   E.db["actionbar"]["bar6"]["hotkeyFontSize"] = 12
 
- 
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
       E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
   end

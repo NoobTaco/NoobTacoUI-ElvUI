@@ -67,7 +67,7 @@ function NoobTacoUI:SetupNamePlates()
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = true
   end
-  
+
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["hideWhenEmpty"] = true
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["enable"] = true
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["height"] = 5
@@ -109,7 +109,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["size"] = 40
     E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["yOffset"] = 1
   end
- 
+
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["font"] = "Montserrat-SemiBold"
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["height"] = 12
   E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["iconOffsetX"] = 5
@@ -137,7 +137,7 @@ function NoobTacoUI:SetupNamePlates()
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = true
   end
-  
+
   E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["hideWhenEmpty"] = true
   E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["enable"] = true
   E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["height"] = 5
@@ -220,7 +220,7 @@ function NoobTacoUI:SetupNamePlates()
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = true
   end
- 
+
   E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["hideWhenEmpty"] = true
   E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["enable"] = true
   E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["height"] = 5
