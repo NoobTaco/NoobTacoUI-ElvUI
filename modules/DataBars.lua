@@ -28,34 +28,24 @@ function NoobTacoUI:SetupDatabars()
   E.db["databars"]["threat"]["font"] = "Montserrat-Bold"
   E.db["databars"]["threat"]["height"] = 12
   E.db["databars"]["threat"]["width"] = 200
-  E.db["databars"]["experience"]["textFormat"] = "CURREM"
-  E.db["databars"]["experience"]["font"] = "Montserrat-Bold"
+  
+  E.db["databars"]["experience"]["textFormat"] = "NONE"
+  E.db["databars"]["experience"]["font"] = "Montserrat-Regular"
+  E.db["databars"]["experience"]["height"] = 222
+  E.db["databars"]["experience"]["hideAtMaxLevel"] = false
   E.db["databars"]["experience"]["hideInCombat"] = false
+  E.db["databars"]["experience"]["orientation"] = "VERTICAL"
   E.db["databars"]["experience"]["questCompletedOnly"] = true
-  E.db["databars"]["experience"]["showBubbles"] = true
-
-  -- Player experience
-  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-      E.db["databars"]["experience"]["width"] = 410
-      E.db["databars"]["experience"]["height"] = 12
-      E.db["databars"]["experience"]["hideAtMaxLevel"] = true
-  end
-  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-    E.db["databars"]["experience"]["width"] = 397
-    E.db["databars"]["experience"]["height"] = 12
-    E.db["databars"]["experience"]["hideAtMaxLevel"] = true
-  end
-  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-    E.db["databars"]["experience"]["width"] = 395
-    E.db["databars"]["experience"]["height"] = 12
-    E.db["databars"]["experience"]["hideAtMaxLevel"] = true
-  end
-
-  E.db["databars"]["reputation"]["font"] = "Montserrat-Regular"
-  E.db["databars"]["reputation"]["height"] = 13
-  E.db["databars"]["reputation"]["hideInCombat"] = true
+  E.db["databars"]["experience"]["showBubbles"] = false
+  E.db["databars"]["experience"]["width"] = 8
   E.db["databars"]["reputation"]["enable"] = true
-  E.db["databars"]["reputation"]["width"] = 200
+  E.db["databars"]["reputation"]["font"] = "Montserrat-Regular"
+  E.db["databars"]["reputation"]["height"] = 222
+  E.db["databars"]["reputation"]["hideInCombat"] = false
+  E.db["databars"]["reputation"]["orientation"] = "VERTICAL"
+  E.db["databars"]["reputation"]["showBubbles"] = false
+  E.db["databars"]["reputation"]["width"] = 8
+  
   E.db["databars"]["colors"]["experience"]["a"] = 1
   E.db["databars"]["colors"]["experience"]["r"] = 0.14901960784314
   E.db["databars"]["colors"]["experience"]["g"] = 0.49411764705882
