@@ -296,6 +296,9 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["target"]["name"]["yOffset"] = -85
   E.db["unitframe"]["smartRaidFilter"] = false
   E.db["unitframe"]["units"]["raid40"]["enable"] = true
+  E.db["unitframe"]["units"]["party"]["visibility"] = "[@raid6,exists][nogroup] hide;show"
+  E.db["unitframe"]["units"]["raid"]["visibility"] = "[@raid6,noexists][@raid26,exists] hide;show"
+  E.db["unitframe"]["units"]["raid40"]["visibility"] = "[@raid26,noexists] hide;show"
 
   -- Basic Raid Frame setup
   E.db["unitframe"]["units"]["raid"]["debuffs"]["anchorPoint"] = "CENTER"
@@ -322,7 +325,6 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["raid"]["name"]["yOffset"] = 10
   E.db["unitframe"]["units"]["raid"]["height"] = 50
   E.db["unitframe"]["units"]["raid"]["verticalSpacing"] = -1
-  E.db["unitframe"]["units"]["raid"]["visibility"] = "[@raid6,noexists] hide;show"
   E.db["unitframe"]["units"]["raid"]["health"]["xOffset"] = 0
   E.db["unitframe"]["units"]["raid"]["health"]["yOffset"] = -10
   E.db["unitframe"]["units"]["raid"]["health"]["text_format"] = "[health:current-percent]"
