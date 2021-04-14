@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.2]
+
+### Fixed
+
+-   25 and 40 man raid frames had a bug that caused double party frames. Issue should be resolved now.
+
 ## [1.2.1]
 
 ### Changed
