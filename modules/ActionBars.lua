@@ -9,18 +9,20 @@ function NoobTacoUI:SetupActionBars()
   E.db["actionbar"]["bar1"]["backdrop"] = true
   E.db["actionbar"]["bar1"]["hotkeyFont"] = "Montserrat-Bold"
   E.db["actionbar"]["bar1"]["countFont"] = "Montserrat-Bold"
+  E.db["actionbar"]["bar1"]["hotkeyFontSize"] = 9
+  E.db["actionbar"]["bar1"]["hotkeyTextXOffset"] = -2
   E.db["actionbar"]["bar1"]["hotkeyFontOutline"] = "NONE"
-  E.db["actionbar"]["bar1"]["hotkeyFontSize"] = 12
+  E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
 
-  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-      E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
-  end
-  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-    E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
-  end
-  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-    E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
-  end
+  -- if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+  --     E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
+  -- end
+  -- if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+  --   E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
+  -- end
+  -- if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+  --   E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
+  -- end
 
   -- Top Actionbar - BottomLeft
   E.db["actionbar"]["bar6"]["enabled"] = true
@@ -31,17 +33,19 @@ function NoobTacoUI:SetupActionBars()
   E.db["actionbar"]["bar6"]["hotkeyFont"] = "Montserrat-Bold"
   E.db["actionbar"]["bar6"]["countFont"] = "Montserrat-Bold"
   E.db["actionbar"]["bar6"]["hotkeyFontOutline"] = "NONE"
-  E.db["actionbar"]["bar6"]["hotkeyFontSize"] = 12
+  E.db["actionbar"]["bar6"]["hotkeyFontSize"] = 9
+  E.db["actionbar"]["bar6"]["hotkeyTextXOffset"] = -2
+  E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
 
-  if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-      E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
-  end
-  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-    E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
-  end
-  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-    E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
-  end
+  -- if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+  --     E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
+  -- end
+  -- if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+  --   E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
+  -- end
+  -- if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+  --   E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
+  -- end
 
   -- Left Actionbar Cluster
   E.db["actionbar"]["bar3"]["enabled"] = true
@@ -54,7 +58,8 @@ function NoobTacoUI:SetupActionBars()
   E.db["actionbar"]["bar3"]["hotkeyFont"] = "Montserrat-Bold"
   E.db["actionbar"]["bar3"]["countFont"] = "Montserrat-Bold"
   E.db["actionbar"]["bar3"]["hotkeyFontOutline"] = "NONE"
-  E.db["actionbar"]["bar3"]["hotkeyFontSize"] = 10
+  E.db["actionbar"]["bar3"]["hotkeyFontSize"] = 9
+  E.db["actionbar"]["bar3"]["hotkeyTextXOffset"] = -2
 
 
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
@@ -79,7 +84,8 @@ function NoobTacoUI:SetupActionBars()
   E.db["actionbar"]["bar5"]["hotkeyFont"] = "Montserrat-Bold"
   E.db["actionbar"]["bar5"]["countFont"] = "Montserrat-Bold"
   E.db["actionbar"]["bar5"]["hotkeyFontOutline"] = "NONE"
-  E.db["actionbar"]["bar5"]["hotkeyFontSize"] = 10
+  E.db["actionbar"]["bar5"]["hotkeyFontSize"] = 9
+  E.db["actionbar"]["bar5"]["hotkeyTextXOffset"] = -2
 
 
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
@@ -102,7 +108,8 @@ function NoobTacoUI:SetupActionBars()
   E.db["actionbar"]["bar2"]["hotkeyFont"] = "Montserrat-Bold"
   E.db["actionbar"]["bar2"]["countFont"] = "Montserrat-Bold"
   E.db["actionbar"]["bar2"]["hotkeyFontOutline"] = "NONE"
-  E.db["actionbar"]["bar2"]["hotkeyFontSize"] = 12
+  E.db["actionbar"]["bar2"]["hotkeyFontSize"] = 9
+  E.db["actionbar"]["bar2"]["hotkeyTextXOffset"] = -2
   -- Disabled Actionbars
   E.db["actionbar"]["bar4"]["enabled"] = false
   E.db["actionbar"]["bar6"]["visibility"] = "[overridebar] hide; [petbattle] hide; show"
@@ -134,7 +141,13 @@ function NoobTacoUI:SetupActionBars()
   E.db["actionbar"]["stanceBar"]["buttonsPerRow"] = 1
   E.db["actionbar"]["stanceBar"]["hotkeyFont"] = "Montserrat-Bold"
   E.db["actionbar"]["stanceBar"]["hotkeyFontOutline"] = "NONE"
+  E.db["actionbar"]["stanceBar"]["hotkeyFontSize"] = 9
+  E.db["actionbar"]["stanceBar"]["hotkeyTextXOffset"] = -2
   E.db["actionbar"]["barPet"]["buttonsPerRow"] = 10
   E.db["actionbar"]["barPet"]["buttonSize"] = 25
   E.db["actionbar"]["barPet"]["point"] = "TOPLEFT"
+  E.db["actionbar"]["barPet"]["hotkeyFont"] = "Montserrat-Bold"
+  E.db["actionbar"]["barPet"]["hotkeyFontOutline"] = "NONE"
+  E.db["actionbar"]["barPet"]["hotkeyFontSize"] = 9
+  E.db["actionbar"]["barPet"]["hotkeyTextXOffset"] = -2
 end

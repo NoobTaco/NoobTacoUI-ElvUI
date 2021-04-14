@@ -429,19 +429,6 @@ function NoobTacoUI:SetupUnitFrames(layout,wowver)
       E.db["movers"]["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,192"
       E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
 
-      if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
-        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-210,153"
-      end
-      if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,506,4"
-        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-210,153"
-      end
-      if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
-        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-210,153"
-      end
-
   -- Heal Layout
   elseif layout == 'v2' then
     E.db.unitframes = nil
@@ -537,19 +524,6 @@ function NoobTacoUI:SetupUnitFrames(layout,wowver)
     E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
     E.db["movers"]["ElvUF_TargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,285"
     E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
-
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-      E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
-      E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
-    end
-    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-      E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,506,4"
-      E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
-    end
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-      E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
-      E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
-    end
 
   end
   -- Update ElvUI --------------------------------------

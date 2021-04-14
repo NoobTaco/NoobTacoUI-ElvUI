@@ -24,7 +24,7 @@ jobs:
       - name: Package Classic
         uses: BigWigsMods/packager@master
         with:
-          args: -g classic
+          args: -g classic -w 25971
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
@@ -33,7 +33,7 @@ jobs:
       - name: Package Burning Crusade
         uses: BigWigsMods/packager@master
         with:
-          args: -g bc
+          args: -g bc -w 25970
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}

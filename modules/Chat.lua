@@ -20,9 +20,4 @@ function NoobTacoUI:SetupChat()
 
   -- Chat Panel Width
   E.db["chat"]["panelWidth"] = 500
-
-  -- If retail
-  if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-      E.db["chat"]["panelWidth"] = 525
-  end
 end
