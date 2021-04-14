@@ -7,33 +7,41 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
 
-    - name: Checkout repository
-      uses: actions/checkout@v1
+      - name: Run luacheck
+        uses: BigWigsMods/actions/luacheck@master
+        with:
+          args: -q --ignore 113 631 211 212 112 311
 
-    - name: Run luacheck
-      uses: BigWigsMods/actions/luacheck@master
-      with:
-        args: -q --ignore 113 631 211 212 112 311
+      - name: "Generate recent changes"
+        uses: kemayo/actions-recent-changelog@v1
+        with:
+          input: CHANGELOG.md
+          output: RECENT_CHANGES.md
 
-    - name: "Generate recent changes"
-      uses: kemayo/actions-recent-changelog@v1
-      with:
-        input: CHANGELOG.md
-        output: RECENT_CHANGES.md
+      - name: Package Classic
+        uses: BigWigsMods/packager@master
+        with:
+          args: -g classic
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
 
-    - name: Package Classic
-      uses: BigWigsMods/packager@master
-      with:
-        args: -g classic
-      env:
-        CF_API_KEY: ${{ secrets.CF_API_KEY }}
-        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-        WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+      - name: Package Burning Crusade
+        uses: BigWigsMods/packager@master
+        with:
+          args: -g bc
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
 
-    - name: Package Retail
-      uses: BigWigsMods/packager@master
-      env:
-        CF_API_KEY: ${{ secrets.CF_API_KEY }}
-        GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-        WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+      - name: Package Retail
+        uses: BigWigsMods/packager@master
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}

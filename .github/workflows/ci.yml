@@ -7,21 +7,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
 
-    - name: Checkout repository
-      uses: actions/checkout@v1
+      - name: Run luacheck
+        uses: BigWigsMods/actions/luacheck@master
+        with:
+          args: -q --ignore 113 631 211 212 112 311
 
-    - name: Run luacheck
-      uses: BigWigsMods/actions/luacheck@master
-      with:
-        args: -q --ignore 113 631 211 212 112 311
+      - name: Package Retail
+        uses: BigWigsMods/packager@master
+        with:
+          args: -d
 
-    - name: Package Retail
-      uses: BigWigsMods/packager@master
-      with:
-        args: -d
+      - name: Package Classic
+        uses: BigWigsMods/packager@master
+        with:
+          args: -d -g classic
 
-    - name: Package Classic
-      uses: BigWigsMods/packager@master
-      with:
-        args: -d -g classic
+        # package for burning crusade
+      - name: Package for Burning Crusade
+        uses: BigWigsMods/packager@master
+        with:
+          args: -d -g bc

@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.2.0]
+
+This is the initial release for NoobTacoUI for TBC Classic.
+Please report any issues to our github issue tracker.
+
+### Added
+
+-   TBC Classic support
+-   Combo Class points added to target nameplate.
+-   Totembar for TBC
+
+### Fixed/Updated
+
+-   Bar 2 now has 12 buttons
+-   New logic for finding which client we are on.
+-   Healing profile has had some work done.
+
+### Changed
+
+-   Target casting bar is not on the target frame
+-   Player XP bar is now above bars.
+-   Player XP bar will hide once at max level
+
 ## [1.1.11]
 
 ### Fixed
