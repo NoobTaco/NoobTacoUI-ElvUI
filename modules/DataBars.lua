@@ -28,7 +28,7 @@ function NoobTacoUI:SetupDatabars()
   E.db["databars"]["threat"]["font"] = "Montserrat-Bold"
   E.db["databars"]["threat"]["height"] = 12
   E.db["databars"]["threat"]["width"] = 200
-  
+
   E.db["databars"]["experience"]["textFormat"] = "NONE"
   E.db["databars"]["experience"]["font"] = "Montserrat-Regular"
   E.db["databars"]["experience"]["height"] = 222
@@ -45,7 +45,7 @@ function NoobTacoUI:SetupDatabars()
   E.db["databars"]["reputation"]["orientation"] = "VERTICAL"
   E.db["databars"]["reputation"]["showBubbles"] = false
   E.db["databars"]["reputation"]["width"] = 8
-  
+
   E.db["databars"]["colors"]["experience"]["a"] = 1
   E.db["databars"]["colors"]["experience"]["r"] = 0.14901960784314
   E.db["databars"]["colors"]["experience"]["g"] = 0.49411764705882
