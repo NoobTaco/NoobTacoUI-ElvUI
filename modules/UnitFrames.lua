@@ -77,9 +77,9 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["player"]["CombatIcon"]["size"] = 60
   E.db["unitframe"]["units"]["player"]["CombatIcon"]["yOffset"] = 19
   E.db["unitframe"]["units"]["player"]["aurabar"]["enable"] = true
-  E.db["unitframe"]["units"]["player"]["RestIcon"]["texture"] = "RESTING"
+  E.db["unitframe"]["units"]["player"]["RestIcon"]["size"] = 28
+  E.db["unitframe"]["units"]["player"]["RestIcon"]["texture"] = "Resting0"
   E.db["unitframe"]["units"]["player"]["RestIcon"]["xOffset"] = 4
-  E.db["unitframe"]["units"]["player"]["RestIcon"]["size"] = 49
   E.db["unitframe"]["units"]["player"]["RestIcon"]["yOffset"] = 2
   E.db["unitframe"]["units"]["player"]["classbar"]["autoHide"] = true
   E.db["unitframe"]["units"]["player"]["power"]["attachTextTo"] = "Power"

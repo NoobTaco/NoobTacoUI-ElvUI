@@ -6,11 +6,13 @@
 
 -   TBC Classic support
 -   Combo Class points added to target nameplate.
+-   Totembar for TBC
 
-### Fixed
+### Fixed/Updated
 
 -   Bar 2 now has 12 buttons
 -   New logic for finding which client we are on.
+-   Healing profile has had some work done.
 
 ### Changed
 
