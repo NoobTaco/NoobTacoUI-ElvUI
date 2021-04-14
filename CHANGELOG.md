@@ -6,6 +6,10 @@
 
 -   Moved XP and Rep bar to side of chat.
 
+### Fixed/Updated
+
+-   Hotkey font and placement
+
 ## [1.2.0]
 
 This is the initial release for NoobTacoUI for TBC Classic.
