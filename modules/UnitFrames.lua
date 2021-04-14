@@ -294,7 +294,7 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["target"]["name"]["xOffset"] = 5
   E.db["unitframe"]["units"]["target"]["name"]["text_format"] = ""
   E.db["unitframe"]["units"]["target"]["name"]["yOffset"] = -85
-  E.db["unitframe"]["smartRaidFilter"] = true
+  E.db["unitframe"]["smartRaidFilter"] = false
   E.db["unitframe"]["units"]["raid40"]["enable"] = true
 
   -- Basic Raid Frame setup
@@ -444,52 +444,112 @@ function NoobTacoUI:SetupUnitFrames(layout,wowver)
 
   -- Heal Layout
   elseif layout == 'v2' then
-      E.db.unitframes = nil
+    E.db.unitframes = nil
 
-      E.db["unitframe"]["units"]["party"]["growthDirection"] = "RIGHT_DOWN"
+    -- Party Frames
+    E.db["unitframe"]["units"]["party"]["buffIndicator"]["size"] = 15
+    E.db["unitframe"]["units"]["party"]["debuffs"]["anchorPoint"] = "CENTER"
+    E.db["unitframe"]["units"]["party"]["debuffs"]["attachTo"] = "HEALTH"
+    E.db["unitframe"]["units"]["party"]["debuffs"]["countFont"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["party"]["debuffs"]["numrows"] = 2
+    E.db["unitframe"]["units"]["party"]["debuffs"]["perrow"] = 3
+    E.db["unitframe"]["units"]["party"]["debuffs"]["sizeOverride"] = 25
+    E.db["unitframe"]["units"]["party"]["debuffs"]["xOffset"] = 24
+    E.db["unitframe"]["units"]["party"]["debuffs"]["yOffset"] = 10
+    E.db["unitframe"]["units"]["party"]["growthDirection"] = "RIGHT_DOWN"
+    E.db["unitframe"]["units"]["party"]["healPrediction"]["enable"] = true
+    E.db["unitframe"]["units"]["party"]["health"]["position"] = "CENTER"
+    E.db["unitframe"]["units"]["party"]["health"]["text_format"] = "[health:current-percent]"
+    E.db["unitframe"]["units"]["party"]["health"]["xOffset"] = 0
+    E.db["unitframe"]["units"]["party"]["health"]["yOffset"] = -10
+    E.db["unitframe"]["units"]["party"]["height"] = 60
+    E.db["unitframe"]["units"]["party"]["horizontalSpacing"] = 3
+    E.db["unitframe"]["units"]["party"]["name"]["text_format"] = "[name:medium] [difficultycolor][smartlevel]"
+    E.db["unitframe"]["units"]["party"]["name"]["yOffset"] = 4
+    E.db["unitframe"]["units"]["party"]["orientation"] = "MIDDLE"
+    E.db["unitframe"]["units"]["party"]["power"]["height"] = 10
+    E.db["unitframe"]["units"]["party"]["power"]["text_format"] = ""
+    E.db["unitframe"]["units"]["party"]["raidRoleIcons"]["yOffset"] = -2
+    E.db["unitframe"]["units"]["party"]["rdebuffs"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["party"]["readycheckIcon"]["position"] = "TOPRIGHT"
+    E.db["unitframe"]["units"]["party"]["readycheckIcon"]["size"] = 30
+    E.db["unitframe"]["units"]["party"]["readycheckIcon"]["yOffset"] = 0
+    E.db["unitframe"]["units"]["party"]["resurrectIcon"]["size"] = 40
+    E.db["unitframe"]["units"]["party"]["width"] = 90
 
-      E.db["unitframe"]["units"]["raid"]["buffIndicator"]["size"] = 10
-      E.db["unitframe"]["units"]["raid"]["debuffs"]["sizeOverride"] = 25
-      E.db["unitframe"]["units"]["raid"]["debuffs"]["xOffset"] = 24
-      E.db["unitframe"]["units"]["raid"]["debuffs"]["yOffset"] = 10
-      E.db["unitframe"]["units"]["raid"]["healPrediction"]["enable"] = true
-      E.db["unitframe"]["units"]["raid"]["health"]["text_format"] = "[health:current-percent]"
-      E.db["unitframe"]["units"]["raid"]["height"] = 52
-      E.db["unitframe"]["units"]["raid"]["name"]["yOffset"] = 10
-      E.db["unitframe"]["units"]["raid"]["rdebuffs"]["size"] = 30
-      E.db["unitframe"]["units"]["raid"]["verticalSpacing"] = 2
-      E.db["unitframe"]["units"]["raid"]["width"] = 100
+    -- Raid Frames 25
+    E.db["unitframe"]["units"]["raid"]["buffIndicator"]["size"] = 10
+    E.db["unitframe"]["units"]["raid"]["buffs"]["perrow"] = 8
+    E.db["unitframe"]["units"]["raid"]["debuffs"]["anchorPoint"] = "CENTER"
+    E.db["unitframe"]["units"]["raid"]["debuffs"]["attachTo"] = "HEALTH"
+    E.db["unitframe"]["units"]["raid"]["debuffs"]["countFont"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["raid"]["debuffs"]["enable"] = true
+    E.db["unitframe"]["units"]["raid"]["debuffs"]["numrows"] = 2
+    E.db["unitframe"]["units"]["raid"]["debuffs"]["sizeOverride"] = 25
+    E.db["unitframe"]["units"]["raid"]["debuffs"]["xOffset"] = 24
+    E.db["unitframe"]["units"]["raid"]["debuffs"]["yOffset"] = 10
+    E.db["unitframe"]["units"]["raid"]["growthDirection"] = "LEFT_DOWN"
+    E.db["unitframe"]["units"]["raid"]["healPrediction"]["enable"] = true
+    E.db["unitframe"]["units"]["raid"]["health"]["position"] = "CENTER"
+    E.db["unitframe"]["units"]["raid"]["health"]["text_format"] = "[health:current-percent]"
+    E.db["unitframe"]["units"]["raid"]["health"]["xOffset"] = 0
+    E.db["unitframe"]["units"]["raid"]["health"]["yOffset"] = -10
+    E.db["unitframe"]["units"]["raid"]["height"] = 45
+    E.db["unitframe"]["units"]["raid"]["name"]["attachTextTo"] = "Frame"
+    E.db["unitframe"]["units"]["raid"]["name"]["text_format"] = "[name:veryshort] [difficultycolor][smartlevel]"
+    E.db["unitframe"]["units"]["raid"]["name"]["yOffset"] = 10
+    E.db["unitframe"]["units"]["raid"]["power"]["height"] = 10
+    E.db["unitframe"]["units"]["raid"]["power"]["position"] = "RIGHT"
+    E.db["unitframe"]["units"]["raid"]["power"]["yOffset"] = 0
+    E.db["unitframe"]["units"]["raid"]["raidRoleIcons"]["yOffset"] = -2
+    E.db["unitframe"]["units"]["raid"]["rdebuffs"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["raid"]["rdebuffs"]["size"] = 30
+    E.db["unitframe"]["units"]["raid"]["rdebuffs"]["yOffset"] = 5
+    E.db["unitframe"]["units"]["raid"]["readycheckIcon"]["position"] = "TOPRIGHT"
+    E.db["unitframe"]["units"]["raid"]["readycheckIcon"]["size"] = 30
+    E.db["unitframe"]["units"]["raid"]["readycheckIcon"]["yOffset"] = 0
+    E.db["unitframe"]["units"]["raid"]["resurrectIcon"]["attachTo"] = "BOTTOMRIGHT"
+    E.db["unitframe"]["units"]["raid"]["resurrectIcon"]["size"] = 40
+    E.db["unitframe"]["units"]["raid"]["verticalSpacing"] = 2
+    E.db["unitframe"]["units"]["raid"]["width"] = 90
+    E.db["unitframe"]["units"]["raid"]["numGroups"] = 5
 
-      E.db["unitframe"]["units"]["raid40"]["width"] = 100
+    -- Raid 40
+    E.db["unitframe"]["units"]["raid40"]["buffIndicator"]["size"] = 10
+    E.db["unitframe"]["units"]["raid40"]["growthDirection"] = "RIGHT_UP"
+    E.db["unitframe"]["units"]["raid40"]["height"] = 32
+    E.db["unitframe"]["units"]["raid40"]["rdebuffs"]["enable"] = true
+    E.db["unitframe"]["units"]["raid40"]["rdebuffs"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["raid40"]["width"] = 90
 
-      E.db["movers"]["AltPowerBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,127"
-      E.db["movers"]["ArenaHeaderMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-288,-215"
-      E.db["movers"]["BossHeaderMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-289,-227"
-      E.db["movers"]["ElvUF_AssistMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,4,-370"
-      E.db["movers"]["ElvUF_FocusMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-536,-530"
-      E.db["movers"]["ElvUF_PartyMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,285"
-      E.db["movers"]["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,250"
-      E.db["movers"]["ElvUF_PetMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,250"
-      E.db["movers"]["ElvUF_PlayerMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,285"
-      E.db["movers"]["ElvUF_Raid40Mover"] = "BOTTOM,ElvUIParent,BOTTOM,0,127"
-      E.db["movers"]["ElvUF_RaidMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,129"
-      E.db["movers"]["ElvUF_TankMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,4,-305"
-      E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
-      E.db["movers"]["ElvUF_TargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,285"
-      E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
+    E.db["movers"]["AltPowerBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,127"
+    E.db["movers"]["ArenaHeaderMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-288,-215"
+    E.db["movers"]["BossHeaderMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-289,-227"
+    E.db["movers"]["ElvUF_AssistMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,4,-370"
+    E.db["movers"]["ElvUF_FocusMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-536,-530"
+    E.db["movers"]["ElvUF_PartyMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,285"
+    E.db["movers"]["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,250"
+    E.db["movers"]["ElvUF_PetMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,250"
+    E.db["movers"]["ElvUF_PlayerMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,285"
+    E.db["movers"]["ElvUF_Raid40Mover"] = "BOTTOM,ElvUIParent,BOTTOM,0,115"
+    E.db["movers"]["ElvUF_RaidMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,115"
+    E.db["movers"]["ElvUF_TankMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,4,-305"
+    E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
+    E.db["movers"]["ElvUF_TargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,285"
+    E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
 
-      if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
-        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
-      end
-      if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,506,4"
-        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
-      end
-      if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-        E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
-        E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
-      end
+    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+      E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
+      E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
+    end
+    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+      E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,506,4"
+      E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
+    end
+    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+      E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,530,4"
+      E.db["movers"]["TotemBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-305,246"
+    end
 
   end
   -- Update ElvUI --------------------------------------
