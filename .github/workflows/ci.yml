@@ -25,7 +25,8 @@ jobs:
         with:
           args: -d -g classic
 
-      - name: Package branches
+        # package for burning crusade
+      - name: Package for Burning Crusade
         uses: BigWigsMods/packager@master
         with:
           args: -d -g bc
