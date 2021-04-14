@@ -2,6 +2,9 @@
 
 ## [1.2.0]
 
+This is the initial release for NoobTacoUI for TBC Classic.
+Please report any issues to our github issue tracker.
+
 ### Added
 
 -   TBC Classic support
