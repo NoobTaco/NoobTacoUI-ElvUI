@@ -1,10 +1,10 @@
 ## Interface: 90005
 ## Interface-Retail: 90005
-## Interface-Classic: 11306
+## Interface-Classic: 11307
 ## Interface-BC: 20501
 ## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
 ## Author: NoobTaco
-## Version: 1.2.2
+## Version: 1.2.3
 ## Notes: Contains layouts from NoobTacoUI
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled

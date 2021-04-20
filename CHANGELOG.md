@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.3]
+
+### Updated
+
+-   Classic Client TOC for new patch 1.13.7
+
 ## [1.2.2]
 
 ### Fixed
