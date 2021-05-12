@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.4]
+
+### Updated
+
+-   Tweaked background to have a little transparency.
+
+### Added
+
+-   Updated the TOC files for packaging as one file instead of several.
+
 ## [1.2.3]
 
 ### Updated
