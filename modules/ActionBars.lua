@@ -14,16 +14,6 @@ function NoobTacoUI:SetupActionBars()
   E.db["actionbar"]["bar1"]["hotkeyFontOutline"] = "NONE"
   E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
 
-  -- if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-  --     E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
-  -- end
-  -- if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-  --   E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
-  -- end
-  -- if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-  --   E.db["actionbar"]["bar1"]["buttonSpacing"] = 2
-  -- end
-
   -- Top Actionbar - BottomLeft
   E.db["actionbar"]["bar6"]["enabled"] = true
   E.db["actionbar"]["bar6"]["buttons"] = 12
@@ -36,16 +26,6 @@ function NoobTacoUI:SetupActionBars()
   E.db["actionbar"]["bar6"]["hotkeyFontSize"] = 9
   E.db["actionbar"]["bar6"]["hotkeyTextXOffset"] = -2
   E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
-
-  -- if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-  --     E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
-  -- end
-  -- if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-  --   E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
-  -- end
-  -- if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-  --   E.db["actionbar"]["bar6"]["buttonSpacing"] = 2
-  -- end
 
   -- Left Actionbar Cluster
   E.db["actionbar"]["bar3"]["enabled"] = true
