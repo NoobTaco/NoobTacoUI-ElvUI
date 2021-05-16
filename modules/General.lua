@@ -28,7 +28,7 @@ function NoobTacoUI:SetupGeneral()
   E.db["general"]["minimap"]["locationFont"] = "Montserrat-Bold"
   E.db["general"]["talkingHeadFrameBackdrop"] = true
   E.db["general"]["resurrectSound"] = true
-  E.db["general"]["backdropfadecolor"]["a"] = 0.80000001192093
+  E.db["general"]["backdropfadecolor"]["a"] = 0.85000001192093
   E.db["general"]["backdropfadecolor"]["r"] = 0.18039215686275
   E.db["general"]["backdropfadecolor"]["g"] = 0.20392156862745
   E.db["general"]["backdropfadecolor"]["b"] = 0.25098039215686
