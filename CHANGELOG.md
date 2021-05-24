@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.5]
+
+-   [UPDATE] - Focus frame now has been given the NoobTacoUI treatment.
+
 ## [1.2.4]
 
 ### Updated
