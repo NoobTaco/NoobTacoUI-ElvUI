@@ -16,6 +16,23 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"] = {}
   end
 
+  -- Focus Unit Frame
+  if not E.db.unitframe.units.focus.customTexts then
+    E.db.unitframe.units.focus.customTexts = {}
+  end
+  if E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"] == nil then
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"] = {}
+  end
+  if E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"] == nil then
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"] = {}
+  end
+  if E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"] == nil then
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"] = {}
+  end
+  if E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"] == nil then
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"] = {}
+  end
+
   -- -- Pet Unit Frame
   if not E.db.unitframe.units.pet.customTexts then
     E.db.unitframe.units.pet.customTexts = {}
