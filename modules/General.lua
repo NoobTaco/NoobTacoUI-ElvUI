@@ -50,8 +50,6 @@ function NoobTacoUI:SetupGeneral()
   E.db["general"]["interruptAnnounce"] = "RAID"
   E.db["general"]["bottomPanel"] = false
 
-  
-
   -- Player totembar
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
     E.db["general"]["totems"]["size"] = 25
