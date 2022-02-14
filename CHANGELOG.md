@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.3.0]
+
+### Updated
+
+-   TOC updated to latest game version for Classic, TBC and Retail
+-   Left and Right Cluster location adjusted
+-   Debuff and Buff direction has been fixed.
+-   Updated nameplate and chat bubble text.
+
+### Added
+
 ## [1.2.5]
 
 -   [UPDATE] - Focus frame now has been given the NoobTacoUI treatment.

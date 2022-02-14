@@ -30,16 +30,16 @@ function NoobTacoUI:SetupMovers()
 
   -- Right and Left Clusters
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-      E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-286,4"
-      E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,286,4"
+      E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-285,4"
+      E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,285,4"
   end
   if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-280,4"
-    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,280,4"
+    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-285,4"
+    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,285,4"
   end
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-278,4"
-    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,278,4"
+    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-285,4"
+    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,285,4"
   end
 
   E.db["movers"]["ElvAB_8"] = "BOTTOM,ElvUIParent,BOTTOM,27,300"
