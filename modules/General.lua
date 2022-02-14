@@ -8,6 +8,10 @@ function NoobTacoUI:SetupGeneral()
   E.private["general"]["dmgfont"] = "Montserrat-Bold"
   E.private["general"]["normTex"] = "ElvUI Norm"
   E.private["general"]["glossTex"] = "ElvUI Norm"
+  E.private["general"]["chatBubbleFont"] = "Montserrat-SemiBold"
+  E.private["general"]["chatBubbleFontSize"] = 16
+	E.private["general"]["nameplateLargeFont"] = "Montserrat-Bold"
+	E.private["general"]["nameplateFont"] = "Montserrat-SemiBold"
 
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["general"]["totems"]["size"] = 30
