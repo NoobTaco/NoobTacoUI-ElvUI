@@ -8,6 +8,10 @@ function NoobTacoUI:SetupGeneral()
   E.private["general"]["dmgfont"] = "Montserrat-Bold"
   E.private["general"]["normTex"] = "ElvUI Norm"
   E.private["general"]["glossTex"] = "ElvUI Norm"
+  E.private["general"]["chatBubbleFont"] = "Montserrat-SemiBold"
+  E.private["general"]["chatBubbleFontSize"] = 16
+	E.private["general"]["nameplateLargeFont"] = "Montserrat-Bold"
+	E.private["general"]["nameplateFont"] = "Montserrat-SemiBold"
 
   if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["general"]["totems"]["size"] = 30
@@ -45,6 +49,8 @@ function NoobTacoUI:SetupGeneral()
   E.db["general"]["valuecolor"]["b"] = 0.8156862745098
   E.db["general"]["interruptAnnounce"] = "RAID"
   E.db["general"]["bottomPanel"] = false
+
+  
 
   -- Player totembar
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic

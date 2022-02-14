@@ -79,6 +79,7 @@ function NoobTacoUI:SetupLayout()
   -- UNITFRAME ----------------------------------------------------------------
   E.db["unitframe"]["fontSize"] = 13
   E.db["unitframe"]["units"]["player"]["debuffs"]["anchorPoint"] = "TOPRIGHT"
+  E.db["unitframe"]["units"]["player"]["debuffs"]["growthX"] = "LEFT"
   E.db["unitframe"]["units"]["player"]["debuffs"]["sizeOverride"] = 40
   E.db["unitframe"]["units"]["player"]["debuffs"]["perrow"] = 6
   E.db["unitframe"]["units"]["player"]["debuffs"]["desaturate"] = false
@@ -233,6 +234,7 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["player"]["name"]["position"] = "BOTTOM"
   E.db["unitframe"]["units"]["player"]["height"] = 60
   E.db["unitframe"]["units"]["player"]["buffs"]["anchorPoint"] = "TOPRIGHT"
+  E.db["unitframe"]["units"]["player"]["buffs"]["growthX"] = "LEFT"
   E.db["unitframe"]["units"]["player"]["pvpIcon"]["anchorPoint"] = "TOPLEFT"
   E.db["unitframe"]["units"]["player"]["pvpIcon"]["enable"] = true
   E.db["unitframe"]["units"]["player"]["pvpIcon"]["scale"] = 1.5
@@ -315,6 +317,7 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["target"]["debuffs"]["attachTo"] = "HEALTH"
   E.db["unitframe"]["units"]["target"]["debuffs"]["maxDuration"] = 0
   E.db["unitframe"]["units"]["target"]["debuffs"]["anchorPoint"] = "TOPLEFT"
+  E.db["unitframe"]["units"]["target"]["debuffs"]["growthX"] = "RIGHT"
   E.db["unitframe"]["units"]["target"]["debuffs"]["yOffset"] = 30
   E.db["unitframe"]["units"]["target"]["portrait"]["enable"] = true
   E.db["unitframe"]["units"]["target"]["portrait"]["camDistanceScale"] = 1.04
@@ -381,6 +384,7 @@ function NoobTacoUI:SetupLayout()
   E.db["unitframe"]["units"]["target"]["castbar"]["overlayOnFrame"] = "Power"
   E.db["unitframe"]["units"]["target"]["height"] = 60
   E.db["unitframe"]["units"]["target"]["buffs"]["anchorPoint"] = "BOTTOMLEFT"
+  E.db["unitframe"]["units"]["target"]["buffs"]["growthX"] = "RIGHT"
   E.db["unitframe"]["units"]["target"]["buffs"]["countFont"] = "Montserrat-Bold"
   E.db["unitframe"]["units"]["target"]["buffs"]["attachTo"] = "DEBUFFS"
   E.db["unitframe"]["units"]["target"]["buffs"]["yOffset"] = 16
