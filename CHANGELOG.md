@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.1]
+
+### Updated
+
+- Bumped Retail TOC to support 9.2
+
 ## [1.3.0]
 
 ### Updated
