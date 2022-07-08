@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.2]
+
+### Updated
+
+-   TOC updated to latest game version for Classic, TBC and Retail
+
 ## [1.3.0]
 
 ### Updated
