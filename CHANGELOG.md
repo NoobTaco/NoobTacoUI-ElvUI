@@ -1,11 +1,17 @@
 # Changelog
 
+### Updated
 ## [1.3.1]
 
-### Updated
 
 - Bumped Retail TOC to support 9.2
 
+
+-   TOC updated to latest game version for Classic, TBC and Retail
+
+### Updated
+
+## [1.3.2]
 ## [1.3.0]
 
 ### Updated
