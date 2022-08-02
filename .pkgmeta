@@ -1,11 +1,12 @@
 package-as: NoobTacoUI
 enable-nolib-creation: no
+enable-toc-creation: yes
 
 ignore:
-  - README.md
-  - CHANGELOG.md
-  - README.bbc
+    - README.md
+    - CHANGELOG.md
+    - README.bbc
 
 manual-changelog:
-  filename: RECENT_CHANGES.md
-  markup-type: markdown
+    filename: RECENT_CHANGES.md
+    markup-type: markdown
