@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.3]
+
+### Updated
+
+-   Cleaned up version checking code for Actionbars
+-   Cleaned up version checking code for Totems
+
+### Added
+
+-   Added font styling for the tooltip header that was added to the base ElvUI
+-   Added WOTLK Classic support
+-   Updating Build process.
+
 ## [1.3.2]
 
 ### Updated
