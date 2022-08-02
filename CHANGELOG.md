@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.3.3]
+
+### Updated
+
+-   Cleaned up version checking code for Actionbars
+-   Cleaned up version checking code for Totems
+-   Target Debuffs cleaned up
+-   Player debuffs cleaned up
+
+### Added
+
+-   Added font styling for the tooltip header that was added to the base ElvUI
+-   Added WOTLK Classic support
+-   Updating Build process.
+-   Pet Experience Bar
+
+## [1.3.2]
+
 ### Updated
 ## [1.3.1]
 
