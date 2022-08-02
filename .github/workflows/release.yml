@@ -39,6 +39,15 @@ jobs:
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
           WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
 
+      - name: Package WOTLK
+        uses: BigWigsMods/packager@master
+        with:
+          args: -g wrath
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+
       - name: Package Retail
         uses: BigWigsMods/packager@master
         env:
