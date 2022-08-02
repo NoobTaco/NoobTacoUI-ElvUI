@@ -30,3 +30,9 @@ jobs:
         uses: BigWigsMods/packager@master
         with:
           args: -d -g bcc
+
+        # package for Wrath
+      - name: Package for WOTLK
+        uses: BigWigsMods/packager@master
+        with:
+          args: -d -g wrath
