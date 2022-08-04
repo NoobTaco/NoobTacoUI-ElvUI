@@ -6,6 +6,7 @@
 
 -   Combat indicator was moved to lower left of Unit Frame
 -   Classbar will now show outside of combat.
+-   Cleaned up pet name code
 
 ## [1.3.3]
 

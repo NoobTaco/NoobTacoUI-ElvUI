@@ -269,19 +269,10 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["pet"]["buffs"]["yOffset"] = -22
     E.db["unitframe"]["units"]["pet"]["name"]["xOffset"] = 2
     E.db["unitframe"]["units"]["pet"]["name"]["position"] = "LEFT"
-
-    -- PET - Use happiness icon for classic only
-
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-        E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
-    end
-    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-        E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
-    end
+    E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
     if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
         E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[name:medium] - [level]"
     end
-
     E.db["unitframe"]["units"]["party"]["horizontalSpacing"] = 2
     E.db["unitframe"]["units"]["party"]["debuffs"]["numrows"] = 2
     E.db["unitframe"]["units"]["party"]["debuffs"]["sizeOverride"] = 25
