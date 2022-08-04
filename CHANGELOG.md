@@ -1,5 +1,12 @@
 # Changelog
 
+##[1.3.4]
+
+### Updated
+
+-   Combat indicator was moved to lower left of Unit Frame
+-   Classbar will now show outside of combat.
+
 ## [1.3.3]
 
 ### Updated
@@ -19,17 +26,17 @@
 ## [1.3.2]
 
 ### Updated
+
 ## [1.3.1]
 
-
-- Bumped Retail TOC to support 9.2
-
+-   Bumped Retail TOC to support 9.2
 
 -   TOC updated to latest game version for Classic, TBC and Retail
 
 ### Updated
 
 ## [1.3.2]
+
 ## [1.3.0]
 
 ### Updated
