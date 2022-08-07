@@ -15,6 +15,12 @@ jobs:
         with:
           args: -q --ignore 113 631 211 212 112 311
 
+      - name: "Generate recent changes"
+        uses: kemayo/actions-recent-changelog@v1
+        with:
+          input: CHANGELOG.md
+          output: RECENT_CHANGES.md
+
       - name: Package Retail
         uses: BigWigsMods/packager@master
         with:
