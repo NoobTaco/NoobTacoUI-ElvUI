@@ -7,7 +7,7 @@
 -   Combat indicator was moved to lower left of Unit Frame
 -   Classbar will now show outside of combat.
 -   Cleaned up pet name code
--   Fixed normal font and size so text does not wrap around on the character screen. If you wish to adjust the size type /ec and click on the tab up top that says Media. Change the Normal font and size there.
+-   Fixed normal font and size so text does not wrap around on the character screen. If you wish to adjust the size type /ec and click on the tab up top that says Media. Change the Normal font and size there. Fixes Issue 28
 -   Added logic to bring up the installer if new version.
 
 ### Added
