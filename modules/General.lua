@@ -24,7 +24,8 @@ function NoobTacoUI:SetupGeneral()
         E.db["general"]["altPowerBar"]["width"] = 417
     end
 
-    E.db["general"]["fontSize"] = 14
+    E.db["general"]["font"] = "Roboto-Bold"
+    E.db["general"]["fontSize"] = 12
     E.db["general"]["autoTrackReputation"] = true
     E.db["general"]["autoRepair"] = "PLAYER"
     E.db["general"]["minimap"]["size"] = 200
@@ -42,7 +43,6 @@ function NoobTacoUI:SetupGeneral()
     E.db["general"]["bordercolor"]["r"] = 0.23137254901961
     E.db["general"]["bordercolor"]["g"] = 0.25882352941176
     E.db["general"]["bordercolor"]["b"] = 0.32156862745098
-    E.db["general"]["font"] = "Montserrat-Bold"
     E.db["general"]["valuecolor"]["r"] = 0.53333333333333
     E.db["general"]["valuecolor"]["g"] = 0.75294117647059
     E.db["general"]["valuecolor"]["b"] = 0.8156862745098
