@@ -417,9 +417,9 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["raid"]["debuffs"]["countFont"] = "Montserrat-Bold"
     E.db["unitframe"]["units"]["raid"]["debuffs"]["enable"] = true
     E.db["unitframe"]["units"]["raid"]["debuffs"]["numrows"] = 2
-    E.db["unitframe"]["units"]["raid"]["debuffs"]["perrow"] = 4
+    E.db["unitframe"]["units"]["raid"]["debuffs"]["perrow"] = 3
     E.db["unitframe"]["units"]["raid"]["debuffs"]["sizeOverride"] = 18
-    E.db["unitframe"]["units"]["raid"]["debuffs"]["xOffset"] = 2
+    E.db["unitframe"]["units"]["raid"]["debuffs"]["xOffset"] = 0
     E.db["unitframe"]["units"]["raid"]["debuffs"]["yOffset"] = -40
     E.db["unitframe"]["units"]["raid"]["growthDirection"] = "RIGHT_UP"
     E.db["unitframe"]["units"]["raid"]["resurrectIcon"]["size"] = 40
@@ -510,8 +510,8 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
 
         E.db["unitframe"]["units"]["raid"]["buffIndicator"]["size"] = 8
         E.db["unitframe"]["units"]["raid"]["debuffs"]["sizeOverride"] = 18
-        E.db["unitframe"]["units"]["raid"]["debuffs"]["xOffset"] = 18
-        E.db["unitframe"]["units"]["raid"]["debuffs"]["yOffset"] = 5
+        E.db["unitframe"]["units"]["raid"]["debuffs"]["xOffset"] = 0
+        E.db["unitframe"]["units"]["raid"]["debuffs"]["yOffset"] = -40
         E.db["unitframe"]["units"]["raid"]["healPrediction"]["enable"] = false
         E.db["unitframe"]["units"]["raid"]["health"]["text_format"] = ""
         E.db["unitframe"]["units"]["raid"]["height"] = 45
@@ -579,14 +579,15 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         -- Raid Frames 25
         E.db["unitframe"]["units"]["raid"]["buffIndicator"]["size"] = 10
         E.db["unitframe"]["units"]["raid"]["buffs"]["perrow"] = 8
-        E.db["unitframe"]["units"]["raid"]["debuffs"]["anchorPoint"] = "CENTER"
-        E.db["unitframe"]["units"]["raid"]["debuffs"]["attachTo"] = "HEALTH"
+        E.db["unitframe"]["units"]["raid"]["debuffs"]["anchorPoint"] = "TOP"
+        E.db["unitframe"]["units"]["raid"]["debuffs"]["attachTo"] = "FRAME"
+        E.db["unitframe"]["units"]["raid"]["debuffs"]["clickThrough"] = true
         E.db["unitframe"]["units"]["raid"]["debuffs"]["countFont"] = "Montserrat-Bold"
         E.db["unitframe"]["units"]["raid"]["debuffs"]["enable"] = true
         E.db["unitframe"]["units"]["raid"]["debuffs"]["numrows"] = 2
-        E.db["unitframe"]["units"]["raid"]["debuffs"]["sizeOverride"] = 25
-        E.db["unitframe"]["units"]["raid"]["debuffs"]["xOffset"] = 24
-        E.db["unitframe"]["units"]["raid"]["debuffs"]["yOffset"] = 10
+        E.db["unitframe"]["units"]["raid"]["debuffs"]["sizeOverride"] = 18
+        E.db["unitframe"]["units"]["raid"]["debuffs"]["xOffset"] = 0
+        E.db["unitframe"]["units"]["raid"]["debuffs"]["yOffset"] = -40
         E.db["unitframe"]["units"]["raid"]["growthDirection"] = "LEFT_DOWN"
         E.db["unitframe"]["units"]["raid"]["healPrediction"]["enable"] = true
         E.db["unitframe"]["units"]["raid"]["health"]["position"] = "CENTER"
