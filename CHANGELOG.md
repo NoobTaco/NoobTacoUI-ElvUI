@@ -10,6 +10,10 @@
 -   Fixed normal font and size so text does not wrap around on the character screen. If you wish to adjust the size type /ec and click on the tab up top that says Media. Change the Normal font and size there.
 -   Added logic to bring up the installer if new version.
 
+### Added
+
+-   Automatically enable the new Talent Preview and Equipment Manger for WOTLK UI.
+
 ## [1.3.3]
 
 ### Updated

@@ -71,6 +71,10 @@ end
 -- Setup the Layout
 local function SetupLayout()
 
+    -- Turn on new WOTLK features
+    SetCVar('equipmentManager', 1)
+    SetCVar('previewTalents', 1)
+
     NoobTacoUI:SetupNamePlates();
     NoobTacoUI:SetupLayout();
     NoobTacoUI:SetupDatabars();
@@ -228,7 +232,7 @@ local function InsertOptions()
             header1 = {
                 order = 1,
                 type = "header",
-                name = MyPluginName
+                name = format("|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r - Ver %s", Version)
             },
             description1 = {
                 order = 2,
