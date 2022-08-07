@@ -1,5 +1,21 @@
 # Changelog
 
+##[1.3.4]
+
+### Updated
+
+-   Combat indicator was moved to lower left of Unit Frame
+-   Classbar will now show outside of combat.
+-   Cleaned up pet name code
+-   Fixed normal font and size so text does not wrap around on the character screen. If you wish to adjust the size type /ec and click on the tab up top that says Media. Change the Normal font and size there. Fixes Issue 28
+-   Added logic to bring up the installer if new version.
+-   Tweaks to party and raid frames to fix debuff override as well as make the icons ignore click through for click healing.
+-   Changed default objective length to 400. If you need longer change in /ec, General, Blizzard UI Improvements
+
+### Added
+
+-   Automatically enable the new Talent Preview and Equipment Manger for WOTLK UI.
+
 ## [1.3.3]
 
 ### Updated
@@ -19,17 +35,17 @@
 ## [1.3.2]
 
 ### Updated
+
 ## [1.3.1]
 
-
-- Bumped Retail TOC to support 9.2
-
+-   Bumped Retail TOC to support 9.2
 
 -   TOC updated to latest game version for Classic, TBC and Retail
 
 ### Updated
 
 ## [1.3.2]
+
 ## [1.3.0]
 
 ### Updated
