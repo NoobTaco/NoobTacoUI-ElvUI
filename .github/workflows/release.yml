@@ -21,35 +21,35 @@ jobs:
           input: CHANGELOG.md
           output: RECENT_CHANGES.md
 
-      - name: Package Classic
-        uses: BigWigsMods/packager@master
-        with:
-          args: -g classic -w 25971
-        env:
-          CF_API_KEY: ${{ secrets.CF_API_KEY }}
-          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-          WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
-          WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+      # - name: Package Classic
+      #   uses: BigWigsMods/packager@master
+      #   with:
+      #     args: -g classic -w 25971
+      #   env:
+      #     CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      #     GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+      #     WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+      #     WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
 
-      - name: Package Burning Crusade
-        uses: BigWigsMods/packager@master
-        with:
-          args: -g bcc -w 25970
-        env:
-          CF_API_KEY: ${{ secrets.CF_API_KEY }}
-          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-          WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
-          WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+      # - name: Package Burning Crusade
+      #   uses: BigWigsMods/packager@master
+      #   with:
+      #     args: -g bcc -w 25970
+      #   env:
+      #     CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      #     GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+      #     WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+      #     WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
 
-      - name: Package WOTLK
-        uses: BigWigsMods/packager@master
-        with:
-          args: -g wrath
-        env:
-          CF_API_KEY: ${{ secrets.CF_API_KEY }}
-          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-          WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
-          WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+      # - name: Package WOTLK
+      #   uses: BigWigsMods/packager@master
+      #   with:
+      #     args: -g wrath
+      #   env:
+      #     CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      #     GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+      #     WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+      #     WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
 
       - name: Package Retail
         uses: BigWigsMods/packager@master

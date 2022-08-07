@@ -15,24 +15,30 @@ jobs:
         with:
           args: -q --ignore 113 631 211 212 112 311
 
+      - name: "Generate recent changes"
+        uses: kemayo/actions-recent-changelog@v1
+        with:
+          input: CHANGELOG.md
+          output: RECENT_CHANGES.md
+
       - name: Package Retail
         uses: BigWigsMods/packager@master
         with:
           args: -d
 
-      - name: Package Classic
-        uses: BigWigsMods/packager@master
-        with:
-          args: -d -g classic
+      # - name: Package Classic
+      #   uses: BigWigsMods/packager@master
+      #   with:
+      #     args: -d -g classic
 
-        # package for burning crusade
-      - name: Package for Burning Crusade
-        uses: BigWigsMods/packager@master
-        with:
-          args: -d -g bcc
+      #   # package for burning crusade
+      # - name: Package for Burning Crusade
+      #   uses: BigWigsMods/packager@master
+      #   with:
+      #     args: -d -g bcc
 
-        # package for Wrath
-      - name: Package for WOTLK
-        uses: BigWigsMods/packager@master
-        with:
-          args: -d -g wrath
+      #   # package for Wrath
+      # - name: Package for WOTLK
+      #   uses: BigWigsMods/packager@master
+      #   with:
+      #     args: -d -g wrath
