@@ -36,7 +36,7 @@ function NoobTacoUI:SetupGeneral()
     E.db["general"]["backdropfadecolor"]["r"] = 0.18039215686275
     E.db["general"]["backdropfadecolor"]["g"] = 0.20392156862745
     E.db["general"]["backdropfadecolor"]["b"] = 0.25098039215686
-    E.db["general"]["objectiveFrameHeight"] = 537
+    E.db["general"]["objectiveFrameHeight"] = 400
     E.db["general"]["backdropcolor"]["r"] = 0.23137254901961
     E.db["general"]["backdropcolor"]["g"] = 0.25882352941176
     E.db["general"]["backdropcolor"]["b"] = 0.32156862745098

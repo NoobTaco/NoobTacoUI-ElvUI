@@ -9,6 +9,8 @@
 -   Cleaned up pet name code
 -   Fixed normal font and size so text does not wrap around on the character screen. If you wish to adjust the size type /ec and click on the tab up top that says Media. Change the Normal font and size there. Fixes Issue 28
 -   Added logic to bring up the installer if new version.
+-   Tweaks to party and raid frames to fix debuff override as well as make the icons ignore click through for click healing.
+-   Changed default objective length to 400. If you need longer change in /ec, General, Blizzard UI Improvements
 
 ### Added
 
