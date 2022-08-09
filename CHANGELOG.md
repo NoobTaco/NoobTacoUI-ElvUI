@@ -1,6 +1,20 @@
 # Changelog
 
-##[1.3.4]
+## [1.3.5]
+
+### Updated
+
+-   Updated the Readme
+-   Changed the main font
+-   Buff and Debuff are cleaned up
+-   NoobTacoUI install now respects your choice for Aura Bar or Icons while in the ElvUI installation. If you would like to change at any time just re-run the ElvUI install and chose the option you want.
+-   Cleaned up some version code.
+
+### Added
+
+-   Added 3 new fonts. Dosis, Exo2 and Mukta
+
+## [1.3.4]
 
 ### Updated
 
