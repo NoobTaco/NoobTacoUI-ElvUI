@@ -1,6 +1,16 @@
 # Changelog
 
-##[1.3.4]
+## [1.3.5]
+
+### Updated
+
+-   Updated the Readme
+
+### Added
+
+-   Added 3 new fonts. Dosis, Exo2 and Mukta
+
+## [1.3.4]
 
 ### Updated
 
