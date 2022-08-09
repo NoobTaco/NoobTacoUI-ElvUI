@@ -215,23 +215,8 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["power"]["height"] = 20
     E.db["unitframe"]["units"]["focus"]["power"]["xOffset"] = -208
     E.db["unitframe"]["units"]["focus"]["width"] = 200
-
-    -- Player castbar
-    -- if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-    --     E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
-    --     E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 410
-    --     E.db["unitframe"]["units"]["player"]["castbar"]["strataAndLevel"]["frameStrata"] = "HIGH"
-    --     E.db["unitframe"]["units"]["player"]["castbar"]["strataAndLevel"]["useCustomStrata"] = true
-    -- end
-    -- if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-    --     E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
-    --     E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 399
-    -- end
-    -- if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
     E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
     E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 400
-    -- end
-
     E.db["unitframe"]["units"]["player"]["name"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["player"]["name"]["xOffset"] = 5
     E.db["unitframe"]["units"]["player"]["name"]["position"] = "BOTTOM"
@@ -485,18 +470,14 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
 
     --   Role icon
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-        E.db["unitframe"]["units"]["party"]["roleIcon"]["damager"] = false
-        E.db["unitframe"]["units"]["party"]["roleIcon"]["combatHide"] = true
-        E.db["unitframe"]["units"]["raid40"]["roleIcon"]["enable"] = true
-        E.db["unitframe"]["units"]["raid40"]["roleIcon"]["combatHide"] = true
-        E.db["unitframe"]["units"]["raid40"]["roleIcon"]["damager"] = false
-        E.db["unitframe"]["units"]["raid"]["roleIcon"]["xOffset"] = 0
-        E.db["unitframe"]["units"]["raid"]["roleIcon"]["attachTo"] = "InfoPanel"
-        E.db["unitframe"]["units"]["raid"]["roleIcon"]["size"] = 12
-        E.db["unitframe"]["units"]["raid"]["roleIcon"]["combatHide"] = true
-        E.db["unitframe"]["units"]["raid"]["roleIcon"]["damager"] = false
-    end
+    E.db["unitframe"]["units"]["party"]["roleIcon"]["damager"] = false
+    E.db["unitframe"]["units"]["party"]["roleIcon"]["size"] = 20
+    E.db["unitframe"]["units"]["raid40"]["roleIcon"]["enable"] = true
+    E.db["unitframe"]["units"]["raid40"]["roleIcon"]["combatHide"] = true
+    E.db["unitframe"]["units"]["raid40"]["roleIcon"]["damager"] = false
+    E.db["unitframe"]["units"]["raid"]["roleIcon"]["size"] = 12
+    E.db["unitframe"]["units"]["raid"]["roleIcon"]["combatHide"] = true
+    E.db["unitframe"]["units"]["raid"]["roleIcon"]["damager"] = false
 end
 
 function NoobTacoUI:SetupUnitFrames(layout, wowver)
