@@ -24,8 +24,8 @@ function NoobTacoUI:SetupGeneral()
         E.db["general"]["altPowerBar"]["width"] = 417
     end
 
-    E.db["general"]["font"] = "Roboto-Bold"
-    E.db["general"]["fontSize"] = 12
+    E.db["general"]["font"] = "Dosis-Bold"
+    E.db["general"]["fontSize"] = 14
     E.db["general"]["autoTrackReputation"] = true
     E.db["general"]["autoRepair"] = "PLAYER"
     E.db["general"]["minimap"]["size"] = 200

@@ -5,6 +5,7 @@
 ### Updated
 
 -   Updated the Readme
+-   Changed the main font
 
 ### Added
 

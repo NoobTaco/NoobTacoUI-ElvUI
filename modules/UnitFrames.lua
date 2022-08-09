@@ -84,6 +84,8 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["debuffs"]["perrow"] = 6
     E.db["unitframe"]["units"]["player"]["debuffs"]["desaturate"] = false
     E.db["unitframe"]["units"]["player"]["debuffs"]["yOffset"] = 20
+    E.db["unitframe"]["units"]["player"]["debuffs"]["attachTo"] = "BUFFS"
+
     E.db["unitframe"]["units"]["player"]["portrait"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["portrait"]["camDistanceScale"] = 1.04
     E.db["unitframe"]["units"]["player"]["portrait"]["width"] = 55
@@ -91,16 +93,12 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["health"]["xOffset"] = -2
     E.db["unitframe"]["units"]["player"]["health"]["text_format"] = ""
     E.db["unitframe"]["units"]["player"]["health"]["position"] = "RIGHT"
-    -- E.db["unitframe"]["units"]["player"]["CombatIcon"]["xOffset"] = -70
-    -- E.db["unitframe"]["units"]["player"]["CombatIcon"]["size"] = 60
-    -- E.db["unitframe"]["units"]["player"]["CombatIcon"]["yOffset"] = 19
     E.db["unitframe"]["units"]["player"]["CombatIcon"]["anchorPoint"] = "BOTTOMLEFT"
     E.db["unitframe"]["units"]["player"]["CombatIcon"]["size"] = 60
     E.db["unitframe"]["units"]["player"]["CombatIcon"]["xOffset"] = -55
     E.db["unitframe"]["units"]["player"]["CombatIcon"]["yOffset"] = -20
-    -- E.db["unitframe"]["units"]["player"]["classbar"]["autoHide"] = true
     E.db["unitframe"]["units"]["player"]["classbar"]["autoHide"] = false
-    E.db["unitframe"]["units"]["player"]["aurabar"]["enable"] = true
+    -- E.db["unitframe"]["units"]["player"]["aurabar"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["RestIcon"]["size"] = 28
     E.db["unitframe"]["units"]["player"]["RestIcon"]["texture"] = "Resting0"
     E.db["unitframe"]["units"]["player"]["RestIcon"]["xOffset"] = 4
@@ -141,7 +139,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["width"] = 200
 
     E.db["unitframe"]["units"]["focus"]["aurabar"]["detachedWidth"] = 270
-    E.db["unitframe"]["units"]["focus"]["aurabar"]["enable"] = true
+    -- E.db["unitframe"]["units"]["focus"]["aurabar"]["enable"] = true
     E.db["unitframe"]["units"]["focus"]["aurabar"]["maxBars"] = 6
     E.db["unitframe"]["units"]["focus"]["buffs"]["attachTo"] = "DEBUFFS"
     E.db["unitframe"]["units"]["focus"]["buffs"]["countFont"] = "Montserrat-Bold"
@@ -192,7 +190,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["xOffset"] = 5
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["yOffset"] = 0
     E.db["unitframe"]["units"]["focus"]["debuffs"]["anchorPoint"] = "TOPLEFT"
-    E.db["unitframe"]["units"]["focus"]["debuffs"]["attachTo"] = "HEALTH"
+    E.db["unitframe"]["units"]["focus"]["debuffs"]["attachTo"] = "BUFFS"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["countFont"] = "Montserrat-Bold"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["maxDuration"] = 0
     E.db["unitframe"]["units"]["focus"]["debuffs"]["numrows"] = 2
@@ -240,9 +238,10 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["name"]["xOffset"] = 5
     E.db["unitframe"]["units"]["player"]["name"]["position"] = "BOTTOM"
     E.db["unitframe"]["units"]["player"]["height"] = 60
+    E.db["unitframe"]["units"]["player"]["buffs"]["attachTo"] = "FRAME"
     E.db["unitframe"]["units"]["player"]["buffs"]["anchorPoint"] = "TOPRIGHT"
     E.db["unitframe"]["units"]["player"]["buffs"]["growthX"] = "LEFT"
-    E.db["unitframe"]["units"]["player"]["buffs"]["enable"] = false
+    -- E.db["unitframe"]["units"]["player"]["buffs"]["enable"] = false
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["scale"] = 1.5
