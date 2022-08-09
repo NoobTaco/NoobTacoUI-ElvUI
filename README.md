@@ -2,7 +2,16 @@
 
 [![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/noobtaco/noobtacoui/CI?label=CI&logo=github&style=for-the-badge)](https://github.com/NoobTaco/NoobTacoUI/actions?query=workflow%3ACI) [![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/NoobTaco/NoobTacoUI/Release?logo=github&style=for-the-badge)](https://github.com/NoobTaco/NoobTacoUI/actions?query=workflow%3ARelease) [![GitHub All Releases](https://img.shields.io/github/downloads/NoobTaco/NoobTacoUI/total?logo=github&style=for-the-badge)](https://github.com/NoobTaco/NoobTacoUI/releases/latest)
 
-NoobTacoUI is an ElvUI Profile that uses the [Nord Theme](https://www.nordtheme.com/) Color palette. The theme is dark, just not as dark as default ElvUI. Download for Retail,Classic or Burning Crusade Classic.
+NoobTacoUI is an ElvUI Profile that uses the [Nord Theme](https://www.nordtheme.com/) Color palette. The theme is dark, just not as dark as default ElvUI.
+
+**Supports:**
+
+-   Retail (Shadowlands)
+-   Classic
+-   Burning Crusade Classic
+-   Wrath of the Lich King Classic
+
+No need to download separate installs for different versions. All game versions are now contained in one download.
 
 # Features
 
@@ -15,6 +24,7 @@ NoobTacoUI is an ElvUI Profile that uses the [Nord Theme](https://www.nordtheme.
 
 -   [GitHub](https://github.com/NoobTaco/NoobTacoUI/releases/latest)
 -   [Curse/Overwolf](https://www.curseforge.com/wow/addons/noobtacoui)
+-   [Wago.io](https://addons.wago.io/addons/noobtacoui)
 -   [WoW Interface](https://www.wowinterface.com/downloads/info25744-NoobTacoUI.html)
 -   [TukUI](https://www.tukui.org/addons.php?id=187)
 
