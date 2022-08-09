@@ -6,6 +6,8 @@
 
 -   Updated the Readme
 -   Changed the main font
+-   Buff and Debuff are cleaned up
+-   NoobTacoUI install now respects your choice for Aura Bar or Icons while in the ElvUI installation. If you would like to change at any time just re-run the ElvUI install and chose the option you want.
 
 ### Added
 

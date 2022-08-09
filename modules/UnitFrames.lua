@@ -83,13 +83,12 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["debuffs"]["sizeOverride"] = 40
     E.db["unitframe"]["units"]["player"]["debuffs"]["perrow"] = 6
     E.db["unitframe"]["units"]["player"]["debuffs"]["desaturate"] = false
-    E.db["unitframe"]["units"]["player"]["debuffs"]["yOffset"] = 20
+    E.db["unitframe"]["units"]["player"]["debuffs"]["yOffset"] = 5
     E.db["unitframe"]["units"]["player"]["debuffs"]["attachTo"] = "BUFFS"
 
     E.db["unitframe"]["units"]["player"]["portrait"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["portrait"]["camDistanceScale"] = 1.04
     E.db["unitframe"]["units"]["player"]["portrait"]["width"] = 55
-    E.db["unitframe"]["units"]["player"]["smartAuraPosition"] = "BUFFS_ON_DEBUFFS"
     E.db["unitframe"]["units"]["player"]["health"]["xOffset"] = -2
     E.db["unitframe"]["units"]["player"]["health"]["text_format"] = ""
     E.db["unitframe"]["units"]["player"]["health"]["position"] = "RIGHT"
@@ -98,7 +97,6 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["CombatIcon"]["xOffset"] = -55
     E.db["unitframe"]["units"]["player"]["CombatIcon"]["yOffset"] = -20
     E.db["unitframe"]["units"]["player"]["classbar"]["autoHide"] = false
-    -- E.db["unitframe"]["units"]["player"]["aurabar"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["RestIcon"]["size"] = 28
     E.db["unitframe"]["units"]["player"]["RestIcon"]["texture"] = "Resting0"
     E.db["unitframe"]["units"]["player"]["RestIcon"]["xOffset"] = 4
@@ -139,15 +137,14 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["width"] = 200
 
     E.db["unitframe"]["units"]["focus"]["aurabar"]["detachedWidth"] = 270
-    -- E.db["unitframe"]["units"]["focus"]["aurabar"]["enable"] = true
     E.db["unitframe"]["units"]["focus"]["aurabar"]["maxBars"] = 6
-    E.db["unitframe"]["units"]["focus"]["buffs"]["attachTo"] = "DEBUFFS"
+    E.db["unitframe"]["units"]["focus"]["buffs"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["focus"]["buffs"]["countFont"] = "Montserrat-Bold"
     E.db["unitframe"]["units"]["focus"]["buffs"]["enable"] = true
     E.db["unitframe"]["units"]["focus"]["buffs"]["maxDuration"] = 0
     E.db["unitframe"]["units"]["focus"]["buffs"]["perrow"] = 8
     E.db["unitframe"]["units"]["focus"]["buffs"]["priority"] = "Blacklist,Personal,nonPersonal"
-    E.db["unitframe"]["units"]["focus"]["buffs"]["yOffset"] = 16
+    E.db["unitframe"]["units"]["focus"]["buffs"]["yOffset"] = 20
     E.db["unitframe"]["units"]["focus"]["castbar"]["height"] = 30
     E.db["unitframe"]["units"]["focus"]["castbar"]["insideInfoPanel"] = false
     E.db["unitframe"]["units"]["focus"]["castbar"]["overlayOnFrame"] = "Power"
@@ -192,12 +189,13 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["debuffs"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["attachTo"] = "BUFFS"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["countFont"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["focus"]["debuffs"]["growthX"] = "RIGHT"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["maxDuration"] = 0
     E.db["unitframe"]["units"]["focus"]["debuffs"]["numrows"] = 2
     E.db["unitframe"]["units"]["focus"]["debuffs"]["perrow"] = 8
     E.db["unitframe"]["units"]["focus"]["debuffs"]["priority"] =
         "Blacklist,Personal,RaidDebuffs,CCDebuffs,Friendly:Dispellable"
-    E.db["unitframe"]["units"]["focus"]["debuffs"]["yOffset"] = 30
+    E.db["unitframe"]["units"]["focus"]["debuffs"]["yOffset"] = 5
     E.db["unitframe"]["units"]["focus"]["disableMouseoverGlow"] = true
     E.db["unitframe"]["units"]["focus"]["disableTargetGlow"] = true
     E.db["unitframe"]["units"]["focus"]["healPrediction"]["absorbStyle"] = "NORMAL"
@@ -219,20 +217,20 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["width"] = 200
 
     -- Player castbar
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
-        E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
-        E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 410
-        E.db["unitframe"]["units"]["player"]["castbar"]["strataAndLevel"]["frameStrata"] = "HIGH"
-        E.db["unitframe"]["units"]["player"]["castbar"]["strataAndLevel"]["useCustomStrata"] = true
-    end
-    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
-        E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
-        E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 399
-    end
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-        E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
-        E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 395
-    end
+    -- if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    --     E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
+    --     E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 410
+    --     E.db["unitframe"]["units"]["player"]["castbar"]["strataAndLevel"]["frameStrata"] = "HIGH"
+    --     E.db["unitframe"]["units"]["player"]["castbar"]["strataAndLevel"]["useCustomStrata"] = true
+    -- end
+    -- if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    --     E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
+    --     E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 399
+    -- end
+    -- if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    E.db["unitframe"]["units"]["player"]["castbar"]["height"] = 35
+    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 400
+    -- end
 
     E.db["unitframe"]["units"]["player"]["name"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["player"]["name"]["xOffset"] = 5
@@ -241,7 +239,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["buffs"]["attachTo"] = "FRAME"
     E.db["unitframe"]["units"]["player"]["buffs"]["anchorPoint"] = "TOPRIGHT"
     E.db["unitframe"]["units"]["player"]["buffs"]["growthX"] = "LEFT"
-    -- E.db["unitframe"]["units"]["player"]["buffs"]["enable"] = false
+    E.db["unitframe"]["units"]["player"]["buffs"]["yOffset"] = 20
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["scale"] = 1.5
@@ -265,7 +263,13 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["pet"]["disableTargetGlow"] = false
     E.db["unitframe"]["units"]["pet"]["height"] = 30
     E.db["unitframe"]["units"]["pet"]["buffs"]["enable"] = true
-    E.db["unitframe"]["units"]["pet"]["buffs"]["yOffset"] = -22
+    E.db["unitframe"]["units"]["pet"]["buffs"]["sizeOverride"] = 21
+    E.db["unitframe"]["units"]["pet"]["buffs"]["yOffset"] = -12
+    E.db["unitframe"]["units"]["pet"]["debuffs"]["enable"] = true
+    E.db["unitframe"]["units"]["pet"]["debuffs"]["height"] = 22
+    E.db["unitframe"]["units"]["pet"]["debuffs"]["sizeOverride"] = 25
+    E.db["unitframe"]["units"]["pet"]["debuffs"]["xOffset"] = -5
+    E.db["unitframe"]["units"]["pet"]["debuffs"]["yOffset"] = 27
     E.db["unitframe"]["units"]["pet"]["name"]["xOffset"] = 2
     E.db["unitframe"]["units"]["pet"]["name"]["position"] = "LEFT"
     E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
@@ -273,7 +277,6 @@ function NoobTacoUI:SetupLayout()
         E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[name:medium] - [level]"
     end
     E.db["unitframe"]["units"]["party"]["horizontalSpacing"] = 2
-    E.db["unitframe"]["units"]["party"]["debuffs"]["attachTo"] = "FRAME"
     E.db["unitframe"]["units"]["party"]["debuffs"]["anchorPoint"] = "TOP"
     E.db["unitframe"]["units"]["party"]["debuffs"]["clickThrough"] = true
     E.db["unitframe"]["units"]["party"]["debuffs"]["countFont"] = "Montserrat-Bold"
@@ -281,14 +284,12 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["party"]["debuffs"]["perrow"] = 3
     E.db["unitframe"]["units"]["party"]["debuffs"]["sizeOverride"] = 20
     E.db["unitframe"]["units"]["party"]["debuffs"]["yOffset"] = -50
-    E.db["unitframe"]["units"]["party"]["debuffs"]["xOffset"] = 0
     E.db["unitframe"]["units"]["party"]["rdebuffs"]["font"] = "Montserrat-Bold"
     E.db["unitframe"]["units"]["party"]["raidRoleIcons"]["yOffset"] = -2
     E.db["unitframe"]["units"]["party"]["resurrectIcon"]["size"] = 40
     E.db["unitframe"]["units"]["party"]["buffIndicator"]["enable"] = true
     E.db["unitframe"]["units"]["party"]["buffIndicator"]["size"] = 15
     E.db["unitframe"]["units"]["party"]["orientation"] = "MIDDLE"
-
     E.db["unitframe"]["units"]["party"]["readycheckIcon"]["yOffset"] = 0
     E.db["unitframe"]["units"]["party"]["readycheckIcon"]["size"] = 30
     E.db["unitframe"]["units"]["party"]["readycheckIcon"]["position"] = "TOPRIGHT"
@@ -316,7 +317,6 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["raid40"]["debuffs"]["enable"] = true
     E.db["unitframe"]["units"]["raid40"]["debuffs"]["sizeOverride"] = 20
     E.db["unitframe"]["units"]["raid40"]["debuffs"]["yOffset"] = -30
-
     E.db["unitframe"]["units"]["target"]["debuffs"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["target"]["debuffs"]["countFont"] = "Montserrat-Bold"
     E.db["unitframe"]["units"]["target"]["debuffs"]["growthX"] = "RIGHT"
@@ -324,7 +324,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["target"]["debuffs"]["numrows"] = 3
     E.db["unitframe"]["units"]["target"]["debuffs"]["perrow"] = 6
     E.db["unitframe"]["units"]["target"]["debuffs"]["sizeOverride"] = 32
-    E.db["unitframe"]["units"]["target"]["debuffs"]["yOffset"] = 10
+    E.db["unitframe"]["units"]["target"]["debuffs"]["yOffset"] = 5
     E.db["unitframe"]["units"]["target"]["debuffs"]["attachTo"] = "BUFFS"
     E.db["unitframe"]["units"]["target"]["portrait"]["enable"] = true
     E.db["unitframe"]["units"]["target"]["portrait"]["camDistanceScale"] = 1.04
@@ -390,11 +390,11 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["target"]["castbar"]["width"] = 200
     E.db["unitframe"]["units"]["target"]["castbar"]["overlayOnFrame"] = "Power"
     E.db["unitframe"]["units"]["target"]["height"] = 60
-    E.db["unitframe"]["units"]["target"]["buffs"]["anchorPoint"] = "BOTTOMLEFT"
-    E.db["unitframe"]["units"]["target"]["buffs"]["attachTo"] = "HEALTH"
+    E.db["unitframe"]["units"]["target"]["buffs"]["anchorPoint"] = "TOPLEFT"
+    E.db["unitframe"]["units"]["target"]["buffs"]["attachTo"] = "FRAME"
     E.db["unitframe"]["units"]["target"]["buffs"]["countFont"] = "Montserrat-Bold"
     E.db["unitframe"]["units"]["target"]["buffs"]["growthX"] = "RIGHT"
-    E.db["unitframe"]["units"]["target"]["buffs"]["yOffset"] = 90
+    E.db["unitframe"]["units"]["target"]["buffs"]["yOffset"] = 20
     E.db["unitframe"]["units"]["target"]["name"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["target"]["name"]["position"] = "BOTTOM"
     E.db["unitframe"]["units"]["target"]["name"]["xOffset"] = 5
@@ -547,7 +547,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         -- Party Frames
         E.db["unitframe"]["units"]["party"]["buffIndicator"]["size"] = 15
         E.db["unitframe"]["units"]["party"]["debuffs"]["anchorPoint"] = "CENTER"
-        E.db["unitframe"]["units"]["party"]["debuffs"]["attachTo"] = "HEALTH"
+        E.db["unitframe"]["units"]["party"]["debuffs"]["attachTo"] = "FRAME"
         E.db["unitframe"]["units"]["party"]["debuffs"]["countFont"] = "Montserrat-Bold"
         E.db["unitframe"]["units"]["party"]["debuffs"]["numrows"] = 2
         E.db["unitframe"]["units"]["party"]["debuffs"]["perrow"] = 3
