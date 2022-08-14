@@ -89,6 +89,8 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["portrait"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["portrait"]["camDistanceScale"] = 1.04
     E.db["unitframe"]["units"]["player"]["portrait"]["width"] = 55
+    E.db["unitframe"]["units"]["player"]["portrait"]["overlay"] = false
+    E.db["unitframe"]["units"]["player"]["portrait"]["desaturation"] = 0
     E.db["unitframe"]["units"]["player"]["health"]["xOffset"] = -2
     E.db["unitframe"]["units"]["player"]["health"]["text_format"] = ""
     E.db["unitframe"]["units"]["player"]["health"]["position"] = "RIGHT"
@@ -97,6 +99,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["CombatIcon"]["xOffset"] = -55
     E.db["unitframe"]["units"]["player"]["CombatIcon"]["yOffset"] = -20
     E.db["unitframe"]["units"]["player"]["classbar"]["autoHide"] = false
+    E.db["unitframe"]["units"]["player"]["classbar"]["detachFromFrame"] = false
     E.db["unitframe"]["units"]["player"]["RestIcon"]["size"] = 28
     E.db["unitframe"]["units"]["player"]["RestIcon"]["texture"] = "Resting0"
     E.db["unitframe"]["units"]["player"]["RestIcon"]["xOffset"] = 4
@@ -106,6 +109,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["power"]["text_format"] = ""
     E.db["unitframe"]["units"]["player"]["power"]["xOffset"] = -208
     E.db["unitframe"]["units"]["player"]["power"]["EnergyManaRegen"] = true
+    E.db["unitframe"]["units"]["player"]["power"]["detachFromFrame"] = false
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["xOffset"] = 5
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["text_format"] =
@@ -211,6 +215,8 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["portrait"]["camDistanceScale"] = 1.04
     E.db["unitframe"]["units"]["focus"]["portrait"]["enable"] = true
     E.db["unitframe"]["units"]["focus"]["portrait"]["width"] = 55
+    E.db["unitframe"]["units"]["focus"]["portrait"]["overlay"] = false
+    E.db["unitframe"]["units"]["focus"]["portrait"]["desaturation"] = 0
     E.db["unitframe"]["units"]["focus"]["power"]["attachTextTo"] = "Power"
     E.db["unitframe"]["units"]["focus"]["power"]["height"] = 20
     E.db["unitframe"]["units"]["focus"]["power"]["xOffset"] = -208
@@ -314,11 +320,14 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["target"]["portrait"]["enable"] = true
     E.db["unitframe"]["units"]["target"]["portrait"]["camDistanceScale"] = 1.04
     E.db["unitframe"]["units"]["target"]["portrait"]["width"] = 55
+    E.db["unitframe"]["units"]["target"]["portrait"]["overlay"] = false
+    E.db["unitframe"]["units"]["target"]["portrait"]["desaturation"] = 0
     E.db["unitframe"]["units"]["target"]["health"]["text_format"] = ""
     E.db["unitframe"]["units"]["target"]["power"]["attachTextTo"] = "Power"
     E.db["unitframe"]["units"]["target"]["power"]["height"] = 20
     E.db["unitframe"]["units"]["target"]["power"]["text_format"] = ""
     E.db["unitframe"]["units"]["target"]["power"]["xOffset"] = -208
+    E.db["unitframe"]["units"]["target"]["power"]["detachFromFrame"] = false
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["xOffset"] = 0
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["text_format"] =
