@@ -204,6 +204,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["disableTargetGlow"] = true
     E.db["unitframe"]["units"]["focus"]["healPrediction"]["absorbStyle"] = "NORMAL"
     E.db["unitframe"]["units"]["focus"]["health"]["attachTextTo"] = "InfoPanel"
+    E.db["unitframe"]["units"]["focus"]["health"]["text_format"] = ""
     E.db["unitframe"]["units"]["focus"]["height"] = 60
     E.db["unitframe"]["units"]["focus"]["infoPanel"]["height"] = 20
     E.db["unitframe"]["units"]["focus"]["name"]["attachTextTo"] = "Frame"
@@ -226,6 +227,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["name"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["player"]["name"]["xOffset"] = 5
     E.db["unitframe"]["units"]["player"]["name"]["position"] = "BOTTOM"
+    E.db["unitframe"]["units"]["player"]["name"]["text_format"] = ""
     E.db["unitframe"]["units"]["player"]["height"] = 60
     E.db["unitframe"]["units"]["player"]["buffs"]["attachTo"] = "FRAME"
     E.db["unitframe"]["units"]["player"]["buffs"]["anchorPoint"] = "TOPRIGHT"
