@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.6]
+
+### Updated
+
+-   Fixed the unitframe text to reset if reinstalling the NoobTacoUI profile over a different profile.
+
 ## [1.3.5]
 
 ### Updated
