@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.7]
+
+### Updated
+
+-   Replaced most fonts with Exo2 for a more modern and readable look.
+
 ## [1.3.6]
 
 ### Updated

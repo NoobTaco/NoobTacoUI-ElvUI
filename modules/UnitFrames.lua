@@ -115,7 +115,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["text_format"] =
         "[name:medium] [difficultycolor] [level] [shortclassification]"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["yOffset"] = 40
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["justifyH"] = "RIGHT"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["enable"] = true
@@ -124,7 +124,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["xOffset"] = -5
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["text_format"] = "[health:current-percent]"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["yOffset"] = 0
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["justifyH"] = "RIGHT"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["enable"] = true
@@ -133,7 +133,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["xOffset"] = -5
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["text_format"] = "[power:current]"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["yOffset"] = 0
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["justifyH"] = "RIGHT"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["enable"] = true
@@ -143,7 +143,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["aurabar"]["detachedWidth"] = 270
     E.db["unitframe"]["units"]["focus"]["aurabar"]["maxBars"] = 6
     E.db["unitframe"]["units"]["focus"]["buffs"]["anchorPoint"] = "TOPLEFT"
-    E.db["unitframe"]["units"]["focus"]["buffs"]["countFont"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["focus"]["buffs"]["countFont"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["focus"]["buffs"]["enable"] = true
     E.db["unitframe"]["units"]["focus"]["buffs"]["maxDuration"] = 0
     E.db["unitframe"]["units"]["focus"]["buffs"]["perrow"] = 8
@@ -155,7 +155,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["castbar"]["width"] = 200
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["enable"] = true
-    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["size"] = 20
@@ -164,7 +164,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["yOffset"] = 0
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["enable"] = true
-    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["fontOutline"] = "OUTLINE"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["justifyH"] = "CENTER"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["size"] = 20
@@ -173,7 +173,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["yOffset"] = -35
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["enable"] = true
-    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["size"] = 13
@@ -183,7 +183,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["yOffset"] = 40
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["attachTextTo"] = "Power"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["enable"] = true
-    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["size"] = 13
@@ -192,7 +192,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["yOffset"] = 0
     E.db["unitframe"]["units"]["focus"]["debuffs"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["attachTo"] = "BUFFS"
-    E.db["unitframe"]["units"]["focus"]["debuffs"]["countFont"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["focus"]["debuffs"]["countFont"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["growthX"] = "RIGHT"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["maxDuration"] = 0
     E.db["unitframe"]["units"]["focus"]["debuffs"]["numrows"] = 2
@@ -272,12 +272,12 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["party"]["horizontalSpacing"] = 2
     E.db["unitframe"]["units"]["party"]["debuffs"]["anchorPoint"] = "TOP"
     E.db["unitframe"]["units"]["party"]["debuffs"]["clickThrough"] = true
-    E.db["unitframe"]["units"]["party"]["debuffs"]["countFont"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["party"]["debuffs"]["countFont"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["party"]["debuffs"]["numrows"] = 2
     E.db["unitframe"]["units"]["party"]["debuffs"]["perrow"] = 3
     E.db["unitframe"]["units"]["party"]["debuffs"]["sizeOverride"] = 20
     E.db["unitframe"]["units"]["party"]["debuffs"]["yOffset"] = -50
-    E.db["unitframe"]["units"]["party"]["rdebuffs"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["party"]["rdebuffs"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["party"]["raidRoleIcons"]["yOffset"] = -2
     E.db["unitframe"]["units"]["party"]["resurrectIcon"]["size"] = 40
     E.db["unitframe"]["units"]["party"]["buffIndicator"]["enable"] = true
@@ -299,7 +299,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["party"]["height"] = 60
 
     E.db["unitframe"]["units"]["raid40"]["rdebuffs"]["enable"] = true
-    E.db["unitframe"]["units"]["raid40"]["rdebuffs"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["raid40"]["rdebuffs"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["raid40"]["growthDirection"] = "RIGHT_UP"
     E.db["unitframe"]["units"]["raid40"]["width"] = 100
     E.db["unitframe"]["units"]["raid40"]["height"] = 32
@@ -311,7 +311,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["raid40"]["debuffs"]["sizeOverride"] = 20
     E.db["unitframe"]["units"]["raid40"]["debuffs"]["yOffset"] = -30
     E.db["unitframe"]["units"]["target"]["debuffs"]["anchorPoint"] = "TOPLEFT"
-    E.db["unitframe"]["units"]["target"]["debuffs"]["countFont"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["target"]["debuffs"]["countFont"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["target"]["debuffs"]["growthX"] = "RIGHT"
     E.db["unitframe"]["units"]["target"]["debuffs"]["maxDuration"] = 0
     E.db["unitframe"]["units"]["target"]["debuffs"]["numrows"] = 3
@@ -335,7 +335,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["text_format"] =
         "[name:medium]  [shortclassification]"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["yOffset"] = 40
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["enable"] = true
@@ -344,7 +344,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["xOffset"] = 5
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["text_format"] = "[health:current-percent]"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["yOffset"] = 0
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["enable"] = true
@@ -353,7 +353,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["xOffset"] = 125
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["text_format"] = "[difficultycolor][smartlevel]"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["yOffset"] = -35
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["justifyH"] = "CENTER"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["fontOutline"] = "OUTLINE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["enable"] = true
@@ -362,7 +362,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["xOffset"] = 5
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["text_format"] = "[power:current]"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["yOffset"] = 0
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["enable"] = true
@@ -388,7 +388,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["target"]["height"] = 60
     E.db["unitframe"]["units"]["target"]["buffs"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["target"]["buffs"]["attachTo"] = "FRAME"
-    E.db["unitframe"]["units"]["target"]["buffs"]["countFont"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["target"]["buffs"]["countFont"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["target"]["buffs"]["growthX"] = "RIGHT"
     E.db["unitframe"]["units"]["target"]["buffs"]["yOffset"] = 20
     E.db["unitframe"]["units"]["target"]["name"]["attachTextTo"] = "Frame"
@@ -403,13 +403,13 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["raid40"]["visibility"] = "[@raid26,noexists] hide;show"
 
     -- Basic Raid Frame setup
-    E.db["unitframe"]["units"]["raid"]["rdebuffs"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["raid"]["rdebuffs"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["raid"]["rdebuffs"]["xOffset"] = 0
     E.db["unitframe"]["units"]["raid"]["rdebuffs"]["yOffset"] = 5
     E.db["unitframe"]["units"]["raid"]["debuffs"]["attachTo"] = "FRAME"
     E.db["unitframe"]["units"]["raid"]["debuffs"]["anchorPoint"] = "TOP"
     E.db["unitframe"]["units"]["raid"]["debuffs"]["clickThrough"] = true
-    E.db["unitframe"]["units"]["raid"]["debuffs"]["countFont"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["raid"]["debuffs"]["countFont"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["raid"]["debuffs"]["enable"] = true
     E.db["unitframe"]["units"]["raid"]["debuffs"]["numrows"] = 2
     E.db["unitframe"]["units"]["raid"]["debuffs"]["perrow"] = 3
@@ -451,7 +451,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"]["xOffset"] = 0
     E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"]["text_format"] = "[name:medium]"
     E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"]["yOffset"] = 0
-    E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"]["justifyH"] = "CENTER"
     E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"]["enable"] = false
@@ -461,7 +461,7 @@ function NoobTacoUI:SetupLayout()
         "[name:medium] [difficultycolor][smartlevel] [shortclassification]"
     E.db["unitframe"]["units"]["targettarget"]["orientation"] = "LEFT"
     E.db["unitframe"]["units"]["targettarget"]["height"] = 30
-    E.db["unitframe"]["font"] = "Montserrat-Bold"
+    E.db["unitframe"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["colors"]["auraBarBuff"]["r"] = 0.96
     E.db["unitframe"]["colors"]["auraBarBuff"]["g"] = 0.55
     E.db["unitframe"]["colors"]["auraBarBuff"]["b"] = 0.73
@@ -540,7 +540,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         E.db["unitframe"]["units"]["party"]["buffIndicator"]["size"] = 15
         E.db["unitframe"]["units"]["party"]["debuffs"]["anchorPoint"] = "CENTER"
         E.db["unitframe"]["units"]["party"]["debuffs"]["attachTo"] = "FRAME"
-        E.db["unitframe"]["units"]["party"]["debuffs"]["countFont"] = "Montserrat-Bold"
+        E.db["unitframe"]["units"]["party"]["debuffs"]["countFont"] = "Exo2-Bold"
         E.db["unitframe"]["units"]["party"]["debuffs"]["numrows"] = 2
         E.db["unitframe"]["units"]["party"]["debuffs"]["perrow"] = 3
         E.db["unitframe"]["units"]["party"]["debuffs"]["sizeOverride"] = 25
@@ -560,7 +560,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         E.db["unitframe"]["units"]["party"]["power"]["height"] = 10
         E.db["unitframe"]["units"]["party"]["power"]["text_format"] = ""
         E.db["unitframe"]["units"]["party"]["raidRoleIcons"]["yOffset"] = -2
-        E.db["unitframe"]["units"]["party"]["rdebuffs"]["font"] = "Montserrat-Bold"
+        E.db["unitframe"]["units"]["party"]["rdebuffs"]["font"] = "Exo2-Bold"
         E.db["unitframe"]["units"]["party"]["readycheckIcon"]["position"] = "TOPRIGHT"
         E.db["unitframe"]["units"]["party"]["readycheckIcon"]["size"] = 30
         E.db["unitframe"]["units"]["party"]["readycheckIcon"]["yOffset"] = 0
@@ -573,7 +573,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         E.db["unitframe"]["units"]["raid"]["debuffs"]["anchorPoint"] = "TOP"
         E.db["unitframe"]["units"]["raid"]["debuffs"]["attachTo"] = "FRAME"
         E.db["unitframe"]["units"]["raid"]["debuffs"]["clickThrough"] = true
-        E.db["unitframe"]["units"]["raid"]["debuffs"]["countFont"] = "Montserrat-Bold"
+        E.db["unitframe"]["units"]["raid"]["debuffs"]["countFont"] = "Exo2-Bold"
         E.db["unitframe"]["units"]["raid"]["debuffs"]["enable"] = true
         E.db["unitframe"]["units"]["raid"]["debuffs"]["numrows"] = 2
         E.db["unitframe"]["units"]["raid"]["debuffs"]["sizeOverride"] = 18
@@ -593,7 +593,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         E.db["unitframe"]["units"]["raid"]["power"]["position"] = "RIGHT"
         E.db["unitframe"]["units"]["raid"]["power"]["yOffset"] = 0
         E.db["unitframe"]["units"]["raid"]["raidRoleIcons"]["yOffset"] = -2
-        E.db["unitframe"]["units"]["raid"]["rdebuffs"]["font"] = "Montserrat-Bold"
+        E.db["unitframe"]["units"]["raid"]["rdebuffs"]["font"] = "Exo2-Bold"
         E.db["unitframe"]["units"]["raid"]["rdebuffs"]["size"] = 30
         E.db["unitframe"]["units"]["raid"]["rdebuffs"]["yOffset"] = 5
         E.db["unitframe"]["units"]["raid"]["readycheckIcon"]["position"] = "TOPRIGHT"
@@ -610,7 +610,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         E.db["unitframe"]["units"]["raid40"]["growthDirection"] = "RIGHT_UP"
         E.db["unitframe"]["units"]["raid40"]["height"] = 32
         E.db["unitframe"]["units"]["raid40"]["rdebuffs"]["enable"] = true
-        E.db["unitframe"]["units"]["raid40"]["rdebuffs"]["font"] = "Montserrat-Bold"
+        E.db["unitframe"]["units"]["raid40"]["rdebuffs"]["font"] = "Exo2-Bold"
         E.db["unitframe"]["units"]["raid40"]["width"] = 90
 
         E.db["movers"]["AltPowerBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,127"
