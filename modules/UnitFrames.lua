@@ -62,9 +62,6 @@ function NoobTacoUI:SetupLayout()
     if E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"] == nil then
         E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"] = {}
     end
-    if E.db["unitframe"]["units"]["target"]["customTexts"]["TargetCount"] == nil then
-        E.db["unitframe"]["units"]["target"]["customTexts"]["TargetCount"] = {}
-    end
 
     -- Target of Target Unit Frame
     if not E.db.unitframe.units.targettarget.customTexts then
@@ -370,15 +367,6 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["enable"] = true
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["size"] = 13
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetCount"]["attachTextTo"] = "Frame"
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetCount"]["enable"] = true
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetCount"]["font"] = "Exo2-Bold"
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetCount"]["fontOutline"] = "NONE"
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetCount"]["justifyH"] = "RIGHT"
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetCount"]["size"] = 15
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetCount"]["text_format"] = "[mTargetingPlayers:party]"
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetCount"]["xOffset"] = 5
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetCount"]["yOffset"] = 30
     E.db["unitframe"]["units"]["target"]["pvpIcon"]["anchorPoint"] = "BOTTOMRIGHT"
     E.db["unitframe"]["units"]["target"]["pvpIcon"]["enable"] = true
     E.db["unitframe"]["units"]["target"]["pvpIcon"]["scale"] = 1.3

@@ -6,10 +6,6 @@
 
 -   Replaced most fonts with Exo2 for a more modern and readable look.
 
-### Added
-
--   Added custom text for target count in party. Must install mMediaTag by Blinkii
-
 ## [1.3.6]
 
 ### Updated
