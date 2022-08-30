@@ -4,17 +4,17 @@ function NoobTacoUI:SetupGeneral()
 
     --	PrivateDB
     E.private["skins"]["parchmentRemoverEnable"] = true
-    E.private["general"]["namefont"] = "Montserrat-Bold"
-    E.private["general"]["dmgfont"] = "Montserrat-Bold"
+    E.private["general"]["namefont"] = "Exo2-Bold"
+    E.private["general"]["dmgfont"] = "Exo2-Bold"
     E.private["general"]["normTex"] = "ElvUI Norm"
     E.private["general"]["glossTex"] = "ElvUI Norm"
-    E.private["general"]["chatBubbleFont"] = "Montserrat-SemiBold"
+    E.private["general"]["chatBubbleFont"] = "Exo2-SemiBold"
     E.private["general"]["chatBubbleFontSize"] = 16
-    E.private["general"]["nameplateLargeFont"] = "Montserrat-Bold"
-    E.private["general"]["nameplateFont"] = "Montserrat-SemiBold"
+    E.private["general"]["nameplateLargeFont"] = "Exo2-Bold"
+    E.private["general"]["nameplateFont"] = "Exo2-SemiBold"
 
     if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
-        E.db["general"]["itemLevel"]["itemLevelFont"] = "Montserrat-Regular"
+        E.db["general"]["itemLevel"]["itemLevelFont"] = "Exo2-Regular"
         E.db["general"]["altPowerBar"]["statusBarColor"]["b"] = 0.67450980392157
         E.db["general"]["altPowerBar"]["statusBarColor"]["g"] = 0.50588235294118
         E.db["general"]["altPowerBar"]["statusBarColor"]["r"] = 0.36862745098039
@@ -24,12 +24,13 @@ function NoobTacoUI:SetupGeneral()
         E.db["general"]["altPowerBar"]["width"] = 417
     end
 
-    E.db["general"]["font"] = "Dosis-Bold"
+    E.db["general"]["font"] = "Exo2-Bold"
+    E.db["general"]["lootRoll"]["nameFont"] = "Exo2-Bold"
     E.db["general"]["fontSize"] = 14
     E.db["general"]["autoTrackReputation"] = true
     E.db["general"]["autoRepair"] = "PLAYER"
     E.db["general"]["minimap"]["size"] = 200
-    E.db["general"]["minimap"]["locationFont"] = "Montserrat-Bold"
+    E.db["general"]["minimap"]["locationFont"] = "Exo2-Bold"
     E.db["general"]["talkingHeadFrameBackdrop"] = true
     E.db["general"]["resurrectSound"] = true
     E.db["general"]["backdropfadecolor"]["a"] = 0.85000001192093
