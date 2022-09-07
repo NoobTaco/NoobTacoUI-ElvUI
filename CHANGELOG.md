@@ -6,6 +6,10 @@
 
 -   Changed enemy nameplate names to one white for visibility.
 
+### Added
+
+-   Included a layout that works well with Luxthos's Weak Aura's for WOTLK https://www.luxthos.com/
+
 ## [1.3.7]
 
 ### Updated
