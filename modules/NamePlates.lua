@@ -43,7 +43,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["PLAYER"]["title"]["format"] = "[guild]"
     E.db["nameplates"]["units"]["PLAYER"]["name"]["font"] = "Exo2-Bold"
     E.db["nameplates"]["units"]["PLAYER"]["name"]["enable"] = true
-    E.db["nameplates"]["units"]["PLAYER"]["name"]["format"] = "[namecolor][name:abbrev:short]"
+    E.db["nameplates"]["units"]["PLAYER"]["name"]["format"] = "[name:abbrev:short]"
     E.db["nameplates"]["units"]["PLAYER"]["name"]["fontSize"] = 14
     E.db["nameplates"]["units"]["PLAYER"]["name"]["yOffset"] = 0
     E.db["nameplates"]["units"]["PLAYER"]["level"]["enable"] = true
@@ -80,7 +80,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["buffs"]["countFontOutline"] = "NONE"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["buffs"]["countFont"] = "Exo2-SemiBold"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["title"]["format"] = "[guild]"
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["format"] = "[namecolor][name:abbrev:short]"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["format"] = "[name:abbrev:short]"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["fontSize"] = 14
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["font"] = "Exo2-Bold"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["yOffset"] = 0
@@ -151,7 +151,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["level"]["fontSize"] = 12
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["level"]["font"] = "Exo2-Bold"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["level"]["yOffset"] = 0
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["format"] = "[namecolor][name:abbrev:short]"
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["format"] = "[name:abbrev:short]"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["fontSize"] = 14
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["font"] = "Exo2-Bold"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["yOffset"] = 0
@@ -186,7 +186,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["enable"] = true
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["height"] = 5
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["yOffset"] = -11
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["format"] = "[namecolor][name:abbrev:short]"
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["format"] = "[name:abbrev:short]"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["fontSize"] = 14
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["font"] = "Exo2-Bold"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["yOffset"] = 0
@@ -227,7 +227,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_NPC"]["eliteIcon"]["enable"] = true
     E.db["nameplates"]["units"]["ENEMY_NPC"]["eliteIcon"]["xOffset"] = 6
     E.db["nameplates"]["units"]["ENEMY_NPC"]["eliteIcon"]["size"] = 30
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["format"] = "[namecolor][name:medium]"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["format"] = "[name:medium]"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["fontSize"] = 14
     E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["font"] = "Exo2-Bold"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["yOffset"] = 0

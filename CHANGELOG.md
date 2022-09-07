@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.8]
+
+### Updated
+
+-   Changed enemy nameplate names to one white for visibility.
+
 ## [1.3.7]
 
 ### Updated
