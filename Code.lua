@@ -8,6 +8,12 @@ local GetCVarBool = GetCVarBool
 local ReloadUI = ReloadUI
 local StopMusic = StopMusic
 
+-- Expansions
+-- E.Retail = WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
+-- E.Classic = WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
+-- E.TBC = WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC
+-- E.Wrath = WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC
+
 -- Change this line and use a unique name for your plugin.
 local MyPluginName = "|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r"
 
@@ -188,6 +194,16 @@ local InstallerData = {
                 NoobTacoUI:SetupUnitFrames("v2")
             end)
             PluginInstallFrame.Option2:SetText("Healer")
+            -- Check if WA is installed
+            if (IsAddOnLoaded("WeakAuras")) then
+                if E.Wrath then -- WOTLK
+                    PluginInstallFrame.Option3:Show()
+                    PluginInstallFrame.Option3:SetScript("OnClick", function()
+                        NoobTacoUI:SetupUnitFrames("v3")
+                    end)
+                    PluginInstallFrame.Option3:SetText("Luxthos WA")
+                end
+            end
         end,
         [5] = function()
             PluginInstallFrame.SubTitle:SetText("Installation Complete")

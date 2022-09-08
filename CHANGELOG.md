@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.8]
+
+### Updated
+
+-   Changed enemy nameplate names to one white for visibility.
+-   Refactored install code
+    = Bumped TOC for retail
+
+### Added
+
+-   Included a layout that works well with Luxthos's Weak Aura's for WOTLK https://www.luxthos.com/
+
 ## [1.3.7]
 
 ### Updated
