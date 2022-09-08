@@ -194,12 +194,15 @@ local InstallerData = {
                 NoobTacoUI:SetupUnitFrames("v2")
             end)
             PluginInstallFrame.Option2:SetText("Healer")
-            if E.Wrath then -- WOTLK
-                PluginInstallFrame.Option3:Show()
-                PluginInstallFrame.Option3:SetScript("OnClick", function()
-                    NoobTacoUI:SetupUnitFrames("v3")
-                end)
-                PluginInstallFrame.Option3:SetText("Luxthos WA")
+            -- Check if WA is installed
+            if (IsAddOnLoaded("WeakAuras")) then
+                if E.Wrath then -- WOTLK
+                    PluginInstallFrame.Option3:Show()
+                    PluginInstallFrame.Option3:SetScript("OnClick", function()
+                        NoobTacoUI:SetupUnitFrames("v3")
+                    end)
+                    PluginInstallFrame.Option3:SetText("Luxthos WA")
+                end
             end
         end,
         [5] = function()
