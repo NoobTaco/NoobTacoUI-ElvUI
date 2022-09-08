@@ -129,8 +129,8 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
 
         -- Raid Frame Movers
         E.db["movers"]["ElvUF_PartyMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,275"
-        E.db["movers"]["ElvUF_Raid40Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
-        E.db["movers"]["ElvUF_RaidMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
+        E.db["movers"]["ElvUF_Raid3Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
+        E.db["movers"]["ElvUF_Raid1Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
 
         -- Enable Castbar
         E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = true
@@ -153,8 +153,8 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
 
         -- Raid Frame Movers
 
-        E.db["movers"]["ElvUF_Raid40Mover"] = "BOTTOM,ElvUIParent,BOTTOM,0,115"
-        E.db["movers"]["ElvUF_RaidMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,115"
+        E.db["movers"]["ElvUF_Raid3Mover"] = "BOTTOM,ElvUIParent,BOTTOM,0,115"
+        E.db["movers"]["ElvUF_Raid1Mover"] = "BOTTOM,ElvUIParent,BOTTOM,0,115"
 
         -- Enable Castbar
         E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = true
@@ -177,8 +177,8 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
 
         -- Raid Frame Movers
         E.db["movers"]["ElvUF_PartyMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,275"
-        E.db["movers"]["ElvUF_Raid40Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
-        E.db["movers"]["ElvUF_RaidMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
+        E.db["movers"]["ElvUF_Raid3Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
+        E.db["movers"]["ElvUF_Raid1Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
 
         -- disable Castbar
         E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = false
