@@ -20,11 +20,16 @@ No need to download separate installs for different versions. All game versions 
 -   Elite unitframe overlay. The default elite dragon fits perfectly with NoobTacoUI's target unitframe. _With option to toggle overlay_.
 -   DPS/Tank and Healer profile setup.
 
+### NEW
+
+-   New layout for WOTLK version that supports [Luxthos](https://www.luxthos.com/) Weakauras!
+
 ### Download from your favorite addon hosts
 
 -   [GitHub](https://github.com/NoobTaco/NoobTacoUI/releases/latest)
 -   [Curse/Overwolf](https://www.curseforge.com/wow/addons/noobtacoui)
 -   [Wago.io](https://addons.wago.io/addons/noobtacoui)
+-   [WoWup](https://wowup.io/addons/2)
 -   [WoW Interface](https://www.wowinterface.com/downloads/info25744-NoobTacoUI.html)
 -   [TukUI](https://www.tukui.org/addons.php?id=187)
 

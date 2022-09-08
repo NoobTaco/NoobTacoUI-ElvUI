@@ -103,6 +103,7 @@ function NoobTacoUI:SetupActionBars()
     E.db["actionbar"]["stanceBar"]["hotkeyFontOutline"] = "NONE"
     E.db["actionbar"]["stanceBar"]["hotkeyFontSize"] = 9
     E.db["actionbar"]["stanceBar"]["hotkeyTextXOffset"] = -2
+    E.db["actionbar"]["stanceBar"]["style"] = "classic"
     E.db["actionbar"]["barPet"]["buttonsPerRow"] = 10
     E.db["actionbar"]["barPet"]["buttonSize"] = 25
     E.db["actionbar"]["barPet"]["point"] = "TOPLEFT"

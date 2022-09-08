@@ -6,6 +6,7 @@
 
 -   Changed enemy nameplate names to one white for visibility.
 -   Refactored install code
+    = Bumped TOC for retail
 
 ### Added
 
