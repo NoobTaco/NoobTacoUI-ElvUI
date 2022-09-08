@@ -2,20 +2,37 @@
 
 [IMG]https://img.shields.io/github/workflow/status/noobtaco/noobtacoui/CI?label=CI&logo=github&style=for-the-badge[/IMG] [IMG]https://img.shields.io/github/workflow/status/NoobTaco/NoobTacoUI/Release?logo=github&style=for-the-badge[/IMG][IMG]https://img.shields.io/github/downloads/NoobTaco/NoobTacoUI/total?logo=github&style=for-the-badge[/IMG]
 
-NoobTacoUI is an ElvUI Profile that uses the [URL="https://www.nordtheme.com/"]Nord Theme[/URL] Color palette. The theme is dark, just not as dark as default ElvUI. Download for Retail or Classic
+NoobTacoUI is an ElvUI Profile that uses the [URL="https://www.nordtheme.com/"]Nord Theme[/URL] Color palette. The theme is dark, just not as dark as default ElvUI.
+
+[SIZE=4]Supports[/SIZE]
+[LIST]
+[*] Retail (Shadowlands)
+[*] Classic
+[*] Burning Crusade Classic
+[*] Wrath of the Lich King Classic
+[/LIST]
+
+No need to download separate installs for different versions. All game versions are now contained in one download.
 
 [SIZE=5]Features[/SIZE]
 [LIST]
-[*] NoobTacoUI is a dark theme based off of the popular Nord Theme. It is not as contrasty as the default profile in an attempt to reduce eye strain from prolonged WoW sessions. 
+[*] NoobTacoUI is a dark theme based off of the popular Nord Theme. It is not as contrasty as the default profile in an attempt to reduce eye strain from prolonged WoW sessions.
 [*] Modern font's making it easier to read information text and game text.
 [*] Elite unitframe overlay. The default elite dragon fits perfectly with NoobTacoUI's target unitframe. [i]With option to toggle overlay[/i].
 [*] DPS/Tank and Healer profile setup.
+[/LIST]
+
+[SIZE=4]NEW[/SIZE]
+[LIST]
+[*] New layout for WOTLK version that supports [URL="https://www.luxthos.com/"]Luxthos[/URL] Weakauras!
 [/LIST]
 
 [SIZE=4]Download from your favorite addon hosts[/SIZE]
 [LIST]
 [*] [URL="https://github.com/NoobTaco/NoobTacoUI"]GitHub[/URL]
 [*] [URL="https://www.curseforge.com/wow/addons/noobtacoui"]Curse/Overwolf[/URL]
+[*] [URL="(https://addons.wago.io/addons/noobtacoui"]Wago.io[/URL]
+[*] [URL="(https://wowup.io/addons/2"]WoWup[/URL]
 [*] [URL="https://www.wowinterface.com/downloads/info25744-NoobTacoUI.html"]WoW Interface[/URL]
 [*] [URL="https://www.tukui.org/addons.php?id=187"]TukUI[/URL]
 [/LIST]
