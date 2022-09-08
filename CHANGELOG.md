@@ -1,6 +1,10 @@
 # Changelog
 
-## [1.4.0]
+## [1.3.9]
+
+### Updated
+
+-   Converted the setup script to use ElvUI's new Raid frame configuration. If you get an error when trying to install please make sure you are on the latest version of ElvUI.
 
 ## [1.3.8]
 
