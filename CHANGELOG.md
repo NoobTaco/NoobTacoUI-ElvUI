@@ -5,6 +5,7 @@
 ### Updated
 
 -   Changed enemy nameplate names to one white for visibility.
+-   Refactored install code
 
 ### Added
 
