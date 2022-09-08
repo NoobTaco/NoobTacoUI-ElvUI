@@ -127,7 +127,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         E.db["unitframe"]["units"]["party"]["width"] = 100
         E.db["unitframe"]["units"]["party"]["growthDirection"] = "UP_RIGHT"
 
-        -- Raid Frame Movers 
+        -- Raid Frame Movers
         E.db["movers"]["ElvUF_PartyMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,275"
         E.db["movers"]["ElvUF_Raid40Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
         E.db["movers"]["ElvUF_RaidMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
@@ -151,7 +151,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         E.db["unitframe"]["units"]["party"]["width"] = 90
         E.db["unitframe"]["units"]["party"]["growthDirection"] = "RIGHT_UP"
 
-        -- Raid Frame Movers 
+        -- Raid Frame Movers
 
         E.db["movers"]["ElvUF_Raid40Mover"] = "BOTTOM,ElvUIParent,BOTTOM,0,115"
         E.db["movers"]["ElvUF_RaidMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,115"
@@ -175,7 +175,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         E.db["unitframe"]["units"]["party"]["width"] = 100
         E.db["unitframe"]["units"]["party"]["growthDirection"] = "UP_RIGHT"
 
-        -- Raid Frame Movers 
+        -- Raid Frame Movers
         E.db["movers"]["ElvUF_PartyMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,275"
         E.db["movers"]["ElvUF_Raid40Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
         E.db["movers"]["ElvUF_RaidMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
