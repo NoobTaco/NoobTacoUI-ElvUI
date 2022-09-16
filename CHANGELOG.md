@@ -1,5 +1,11 @@
 # Changelog
 
+### Updated
+
+## [1.4.0]
+
+-   Changed actionbar glow to be more visible.
+
 ## [1.3.9]
 
 ### Updated

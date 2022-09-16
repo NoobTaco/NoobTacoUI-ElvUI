@@ -49,6 +49,7 @@ function NoobTacoUI:SetupGeneral()
     E.db["general"]["valuecolor"]["b"] = 0.8156862745098
     E.db["general"]["interruptAnnounce"] = "RAID"
     E.db["general"]["bottomPanel"] = false
+    E.db["general"]["customGlow"]["style"] = "Action Button Glow"
 
     -- Player totembar
     E.db["general"]["totems"]["growthDirection"] = "HORIZONTAL"

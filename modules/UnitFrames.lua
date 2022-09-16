@@ -181,7 +181,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         E.db["movers"]["ElvUF_Raid1Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
 
         -- disable Castbar
-        E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = false
+        E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = true
 
     end
     -- Update ElvUI --------------------------------------
