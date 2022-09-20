@@ -27,13 +27,13 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["fontSize"] = 10
     E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["yOffset"] = -14
 
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    if E.Classic then -- Classic
         E.db["nameplates"]["units"]["PLAYER"]["power"]["displayAltPower"] = false
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    if E.TBC then -- TBCc
         E.db["nameplates"]["units"]["PLAYER"]["power"]["displayAltPower"] = false
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    if E.Retail then -- Retail
         E.db["nameplates"]["units"]["PLAYER"]["power"]["displayAltPower"] = true
     end
 
@@ -58,13 +58,13 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["countFont"] = "Exo2-SemiBold"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["size"] = 40
 
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    if E.Classic then -- Classic
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = false
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    if E.TBC then -- TBCc
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = false
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    if E.Retail then -- Retail
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = true
     end
 
@@ -126,13 +126,13 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["countFont"] = "Exo2-SemiBold"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["title"]["format"] = "[guild]"
 
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    if E.Classic then -- Classic
         E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = false
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    if E.TBC then -- TBCc
         E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = false
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    if E.Retail then -- Retail
         E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = true
     end
 
@@ -172,13 +172,13 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["buffs"]["countFontOutline"] = "NONE"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["title"]["format"] = "[guild]"
 
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    if E.Classic then -- Classic
         E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["displayAltPower"] = false
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    if E.TBC then -- TBCc
         E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["displayAltPower"] = false
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    if E.Retail then -- Retail
         E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["displayAltPower"] = true
     end
 
@@ -209,13 +209,13 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["size"] = 30
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["yOffset"] = 15
 
-    if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then -- Classic
+    if E.Classic then -- Classic
         E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = false
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then -- TBCc
+    if E.TBC then -- TBCc
         E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = false
     end
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    if E.Retail then -- Retail
         E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = true
     end
 
