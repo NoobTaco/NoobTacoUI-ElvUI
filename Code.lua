@@ -9,9 +9,9 @@ local ReloadUI = ReloadUI
 local StopMusic = StopMusic
 
 -- Expansions
--- E.Retail = WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
--- E.Classic = WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
--- E.TBC = WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC
+-- E.Retail = E.Retail
+-- E.Classic = E.Classic
+-- E.TBC = E.TBC
 -- E.Wrath = WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC
 
 -- Change this line and use a unique name for your plugin.

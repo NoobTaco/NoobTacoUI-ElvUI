@@ -13,7 +13,7 @@ function NoobTacoUI:SetupGeneral()
     E.private["general"]["nameplateLargeFont"] = "Exo2-Bold"
     E.private["general"]["nameplateFont"] = "Exo2-SemiBold"
 
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    if E.Retail then -- Retail
         E.db["general"]["itemLevel"]["itemLevelFont"] = "Exo2-Regular"
         E.db["general"]["altPowerBar"]["statusBarColor"]["b"] = 0.67450980392157
         E.db["general"]["altPowerBar"]["statusBarColor"]["g"] = 0.50588235294118

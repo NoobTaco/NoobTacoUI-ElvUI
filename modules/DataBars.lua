@@ -1,7 +1,7 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
 function NoobTacoUI:SetupDatabars()
-    if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then -- Retail
+    if E.Retail then -- Retail
         E.db["databars"]["honor"]["enable"] = false
         E.db["databars"]["colors"]["quest"]["a"] = 0.99000000022352
         E.db["databars"]["colors"]["quest"]["r"] = 0.27450980392157

@@ -5,6 +5,7 @@
 ## [1.4.0]
 
 -   Changed actionbar glow to be more visible.
+-   Updated version checks
 
 ## [1.3.9]
 
