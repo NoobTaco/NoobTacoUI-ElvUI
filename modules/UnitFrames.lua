@@ -135,6 +135,9 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         -- Enable Castbar
         E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = true
 
+        -- Totem tracker mover DK pet as well
+        E.db["movers"]["TotemTrackerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-205,155"
+
         -- Heal Layout
     elseif layout == 'v2' then
         E.db.unitframes = nil
@@ -159,6 +162,9 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         -- Enable Castbar
         E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = true
 
+        -- Totem tracker mover DK pet as well
+        E.db["movers"]["TotemTrackerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-300,244"
+
         -- Luxothe Weak Aura layout
     elseif layout == 'v3' then
         E.db.unitframes = nil
@@ -182,6 +188,9 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
 
         -- disable Castbar
         E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = true
+
+        -- Totem tracker mover DK pet as well
+        E.db["movers"]["TotemTrackerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-300,244"
 
     end
     -- Update ElvUI --------------------------------------

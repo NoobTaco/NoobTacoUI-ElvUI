@@ -6,6 +6,7 @@
 
 -   Changed actionbar glow to be more visible.
 -   Updated version checks
+-   Fix #35 - Correctly move the new totem tracker for shaman and DK's
 
 ## [1.3.9]
 
