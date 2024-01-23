@@ -1,8 +1,16 @@
 # Changelog
 
+## [1.4.1]
+
 ### Updated
 
+-   Updated TOC for all versions of the game
+-   Fixed an error that happens when opening NoobTacoUI installer after its been installed.
+-
+
 ## [1.4.0]
+
+### Updated
 
 -   Changed actionbar glow to be more visible.
 -   Updated version checks

@@ -302,7 +302,7 @@ local function InsertOptions()
                 desc = "Run the installation process.",
                 func = function()
                     E:GetModule("PluginInstaller"):Queue(InstallerData)
-                    E:ToggleOptionsUI()
+                    E:ToggleOptions()
                 end
             }
         }
