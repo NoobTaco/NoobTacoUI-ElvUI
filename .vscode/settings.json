@@ -1,0 +1,13 @@
+{
+	"Lua.diagnostics.globals": [
+		"ReloadUI",
+		"StaticPopupDialogs",
+		"StaticPopup_Show",
+		"GetCVarBool",
+		"StopMusic",
+		"_G",
+		"string",
+		"unpack",
+		"SetCVar"
+	]
+}
