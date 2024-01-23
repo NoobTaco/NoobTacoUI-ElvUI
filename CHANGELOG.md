@@ -1,8 +1,14 @@
 # Changelog
 
+## [1.4.1]
+
 ### Updated
 
+-   Updated TOC for all versions of the game
+
 ## [1.4.0]
+
+### Updated
 
 -   Changed actionbar glow to be more visible.
 -   Updated version checks
