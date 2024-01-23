@@ -1,10 +1,10 @@
-## Interface: 90207
-## Interface-Classic: 11403
+## Interface: 100205
+## Interface-Classic: 11500
 ## Interface-BCC: 20504
-## Interface-Wrath: 30400
+## Interface-Wrath: 30403
 ## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
 ## Author: NoobTaco
-## Version: 1.4.0
+## Version: 1.4.1
 ## Notes: Contains layouts from NoobTacoUI
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled
