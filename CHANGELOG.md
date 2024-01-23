@@ -5,6 +5,8 @@
 ### Updated
 
 -   Updated TOC for all versions of the game
+-   Fixed an error that happens when opening NoobTacoUI installer after its been installed.
+-
 
 ## [1.4.0]
 
