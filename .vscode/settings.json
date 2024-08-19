@@ -1,4 +1,17 @@
 {
+<<<<<<< HEAD
+	"Lua.diagnostics.globals": [
+		"ReloadUI",
+		"StaticPopupDialogs",
+		"StaticPopup_Show",
+		"GetCVarBool",
+		"StopMusic",
+		"_G",
+		"string",
+		"unpack",
+		"SetCVar",
+		"UIParent"
+=======
 	"Lua.runtime.version": "Lua 5.1",
 	"Lua.runtime.builtin": {
 		"basic": "disable",
@@ -18,5 +31,6 @@
 		"ReloadUI",
 		"StaticPopupDialogs",
 		"StaticPopup_Show"
+>>>>>>> 1.4.2
 	]
 }

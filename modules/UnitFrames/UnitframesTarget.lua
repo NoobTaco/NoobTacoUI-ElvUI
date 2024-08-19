@@ -1,7 +1,6 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
 function NoobTacoUI:UnitframeTarget()
-
     E.db["unitframe"]["units"]["target"]["buffs"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["target"]["buffs"]["attachTo"] = "FRAME"
     E.db["unitframe"]["units"]["target"]["buffs"]["countFont"] = "Exo2-Bold"
@@ -17,10 +16,11 @@ function NoobTacoUI:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["size"] = 15
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["text_format"] = "[health:current-percent:shortvalue]"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["text_format"] =
+        "[health:current-percent:shortvalue]"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["xOffset"] = 5
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["yOffset"] = -10
-    -- 
+    --
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["enable"] = true
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["font"] = "Exo2-Bold"
