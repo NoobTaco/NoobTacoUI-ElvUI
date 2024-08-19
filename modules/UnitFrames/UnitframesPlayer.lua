@@ -1,7 +1,6 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
 function NoobTacoUI:UnitframePlayer()
-
     E.db["unitframe"]["units"]["player"]["debuffs"]["anchorPoint"] = "TOPRIGHT"
     E.db["unitframe"]["units"]["player"]["debuffs"]["growthX"] = "LEFT"
     E.db["unitframe"]["units"]["player"]["debuffs"]["sizeOverride"] = 40
@@ -51,10 +50,11 @@ function NoobTacoUI:UnitframePlayer()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["justifyH"] = "RIGHT"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["size"] = 15
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["text_format"] = "[health:current-percent:shortvalue]"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["text_format"] =
+        "[health:current-percent:shortvalue]"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["xOffset"] = -5
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["yOffset"] = -5
-    -- 
+    --
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["attachTextTo"] = "Power"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["xOffset"] = -5
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["text_format"] = "[power:current]"
