@@ -44,15 +44,17 @@ function NoobTacoUI:UnitframePlayer()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["size"] = 13
+    -- Updated 8-19-24
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["attachTextTo"] = "Health"
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["xOffset"] = -5
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["text_format"] = "[health:current-percent]"
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["yOffset"] = 0
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["font"] = "Exo2-Bold"
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["justifyH"] = "RIGHT"
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["enable"] = true
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["size"] = 20
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["fontOutline"] = "NONE"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["justifyH"] = "RIGHT"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["size"] = 15
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["text_format"] = "[health:current-percent:shortvalue]"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["xOffset"] = -5
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["yOffset"] = -5
+    -- 
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["attachTextTo"] = "Power"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["xOffset"] = -5
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["text_format"] = "[power:current]"

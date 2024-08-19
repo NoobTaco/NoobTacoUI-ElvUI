@@ -10,15 +10,17 @@ function NoobTacoUI:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["castbar"]["height"] = 30
     E.db["unitframe"]["units"]["target"]["castbar"]["overlayOnFrame"] = "Power"
     E.db["unitframe"]["units"]["target"]["castbar"]["width"] = 200
+    -- Updated 8-19-24
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["enable"] = true
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["font"] = "Exo2-Bold"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["justifyH"] = "LEFT"
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["size"] = 20
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["text_format"] = "[health:current-percent]"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["size"] = 15
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["text_format"] = "[health:current-percent:shortvalue]"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["xOffset"] = 5
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["yOffset"] = 0
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["yOffset"] = -10
+    -- 
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["enable"] = true
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["font"] = "Exo2-Bold"

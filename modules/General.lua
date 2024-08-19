@@ -14,7 +14,10 @@ function NoobTacoUI:SetupGeneral()
     E.private["general"]["nameplateFont"] = "Exo2-SemiBold"
 
     if E.Retail then -- Retail
-        E.db["general"]["itemLevel"]["itemLevelFont"] = "Exo2-Regular"
+        E.db["general"]["itemLevel"]["itemLevelFont"] = "Exo2-Bold"
+        E.db["general"]["itemLevel"]["itemLevelFontSize"] = 15
+        E.db["general"]["itemLevel"]["totalLevelFont"] = "Exo2-Bold"
+        E.db["general"]["itemLevel"]["totalLevelFontSize"] = 20
         E.db["general"]["altPowerBar"]["statusBarColor"]["b"] = 0.67450980392157
         E.db["general"]["altPowerBar"]["statusBarColor"]["g"] = 0.50588235294118
         E.db["general"]["altPowerBar"]["statusBarColor"]["r"] = 0.36862745098039
