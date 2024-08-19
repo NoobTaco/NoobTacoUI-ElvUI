@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.4.4]
+
+### Updated
+
+-   Updated Player and Target health display
+-   Updated the nameplate health text
+-   Character sheet item level and gems update
+-   More TOC cleanup
+-   Updated the README file
+
 ## [1.4.3]
 
 ### Updated
