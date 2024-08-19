@@ -281,7 +281,7 @@ local function InsertOptions()
                     overlay = {
                         order = 1,
                         type = "toggle",
-                        name = L["Elite Overlay"],
+                        name = L["Elite Overlay Dragon Flight Style"],
                         desc = L["Disable/Enable the elite dragon overlay for the target."]
                     }
                 }
