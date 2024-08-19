@@ -1,15 +1,16 @@
 # NoobTacoUI
 
-[![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/noobtaco/noobtacoui/CI?label=CI&logo=github&style=for-the-badge)](https://github.com/NoobTaco/NoobTacoUI/actions?query=workflow%3ACI) [![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/NoobTaco/NoobTacoUI/Release?logo=github&style=for-the-badge)](https://github.com/NoobTaco/NoobTacoUI/actions?query=workflow%3ARelease) [![GitHub All Releases](https://img.shields.io/github/downloads/NoobTaco/NoobTacoUI/total?logo=github&style=for-the-badge)](https://github.com/NoobTaco/NoobTacoUI/releases/latest)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/noobtaco/NoobTacoUI/ci.yml?style=for-the-badge&logo=github)
+
+[![GitHub All Releases](https://img.shields.io/github/downloads/NoobTaco/NoobTacoUI/total?logo=github&style=for-the-badge)](https://github.com/NoobTaco/NoobTacoUI/releases/latest)
 
 NoobTacoUI is an ElvUI Profile that uses the [Nord Theme](https://www.nordtheme.com/) Color palette. The theme is dark, just not as dark as default ElvUI.
 
 **Supports:**
 
--   Retail (Shadowlands)
+-   Retail (War Within)
 -   Classic
--   Burning Crusade Classic
--   Wrath of the Lich King Classic
+-   Cata
 
 No need to download separate installs for different versions. All game versions are now contained in one download.
 
@@ -20,10 +21,6 @@ No need to download separate installs for different versions. All game versions 
 -   Elite unitframe overlay. The default elite dragon fits perfectly with NoobTacoUI's target unitframe. _With option to toggle overlay_.
 -   DPS/Tank and Healer profile setup.
 
-### NEW
-
--   New layout for WOTLK version that supports [Luxthos](https://www.luxthos.com/) Weakauras!
-
 ### Download from your favorite addon hosts
 
 -   [GitHub](https://github.com/NoobTaco/NoobTacoUI/releases/latest)
@@ -31,7 +28,6 @@ No need to download separate installs for different versions. All game versions 
 -   [Wago.io](https://addons.wago.io/addons/noobtacoui)
 -   [WoWup](https://wowup.io/addons/2)
 -   [WoW Interface](https://www.wowinterface.com/downloads/info25744-NoobTacoUI.html)
--   [TukUI](https://www.tukui.org/addons.php?id=187)
 
 Feel free to use any of the supported download managers.
 
