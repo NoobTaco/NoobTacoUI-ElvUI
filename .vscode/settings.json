@@ -8,6 +8,7 @@
 		"_G",
 		"string",
 		"unpack",
-		"SetCVar"
+		"SetCVar",
+		"UIParent"
 	]
 }
