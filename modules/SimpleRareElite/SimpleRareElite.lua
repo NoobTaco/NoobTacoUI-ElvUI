@@ -19,8 +19,8 @@ local function SetSimpleRareElite(Texture)
     SimpleRareElite:ClearAllPoints()
 
     -- Modern
-    SimpleRareElite:SetSize(100, 100)
-    SimpleRareElite:SetPoint("TOPRIGHT", TargetFrame, "TOPRIGHT", 36, 8)
+    SimpleRareElite:SetSize(100, 85)
+    SimpleRareElite:SetPoint("TOPRIGHT", TargetFrame, "TOPRIGHT", 35, 12)
 
     SimpleRareElite:Show()
 end
@@ -58,15 +58,15 @@ local function CreateSimpleRareElite()
                 local TargetClass =
                     UnitIsPlayer("target") and select(2, UnitClass("target")) or UnitClassification("target")
 
-                if TargetClass == "worldboss" then
-                    SetSimpleRareElite("worldboss.tga")
-                elseif TargetClass == "elite" then
-                    SetSimpleRareElite("elite.tga")
-                elseif TargetClass == "rare" then
-                    SetSimpleRareElite("rare.tga")
-                elseif TargetClass == "rareelite" then
-                    SetSimpleRareElite("rareelite.tga")
-                end
+                    if TargetClass == "worldboss" then
+                        SetSimpleRareElite("worldboss_df.tga")
+                    elseif TargetClass == "elite" then
+                        SetSimpleRareElite("elite_df.tga")
+                    elseif TargetClass == "rare" then
+                        SetSimpleRareElite("rare_df.tga")
+                    elseif TargetClass == "rareelite" then
+                        SetSimpleRareElite("rare_df.tga")
+                    end
             end
         end
     )

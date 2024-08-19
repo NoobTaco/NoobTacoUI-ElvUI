@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.3]
+
+### Updated
+
+-   TOC (Typo before hand)
+-   Updated the elite overlay's to the new modern UI overlays.
+
 ## [1.4.2]
 
 ### Updated
