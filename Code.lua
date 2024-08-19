@@ -1,6 +1,7 @@
 -- Don't worry about this
 local addon, Engine, ns = ...
-local Version = GetAddOnMetadata(addon, "Version")
+-- local Version = GetAddOnMetadata(addon, "Version")
+local Version = C_AddOns.GetAddOnMetadata(addon, "Version")
 
 -- Cache Lua / WoW API
 local format = string.format
@@ -195,7 +196,7 @@ local InstallerData = {
             end)
             PluginInstallFrame.Option2:SetText("Healer")
             -- Check if WA is installed
-            if (IsAddOnLoaded("WeakAuras")) then
+            if (C_AddOns.IsAddOnLoaded("WeakAuras")) then
                 if E.Wrath then -- WOTLK
                     PluginInstallFrame.Option3:Show()
                     PluginInstallFrame.Option3:SetScript("OnClick", function()
@@ -203,6 +204,11 @@ local InstallerData = {
                     end)
                     PluginInstallFrame.Option3:SetText("Luxthos WA")
                 end
+            end
+            -- Check if Baganator is loaded and disable ElvUI bags
+            -- TODO: Add more bag mod checks
+            if (C_AddOns.IsAddOnLoaded("Baganator")) then
+                E.private["bags"]["enable"] = false
             end
         end,
         [5] = function()
