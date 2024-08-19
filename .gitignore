@@ -39,4 +39,9 @@ luac.out
 *.x86_64
 *.hex
 
+<<<<<<< HEAD
 .vscode
+=======
+.vscode
+
+>>>>>>> 1.4.2

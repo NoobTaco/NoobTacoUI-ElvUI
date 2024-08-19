@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.4.2]
+
+### Updated
+
+-   Updated TOC for all versions of the game
+
+### Added
+
+-   Check if Baganator is loaded. If so disable ElvUI bags by default (More bags to be added to check in later version)
+
 ## [1.4.1]
 
 ### Updated
