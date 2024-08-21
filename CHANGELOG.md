@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.5]
+
+### Updated
+
+-   Moved PowerBarContainer (Flight Interface) - May need to be relocated if interfered with.
+-   Moved OzCooldownsMover location (ProjectAzilroka)
+
 ## [1.4.4]
 
 ### Updated
