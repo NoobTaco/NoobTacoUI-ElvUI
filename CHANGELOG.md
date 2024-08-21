@@ -6,6 +6,7 @@
 
 -   Moved PowerBarContainer (Flight Interface) - May need to be relocated if interfered with.
 -   Moved OzCooldownsMover location (ProjectAzilroka)
+-   TopCenterMover relocated to give more space on top of screen
 
 ## [1.4.4]
 

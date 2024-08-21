@@ -36,7 +36,7 @@ function NoobTacoUI:SetupMovers()
     E.db["movers"]["ElvUIBagMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,232"
     E.db["movers"]["NB_LocationLiteMover"] = "TOP,ElvUIParent,TOP,0,0"
     E.db["movers"]["RightChatMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,4"
-    E.db["movers"]["TopCenterContainerMover"] = "TOP,ElvUIParent,TOP,0,-20"
+    E.db["movers"]["TopCenterContainerMover"] = "TOP,ElvUIParent,TOP,0,-35"
     E.db["movers"]["ThreatBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-5,-243"
     E.db["movers"]["LeftChatMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,4"
     E.db["movers"]["GMMover"] = "TOP,ElvUIParent,TOP,-346,-30"
