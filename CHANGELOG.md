@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.6]
+
+### Added
+
+-   New option during install to chose between the old NoobTacoUI nameplates or a Blizzard Like version.
+
 ## [1.4.5]
 
 ### Updated
