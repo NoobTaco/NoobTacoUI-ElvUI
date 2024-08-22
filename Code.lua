@@ -257,7 +257,7 @@ local InstallerData = {
                     NoobTacoUI:SetupNamePlatesLayout("v1")
                 end
             )
-            PluginInstallFrame.Option1:SetText("Old NoobTacoUI")
+            PluginInstallFrame.Option1:SetText("Old: NoobTacoUI")
 
             -- Option 2
             PluginInstallFrame.Option2:Show()
@@ -267,7 +267,7 @@ local InstallerData = {
                     NoobTacoUI:SetupNamePlatesLayout("v2")
                 end
             )
-            PluginInstallFrame.Option2:SetText("BlizzLike")
+            PluginInstallFrame.Option2:SetText("New: BlizzLike")
         end,
         [6] = function()
             PluginInstallFrame.SubTitle:SetText("Installation Complete")

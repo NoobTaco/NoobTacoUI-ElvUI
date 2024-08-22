@@ -52,26 +52,6 @@ end
 
 function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
     if np_layout == "v1" then -- Old Wide and High Layout
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["r"] = 1
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["g"] = 0.50980392156863
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["b"] = 0.55686274509804
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][2]["r"] = 1
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][2]["g"] = 0.65098039215686
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][2]["b"] = 0.53725490196078
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][3]["r"] = 1
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][3]["g"] = 0.85882352941176
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][3]["b"] = 0.5921568627451
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["r"] = 0.85882352941176
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["g"] = 1
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["b"] = 0.73725490196078
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["r"] = 0.47843137254902
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["g"] = 0.90196078431373
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["b"] = 0.30980392156863
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["r"] = 1
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["g"] = 0.78823529411765
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["b"] = 0.96078431372549
-        -- E.db["v11NamePlateReset"] = true
-        -- E.db["nameplates"]["threat"]["indicator"] = true
         E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["countFontOutline"] = "NONE"
         E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["priority"] =
             "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
@@ -94,17 +74,7 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["format"] = "[health:current-percent:shortvalue]"
         E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["fontSize"] = 10
         E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["yOffset"] = 0
-
-        -- if E.Classic then -- Classic
-        --     E.db["nameplates"]["units"]["PLAYER"]["power"]["displayAltPower"] = false
-        -- end
-        -- if E.TBC then -- TBCc
-        --     E.db["nameplates"]["units"]["PLAYER"]["power"]["displayAltPower"] = false
-        -- end
-        -- if E.Retail then -- Retail
         E.db["nameplates"]["units"]["PLAYER"]["power"]["displayAltPower"] = true
-        -- end
-
         E.db["nameplates"]["units"]["PLAYER"]["power"]["height"] = 5
         E.db["nameplates"]["units"]["PLAYER"]["power"]["hideWhenEmpty"] = true
         E.db["nameplates"]["units"]["PLAYER"]["power"]["yOffset"] = -11
@@ -125,17 +95,7 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
             "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["countFont"] = "Exo2-SemiBold"
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["size"] = 40
-
-        -- if E.Classic then -- Classic
-        --     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = false
-        -- end
-        -- if E.TBC then -- TBCc
-        --     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = false
-        -- end
-        -- if E.Retail then -- Retail
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = true
-        -- end
-
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["hideWhenEmpty"] = true
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["enable"] = true
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["height"] = 5
@@ -164,7 +124,6 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["fontSize"] = 12
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["font"] = "Exo2-Bold"
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["yOffset"] = 0
-
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["size"] = 30
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["font"] = "Exo2-Bold"
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["position"] = "CENTER"
@@ -175,7 +134,6 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textPosition"] = "TOP"
         E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["size"] = 40
         E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["yOffset"] = 1
-
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["font"] = "Exo2-SemiBold"
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["height"] = 12
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["iconOffsetX"] = 5
@@ -193,17 +151,7 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["countFontOutline"] = "NONE"
         E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["countFont"] = "Exo2-SemiBold"
         E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["title"]["format"] = "[guild]"
-
-        -- if E.Classic then -- Classic
-        --     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = false
-        -- end
-        -- if E.TBC then -- TBCc
-        --     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = false
-        -- end
-        -- if E.Retail then -- Retail
         E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = true
-        -- end
-
         E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["hideWhenEmpty"] = true
         E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["enable"] = true
         E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["height"] = 5
@@ -241,17 +189,7 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["units"]["ENEMY_PLAYER"]["buffs"]["countFont"] = "Exo2-SemiBold"
         E.db["nameplates"]["units"]["ENEMY_PLAYER"]["buffs"]["countFontOutline"] = "NONE"
         E.db["nameplates"]["units"]["ENEMY_PLAYER"]["title"]["format"] = "[guild]"
-
-        -- if E.Classic then -- Classic
-        --     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["displayAltPower"] = false
-        -- end
-        -- if E.TBC then -- TBCc
-        --     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["displayAltPower"] = false
-        -- end
-        -- if E.Retail then -- Retail
         E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["displayAltPower"] = true
-        -- end
-
         E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["hideWhenEmpty"] = true
         E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["enable"] = true
         E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["height"] = 5
@@ -278,17 +216,7 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
             "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
         E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["size"] = 30
         E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["yOffset"] = 15
-
-        -- if E.Classic then -- Classic
-        --     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = false
-        -- end
-        -- if E.TBC then -- TBCc
-        --     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = false
-        -- end
-        -- if E.Retail then -- Retail
         E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = true
-        -- end
-
         E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["hideWhenEmpty"] = true
         E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["enable"] = true
         E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["height"] = 5
@@ -322,7 +250,6 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["units"]["ENEMY_NPC"]["castbar"]["iconOffsetX"] = 5
         E.db["nameplates"]["units"]["ENEMY_NPC"]["castbar"]["iconSize"] = 25
         E.db["nameplates"]["units"]["ENEMY_NPC"]["castbar"]["yOffset"] = -20
-        -- E.db["nameplates"]["smoothbars"] = true
         E.db["nameplates"]["font"] = "Exo2-Bold"
         E.db["nameplates"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
         E.db["nameplates"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
@@ -332,49 +259,6 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["units"]["TARGET"]["classpower"]["spacing"] = 1
         E.db["nameplates"]["units"]["TARGET"]["classpower"]["yOffset"] = -18
     elseif np_layout == "v2" then -- New Blizz Like Nameplates
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["b"] = 0.55686274509804
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["g"] = 0.50980392156863
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["r"] = 1
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][2]["b"] = 0.53725490196078
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][2]["g"] = 0.65098039215686
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][2]["r"] = 1
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][3]["b"] = 0.5921568627451
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][3]["g"] = 0.85882352941176
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][3]["r"] = 1
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["b"] = 0.73725490196078
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["g"] = 1
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][4]["r"] = 0.85882352941176
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["b"] = 0.30980392156863
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["g"] = 0.90196078431373
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][5]["r"] = 0.47843137254902
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["b"] = 0.96078431372549
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["g"] = 0.78823529411765
-        -- E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["r"] = 1
-        -- E.db["nameplates"]["colors"]["reactions"]["good"]["b"] = 0.29
-        -- E.db["nameplates"]["colors"]["reactions"]["good"]["g"] = 0.67
-        -- E.db["nameplates"]["colors"]["reactions"]["good"]["r"] = 0.3
-        -- E.db["nameplates"]["colors"]["reactions"]["neutral"]["g"] = 0.76
-        -- E.db["nameplates"]["colors"]["selection"][0]["b"] = 0.25
-        -- E.db["nameplates"]["colors"]["selection"][0]["g"] = 0.25
-        -- E.db["nameplates"]["colors"]["selection"][0]["r"] = 0.78
-        -- E.db["nameplates"]["colors"]["selection"][2]["b"] = 0.36
-        -- E.db["nameplates"]["colors"]["selection"][2]["g"] = 0.76
-        -- E.db["nameplates"]["colors"]["selection"][2]["r"] = 0.85
-        -- E.db["nameplates"]["colors"]["selection"][3]["b"] = 0.3
-        -- E.db["nameplates"]["colors"]["selection"][3]["g"] = 0.67
-        -- E.db["nameplates"]["colors"]["selection"][3]["r"] = 0.29
-        -- E.db["nameplates"]["colors"]["threat"]["badColor"]["b"] = 0.25
-        -- E.db["nameplates"]["colors"]["threat"]["badColor"]["g"] = 0.25
-        -- E.db["nameplates"]["colors"]["threat"]["badColor"]["r"] = 0.78
-        -- E.db["nameplates"]["colors"]["threat"]["goodColor"]["b"] = 0.3
-        -- E.db["nameplates"]["colors"]["threat"]["goodColor"]["g"] = 0.67
-        -- E.db["nameplates"]["colors"]["threat"]["goodColor"]["r"] = 0.29
-        -- E.db["nameplates"]["colors"]["threat"]["goodTransition"]["b"] = 0.36
-        -- E.db["nameplates"]["colors"]["threat"]["goodTransition"]["g"] = 0.76
-        -- E.db["nameplates"]["colors"]["threat"]["goodTransition"]["r"] = 0.85
-        -- E.db["nameplates"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
-        -- E.db["nameplates"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
-        -- E.db["nameplates"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
         E.db["nameplates"]["font"] = "Exo2-Bold"
         E.db["nameplates"]["overlapH"] = 1
         E.db["nameplates"]["overlapV"] = 1.2
@@ -382,8 +266,6 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["plateSize"]["enemyWidth"] = 160
         E.db["nameplates"]["plateSize"]["friendlyWidth"] = 160
         E.db["nameplates"]["plateSize"]["personalWidth"] = 160
-        -- E.db["nameplates"]["smoothbars"] = true
-        -- E.db["nameplates"]["threat"]["indicator"] = true
         E.db["nameplates"]["units"]["ENEMY_NPC"]["buffs"]["anchorPoint"] = "TOPRIGHT"
         E.db["nameplates"]["units"]["ENEMY_NPC"]["buffs"]["attachTo"] = "DEBUFFS"
         E.db["nameplates"]["units"]["ENEMY_NPC"]["buffs"]["countFont"] = "Exo2-SemiBold"
@@ -443,7 +325,6 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["hideWhenEmpty"] = true
         E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["width"] = 151
         E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["yOffset"] = -11
-
         E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["font"] = "Roboto-Black"
         E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["position"] = "LEFT"
         E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["size"] = 30
@@ -451,14 +332,6 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textXOffset"] = 0
         E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textYOffset"] = 5
         E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["xOffset"] = -3
-
-        -- E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["font"] = "Roboto-Black"
-        -- E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["position"] = "LEFT"
-        -- E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["size"] = 40
-        -- E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textPosition"] = "TOP"
-        -- E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["xOffset"] = 5
-        -- E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["yOffset"] = 1
-
         E.db["nameplates"]["units"]["ENEMY_NPC"]["raidTargetIndicator"]["size"] = 30
         E.db["nameplates"]["units"]["ENEMY_NPC"]["raidTargetIndicator"]["xOffset"] = -15
         E.db["nameplates"]["units"]["ENEMY_NPC"]["title"]["format"] = "[guild]"
@@ -588,12 +461,6 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["textXOffset"] = 0
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["textYOffset"] = 5
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["xOffset"] = -3
-        -- E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["font"] = "Roboto-Black"
-        -- E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["position"] = "LEFT"
-        -- E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["size"] = 40
-        -- E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["textPosition"] = "TOP"
-        -- E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["xOffset"] = 5
-        -- E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["yOffset"] = 1
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["raidTargetIndicator"]["size"] = 30
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["raidTargetIndicator"]["xOffset"] = -15
         E.db["nameplates"]["units"]["FRIENDLY_NPC"]["title"]["format"] = "[guild]"
@@ -720,11 +587,6 @@ function NoobTacoUI:SetupNamePlatesLayout(np_layout, wowver)
         E.db["nameplates"]["units"]["TARGET"]["arrow"] = "ArrowUp"
         E.db["nameplates"]["units"]["TARGET"]["arrowScale"] = 0.7
         E.db["nameplates"]["units"]["TARGET"]["arrowSpacing"] = 15
-        -- E.db["nameplates"]["units"]["TARGET"]["classpower"]["classColor"] = true
-        -- E.db["nameplates"]["units"]["TARGET"]["classpower"]["enable"] = true
-        -- E.db["nameplates"]["units"]["TARGET"]["classpower"]["height"] = 10
-        -- E.db["nameplates"]["units"]["TARGET"]["classpower"]["width"] = 116
-        -- E.db["nameplates"]["units"]["TARGET"]["classpower"]["yOffset"] = 9
         E.db["nameplates"]["units"]["TARGET"]["glowStyle"] = "style3"
         -- Height
         E.db["nameplates"]["units"]["PLAYER"]["health"]["height"] = 10
