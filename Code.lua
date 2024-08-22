@@ -26,7 +26,7 @@ local EP = LibStub("LibElvUIPlugin-1.0")
 
 -- Create a new ElvUI module so ElvUI can handle initialization when ready
 local mod = E:NewModule(MyPluginName, "AceHook-3.0", "AceEvent-3.0", "AceTimer-3.0")
-local NoobTacoUI = E:NewModule(addon, 'AceHook-3.0', 'AceEvent-3.0', 'AceTimer-3.0');
+local NoobTacoUI = E:NewModule(addon, "AceHook-3.0", "AceEvent-3.0", "AceTimer-3.0")
 
 Engine[1] = NoobTacoUI
 Engine[2] = E
@@ -34,7 +34,7 @@ Engine[3] = L
 Engine[4] = V
 Engine[5] = P
 Engine[6] = G
-_G[addon] = Engine;
+_G[addon] = Engine
 
 -- Runs for the step questioning the user if they want a new ElvUI profile
 local function NewProfile(new)
@@ -48,7 +48,7 @@ local function NewProfile(new)
             hideOnEscape = 1,
             timeout = 0,
             OnShow = function(self, data)
-                self.editBox:SetText("NoobTacoUI"); -- default text in the editbox
+                self.editBox:SetText("NoobTacoUI") -- default text in the editbox
             end,
             OnAccept = function(self, data, data2)
                 local text = self.editBox:GetText()
@@ -56,8 +56,8 @@ local function NewProfile(new)
                 PluginInstallStepComplete.message = "Profile Created"
                 PluginInstallStepComplete:Show()
             end
-        };
-        StaticPopup_Show("CreateProfileNameNew", "test"); -- tell our dialog box to show
+        }
+        StaticPopup_Show("CreateProfileNameNew", "test") -- tell our dialog box to show
     elseif (new == false) then -- the user clicked "Use Current" create a dialog pop up
         StaticPopupDialogs["ProfileOverrideConfirm"] = {
             text = "Are you sure you want to override the current profile?",
@@ -77,23 +77,22 @@ end
 
 -- Setup the Layout
 local function SetupLayout()
-
     -- Turn on new WOTLK features
-    SetCVar('equipmentManager', 1)
-    SetCVar('previewTalents', 1)
+    SetCVar("equipmentManager", 1)
+    SetCVar("previewTalents", 1)
 
-    NoobTacoUI:SetupNamePlates();
-    NoobTacoUI:SetupLayout();
-    NoobTacoUI:SetupDatabars();
-    NoobTacoUI:SetupBags();
-    NoobTacoUI:SetupChat();
-    NoobTacoUI:SetupGeneral();
-    NoobTacoUI:SetupAuras();
-    NoobTacoUI:SetupCooldowns();
-    NoobTacoUI:SetupTooltips();
-    NoobTacoUI:SetupActionBars();
+    NoobTacoUI:SetupNamePlates()
+    NoobTacoUI:SetupLayout()
+    NoobTacoUI:SetupDatabars()
+    NoobTacoUI:SetupBags()
+    NoobTacoUI:SetupChat()
+    NoobTacoUI:SetupGeneral()
+    NoobTacoUI:SetupAuras()
+    NoobTacoUI:SetupCooldowns()
+    NoobTacoUI:SetupTooltips()
+    NoobTacoUI:SetupActionBars()
 
-    NoobTacoUI:SetupMovers();
+    NoobTacoUI:SetupMovers()
 
     E:UpdateAll(true)
 
@@ -126,9 +125,11 @@ local InstallerData = {
         [1] = function()
             PluginInstallFrame.SubTitle:SetFormattedText("Welcome to the installation for %s.", MyPluginName)
             PluginInstallFrame.Desc1:SetText(
-                "This installation process will guide you through a few steps and apply settings to your current ElvUI profile. If you want to be able to go back to your original settings then create a new profile before going through this installation process.")
+                "This installation process will guide you through a few steps and apply settings to your current ElvUI profile. If you want to be able to go back to your original settings then create a new profile before going through this installation process."
+            )
             PluginInstallFrame.Desc2:SetText(
-                "Please press the continue button if you wish to go through the installation process, otherwise click the 'Skip Process' button.")
+                "Please press the continue button if you wish to go through the installation process, otherwise click the 'Skip Process' button."
+            )
             PluginInstallFrame.Option1:Show()
             PluginInstallFrame.Option1:SetScript("OnClick", InstallComplete)
             PluginInstallFrame.Option1:SetText("Skip Process")
@@ -136,36 +137,53 @@ local InstallerData = {
         [2] = function()
             PluginInstallFrame.SubTitle:SetText("Profiles")
             PluginInstallFrame.Desc1:SetText(
-                "You can either create a new profile to install NoobTacoUI onto or you can apply NoobTacoUI settings to your current profile")
-            PluginInstallFrame.Desc3:SetText("Your currently active ElvUI profile is: |cffc41f3b" ..
-                                                 ElvUI[1].data:GetCurrentProfile() .. "|r")
+                "You can either create a new profile to install NoobTacoUI onto or you can apply NoobTacoUI settings to your current profile"
+            )
+            PluginInstallFrame.Desc3:SetText(
+                "Your currently active ElvUI profile is: |cffc41f3b" .. ElvUI[1].data:GetCurrentProfile() .. "|r"
+            )
             PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript("OnClick", function()
-                NewProfile(false)
-            end)
+            PluginInstallFrame.Option1:SetScript(
+                "OnClick",
+                function()
+                    NewProfile(false)
+                end
+            )
             PluginInstallFrame.Option1:SetText("Use Current")
             PluginInstallFrame.Option2:Show()
-            PluginInstallFrame.Option2:SetScript("OnClick", function()
-                NewProfile(true, "NoobTacoUI")
-            end)
+            PluginInstallFrame.Option2:SetScript(
+                "OnClick",
+                function()
+                    NewProfile(true, "NoobTacoUI")
+                end
+            )
             PluginInstallFrame.Option2:SetText("Create New")
 
             PluginInstallFrame.SubTitle:SetText("Profiles")
             PluginInstallFrame.Desc1:SetText(
-                "Press \"Update Current\" to update your current profile with the new NoobTacoUI changes.")
+                'Press "Update Current" to update your current profile with the new NoobTacoUI changes.'
+            )
             PluginInstallFrame.Desc2:SetText(
-                "If you'd like to check out what the changes are, without overwriting your current settings, you can press \"Create New\"")
-            PluginInstallFrame.Desc3:SetText("Your currently active ElvUI profile is: |cffc41f3b" ..
-                                                 ElvUI[1].data:GetCurrentProfile() .. "|r")
+                'If you\'d like to check out what the changes are, without overwriting your current settings, you can press "Create New"'
+            )
+            PluginInstallFrame.Desc3:SetText(
+                "Your currently active ElvUI profile is: |cffc41f3b" .. ElvUI[1].data:GetCurrentProfile() .. "|r"
+            )
             PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript("OnClick", function()
-                NewProfile(false)
-            end)
+            PluginInstallFrame.Option1:SetScript(
+                "OnClick",
+                function()
+                    NewProfile(false)
+                end
+            )
             PluginInstallFrame.Option1:SetText("Update Current")
             PluginInstallFrame.Option2:Show()
-            PluginInstallFrame.Option2:SetScript("OnClick", function()
-                NewProfile(true, "ThinkTankkUI-Update")
-            end)
+            PluginInstallFrame.Option2:SetScript(
+                "OnClick",
+                function()
+                    NewProfile(true, "ThinkTankkUI-Update")
+                end
+            )
             PluginInstallFrame.Option2:SetText("Create New")
         end,
         [3] = function()
@@ -175,33 +193,46 @@ local InstallerData = {
             PluginInstallFrame.Desc3:SetFormattedText(L["Importance: |cffFF0000High|r"])
 
             PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript('OnClick', function()
-                SetupLayout();
-            end)
+            PluginInstallFrame.Option1:SetScript(
+                "OnClick",
+                function()
+                    SetupLayout()
+                end
+            )
             PluginInstallFrame.Option1:SetText("Set Layout")
         end,
         [4] = function()
             PluginInstallFrame.SubTitle:SetText("Layouts")
             PluginInstallFrame.Desc1:SetText(
-                "These are the layouts that are available. Please click a button below to apply the layout of your choosing.")
+                "These are the layouts that are available. Please click a button below to apply the layout of your choosing."
+            )
             PluginInstallFrame.Desc2:SetText("Importance: |cff07D400High|r")
             PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript("OnClick", function()
-                NoobTacoUI:SetupUnitFrames("v1")
-            end)
+            PluginInstallFrame.Option1:SetScript(
+                "OnClick",
+                function()
+                    NoobTacoUI:SetupUnitFrames("v1")
+                end
+            )
             PluginInstallFrame.Option1:SetText("DPS or Tank")
             PluginInstallFrame.Option2:Show()
-            PluginInstallFrame.Option2:SetScript("OnClick", function()
-                NoobTacoUI:SetupUnitFrames("v2")
-            end)
+            PluginInstallFrame.Option2:SetScript(
+                "OnClick",
+                function()
+                    NoobTacoUI:SetupUnitFrames("v2")
+                end
+            )
             PluginInstallFrame.Option2:SetText("Healer")
             -- Check if WA is installed
             if (C_AddOns.IsAddOnLoaded("WeakAuras")) then
                 if E.Wrath then -- WOTLK
                     PluginInstallFrame.Option3:Show()
-                    PluginInstallFrame.Option3:SetScript("OnClick", function()
-                        NoobTacoUI:SetupUnitFrames("v3")
-                    end)
+                    PluginInstallFrame.Option3:SetScript(
+                        "OnClick",
+                        function()
+                            NoobTacoUI:SetupUnitFrames("v3")
+                        end
+                    )
                     PluginInstallFrame.Option3:SetText("Luxthos WA")
                 end
             end
@@ -212,11 +243,40 @@ local InstallerData = {
             end
         end,
         [5] = function()
+            PluginInstallFrame.SubTitle:SetText("Nameplates")
+            PluginInstallFrame.Desc1:SetText(
+                "These are the Nameplate Options available. Please click a button below to apply the layout of your choosing."
+            )
+            PluginInstallFrame.Desc2:SetText("Importance: |cff07D400High|r")
+
+            -- Option 1
+            PluginInstallFrame.Option1:Show()
+            PluginInstallFrame.Option1:SetScript(
+                "OnClick",
+                function()
+                    NoobTacoUI:SetupNamePlatesLayout("v1")
+                end
+            )
+            PluginInstallFrame.Option1:SetText("Old: NoobTacoUI")
+
+            -- Option 2
+            PluginInstallFrame.Option2:Show()
+            PluginInstallFrame.Option2:SetScript(
+                "OnClick",
+                function()
+                    NoobTacoUI:SetupNamePlatesLayout("v2")
+                end
+            )
+            PluginInstallFrame.Option2:SetText("New: BlizzLike")
+        end,
+        [6] = function()
             PluginInstallFrame.SubTitle:SetText("Installation Complete")
             PluginInstallFrame.Desc1:SetText(
-                "You have completed the installation process.\nIf you need help or wish to report a bug, please go to http://tukui.org")
+                "You have completed the installation process.\nIf you need help or wish to report a bug, please go to http://tukui.org"
+            )
             PluginInstallFrame.Desc2:SetText(
-                "Please click the button below in order to finalize the process and automatically reload your UI. \nLog out of character is needed for all fonts to update.")
+                "Please click the button below in order to finalize the process and automatically reload your UI. \nLog out of character is needed for all fonts to update."
+            )
             PluginInstallFrame.Option1:Show()
             PluginInstallFrame.Option1:SetScript("OnClick", InstallComplete)
             PluginInstallFrame.Option1:SetText("Finished")
@@ -227,8 +287,8 @@ local InstallerData = {
         [2] = "Profiles",
         [3] = "General Layout",
         [4] = "Layouts",
-        [5] = "Installation Complete"
-
+        [5] = "Nameplate",
+        [6] = "Installation Complete"
     },
     StepTitlesColor = {1, 1, 1},
     StepTitlesColorSelected = {0, 179 / 255, 1},
