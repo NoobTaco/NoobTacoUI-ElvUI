@@ -1,5 +1,12 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
+-- CHANGELOG --------------------------------------------------------------------
+--[[
+    Version 1.5.0 - Databars improvements
+        - Updated the font used for databars to "Poppins-SemiBold"
+        - Adjusted the colors for experience and rested
+        - Increased the font size for datatexts
+]]
 function NoobTacoUI:SetupDatabars()
     if E.Retail then -- Retail
         E.db["databars"]["honor"]["enable"] = false
@@ -14,7 +21,7 @@ function NoobTacoUI:SetupDatabars()
     end
 
     -- DATATEXT ------------------------------------------------------------------
-    E.db["datatexts"]["font"] = "Exo2-Bold"
+    E.db["datatexts"]["font"] = "Poppins-SemiBold"
     E.db["datatexts"]["panels"]["RightMiniPanel"] = "Bags"
     E.db["datatexts"]["panels"]["LeftCoordDtPanel"] = "Coords"
     E.db["datatexts"]["panels"]["RightCoordDtPanel"] = "Broker_RunSpeed"
@@ -25,12 +32,12 @@ function NoobTacoUI:SetupDatabars()
 
     -- DATABARS ------------------------------------------
     E.db["databars"]["threat"]["enable"] = false
-    E.db["databars"]["threat"]["font"] = "Exo2-Bold"
+    E.db["databars"]["threat"]["font"] = "Poppins-SemiBold"
     E.db["databars"]["threat"]["height"] = 12
     E.db["databars"]["threat"]["width"] = 200
 
     E.db["databars"]["experience"]["textFormat"] = "NONE"
-    E.db["databars"]["experience"]["font"] = "Exo2-Regular"
+    E.db["databars"]["experience"]["font"] = "Poppins-SemiBold"
     E.db["databars"]["experience"]["height"] = 222
     E.db["databars"]["experience"]["hideAtMaxLevel"] = false
     E.db["databars"]["experience"]["hideInCombat"] = false
@@ -39,7 +46,7 @@ function NoobTacoUI:SetupDatabars()
     E.db["databars"]["experience"]["showBubbles"] = false
     E.db["databars"]["experience"]["width"] = 8
     E.db["databars"]["reputation"]["enable"] = true
-    E.db["databars"]["reputation"]["font"] = "Exo2-Regular"
+    E.db["databars"]["reputation"]["font"] = "Poppins-SemiBold"
     E.db["databars"]["reputation"]["height"] = 222
     E.db["databars"]["reputation"]["hideInCombat"] = false
     E.db["databars"]["reputation"]["orientation"] = "VERTICAL"

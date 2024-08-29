@@ -1,5 +1,11 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
+-- CHANGELOG --------------------------------------------------------------------
+--[[
+    Version 1.5.0 - Cooldowns improvements
+        - Updated the font used for cooldowns to "Poppins-SemiBold"
+        - Adjusted the colors for cooldowns
+]]
 function NoobTacoUI:SetupCooldowns()
     -- COOLDOWN --------------------------------------------------------------------
     E.db["cooldown"]["secondsColor"]["r"] = 0.92156862745098
@@ -12,7 +18,7 @@ function NoobTacoUI:SetupCooldowns()
     E.db["cooldown"]["expiringColor"]["g"] = 0.38039215686275
     E.db["cooldown"]["expiringColor"]["b"] = 0.4156862745098
     E.db["cooldown"]["fonts"]["enable"] = true
-    E.db["cooldown"]["fonts"]["font"] = "Exo2-Bold"
+    E.db["cooldown"]["fonts"]["font"] = "Poppins-SemiBold"
     E.db["cooldown"]["hoursColor"]["r"] = 0.53333333333333
     E.db["cooldown"]["hoursColor"]["g"] = 0.75294117647059
     E.db["cooldown"]["hoursColor"]["b"] = 0.8156862745098

@@ -1,5 +1,12 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
+-- CHANGELOG --------------------------------------------------------------------
+--[[
+    Version 1.5.0 - General improvements
+        - Updated the font used for general UI to "Poppins-SemiBold"
+        - Adjusted the colors for general UI
+        - Increased the font size for general UI
+]]
 function NoobTacoUI:UnitframePlayer()
     E.db["unitframe"]["units"]["player"]["debuffs"]["anchorPoint"] = "TOPRIGHT"
     E.db["unitframe"]["units"]["player"]["debuffs"]["growthX"] = "LEFT"
@@ -38,7 +45,7 @@ function NoobTacoUI:UnitframePlayer()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["text_format"] =
         "[name:medium] [difficultycolor] [level] [shortclassification]"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["yOffset"] = 40
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["justifyH"] = "RIGHT"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["enable"] = true
@@ -46,7 +53,7 @@ function NoobTacoUI:UnitframePlayer()
     -- Updated 8-19-24
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["enable"] = true
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["justifyH"] = "RIGHT"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["size"] = 15
@@ -59,7 +66,7 @@ function NoobTacoUI:UnitframePlayer()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["xOffset"] = -5
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["text_format"] = "[power:current]"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["yOffset"] = 0
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["justifyH"] = "RIGHT"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["enable"] = true

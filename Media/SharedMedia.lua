@@ -47,3 +47,20 @@ LSM:Register("font", "Mukta-Light", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Mu
 LSM:Register("font", "Mukta-Medium", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Mukta-Medium.ttf]])
 LSM:Register("font", "Mukta-Regular", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Mukta-Regular.ttf]])
 LSM:Register("font", "Mukta-SemiBold", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Mukta-SemiBold.ttf]])
+
+-- Poppins
+LSM:Register("font", "Poppins-Black", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Poppins-Black.ttf]])
+LSM:Register("font", "Poppins-Bold", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Poppins-Bold.ttf]])
+LSM:Register("font", "Poppins-ExtraBold", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Poppins-ExtraBold.ttf]])
+LSM:Register("font", "Poppins-ExtraLight", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Poppins-ExtraLight.ttf]])
+LSM:Register("font", "Poppins-Italic", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Poppins-Italic.ttf]])
+LSM:Register("font", "Poppins-Medium", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Poppins-Medium.ttf]])
+LSM:Register("font", "Poppins-Regular", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Poppins-Regular.ttf]])
+LSM:Register("font", "Poppins-SemiBold", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Poppins-SemiBold.ttf]])
+LSM:Register("font", "Poppins-Thin", [[Interface\AddOns\NoobTacoUI\Media\Fonts\Poppins-Thin.ttf]])
+
+-- Audio
+LSM:Register("sound", "NT_Chest", [[Interface\AddOns\NoobTacoUI\Media\Audio\nt_sd_chest.ogg]])
+LSM:Register("sound", "NT_Group", [[Interface\AddOns\NoobTacoUI\Media\Audio\nt_sd_groupnpc.ogg]])
+LSM:Register("sound", "NT_Mount", [[Interface\AddOns\NoobTacoUI\Media\Audio\nt_sd_mount.ogg]])
+LSM:Register("sound", "NT_NPC", [[Interface\AddOns\NoobTacoUI\Media\Audio\nt_sd_npc.ogg]])
