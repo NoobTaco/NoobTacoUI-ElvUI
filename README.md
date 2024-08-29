@@ -86,6 +86,9 @@ If you find a bug or would like to request a feature, please fill out an issue o
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G01GM9G)
 [![sponsormeongithub](https://user-images.githubusercontent.com/1172935/97088810-463e0e00-15e8-11eb-8078-f18da01c6e9e.png)](https://github.com/sponsors/NoobTaco)
+
+[![Zygor](https://zygorguides.com/blog/wp-content/uploads/2023/07/df-flat-banner.jpg)](https://zygorguides.com/ref/manorton/)
+
 [![restedXp](https://www.restedxp.com/wp-content/uploads/2021/05/rxp-promo-banner_short.gif)](https://www.restedxp.com/ref/NoobTaco)
 
 # Images
