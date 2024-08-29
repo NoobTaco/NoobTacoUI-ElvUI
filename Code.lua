@@ -242,34 +242,34 @@ local InstallerData = {
                 E.private["bags"]["enable"] = false
             end
         end,
+        -- [5] = function()
+        --     PluginInstallFrame.SubTitle:SetText("Nameplates")
+        --     PluginInstallFrame.Desc1:SetText(
+        --         "These are the Nameplate Options available. Please click a button below to apply the layout of your choosing."
+        --     )
+        --     PluginInstallFrame.Desc2:SetText("Importance: |cff07D400High|r")
+
+        --     -- Option 1
+        --     PluginInstallFrame.Option1:Show()
+        --     PluginInstallFrame.Option1:SetScript(
+        --         "OnClick",
+        --         function()
+        --             NoobTacoUI:SetupNamePlatesLayout("v1")
+        --         end
+        --     )
+        --     PluginInstallFrame.Option1:SetText("Old: NoobTacoUI")
+
+        --     -- Option 2
+        --     PluginInstallFrame.Option2:Show()
+        --     PluginInstallFrame.Option2:SetScript(
+        --         "OnClick",
+        --         function()
+        --             NoobTacoUI:SetupNamePlatesLayout("v2")
+        --         end
+        --     )
+        --     PluginInstallFrame.Option2:SetText("New: BlizzLike")
+        -- end,
         [5] = function()
-            PluginInstallFrame.SubTitle:SetText("Nameplates")
-            PluginInstallFrame.Desc1:SetText(
-                "These are the Nameplate Options available. Please click a button below to apply the layout of your choosing."
-            )
-            PluginInstallFrame.Desc2:SetText("Importance: |cff07D400High|r")
-
-            -- Option 1
-            PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript(
-                "OnClick",
-                function()
-                    NoobTacoUI:SetupNamePlatesLayout("v1")
-                end
-            )
-            PluginInstallFrame.Option1:SetText("Old: NoobTacoUI")
-
-            -- Option 2
-            PluginInstallFrame.Option2:Show()
-            PluginInstallFrame.Option2:SetScript(
-                "OnClick",
-                function()
-                    NoobTacoUI:SetupNamePlatesLayout("v2")
-                end
-            )
-            PluginInstallFrame.Option2:SetText("New: BlizzLike")
-        end,
-        [6] = function()
             PluginInstallFrame.SubTitle:SetText("Installation Complete")
             PluginInstallFrame.Desc1:SetText(
                 "You have completed the installation process.\nIf you need help or wish to report a bug, please go to http://tukui.org"
