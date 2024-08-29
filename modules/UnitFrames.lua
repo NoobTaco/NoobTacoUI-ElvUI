@@ -1,5 +1,12 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
+-- CHANGELOG --------------------------------------------------------------------
+--[[
+    Version 1.5.0 - Unitframes improvements
+        - Updated the font used for unitframes to "Poppins-SemiBold"
+        - Adjusted the colors for unitframes
+        - Increased the font size for unitframes
+]]
 function NoobTacoUI:SetupLayout()
     -- CUSTOM TEXTS
     -- Player Unit Frame
@@ -80,16 +87,16 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["fontSize"] = 13
     E.db["unitframe"]["smartRaidFilter"] = false
 
-    NoobTacoUI:UnitframePlayer();
-    NoobTacoUI:UnitframeFocus();
-    NoobTacoUI:UnitframePet();
-    NoobTacoUI:UnitframeParty();
-    NoobTacoUI:UnitframeTarget();
-    NoobTacoUI:UnitframeTargetTarget();
-    NoobTacoUI:UnitframeRaid1();
-    NoobTacoUI:UnitframeRaid3();
+    NoobTacoUI:UnitframePlayer()
+    NoobTacoUI:UnitframeFocus()
+    NoobTacoUI:UnitframePet()
+    NoobTacoUI:UnitframeParty()
+    NoobTacoUI:UnitframeTarget()
+    NoobTacoUI:UnitframeTargetTarget()
+    NoobTacoUI:UnitframeRaid1()
+    NoobTacoUI:UnitframeRaid3()
 
-    E.db["unitframe"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["colors"]["auraBarBuff"]["r"] = 0.96
     E.db["unitframe"]["colors"]["auraBarBuff"]["g"] = 0.55
     E.db["unitframe"]["colors"]["auraBarBuff"]["b"] = 0.73
@@ -107,13 +114,12 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
     E.db["unitframe"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
     E.db["unitframe"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
-
 end
 
 function NoobTacoUI:SetupUnitFrames(layout, wowver)
-
     -- DPS and TANK Layout
-    if layout == 'v1' then
+    if layout == "v1" then
+        -- Heal Layout
         E.db.unitframes = nil
 
         E.db["movers"]["ElvUF_PetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-240,158"
@@ -137,9 +143,8 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
 
         -- Totem tracker mover DK pet as well
         E.db["movers"]["TotemTrackerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-205,155"
-
-        -- Heal Layout
-    elseif layout == 'v2' then
+    elseif layout == "v2" then
+        -- Luxothe Weak Aura layout
         E.db.unitframes = nil
 
         E.db["movers"]["ElvUF_PartyMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,285"
@@ -164,9 +169,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
 
         -- Totem tracker mover DK pet as well
         E.db["movers"]["TotemTrackerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-300,244"
-
-        -- Luxothe Weak Aura layout
-    elseif layout == 'v3' then
+    elseif layout == "v3" then
         E.db.unitframes = nil
 
         -- Movers
@@ -191,7 +194,6 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
 
         -- Totem tracker mover DK pet as well
         E.db["movers"]["TotemTrackerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-300,244"
-
     end
     -- Update ElvUI --------------------------------------
     E:UpdateAll(true)

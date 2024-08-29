@@ -1,11 +1,18 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
+-- CHANGELOG --------------------------------------------------------------------
+--[[
+    Version 1.5.0 - General improvements
+        - Updated the font used for general UI to "Poppins-SemiBold"
+        - Adjusted the colors for general UI
+        - Increased the font size for general UI
+]]
 function NoobTacoUI:UnitframeParty()
     E.db["unitframe"]["units"]["party"]["buffIndicator"]["enable"] = true
     E.db["unitframe"]["units"]["party"]["buffIndicator"]["size"] = 15
     E.db["unitframe"]["units"]["party"]["debuffs"]["anchorPoint"] = "TOP"
     E.db["unitframe"]["units"]["party"]["debuffs"]["clickThrough"] = true
-    E.db["unitframe"]["units"]["party"]["debuffs"]["countFont"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["party"]["debuffs"]["countFont"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["party"]["debuffs"]["numrows"] = 2
     E.db["unitframe"]["units"]["party"]["debuffs"]["perrow"] = 3
     E.db["unitframe"]["units"]["party"]["debuffs"]["sizeOverride"] = 20
@@ -23,7 +30,7 @@ function NoobTacoUI:UnitframeParty()
     E.db["unitframe"]["units"]["party"]["power"]["height"] = 10
     E.db["unitframe"]["units"]["party"]["power"]["text_format"] = ""
     E.db["unitframe"]["units"]["party"]["raidRoleIcons"]["yOffset"] = -2
-    E.db["unitframe"]["units"]["party"]["rdebuffs"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["party"]["rdebuffs"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["party"]["readycheckIcon"]["position"] = "TOPRIGHT"
     E.db["unitframe"]["units"]["party"]["readycheckIcon"]["size"] = 30
     E.db["unitframe"]["units"]["party"]["readycheckIcon"]["yOffset"] = 0

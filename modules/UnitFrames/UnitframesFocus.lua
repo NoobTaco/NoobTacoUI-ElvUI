@@ -1,10 +1,17 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
+-- CHANGELOG --------------------------------------------------------------------
+--[[
+    Version 1.5.0 - General improvements
+        - Updated the font used for general UI to "Poppins-SemiBold"
+        - Adjusted the colors for general UI
+        - Increased the font size for general UI
+]]
 function NoobTacoUI:UnitframeFocus()
     E.db["unitframe"]["units"]["focus"]["aurabar"]["detachedWidth"] = 270
     E.db["unitframe"]["units"]["focus"]["aurabar"]["maxBars"] = 6
     E.db["unitframe"]["units"]["focus"]["buffs"]["anchorPoint"] = "TOPLEFT"
-    E.db["unitframe"]["units"]["focus"]["buffs"]["countFont"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["focus"]["buffs"]["countFont"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["focus"]["buffs"]["enable"] = true
     E.db["unitframe"]["units"]["focus"]["buffs"]["maxDuration"] = 0
     E.db["unitframe"]["units"]["focus"]["buffs"]["perrow"] = 8
@@ -16,7 +23,7 @@ function NoobTacoUI:UnitframeFocus()
     E.db["unitframe"]["units"]["focus"]["castbar"]["width"] = 200
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["enable"] = true
-    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["size"] = 20
@@ -25,7 +32,7 @@ function NoobTacoUI:UnitframeFocus()
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetHealth"]["yOffset"] = 0
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["enable"] = true
-    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["fontOutline"] = "OUTLINE"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["justifyH"] = "CENTER"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["size"] = 20
@@ -34,7 +41,7 @@ function NoobTacoUI:UnitframeFocus()
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetLevel"]["yOffset"] = -35
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["enable"] = true
-    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["size"] = 13
@@ -44,7 +51,7 @@ function NoobTacoUI:UnitframeFocus()
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["yOffset"] = 40
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["attachTextTo"] = "Power"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["enable"] = true
-    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["size"] = 13
@@ -53,7 +60,7 @@ function NoobTacoUI:UnitframeFocus()
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["yOffset"] = 0
     E.db["unitframe"]["units"]["focus"]["debuffs"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["attachTo"] = "BUFFS"
-    E.db["unitframe"]["units"]["focus"]["debuffs"]["countFont"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["focus"]["debuffs"]["countFont"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["growthX"] = "RIGHT"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["maxDuration"] = 0
     E.db["unitframe"]["units"]["focus"]["debuffs"]["numrows"] = 2

@@ -1,9 +1,16 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
+-- CHANGELOG --------------------------------------------------------------------
+--[[
+    Version 1.5.0 - General improvements
+        - Updated the font used for general UI to "Poppins-SemiBold"
+        - Adjusted the colors for general UI
+        - Increased the font size for general UI
+]]
 function NoobTacoUI:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["buffs"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["target"]["buffs"]["attachTo"] = "FRAME"
-    E.db["unitframe"]["units"]["target"]["buffs"]["countFont"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["target"]["buffs"]["countFont"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["target"]["buffs"]["growthX"] = "RIGHT"
     E.db["unitframe"]["units"]["target"]["buffs"]["yOffset"] = 20
     E.db["unitframe"]["units"]["target"]["castbar"]["height"] = 30
@@ -12,7 +19,7 @@ function NoobTacoUI:UnitframeTarget()
     -- Updated 8-19-24
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["enable"] = true
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["size"] = 15
@@ -23,7 +30,7 @@ function NoobTacoUI:UnitframeTarget()
     --
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["enable"] = true
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["fontOutline"] = "OUTLINE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["justifyH"] = "CENTER"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["size"] = 20
@@ -32,7 +39,7 @@ function NoobTacoUI:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"]["yOffset"] = -35
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["enable"] = true
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["size"] = 13
@@ -42,7 +49,7 @@ function NoobTacoUI:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["yOffset"] = 40
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["attachTextTo"] = "Power"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["enable"] = true
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["size"] = 13
@@ -51,7 +58,7 @@ function NoobTacoUI:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["yOffset"] = 0
     E.db["unitframe"]["units"]["target"]["debuffs"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["target"]["debuffs"]["attachTo"] = "BUFFS"
-    E.db["unitframe"]["units"]["target"]["debuffs"]["countFont"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["target"]["debuffs"]["countFont"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["target"]["debuffs"]["growthX"] = "RIGHT"
     E.db["unitframe"]["units"]["target"]["debuffs"]["maxDuration"] = 0
     E.db["unitframe"]["units"]["target"]["debuffs"]["numrows"] = 3

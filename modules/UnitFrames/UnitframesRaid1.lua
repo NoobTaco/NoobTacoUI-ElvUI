@@ -1,5 +1,12 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
+-- CHANGELOG --------------------------------------------------------------------
+--[[
+    Version 1.5.0 - General improvements
+        - Updated the font used for general UI to "Poppins-SemiBold"
+        - Adjusted the colors for general UI
+        - Increased the font size for general UI
+]]
 function NoobTacoUI:UnitframeRaid1()
     E.db["unitframe"]["units"]["raid1"]["buffIndicator"]["enable"] = true
     E.db["unitframe"]["units"]["raid1"]["buffIndicator"]["size"] = 10
@@ -7,7 +14,7 @@ function NoobTacoUI:UnitframeRaid1()
     E.db["unitframe"]["units"]["raid1"]["debuffs"]["anchorPoint"] = "TOP"
     E.db["unitframe"]["units"]["raid1"]["debuffs"]["attachTo"] = "FRAME"
     E.db["unitframe"]["units"]["raid1"]["debuffs"]["clickThrough"] = true
-    E.db["unitframe"]["units"]["raid1"]["debuffs"]["countFont"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["raid1"]["debuffs"]["countFont"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["raid1"]["debuffs"]["enable"] = true
     E.db["unitframe"]["units"]["raid1"]["debuffs"]["numrows"] = 2
     E.db["unitframe"]["units"]["raid1"]["debuffs"]["perrow"] = 3
@@ -31,7 +38,7 @@ function NoobTacoUI:UnitframeRaid1()
     E.db["unitframe"]["units"]["raid1"]["power"]["position"] = "RIGHT"
     E.db["unitframe"]["units"]["raid1"]["power"]["yOffset"] = 0
     E.db["unitframe"]["units"]["raid1"]["raidRoleIcons"]["yOffset"] = -2
-    E.db["unitframe"]["units"]["raid1"]["rdebuffs"]["font"] = "Exo2-Bold"
+    E.db["unitframe"]["units"]["raid1"]["rdebuffs"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["raid1"]["rdebuffs"]["size"] = 20
     E.db["unitframe"]["units"]["raid1"]["rdebuffs"]["yOffset"] = 5
     E.db["unitframe"]["units"]["raid1"]["readycheckIcon"]["position"] = "TOPRIGHT"
