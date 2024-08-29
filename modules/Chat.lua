@@ -1,16 +1,22 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
-
+-- CHANGELOG --------------------------------------------------------------------
+--[[
+    Version 1.5.0 - Chat improvements
+        - Updated the font used for chat to "Poppins-SemiBold"
+        - Adjusted the colors for chat panels
+        - Increased the font size for chat
+]]
 function NoobTacoUI:SetupChat()
     E.db["chat"]["useCustomTimeColor"] = false
     E.db["chat"]["fontSize"] = 14
     E.db["chat"]["keywordSound"] = "Simon Chime"
-    E.db["chat"]["tabFont"] = "Exo2-Bold"
+    E.db["chat"]["tabFont"] = "Poppins-SemiBold"
     E.db["chat"]["panelColor"]["a"] = 0.53608983755112
     E.db["chat"]["panelColor"]["r"] = 0.13725490196078
     E.db["chat"]["panelColor"]["g"] = 0.15294117647059
     E.db["chat"]["panelColor"]["b"] = 0.18823529411765
     E.db["chat"]["tabFontSize"] = 14
-    E.db["chat"]["font"] = "Exo2-Bold"
+    E.db["chat"]["font"] = "Poppins-SemiBold"
     E.db["chat"]["panelHeight"] = 200
     E.db["chat"]["editBoxPosition"] = "ABOVE_CHAT"
     E.db["chat"]["tabSelectorColor"]["r"] = 0.53333333333333
