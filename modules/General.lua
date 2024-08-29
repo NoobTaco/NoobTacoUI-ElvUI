@@ -48,7 +48,7 @@ function NoobTacoUI:SetupGeneral()
     E.db["general"]["fonts"]["questsmall"]["enable"] = true
     E.db["general"]["fonts"]["questsmall"]["font"] = "Poppins-Medium"
     E.db["general"]["fonts"]["questtext"]["enable"] = true
-    E.db["general"]["fonts"]["questtext"]["font"] = "Poppins-Regular"
+    E.db["general"]["fonts"]["questtext"]["font"] = "Poppins-Medium"
     E.db["general"]["fonts"]["questtitle"]["enable"] = true
     E.db["general"]["fonts"]["questtitle"]["font"] = "Poppins-SemiBold"
     E.db["general"]["fonts"]["talkingtext"]["enable"] = true
