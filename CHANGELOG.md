@@ -227,11 +227,3 @@
 ### [1.0.0]
 
 -   Initial upload.
-
-### Todo List:
-
--   Font overhaul
--   Nameplate fixed
--   Color tweaks
--   Settings for ElvUI Combat text
--   Custom Details profile
