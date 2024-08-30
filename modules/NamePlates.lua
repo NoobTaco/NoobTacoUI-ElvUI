@@ -7,6 +7,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Adjusted the colors for nameplates
         - Increased the font size for nameplates
         - Removed second nameplate option
+        - Updated the questIcon section for Enemy NPC and FRIENDLY_NPC
 ]]
 function NoobTacoUI:SetupNamePlates()
     -- NAMEPLATES -------------------------------------------------------------
@@ -103,15 +104,19 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["hideWhenEmpty"] = true
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["yOffset"] = -11
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["xOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["font"] = "Poppins-SemiBold"
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["fontOutline"] = "THICKOUTLINE"
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["position"] = "CENTER"
+
+    -- Quest Icon Section for Enemy NPC
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["font"] = "Poppins-Medium"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["position"] = "LEFT"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["fontOutline"] = "OUTLINE"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["size"] = 20
     E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["spacing"] = 0
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textPosition"] = "LEFT"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textPosition"] = "TOP"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textXOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textYOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["yOffset"] = -8
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["xOffset"] = 5
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textYOffset"] = 5
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["yOffset"] = 0
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["xOffset"] = 0
+
     E.db["nameplates"]["units"]["ENEMY_NPC"]["raidTargetIndicator"]["position"] = "CENTER"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["raidTargetIndicator"]["size"] = 30
     E.db["nameplates"]["units"]["ENEMY_NPC"]["raidTargetIndicator"]["xOffset"] = 0
@@ -207,14 +212,19 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["height"] = 5
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["hideWhenEmpty"] = true
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["yOffset"] = -11
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["font"] = "Poppins-SemiBold"
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["fontOutline"] = "THICKOUTLINE"
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["position"] = "CENTER"
+
+    -- Quest Icon Section for FRIENDLY_NPC
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["font"] = "Poppins-Medium"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["position"] = "LEFT"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["fontOutline"] = "OUTLINE"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["size"] = 20
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["spacing"] = 0
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["textPosition"] = "LEFT"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["textPosition"] = "TOP"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["textXOffset"] = 0
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["textYOffset"] = 0
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["yOffset"] = -8
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["textYOffset"] = 5
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["yOffset"] = 0
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["xOffset"] = 0
+
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["raidTargetIndicator"]["position"] = "CENTER"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["raidTargetIndicator"]["size"] = 30
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["raidTargetIndicator"]["xOffset"] = 0
@@ -307,5 +317,5 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["TARGET"]["classpower"]["enable"] = true
     E.db["nameplates"]["units"]["TARGET"]["classpower"]["height"] = 10
     E.db["nameplates"]["units"]["TARGET"]["classpower"]["yOffset"] = -18
-    E.db["nameplates"]["units"]["TARGET"]["glowStyle"] = "style7"
+    E.db["nameplates"]["units"]["TARGET"]["glowStyle"] = "style2"
 end

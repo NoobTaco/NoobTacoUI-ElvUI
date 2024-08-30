@@ -6,6 +6,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Updated the font used for general UI to "Poppins-SemiBold"
         - Adjusted the colors for general UI
         - Increased the font size for general UI
+        - Adjusted the size pvpsubzone, pvpzone, questsmall, questtext, questtitle, talkingtext, talkingtitle, worldsubzone, worldzone fonts
 ]]
 function NoobTacoUI:SetupGeneral()
     --	PrivateDB
@@ -42,9 +43,9 @@ function NoobTacoUI:SetupGeneral()
     E.db["general"]["fonts"]["objective"]["enable"] = true
     E.db["general"]["fonts"]["objective"]["font"] = "Poppins-SemiBold"
     E.db["general"]["fonts"]["pvpsubzone"]["enable"] = true
-    E.db["general"]["fonts"]["pvpsubzone"]["font"] = "Poppins-Medium"
+    E.db["general"]["fonts"]["pvpsubzone"]["font"] = "Poppins-SemiBold"
     E.db["general"]["fonts"]["pvpzone"]["enable"] = true
-    E.db["general"]["fonts"]["pvpzone"]["font"] = "Poppins-SemiBold"
+    E.db["general"]["fonts"]["pvpzone"]["font"] = "Poppins-Bold"
     E.db["general"]["fonts"]["questsmall"]["enable"] = true
     E.db["general"]["fonts"]["questsmall"]["font"] = "Poppins-Medium"
     E.db["general"]["fonts"]["questtext"]["enable"] = true
@@ -56,9 +57,9 @@ function NoobTacoUI:SetupGeneral()
     E.db["general"]["fonts"]["talkingtitle"]["enable"] = true
     E.db["general"]["fonts"]["talkingtitle"]["font"] = "Poppins-SemiBold"
     E.db["general"]["fonts"]["worldsubzone"]["enable"] = true
-    E.db["general"]["fonts"]["worldsubzone"]["font"] = "Poppins-Medium"
+    E.db["general"]["fonts"]["worldsubzone"]["font"] = "Poppins-SemiBold"
     E.db["general"]["fonts"]["worldzone"]["enable"] = true
-    E.db["general"]["fonts"]["worldzone"]["font"] = "Poppins-SemiBold"
+    E.db["general"]["fonts"]["worldzone"]["font"] = "Poppins-Bold"
 
     E.db["general"]["lootRoll"]["nameFont"] = "Poppins-SemiBold"
     E.db["general"]["fontSize"] = 14
