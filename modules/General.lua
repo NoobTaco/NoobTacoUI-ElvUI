@@ -35,7 +35,6 @@ function NoobTacoUI:SetupGeneral()
     end
 
     E.db["general"]["font"] = "Poppins-SemiBold"
-
     E.db["general"]["fonts"]["cooldown"]["font"] = "Poppins-Bold"
     E.db["general"]["fonts"]["errortext"]["font"] = "Poppins-Bold"
     E.db["general"]["fonts"]["mailbody"]["enable"] = true
@@ -60,7 +59,6 @@ function NoobTacoUI:SetupGeneral()
     E.db["general"]["fonts"]["worldsubzone"]["font"] = "Poppins-SemiBold"
     E.db["general"]["fonts"]["worldzone"]["enable"] = true
     E.db["general"]["fonts"]["worldzone"]["font"] = "Poppins-Bold"
-
     E.db["general"]["lootRoll"]["nameFont"] = "Poppins-SemiBold"
     E.db["general"]["fontSize"] = 14
     E.db["general"]["autoTrackReputation"] = true
