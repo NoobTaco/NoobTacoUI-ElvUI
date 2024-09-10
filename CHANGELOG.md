@@ -1,27 +1,5 @@
 ## Changelog
 
-## [Unreleased]
-
-### Added
-
--   Placeholder for unreleased changes.
-
-### Changed
-
--   Placeholder for changed features.
-
-### Deprecated
-
--   Placeholder for deprecated features.
-
-### Removed
-
--   Placeholder for removed features.
-
-### Fixed
-
--   Placeholder for bug fixes.
-
 ## [1.5.1]
 
 ### Added
