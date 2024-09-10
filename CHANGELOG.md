@@ -1,5 +1,11 @@
 ## Changelog
 
+### [1.5.1]
+
+-   Refactored some code and broke integrations into their own sections code wise.
+-   Added integration for Baganator. Will disable ElvUI bags.
+-   Added integration for XIV_Databar. Will disable bottom data bars and move bottom of UI up to fit XIV
+
 ### [1.5.0]
 
 -   Added new feature to customize the color scheme of the UI.
