@@ -1,0 +1,6 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="integrations.lua"/>
+	<Script file="bags/bags.lua"/>
+	<Script file="XIV_Databar/XIV_Databar.lua"/>
+	
+</Ui>

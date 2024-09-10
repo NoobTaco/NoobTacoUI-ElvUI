@@ -120,7 +120,7 @@ local InstallerData = {
     -- Title = format("|cff4beb2c%s %s|r", MyPluginName, "Installation - Ver: %d", Version),
     Title = format("|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r |cff4beb2cInstallation|r %s", Version),
     Name = MyPluginName,
-    tutorialImage = "Interface\\AddOns\\NoobTacoUI\\Media\\Textures\\noobtaco.tga",
+    tutorialImage = "Interface\\AddOns\\NoobTacoUI\\media\\Textures\\noobtaco.tga",
     Pages = {
         [1] = function()
             PluginInstallFrame.SubTitle:SetFormattedText("Welcome to the installation for %s.", MyPluginName)
@@ -223,52 +223,10 @@ local InstallerData = {
                 end
             )
             PluginInstallFrame.Option2:SetText("Healer")
-            -- Check if WA is installed
-            if (C_AddOns.IsAddOnLoaded("WeakAuras")) then
-                if E.Wrath then -- WOTLK
-                    PluginInstallFrame.Option3:Show()
-                    PluginInstallFrame.Option3:SetScript(
-                        "OnClick",
-                        function()
-                            NoobTacoUI:SetupUnitFrames("v3")
-                        end
-                    )
-                    PluginInstallFrame.Option3:SetText("Luxthos WA")
-                end
-            end
-            -- Check if Baganator is loaded and disable ElvUI bags
-            -- TODO: Add more bag mod checks
-            if (C_AddOns.IsAddOnLoaded("Baganator")) then
-                E.private["bags"]["enable"] = false
-            end
+
+            -- Integration Check
+            NoobTacoUI:SetupIntegration()
         end,
-        -- [5] = function()
-        --     PluginInstallFrame.SubTitle:SetText("Nameplates")
-        --     PluginInstallFrame.Desc1:SetText(
-        --         "These are the Nameplate Options available. Please click a button below to apply the layout of your choosing."
-        --     )
-        --     PluginInstallFrame.Desc2:SetText("Importance: |cff07D400High|r")
-
-        --     -- Option 1
-        --     PluginInstallFrame.Option1:Show()
-        --     PluginInstallFrame.Option1:SetScript(
-        --         "OnClick",
-        --         function()
-        --             NoobTacoUI:SetupNamePlatesLayout("v1")
-        --         end
-        --     )
-        --     PluginInstallFrame.Option1:SetText("Old: NoobTacoUI")
-
-        --     -- Option 2
-        --     PluginInstallFrame.Option2:Show()
-        --     PluginInstallFrame.Option2:SetScript(
-        --         "OnClick",
-        --         function()
-        --             NoobTacoUI:SetupNamePlatesLayout("v2")
-        --         end
-        --     )
-        --     PluginInstallFrame.Option2:SetText("New: BlizzLike")
-        -- end,
         [5] = function()
             PluginInstallFrame.SubTitle:SetText("Installation Complete")
             PluginInstallFrame.Desc1:SetText(
@@ -287,8 +245,8 @@ local InstallerData = {
         [2] = "Profiles",
         [3] = "General Layout",
         [4] = "Layouts",
-        [5] = "Nameplate",
-        [6] = "Installation Complete"
+        -- [5] = "Nameplate",
+        [5] = "Installation Complete"
     },
     StepTitlesColor = {1, 1, 1},
     StepTitlesColorSelected = {0, 179 / 255, 1},
