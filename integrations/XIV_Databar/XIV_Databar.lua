@@ -33,6 +33,6 @@ function NoobTacoUI:XIV_Databar()
     -- PowerBarContainerMover
     E.db["movers"]["PowerBarContainerMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,105"
 
-    print("XIV Databar Continued is loaded!")
+    print("NoobTacoUI: XIV Databar Continued.")
   end
 end

@@ -2,5 +2,6 @@
 	<Script file="integrations.lua"/>
 	<Script file="bags/bags.lua"/>
 	<Script file="XIV_Databar/XIV_Databar.lua"/>
+	<Script file="Cell/Cell.lua"/>
 	
 </Ui>

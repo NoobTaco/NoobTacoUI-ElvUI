@@ -7,6 +7,6 @@ function NoobTacoUI:IntegrationBag()
   -- TODO: Add more bag mod checks
   if (C_AddOns.IsAddOnLoaded("Baganator")) then
     E.private["bags"]["enable"] = false
-    print("Baganator is loaded. Disabling NoobTacoUI bag integration.")
+    print("NoobTacoUI: Baganator is loaded. Disabling ElvUI bag integration.")
   end
 end
