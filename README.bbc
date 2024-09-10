@@ -1,87 +1,94 @@
-[SIZE=5]NoobTacoUI[/SIZE]
+[color=RoyalBlue][size=4][b]NoobTacoUI: A Comfortable Dark Theme for ElvUI[/b][/size][/color]
 
-[IMG]https://img.shields.io/github/workflow/status/noobtaco/noobtacoui/CI?label=CI&logo=github&style=for-the-badge[/IMG] [IMG]https://img.shields.io/github/workflow/status/NoobTaco/NoobTacoUI/Release?logo=github&style=for-the-badge[/IMG][IMG]https://img.shields.io/github/downloads/NoobTaco/NoobTacoUI/total?logo=github&style=for-the-badge[/IMG]
+[img]https://img.shields.io/github/actions/workflow/status/noobtaco/NoobTacoUI/ci.yml?style=for-the-badge&logo=github[/img]
 
-NoobTacoUI is an ElvUI Profile that uses the [URL="https://www.nordtheme.com/"]Nord Theme[/URL] Color palette. The theme is dark, just not as dark as default ElvUI.
+[url=https://github.com/NoobTaco/NoobTacoUI/releases/latest][img]https://img.shields.io/github/downloads/NoobTaco/NoobTacoUI/total?logo=github&style=for-the-badge[/img][/url]
 
-[SIZE=4]Supports[/SIZE]
-[LIST]
-[*] Retail (Shadowlands)
-[*] Classic
-[*] Burning Crusade Classic
-[*] Wrath of the Lich King Classic
-[/LIST]
+[b]Elevate your World of Warcraft experience with NoobTacoUI, a sleek and user-friendly ElvUI profile.[/b]
 
-No need to download separate installs for different versions. All game versions are now contained in one download.
+This profile boasts a [b]dark theme based on the popular Nord palette[/b], offering a stylish yet comfortable interface that reduces eye strain during extended play sessions.
 
-[SIZE=5]Features[/SIZE]
-[LIST]
-[*] NoobTacoUI is a dark theme based off of the popular Nord Theme. It is not as contrasty as the default profile in an attempt to reduce eye strain from prolonged WoW sessions.
-[*] Modern font's making it easier to read information text and game text.
-[*] Elite unitframe overlay. The default elite dragon fits perfectly with NoobTacoUI's target unitframe. [i]With option to toggle overlay[/i].
-[*] DPS/Tank and Healer profile setup.
-[/LIST]
+[b]Key Features:[/b]
 
-[SIZE=4]NEW[/SIZE]
-[LIST]
-[*] New layout for WOTLK version that supports [URL="https://www.luxthos.com/"]Luxthos[/URL] Weakauras!
-[/LIST]
+[list][*]  [b]Reduced Eye Strain:[/b] The theme's balanced contrast prioritizes readability while keeping things dark.
+[*]  [b]Modern Fonts:[/b] Enjoy crisp, clean fonts that make information easy to digest.
+[*]  [b]Enhanced Unit Frames:[/b] Effortlessly track targets with the sleek target unit frame and optional elite unit frame overlay.
+[*]  [b]Role-Specific Layouts:[/b] Optimized setups for DPS, Tanks, and Healers ensure a smooth gameplay experience.
+[/list]
+[b]Integration with your favorite addons[/b] NoobTacoUI seamlessly integrates with your favorite addons, enhancing your World of Warcraft experience. Combine NoobTacoUI with addons like [b]Details! Damage Meter[/b], [b]BigWigs[/b], [b]WeakAuras[/b], and more for a unified and streamlined interface. Customize your gameplay and make the most out of your WoW journey with NoobTacoUI's addon integration.
 
-[SIZE=4]Download from your favorite addon hosts[/SIZE]
-[LIST]
-[*] [URL="https://github.com/NoobTaco/NoobTacoUI"]GitHub[/URL]
-[*] [URL="https://www.curseforge.com/wow/addons/noobtacoui"]Curse/Overwolf[/URL]
-[*] [URL="(https://addons.wago.io/addons/noobtacoui"]Wago.io[/URL]
-[*] [URL="(https://wowup.io/addons/2"]WoWup[/URL]
-[*] [URL="https://www.wowinterface.com/downloads/info25744-NoobTacoUI.html"]WoW Interface[/URL]
-[*] [URL="https://www.tukui.org/addons.php?id=187"]TukUI[/URL]
-[/LIST]
+[b]Integrated Addons (So far):[/b]
 
-Feel free to use any of the supported download managers.
+[list][*]  XVI Databar [url=https://www.curseforge.com/wow/addons/xiv_databar-continued]link[/url]
+[*]  Cell unit unit frames [url=https://www.curseforge.com/wow/addons/cell]link[/url]
+[*]  Baganotor [url=https://www.curseforge.com/wow/addons/baganator]link[/url]
+[/list]
+Please [url=https://github.com/NoobTaco/NoobTacoUI/issues/new]add an issue request[/url] if there are any addons you would like to see integrated.
 
-[SIZE=3]Installation[/SIZE]
-[LIST=1]
-[*] Download and install [URL="https://www.tukui.org/download.php?ui=elvui"]ElvUI[/URL] 
-[*] Download and install NoobTacoUI
-[/LIST]
+[b]One Download for All:[/b]
 
-Once installed start wow and follow the instructions for ElvUI. When ElvUI is finished it will reload the UI and NoobTacoUI will start its installation. Accept the options and reload.
+No more juggling separate versions! NoobTacoUI conveniently supports both [b]Retail World of Warcraft (up to War Within)[/b] and [b]Classic WoW (including Cats)[/b] within a single download.
 
-For best results log out of your character and then back in. This will allow the nameplate text to show the correct font. 
+[b]Easy Installation:[/b]
 
-[SIZE=5]Support[/SIZE]
+[list=1][*]Install the required [b]ElvUI addon[/b][[url=https://tukui.org/elvui]link[/url]]
+[*]Download and install NoobTacoUI.
+[*]Launch WoW and follow ElvUI's setup instructions.
+[*]Enjoy your new interface! (For best nameplate text, log out and back in after setup.)
+[/list]
+[b]Get Started:[/b]
 
-[SIZE=3]Found a bug? Have a feature request?[/SIZE]
+Download NoobTacoUI from your preferred source:
 
-If you find a bug or would like to request a feature, please fill out an issue on my GitHub Repository [url=https://github.com/NoobTaco/NoobTacoUI/issues]CLICK HERE[/url]
+[list][*]  [b]GitHub:[/b] [[url=https://github.com/NoobTaco/NoobTacoUI/releases/latest]link[/url]]
+[*]  [b]Curse/Overwolf:[/b] [[url=https://www.curseforge.com/wow/addons/noobtacoui]link[/url]]
+[*]  [b]Wago.io:[/b] [[url=https://addons.wago.io/addons/noobtacoui]link[/url]]
+[*]  [b]WoWup:[/b] [[url=https://wowup.io/addons/2]link[/url]]
+[*]  [b]WoW Interface:[/b] [[url=https://www.wowinterface.com/downloads/info25744-NoobTacoUI.html]link[/url]]
+[/list]
+[b]Need Help? Found a bug? Have a feature request?[/b]
 
-[SIZE=3]Support my addon development[/SIZE]
+Encountered a bug or have a feature request? Head over to the dedicated issue tracker on the NoobTacoUI GitHub repository: [url=https://github.com/NoobTaco/NoobTacoUI/issues/new]link[/url]
 
-[URL="https://ko-fi.com/G2G01GM9G"][IMG]https://www.ko-fi.com/img/githubbutton_sm.svg[/IMG][/URL] [URL="https://github.com/sponsors/NoobTaco"][IMG]https://user-images.githubusercontent.com/1172935/97088810-463e0e00-15e8-11eb-8078-f18da01c6e9e.png[/IMG][/URL]
+[b]Let NoobTacoUI enhance your WoW journey![/b]
 
+[b]Supports:[/b]
 
-[SIZE=3]Images[/SIZE]
+[list][*]  Retail (War Within)
+[*]  Classic
+[*]  Cata
+[/list]
+[b]Support my addon development[/b]
 
-[IMG]https://user-images.githubusercontent.com/1172935/98390782-b1d1a380-200a-11eb-901c-9c772adc8987.png[/IMG]
+[url=https://ko-fi.com/G2G01GM9G][img]https://www.ko-fi.com/img/githubbutton_sm.svg[/img][/url] [url=https://github.com/sponsors/NoobTaco][img]https://user-images.githubusercontent.com/1172935/97088810-463e0e00-15e8-11eb-8078-f18da01c6e9e.png[/img][/url]
 
-[IMG]https://user-images.githubusercontent.com/1172935/98391018-f78e6c00-200a-11eb-971b-88969775d12c.png[/IMG]
+[url=https://zygorguides.com/ref/manorton/][img]https://zygorguides.com/blog/wp-content/uploads/2023/07/df-flat-banner.jpg[/img][/url]
 
-[SIZE=3]Nord Theme Colors[/SIZE]
+[url=https://www.restedxp.com/ref/NoobTaco][img]https://www.restedxp.com/wp-content/uploads/2021/05/rxp-promo-banner_short.gif[/img][/url]
 
-[IMG]https://user-images.githubusercontent.com/1172935/98390923-d7f74380-200a-11eb-9e62-cdfdedd168b0.png[/IMG]
+[color=DarkOrange][size=5][b]Images[/b][/size][/color]
 
-[SIZE=3]Healing 25 man layout[/SIZE]
+[img]https://user-images.githubusercontent.com/1172935/98390782-b1d1a380-200a-11eb-901c-9c772adc8987.png[/img]
 
-[IMG]https://user-images.githubusercontent.com/1172935/98392199-86e84f00-200c-11eb-9504-0d04fc4bb902.png[/IMG]
+[img]https://user-images.githubusercontent.com/1172935/98391018-f78e6c00-200a-11eb-971b-88969775d12c.png[/img]
 
-[SIZE=3]Healing 40 man layout[/SIZE]
+[color=DodgerBlue][size=3][b]Nord Theme Colors[/b][/size][/color]
 
-[IMG]https://user-images.githubusercontent.com/1172935/98391578-acc12400-200b-11eb-93f8-cdc7a4e05a7b.png[/IMG]
+[img]https://user-images.githubusercontent.com/1172935/98390923-d7f74380-200a-11eb-9e62-cdfdedd168b0.png[/img]
 
-[SIZE=3]NoobTacoUI Settings[/SIZE]
+[color=SlateGray][size=3]Healing 25 man layout[/size][/color]
 
-[IMG]https://user-images.githubusercontent.com/1172935/98392414-d2026200-200c-11eb-9d42-8f49597056bd.png[/IMG]
+[img]https://user-images.githubusercontent.com/1172935/98392199-86e84f00-200c-11eb-9504-0d04fc4bb902.png[/img]
 
-[SIZE=3]Memory usage[/SIZE]
+[color=SlateGray][size=3]Healing 40 man layout[/size][/color]
 
-[IMG]https://user-images.githubusercontent.com/1172935/98391292-4cca7d80-200b-11eb-8c8b-a247487d85e4.png[/IMG]
+[img]https://user-images.githubusercontent.com/1172935/98391578-acc12400-200b-11eb-93f8-cdc7a4e05a7b.png[/img]
+
+[color=SlateGray][size=3]NobTacoUI Settings[/size][/color]
+
+[img]https://user-images.githubusercontent.com/1172935/98392414-d2026200-200c-11eb-9d42-8f49597056bd.png[/img]
+
+[color=SlateGray][size=3]Memory usage[/size][/color]
+
+[img]https://user-images.githubusercontent.com/1172935/98391292-4cca7d80-200b-11eb-8c8b-a247487d85e4.png[/img]
+

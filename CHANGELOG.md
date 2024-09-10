@@ -9,6 +9,10 @@
 -   Added integration for XIV_Databar. Will disable bottom data bars and move bottom of UI up to fit XIV.
 -   Added integration for Cell unit frames. Default ElvUI raid and party frames will be disabled.
 
+### Updated
+
+-   Updated README.md and README.bbc
+
 ## [1.5.0]
 
 ### Added

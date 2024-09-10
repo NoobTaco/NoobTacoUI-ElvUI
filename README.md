@@ -15,13 +15,24 @@ This profile boasts a **dark theme based on the popular Nord palette**, offering
 -   **Enhanced Unit Frames:** Effortlessly track targets with the sleek target unit frame and optional elite unit frame overlay.
 -   **Role-Specific Layouts:** Optimized setups for DPS, Tanks, and Healers ensure a smooth gameplay experience.
 
+**Integration with your favorite addons**
+NoobTacoUI seamlessly integrates with your favorite addons, enhancing your World of Warcraft experience. Combine NoobTacoUI with addons like **Details! Damage Meter**, **BigWigs**, **WeakAuras**, and more for a unified and streamlined interface. Customize your gameplay and make the most out of your WoW journey with NoobTacoUI's addon integration.
+
+**Integrated Addons (So far):**
+
+-   XVI Databar [link](https://www.curseforge.com/wow/addons/xiv_databar-continued)
+-   Cell unit unit frames [link](https://www.curseforge.com/wow/addons/cell)
+-   Baganotor [link](https://www.curseforge.com/wow/addons/baganator)
+
+Please [add an issue request](https://github.com/NoobTaco/NoobTacoUI/issues/new) if there are any addons you would like to see integrated.
+
 **One Download for All:**
 
 No more juggling separate versions! NoobTacoUI conveniently supports both **Retail World of Warcraft (up to War Within)** and **Classic WoW (including Cats)** within a single download.
 
 **Easy Installation:**
 
-1. Install the required **ElvUI addon** (link included).
+1. Install the required **ElvUI addon**[[link](https://tukui.org/elvui)]
 2. Download and install NoobTacoUI.
 3. Launch WoW and follow ElvUI's setup instructions.
 4. Enjoy your new interface! (For best nameplate text, log out and back in after setup.)
@@ -36,9 +47,9 @@ Download NoobTacoUI from your preferred source:
 -   **WoWup:** [[link](https://wowup.io/addons/2)]
 -   **WoW Interface:** [[link](https://www.wowinterface.com/downloads/info25744-NoobTacoUI.html)]
 
-**Need Help?**
+**Need Help? Found a bug? Have a feature request?**
 
-Encountered a bug or have a feature request? Head over to the dedicated issue tracker on the NoobTacoUI GitHub repository: [link]
+Encountered a bug or have a feature request? Head over to the dedicated issue tracker on the NoobTacoUI GitHub repository: [link](https://github.com/NoobTaco/NoobTacoUI/issues/new)
 
 **Let NoobTacoUI enhance your WoW journey!**
 
@@ -47,40 +58,6 @@ Encountered a bug or have a feature request? Head over to the dedicated issue tr
 -   Retail (War Within)
 -   Classic
 -   Cata
-
-No need to download separate installs for different versions. All game versions are now contained in one download.
-
-**Features**
-
--   NoobTacoUI is a dark theme based off of the popular Nord Theme. It is not as contrasty as the default profile in an attempt to reduce eye strain from prolonged WoW sessions.
--   Modern font's making it easier to read information text and game text.
--   Elite unitframe overlay. The default elite dragon fits perfectly with NoobTacoUI's target unitframe. _With option to toggle overlay_.
--   DPS/Tank and Healer profile setup.
-
-**Download from your favorite addon hosts**
-
--   [GitHub](https://github.com/NoobTaco/NoobTacoUI/releases/latest)
--   [Curse/Overwolf](https://www.curseforge.com/wow/addons/noobtacoui)
--   [Wago.io](https://addons.wago.io/addons/noobtacoui)
--   [WoWup](https://wowup.io/addons/2)
--   [WoW Interface](https://www.wowinterface.com/downloads/info25744-NoobTacoUI.html)
-
-Feel free to use any of the supported download managers.
-
-**Installation**
-
-1. **[REQUIRED]** Download and install [ElvUI](https://www.tukui.org/download.php?ui=elvui)
-2. Download and install NoobTacoUI
-
-Once installed start wow and follow the instructions for ElvUI. When ElvUI is finished it will reload the UI and NoobTacoUI will start its installation. Accept the options and reload.
-
-For best results log out of your character and then back in. This will allow the nameplate text to show the correct font.
-
-**Support**
-
-**Found a bug? Have a feature request?**
-
-If you find a bug or would like to request a feature, please fill out an issue on my GitHub Repository [CLICK HERE](https://github.com/NoobTaco/NoobTacoUI/issues)
 
 **Support my addon development**
 
