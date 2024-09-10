@@ -223,24 +223,9 @@ local InstallerData = {
                 end
             )
             PluginInstallFrame.Option2:SetText("Healer")
-            -- Check if WA is installed
-            if (C_AddOns.IsAddOnLoaded("WeakAuras")) then
-                if E.Wrath then -- WOTLK
-                    PluginInstallFrame.Option3:Show()
-                    PluginInstallFrame.Option3:SetScript(
-                        "OnClick",
-                        function()
-                            NoobTacoUI:SetupUnitFrames("v3")
-                        end
-                    )
-                    PluginInstallFrame.Option3:SetText("Luxthos WA")
-                end
-            end
-            -- Check if Baganator is loaded and disable ElvUI bags
-            -- TODO: Add more bag mod checks
-            if (C_AddOns.IsAddOnLoaded("Baganator")) then
-                E.private["bags"]["enable"] = false
-            end
+
+            -- Integration Check
+            NoobTacoUI:SetupIntegration()
         end,
         [5] = function()
             PluginInstallFrame.SubTitle:SetText("Installation Complete")
@@ -260,8 +245,8 @@ local InstallerData = {
         [2] = "Profiles",
         [3] = "General Layout",
         [4] = "Layouts",
-        [5] = "Nameplate",
-        [6] = "Installation Complete"
+        -- [5] = "Nameplate",
+        [5] = "Installation Complete"
     },
     StepTitlesColor = {1, 1, 1},
     StepTitlesColorSelected = {0, 179 / 255, 1},
