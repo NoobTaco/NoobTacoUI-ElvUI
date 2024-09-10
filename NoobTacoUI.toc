@@ -1,6 +1,7 @@
+## Interface: 11502,11503, 40400, 110000, 110002
 ## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
 ## Author: NoobTaco
-## Version: 1.5.0
+## Version: 1.5.1
 ## Notes: Contains layouts from NoobTacoUI
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled
@@ -10,7 +11,8 @@
 ## X-Curse-Project-ID: 414874
 ## X-Wago-ID: 9rN49x6D
 
-Libraries\Load_Libraries.xml
-Media\Load_Media.xml
-Code.lua
+libraries\Load_Libraries.xml
+media\Load_Media.xml
+core\Code.lua
 modules\load_modules.xml
+integrations\load_integrations.xml
