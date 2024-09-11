@@ -5,6 +5,7 @@
 ### Added
 
 -   Icon for ingame addon menu
+-   Added wago analytics
 
 ## [1.5.2]
 
