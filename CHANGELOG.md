@@ -1,6 +1,6 @@
 # Changelog
 
-## [@project-version@] - @project-date-iso@
+## [1.5.3]
 
 ### Added
 
