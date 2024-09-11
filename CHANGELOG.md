@@ -1,4 +1,10 @@
-## Changelog
+# Changelog
+
+## [@project-version@] - @project-date-iso@
+
+### Added
+
+-   Icon for ingame addon menu
 
 ## [1.5.2]
 

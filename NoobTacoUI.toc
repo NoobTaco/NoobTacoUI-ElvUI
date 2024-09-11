@@ -1,10 +1,11 @@
 ## Interface: 11502,11503, 40400, 110000, 110002
 ## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
 ## Author: NoobTaco
-## Version: 1.5.2
+## Version: @project-version@
 ## Notes: Contains layouts from NoobTaco
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled
+## IconTexture: Interface\AddOns\NoobTacoUI\media\Textures\logo.tga
 ## X-Tukui-ProjectID: 187
 ## X-Tukui-ProjectFolders: NoobTacoUI
 ## X-WoWI-ID: 25744
