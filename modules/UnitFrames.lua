@@ -119,7 +119,7 @@ end
 function NoobTacoUI:SetupUnitFrames(layout, wowver)
     -- DPS and TANK Layout
     if layout == "v1" then
-        -- Heal Layout
+        -- Option2
         E.db.unitframes = nil
 
         E.db["movers"]["ElvUF_PetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-240,158"

@@ -125,7 +125,6 @@ end
 
 -- PLUGIN INSTALLER -----------------------------------------------------------------
 local InstallerData = {
-    -- Title = format("|cff4beb2c%s %s|r", MyPluginName, "Installation - Ver: %d", Version),
     Title = format("|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r |cff4beb2cInstallation|r %s", Version),
     Name = MyPluginName,
     tutorialImage = "Interface\\AddOns\\NoobTacoUI\\media\\Textures\\noobtaco.tga",
@@ -145,7 +144,7 @@ local InstallerData = {
         [2] = function()
             PluginInstallFrame.SubTitle:SetText("Profiles")
             PluginInstallFrame.Desc1:SetText(
-                "You can either create a new profile to install NoobTacoUI onto or you can apply NoobTacoUI settings to your current profile"
+                "You have the option to either create a new profile specifically for NoobTacoUI installation or apply NoobTacoUI settings to your current profile"
             )
             PluginInstallFrame.Desc3:SetText(
                 "Your currently active ElvUI profile is: |cffc41f3b" .. ElvUI[1].data:GetCurrentProfile() .. "|r"
@@ -169,7 +168,7 @@ local InstallerData = {
 
             PluginInstallFrame.SubTitle:SetText("Profiles")
             PluginInstallFrame.Desc1:SetText(
-                'Press "Update Current" to update your current profile with the new NoobTacoUI changes.'
+                'Press "Update Current" to update your current profile with the NoobTacoUI changes.'
             )
             PluginInstallFrame.Desc2:SetText(
                 'If you\'d like to check out what the changes are, without overwriting your current settings, you can press "Create New"'
@@ -215,6 +214,8 @@ local InstallerData = {
                 "These are the layouts that are available. Please click a button below to apply the layout of your choosing."
             )
             PluginInstallFrame.Desc2:SetText("Importance: |cff07D400High|r")
+
+            -- Option1
             PluginInstallFrame.Option1:Show()
             PluginInstallFrame.Option1:SetScript(
                 "OnClick",
@@ -225,6 +226,8 @@ local InstallerData = {
                 end
             )
             PluginInstallFrame.Option1:SetText("DPS or Tank")
+
+            -- Option2
             PluginInstallFrame.Option2:Show()
             PluginInstallFrame.Option2:SetScript(
                 "OnClick",
