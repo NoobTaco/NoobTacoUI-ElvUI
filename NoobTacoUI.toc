@@ -5,6 +5,7 @@
 ## Notes: Contains layouts from NoobTaco
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled
+## IconTexture: Interface\AddOns\NoobTacoUI\media\Textures\logo.tga
 ## X-Tukui-ProjectID: 187
 ## X-Tukui-ProjectFolders: NoobTacoUI
 ## X-WoWI-ID: 25744
