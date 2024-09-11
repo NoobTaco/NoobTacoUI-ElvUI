@@ -1,4 +1,5 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local WagoAnalytics = LibStub("WagoAnalytics"):Register("9rN49x6D")
 
 function NoobTacoUI:XIV_Databar()
   -- Defaults On

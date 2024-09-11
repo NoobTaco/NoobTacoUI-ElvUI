@@ -13,8 +13,6 @@
 ## X-Wago-ID: 9rN49x6D
 ## OptionalDependencies: WagoAnalytics
 
-libs\WagoAnalyticsShim\Shim.lua
-
 libraries\Load_Libraries.xml
 media\Load_Media.xml
 core\Code.lua

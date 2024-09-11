@@ -113,7 +113,13 @@ local function InstallComplete()
     E.db[MyPluginName].install_version = Version
 
     -- Set the key for Overlay
+    -- Add WagoAnalytics for Elite Overlay
+    WagoAnalytics:Switch("Elite Overlay", true)
     E.db[MyPluginName].overlay = true
+
+    -- WagoAnalytics:IncrementCounter("installedCounter") -- Increase the counter by 1
+    WagoAnalytics:IncrementCounter("installedCounter")
+
     ReloadUI()
 end
 
