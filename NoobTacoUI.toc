@@ -11,6 +11,7 @@
 ## X-WoWI-ID: 25744
 ## X-Curse-Project-ID: 414874
 ## X-Wago-ID: 9rN49x6D
+## OptionalDependencies: WagoAnalytics
 
 libraries\Load_Libraries.xml
 media\Load_Media.xml

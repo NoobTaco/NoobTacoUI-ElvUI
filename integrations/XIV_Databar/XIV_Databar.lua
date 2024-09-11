@@ -1,4 +1,5 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local WagoAnalytics = LibStub("WagoAnalytics"):Register("9rN49x6D")
 
 function NoobTacoUI:XIV_Databar()
   -- Defaults On
@@ -34,5 +35,8 @@ function NoobTacoUI:XIV_Databar()
     E.db["movers"]["PowerBarContainerMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,105"
 
     print("NoobTacoUI: XIV Databar Continued.")
+
+    -- WagoAnalytics:IncrementCounter("XIV_DatabarCounter") -- Increase the counter by 1
+    WagoAnalytics:IncrementCounter("XIV_DatabarCounter")
   end
 end

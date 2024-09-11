@@ -1,4 +1,5 @@
 local SimpleRareElite = CreateFrame("Frame", "SimpleRareElite", UIParent)
+local WagoAnalytics = LibStub("WagoAnalytics"):Register("9rN49x6D")
 local TargetFrame
 
 -- Change this line and use a unique name for your plugin.
@@ -29,6 +30,8 @@ end
 local function CreateSimpleRareElite()
     -- Check if overlay is enabled
     if E.db[MyPluginName].overlay == false then
+        -- Add WagoAnalytics for Elite Overlay
+        WagoAnalytics:Switch("Elite Overlay", false)
         print(MyPluginName .. " - overlay disabled")
         return
     end
@@ -58,15 +61,15 @@ local function CreateSimpleRareElite()
                 local TargetClass =
                     UnitIsPlayer("target") and select(2, UnitClass("target")) or UnitClassification("target")
 
-                    if TargetClass == "worldboss" then
-                        SetSimpleRareElite("worldboss_df.tga")
-                    elseif TargetClass == "elite" then
-                        SetSimpleRareElite("elite_df.tga")
-                    elseif TargetClass == "rare" then
-                        SetSimpleRareElite("rare_df.tga")
-                    elseif TargetClass == "rareelite" then
-                        SetSimpleRareElite("rare_df.tga")
-                    end
+                if TargetClass == "worldboss" then
+                    SetSimpleRareElite("worldboss_df.tga")
+                elseif TargetClass == "elite" then
+                    SetSimpleRareElite("elite_df.tga")
+                elseif TargetClass == "rare" then
+                    SetSimpleRareElite("rare_df.tga")
+                elseif TargetClass == "rareelite" then
+                    SetSimpleRareElite("rare_df.tga")
+                end
             end
         end
     )

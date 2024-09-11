@@ -10,3 +10,8 @@ ignore:
 manual-changelog:
     filename: RECENT_CHANGES.md
     markup-type: markdown
+
+externals:
+    libs/WagoAnalyticsShim:
+        url: https://github.com/wagoio/WagoAnalyticsShim.git
+        branch: main
