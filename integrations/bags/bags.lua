@@ -8,5 +8,7 @@ function NoobTacoUI:IntegrationBag()
   if (C_AddOns.IsAddOnLoaded("Baganator")) then
     E.private["bags"]["enable"] = false
     print("NoobTacoUI: Baganator is loaded. Disabling ElvUI bag integration.")
+    -- WagoAnalytics:IncrementCounter("BaganatorCounter") -- Increase the counter by 1
+    WagoAnalytics:IncrementCounter("BaganatorCounter")
   end
 end

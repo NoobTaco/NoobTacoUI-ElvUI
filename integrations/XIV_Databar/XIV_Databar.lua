@@ -34,5 +34,8 @@ function NoobTacoUI:XIV_Databar()
     E.db["movers"]["PowerBarContainerMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,105"
 
     print("NoobTacoUI: XIV Databar Continued.")
+
+    -- WagoAnalytics:IncrementCounter("XIV_DatabarCounter") -- Increase the counter by 1
+    WagoAnalytics:IncrementCounter("XIV_DatabarCounter")
   end
 end
