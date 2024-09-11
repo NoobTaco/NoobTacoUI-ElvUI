@@ -2,7 +2,7 @@
 ## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
 ## Author: NoobTaco
 ## Version: 1.5.1
-## Notes: Contains layouts from NoobTacoUI
+## Notes: Contains layouts from NoobTaco
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled
 ## X-Tukui-ProjectID: 187
