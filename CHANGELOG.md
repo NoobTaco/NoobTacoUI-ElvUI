@@ -1,5 +1,11 @@
 ## Changelog
 
+## [1.5.2]
+
+### Updated
+
+= Fixed nameplate text bug. Names should now properly display in the correct location. Fixes [#56](https://github.com/NoobTaco/NoobTacoUI/issues/56)
+
 ## [1.5.1]
 
 ### Added
