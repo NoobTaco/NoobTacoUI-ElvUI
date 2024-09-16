@@ -1,5 +1,3 @@
--- Load WagoAnalytics
-local WagoAnalytics = LibStub("WagoAnalytics"):Register("9rN49x6D")
 -- Don't worry about this
 local addon, Engine, ns = ...
 -- local Version = GetAddOnMetadata(addon, "Version")
@@ -113,12 +111,7 @@ local function InstallComplete()
     E.db[MyPluginName].install_version = Version
 
     -- Set the key for Overlay
-    -- Add WagoAnalytics for Elite Overlay
-    WagoAnalytics:Switch("Elite Overlay", true)
     E.db[MyPluginName].overlay = true
-
-    -- WagoAnalytics:IncrementCounter("installedCounter") -- Increase the counter by 1
-    WagoAnalytics:IncrementCounter("installedCounter")
 
     ReloadUI()
 end
@@ -221,8 +214,6 @@ local InstallerData = {
                 "OnClick",
                 function()
                     NoobTacoUI:SetupUnitFrames("v1")
-                    -- Add WagoAnalytics for DPS/Tank Profile
-                    WagoAnalytics:Switch("DPS/Tank Profile", true)
                 end
             )
             PluginInstallFrame.Option1:SetText("DPS or Tank")
@@ -233,8 +224,6 @@ local InstallerData = {
                 "OnClick",
                 function()
                     NoobTacoUI:SetupUnitFrames("v2")
-                    -- Add WagoAnalytics for Healer Profile
-                    WagoAnalytics:Switch("Healer Profile", true)
                 end
             )
             PluginInstallFrame.Option2:SetText("Healer")

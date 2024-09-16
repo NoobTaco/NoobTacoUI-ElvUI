@@ -1,5 +1,4 @@
 local SimpleRareElite = CreateFrame("Frame", "SimpleRareElite", UIParent)
-local WagoAnalytics = LibStub("WagoAnalytics"):Register("9rN49x6D")
 local TargetFrame
 
 -- Change this line and use a unique name for your plugin.
@@ -30,8 +29,6 @@ end
 local function CreateSimpleRareElite()
     -- Check if overlay is enabled
     if E.db[MyPluginName].overlay == false then
-        -- Add WagoAnalytics for Elite Overlay
-        WagoAnalytics:Switch("Elite Overlay", false)
         print(MyPluginName .. " - overlay disabled")
         return
     end

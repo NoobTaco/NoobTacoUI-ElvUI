@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.4]
+
+### Updated
+
+-   Removed wago analytics. Was causing issues.
+
 ## [1.5.3]
 
 ### Added
