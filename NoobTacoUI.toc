@@ -1,7 +1,7 @@
 ## Interface: 11502,11503, 40400, 110000, 110002
 ## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
 ## Author: NoobTaco
-## Version: 1.5.3
+## Version: 1.5.4
 ## Notes: Contains layouts from NoobTaco
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled
@@ -11,7 +11,6 @@
 ## X-WoWI-ID: 25744
 ## X-Curse-Project-ID: 414874
 ## X-Wago-ID: 9rN49x6D
-## OptionalDependencies: WagoAnalytics
 
 libraries\Load_Libraries.xml
 media\Load_Media.xml
