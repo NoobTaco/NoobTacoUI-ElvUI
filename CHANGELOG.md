@@ -1,5 +1,50 @@
 # Changelog
 
+## [1.5.5]
+
+### Updated
+
+-   Updated the colors for class resources combo points
+-   Adjusted the reaction colors for nameplates
+-   Added support for new nameplate styles
+-   Improved performance of nameplate updates
+-   Fixed an issue with nameplate visibility in certain scenarios
+-   TOC update
+
+## [1.5.4]
+
+### Updated
+
+-   Removed wago analytics. Was causing issues.
+
+## [1.5.3]
+
+### Added
+
+-   Icon for ingame addon menu
+-   Added wago analytics
+
+## [1.5.2]
+
+### Updated
+
+-   Fixed nameplate text bug. Names should now properly display in the correct location. Fixes [#56](https://github.com/NoobTaco/NoobTacoUI/issues/56)
+
+## [1.5.1]
+
+### Added
+
+-   Refactored some code and broke integrations into their own sections code wise.
+-   Added integration for Baganator. Will disable ElvUI bags.
+-   Added integration for XIV_Databar. Will disable bottom data bars and move bottom of UI up to fit XIV.
+-   Added integration for Cell unit frames. Default ElvUI raid and party frames will be disabled.
+
+### Updated
+
+-   Updated README.md and README.bbc
+
+## [1.5.0]
+
 ## [1.5.4]
 
 ### Updated

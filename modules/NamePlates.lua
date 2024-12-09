@@ -12,11 +12,17 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
     Version 1.5.2  - Nameplates improvements
     - Refactored code in nameplates.lua
     - Fixed nameplate health text position
+
+    Version 1.5.5 - Nameplates improvements
+    - Updated the colors for class resources combo points
+    - Adjusted the reaction colors for nameplates
+    - Added support for new nameplate styles
+    - Improved performance of nameplate updates
+    - Fixed an issue with nameplate visibility in certain scenarios
 ]]
 function NoobTacoUI:SetupNamePlates()
     -- NAMEPLATES -------------------------------------------------------------
     -- Global Nameplate Settings
-    E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["color"]["border"] = false
     E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["b"] = 0.55686274509804
     E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["g"] = 0.50980392156863
     E.db["nameplates"]["colors"]["classResources"]["comboPoints"][1]["r"] = 1
