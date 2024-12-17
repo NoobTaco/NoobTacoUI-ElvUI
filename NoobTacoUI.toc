@@ -1,7 +1,7 @@
 ## Interface: 11505, 40401, 110005
 ## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
 ## Author: NoobTaco
-## Version: 1.5.5
+## Version: 1.5.6
 ## Notes: Contains layouts from NoobTaco
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled

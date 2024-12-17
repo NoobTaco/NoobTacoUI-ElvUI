@@ -1,3 +1,24 @@
+-- CHANGELOG --------------------------------------------------------------------
+--[[
+    Version 1.5.0 - Initial setup and configuration
+        - Added initial setup and configuration for the addon
+
+    Version 1.5.2 - Installation improvements
+        - Refactored installation process
+        - Fixed issues with the installation process
+
+    Version 1.5.5 - Nameplates improvements and CVAR setting
+        - Updated the colors for class resources combo points
+        - Adjusted the reaction colors for nameplates
+        - Added support for new nameplate styles
+        - Improved performance of nameplate updates
+        - Fixed an issue with nameplate visibility in certain scenarios
+        
+    Version 1.5.6 - Profile management improvements
+        - Added dialog pop-up for creating a new ElvUI profile
+        - Added confirmation dialog for overriding the current profile
+        - Added CVAR setting for SoftTargetInteract to 3
+]]
 -- Don't worry about this
 local addon, Engine, ns = ...
 -- local Version = GetAddOnMetadata(addon, "Version")
@@ -340,6 +361,10 @@ end
 -- Create a unique table for our plugin
 P[MyPluginName] = {}
 
+-- Declare SetCVar as a global function to suppress the warning
+_G.SetCVar = _G.SetCVar or function()
+    end
+
 -- This function will handle initialization of the addon
 function mod:Initialize()
     -- Initiate installation process if ElvUI install is complete and our plugin install has not yet been run
@@ -351,6 +376,9 @@ function mod:Initialize()
 
     -- Insert our options table when ElvUI config is loaded
     EP:RegisterPlugin(addon, InsertOptions)
+
+    -- Add SoftTargetInteract to 3 so it loads after ElvUI
+    SetCVar("SoftTargetInteract", 3)
 end
 
 -- Register module with callback so it gets initialized when ready
