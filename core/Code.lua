@@ -13,7 +13,7 @@
         - Added support for new nameplate styles
         - Improved performance of nameplate updates
         - Fixed an issue with nameplate visibility in certain scenarios
-       
+
     Version 1.5.6 - Profile management improvements
         - Added dialog pop-up for creating a new ElvUI profile
         - Added confirmation dialog for overriding the current profile
