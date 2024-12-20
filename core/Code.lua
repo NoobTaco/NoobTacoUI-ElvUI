@@ -391,10 +391,6 @@ end
 -- Create a unique table for our plugin
 P[MyPluginName] = {}
 
--- Declare SetCVar as a global function to suppress the warning
-_G.SetCVar = _G.SetCVar or function()
-    end
-
 -- This function will handle initialization of the addon
 function mod:Initialize()
     -- Initiate installation process if ElvUI install is complete and our plugin install has not yet been run
@@ -409,9 +405,9 @@ function mod:Initialize()
 
     -- check if enableInteraction is true or false
     if E.db[MyPluginName].enableInteraction then
-        SetCVar("SoftTargetInteract", 3)
+        E:SetCVar("SoftTargetInteract", 3)
     else
-        SetCVar("SoftTargetInteract", 0)
+        E:SetCVar("SoftTargetInteract", 0)
     end
 end
 
