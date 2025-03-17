@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.8]
+
+### Updated
+
+-   Updated game versions (forgot in last update)
+
 ## [1.5.7]
 
 ### Updated
