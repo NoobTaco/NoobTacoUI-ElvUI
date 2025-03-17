@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.7]
+
+### Updated
+
+-   Changed TOC for all versions of the game.
+-   Included Category for addon list.
+
 ## [1.5.6]
 
 ### Added
