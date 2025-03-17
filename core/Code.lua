@@ -1,3 +1,25 @@
+-- CHANGELOG --------------------------------------------------------------------
+--[[
+    Version 1.5.0 - Initial setup and configuration
+        - Added initial setup and configuration for the addon
+
+    Version 1.5.2 - Installation improvements
+        - Refactored installation process
+        - Fixed issues with the installation process
+
+    Version 1.5.5 - Nameplates improvements and CVAR setting
+        - Updated the colors for class resources combo points
+        - Adjusted the reaction colors for nameplates
+        - Added support for new nameplate styles
+        - Improved performance of nameplate updates
+        - Fixed an issue with nameplate visibility in certain scenarios
+
+    Version 1.5.6 - Profile management improvements
+        - Added dialog pop-up for creating a new ElvUI profile
+        - Added confirmation dialog for overriding the current profile
+        - Added CVAR setting for SoftTargetInteract to 3
+        - Separated toggle options for elite overlay and interaction
+]]
 -- Don't worry about this
 local addon, Engine, ns = ...
 -- local Version = GetAddOnMetadata(addon, "Version")
@@ -112,6 +134,9 @@ local function InstallComplete()
 
     -- Set the key for Overlay
     E.db[MyPluginName].overlay = true
+
+    -- Set the key for Interaction
+    E.db[MyPluginName].enableInteraction = true
 
     ReloadUI()
 end
@@ -311,20 +336,46 @@ local function InsertOptions()
             header3 = {
                 order = 6,
                 type = "header",
+                name = "Tweaks"
+            },
+            description3 = {
+                order = 7,
+                type = "description",
+                name = "These are various tweaks that can be applied to the layout and game."
+            },
+            tweaks = {
+                order = 8,
+                type = "group",
+                name = "Interaction",
+                guiInline = true,
+                args = {
+                    enableInteraction = {
+                        order = 2,
+                        type = "toggle",
+                        name = L["Enable Interaction"],
+                        desc = L[
+                            "Disable/Enable the interaction option in wow. This will ensure it stays on throughout sessions."
+                        ]
+                    }
+                }
+            },
+            header4 = {
+                order = 9,
+                type = "header",
                 name = "Installation"
             },
             description2 = {
-                order = 7,
+                order = 10,
                 type = "description",
                 name = "The installation guide should pop up automatically after you have completed the ElvUI installation. If you wish to re-run the installation process for this layout then please click the button below."
             },
             spacer2 = {
-                order = 8,
+                order = 11,
                 type = "description",
                 name = ""
             },
             install = {
-                order = 9,
+                order = 12,
                 type = "execute",
                 name = "Install",
                 desc = "Run the installation process.",
@@ -351,6 +402,13 @@ function mod:Initialize()
 
     -- Insert our options table when ElvUI config is loaded
     EP:RegisterPlugin(addon, InsertOptions)
+
+    -- check if enableInteraction is true or false
+    if E.db[MyPluginName].enableInteraction then
+        E:SetCVar("SoftTargetInteract", 3)
+    else
+        E:SetCVar("SoftTargetInteract", 0)
+    end
 end
 
 -- Register module with callback so it gets initialized when ready

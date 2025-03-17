@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.5.7]
+
+### Updated
+
+-   Changed TOC for all versions of the game.
+-   Included Category for addon list.
+
+## [1.5.6]
+
+### Added
+
+-   Added dialog pop-up for creating a new ElvUI profile
+-   Added confirmation dialog for overriding the current profile
+-   Added CVAR setting for SoftTargetInteract to 3
+
 ## [1.5.5]
 
 ### Updated

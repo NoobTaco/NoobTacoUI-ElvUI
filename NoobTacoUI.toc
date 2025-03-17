@@ -1,11 +1,22 @@
 ## Interface: 11505, 40401, 110005
 ## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
 ## Author: NoobTaco
-## Version: 1.5.5
+## Version: 1.5.7
 ## Notes: Contains layouts from NoobTaco
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled
 ## IconTexture: Interface\AddOns\NoobTacoUI\media\Textures\logo.tga
+## Category-enUS: UI Overhaul
+## Category-deDE: UI-Überholung
+## Category-esES: Renovación de la UI
+## Category-esMX: Renovación de la UI
+## Category-itIT: Revisione dell'UI
+## Category-frFR: Révision de l'UI
+## Category-ptBR: Renovação da UI
+## Category-ruRU: Переработка интерфейса
+## Category-koKR: UI 개편
+## Category-zhCN: UI重构
+## Category-zhTW: UI重構
 ## X-Tukui-ProjectID: 187
 ## X-Tukui-ProjectFolders: NoobTacoUI
 ## X-WoWI-ID: 25744
