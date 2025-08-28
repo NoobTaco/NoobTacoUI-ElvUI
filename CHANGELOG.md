@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.5.9]
+
+### Updated
+
+-   Updated interface versions to support MoP Classic (50407) and latest retail (110205)
+-   Standardized all player buff sizes to 30 across auras and unit frames (player, target, focus, pet)
+-   Updated boss unit frame buff and debuff sizes to 20 for better visibility
+-   Enhanced boss unit frame castbar with custom colors for normal, interrupted, and non-interruptible casts
+-   Improved boss unit frame layout with custom text elements for health and name display
+-   Refined boss unit frame text positioning with centered alignment and proper offsets
+-   Reduced chat bubble font size from 16 to 14 for improved readability
+
+### Added
+
+-   Created separate boss unit frame module (UnitframesBoss.lua) for better code organization
+-   Added custom castbar colors for boss units (orange normal, red interrupted, gray non-interruptible)
+-   Added custom text elements for boss unit frames with independent health and name display
+-   Added Poppins font styling for boss unit frame text elements (Regular for health, SemiBold for names)
+-   Added castbar icon configuration and font styling for boss units
+
+### Fixed
+
+-   
+
 ## [1.5.8]
 
 ### Updated

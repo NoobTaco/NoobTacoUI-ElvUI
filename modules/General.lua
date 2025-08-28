@@ -16,7 +16,7 @@ function NoobTacoUI:SetupGeneral()
     E.private["general"]["normTex"] = "ElvUI Norm"
     E.private["general"]["glossTex"] = "ElvUI Norm"
     E.private["general"]["chatBubbleFont"] = "Poppins-SemiBold"
-    E.private["general"]["chatBubbleFontSize"] = 16
+    E.private["general"]["chatBubbleFontSize"] = 14
     E.private["general"]["nameplateLargeFont"] = "Poppins-SemiBold"
     E.private["general"]["nameplateFont"] = "Poppins-SemiBold"
 

@@ -2,7 +2,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
 function NoobTacoUI:UnitframePet()
     E.db["unitframe"]["units"]["pet"]["buffs"]["enable"] = true
-    E.db["unitframe"]["units"]["pet"]["buffs"]["sizeOverride"] = 21
+    E.db["unitframe"]["units"]["pet"]["buffs"]["sizeOverride"] = 30
     E.db["unitframe"]["units"]["pet"]["buffs"]["yOffset"] = -12
     E.db["unitframe"]["units"]["pet"]["castbar"]["height"] = 30
     E.db["unitframe"]["units"]["pet"]["castbar"]["iconSize"] = 32

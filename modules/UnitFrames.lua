@@ -93,6 +93,7 @@ function NoobTacoUI:SetupLayout()
     NoobTacoUI:UnitframeParty()
     NoobTacoUI:UnitframeTarget()
     NoobTacoUI:UnitframeTargetTarget()
+    NoobTacoUI:UnitframeBoss()
     NoobTacoUI:UnitframeRaid1()
     NoobTacoUI:UnitframeRaid3()
 
