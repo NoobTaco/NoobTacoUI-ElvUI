@@ -8,6 +8,24 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Optimized boss unit frame dimensions and spacing
 ]]
 function NoobTacoUI:UnitframeBoss()
+    -- Boss frames are only available in MoP Classic and Retail (not Classic, TBC, or Wrath)
+    if E.Classic or E.TBC or E.Wrath then
+        return
+    end
+
+        -- CUSTOM TEXTS
+    -- Boss Unit Frame
+    if not E.db.unitframe.units.boss.customTexts then
+        E.db.unitframe.units.boss.customTexts = {}
+    end
+    if E.db["unitframe"]["units"]["boss"]["customTexts"]["Boss-Health"] == nil then
+        E.db["unitframe"]["units"]["boss"]["customTexts"]["Boss-Health"] = {}
+    end
+    if E.db["unitframe"]["units"]["boss"]["customTexts"]["Boss-Name"] == nil then
+        E.db["unitframe"]["units"]["boss"]["customTexts"]["Boss-Name"] = {}
+    end
+
+    
     E.db["unitframe"]["units"]["boss"]["buffs"]["maxDuration"] = 300
     E.db["unitframe"]["units"]["boss"]["buffs"]["sizeOverride"] = 20
     E.db["unitframe"]["units"]["boss"]["buffs"]["yOffset"] = 16
