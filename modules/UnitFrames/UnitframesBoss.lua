@@ -25,7 +25,6 @@ function NoobTacoUI:UnitframeBoss()
         E.db["unitframe"]["units"]["boss"]["customTexts"]["Boss-Name"] = {}
     end
 
-    
     E.db["unitframe"]["units"]["boss"]["buffs"]["maxDuration"] = 300
     E.db["unitframe"]["units"]["boss"]["buffs"]["sizeOverride"] = 20
     E.db["unitframe"]["units"]["boss"]["buffs"]["yOffset"] = 16
