@@ -64,7 +64,7 @@ function NoobTacoUI:UnitframePlayer()
     --
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["attachTextTo"] = "Power"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["xOffset"] = -5
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["text_format"] = "[power:current]"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["text_format"] = "[power:current-percent:shortvalue]"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["yOffset"] = 0
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerPower"]["justifyH"] = "RIGHT"
@@ -84,6 +84,7 @@ function NoobTacoUI:UnitframePlayer()
     E.db["unitframe"]["units"]["player"]["buffs"]["anchorPoint"] = "TOPRIGHT"
     E.db["unitframe"]["units"]["player"]["buffs"]["growthX"] = "LEFT"
     E.db["unitframe"]["units"]["player"]["buffs"]["yOffset"] = 20
+    E.db["unitframe"]["units"]["player"]["buffs"]["sizeOverride"] = 30
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["scale"] = 1.5

@@ -17,6 +17,7 @@ function NoobTacoUI:UnitframeFocus()
     E.db["unitframe"]["units"]["focus"]["buffs"]["perrow"] = 8
     E.db["unitframe"]["units"]["focus"]["buffs"]["priority"] = "Blacklist,Personal,nonPersonal"
     E.db["unitframe"]["units"]["focus"]["buffs"]["yOffset"] = 20
+    E.db["unitframe"]["units"]["focus"]["buffs"]["sizeOverride"] = 30
     E.db["unitframe"]["units"]["focus"]["castbar"]["height"] = 30
     E.db["unitframe"]["units"]["focus"]["castbar"]["insideInfoPanel"] = false
     E.db["unitframe"]["units"]["focus"]["castbar"]["overlayOnFrame"] = "Power"

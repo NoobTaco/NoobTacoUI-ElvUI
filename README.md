@@ -12,7 +12,8 @@ This profile boasts a **dark theme based on the popular Nord palette**, offering
 
 -   **Reduced Eye Strain:** The theme's balanced contrast prioritizes readability while keeping things dark.
 -   **Modern Fonts:** Enjoy crisp, clean fonts that make information easy to digest.
--   **Enhanced Unit Frames:** Effortlessly track targets with the sleek target unit frame and optional elite unit frame overlay.
+-   **Enhanced Unit Frames:** Effortlessly track targets with sleek unit frames, including dedicated boss frame configurations with custom text elements.
+-   **Smart Addon Integration:** Automatically detects and configures popular addons like Cell, Plater, and XIV Databar for seamless compatibility.
 -   **Role-Specific Layouts:** Optimized setups for DPS, Tanks, and Healers ensure a smooth gameplay experience.
 
 **Integration with your favorite addons**
@@ -21,14 +22,15 @@ NoobTacoUI seamlessly integrates with your favorite addons, enhancing your World
 **Integrated Addons (So far):**
 
 -   XVI Databar [link](https://www.curseforge.com/wow/addons/xiv_databar-continued)
--   Cell unit unit frames [link](https://www.curseforge.com/wow/addons/cell)
--   Baganotor [link](https://www.curseforge.com/wow/addons/baganator)
+-   Cell unit frames [link](https://www.curseforge.com/wow/addons/cell)
+-   Baganator [link](https://www.curseforge.com/wow/addons/baganator)
+-   Plater nameplates [link](https://www.curseforge.com/wow/addons/plater-nameplates)
 
 Please [add an issue request](https://github.com/NoobTaco/NoobTacoUI/issues/new) if there are any addons you would like to see integrated.
 
 **One Download for All:**
 
-No more juggling separate versions! NoobTacoUI conveniently supports both **Retail World of Warcraft (up to War Within)** and **Classic WoW (including Cats)** within a single download.
+No more juggling separate versions! NoobTacoUI conveniently supports **Retail World of Warcraft (up to The War Within)**, **MoP Classic**, and **Classic WoW (including Cata)** within a single download.
 
 **Easy Installation:**
 
@@ -55,7 +57,8 @@ Encountered a bug or have a feature request? Head over to the dedicated issue tr
 
 **Supports:**
 
--   Retail (War Within)
+-   Retail (The War Within)
+-   MoP Classic
 -   Classic
 -   Cata
 

@@ -1,4 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="UnitframesBoss.lua"/>
 	<Script file="UnitframesFocus.lua"/>
 	<Script file="UnitframesParty.lua"/>
 	<Script file="UnitframesPet.lua"/>

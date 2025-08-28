@@ -19,6 +19,7 @@ function NoobTacoUI:SetupAuras()
     E.db["auras"]["buffs"]["timeFontSize"] = 12
     E.db["auras"]["buffs"]["countFontSize"] = 14
     E.db["auras"]["buffs"]["durationFontSize"] = 14
+    E.db["auras"]["buffs"]["size"] = 30
     E.db["auras"]["debuffs"]["countFont"] = "Poppins-SemiBold"
     E.db["auras"]["debuffs"]["countFontSize"] = 14
     E.db["auras"]["debuffs"]["timeFont"] = "Poppins-SemiBold"

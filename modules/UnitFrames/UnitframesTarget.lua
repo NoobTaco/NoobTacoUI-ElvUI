@@ -13,6 +13,7 @@ function NoobTacoUI:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["buffs"]["countFont"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["target"]["buffs"]["growthX"] = "RIGHT"
     E.db["unitframe"]["units"]["target"]["buffs"]["yOffset"] = 20
+    E.db["unitframe"]["units"]["target"]["buffs"]["sizeOverride"] = 30
     E.db["unitframe"]["units"]["target"]["castbar"]["height"] = 30
     E.db["unitframe"]["units"]["target"]["castbar"]["overlayOnFrame"] = "Power"
     E.db["unitframe"]["units"]["target"]["castbar"]["width"] = 200
@@ -53,7 +54,7 @@ function NoobTacoUI:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["fontOutline"] = "NONE"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["size"] = 13
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["text_format"] = "[power:current]"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["text_format"] = "[power:current-percent:shortvalue]"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["xOffset"] = 5
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["yOffset"] = 0
     E.db["unitframe"]["units"]["target"]["debuffs"]["anchorPoint"] = "TOPLEFT"

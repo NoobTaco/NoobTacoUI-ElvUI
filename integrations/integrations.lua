@@ -4,4 +4,5 @@ function NoobTacoUI:SetupIntegration(layout, wowver)
   NoobTacoUI:IntegrationBag()
   NoobTacoUI:XIV_Databar()
   NoobTacoUI:CellIntegration()
+  NoobTacoUI:PlatterIntegration()
 end

@@ -12,7 +12,8 @@ This profile boasts a [b]dark theme based on the popular Nord palette[/b], offer
 
 [list][*]  [b]Reduced Eye Strain:[/b] The theme's balanced contrast prioritizes readability while keeping things dark.
 [*]  [b]Modern Fonts:[/b] Enjoy crisp, clean fonts that make information easy to digest.
-[*]  [b]Enhanced Unit Frames:[/b] Effortlessly track targets with the sleek target unit frame and optional elite unit frame overlay.
+[*]  [b]Enhanced Unit Frames:[/b] Effortlessly track targets with sleek unit frames, including dedicated boss frame configurations with custom text elements.
+[*]  [b]Smart Addon Integration:[/b] Automatically detects and configures popular addons like Cell, Plater, and XIV Databar for seamless compatibility.
 [*]  [b]Role-Specific Layouts:[/b] Optimized setups for DPS, Tanks, and Healers ensure a smooth gameplay experience.
 [/list]
 [b]Integration with your favorite addons[/b] NoobTacoUI seamlessly integrates with your favorite addons, enhancing your World of Warcraft experience. Combine NoobTacoUI with addons like [b]Details! Damage Meter[/b], [b]BigWigs[/b], [b]WeakAuras[/b], and more for a unified and streamlined interface. Customize your gameplay and make the most out of your WoW journey with NoobTacoUI's addon integration.
@@ -20,14 +21,15 @@ This profile boasts a [b]dark theme based on the popular Nord palette[/b], offer
 [b]Integrated Addons (So far):[/b]
 
 [list][*]  XVI Databar [url=https://www.curseforge.com/wow/addons/xiv_databar-continued]link[/url]
-[*]  Cell unit unit frames [url=https://www.curseforge.com/wow/addons/cell]link[/url]
-[*]  Baganotor [url=https://www.curseforge.com/wow/addons/baganator]link[/url]
+[*]  Cell unit frames [url=https://www.curseforge.com/wow/addons/cell]link[/url]
+[*]  Baganator [url=https://www.curseforge.com/wow/addons/baganator]link[/url]
+[*]  Plater nameplates [url=https://www.curseforge.com/wow/addons/plater-nameplates]link[/url]
 [/list]
 Please [url=https://github.com/NoobTaco/NoobTacoUI/issues/new]add an issue request[/url] if there are any addons you would like to see integrated.
 
 [b]One Download for All:[/b]
 
-No more juggling separate versions! NoobTacoUI conveniently supports both [b]Retail World of Warcraft (up to War Within)[/b] and [b]Classic WoW (including Cats)[/b] within a single download.
+No more juggling separate versions! NoobTacoUI conveniently supports [b]Retail World of Warcraft (up to The War Within)[/b], [b]MoP Classic[/b], and [b]Classic WoW (including Cata)[/b] within a single download.
 
 [b]Easy Installation:[/b]
 
@@ -54,7 +56,8 @@ Encountered a bug or have a feature request? Head over to the dedicated issue tr
 
 [b]Supports:[/b]
 
-[list][*]  Retail (War Within)
+[list][*]  Retail (The War Within)
+[*]  MoP Classic
 [*]  Classic
 [*]  Cata
 [/list]
