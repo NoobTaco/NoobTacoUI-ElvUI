@@ -1,6 +1,13 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
 function NoobTacoUI:CellIntegration()
+
+  -- Defaults On
+  E.db["unitframe"]["units"]["raid1"]["enable"] = true
+  E.db["unitframe"]["units"]["raid2"]["enable"] = true
+  E.db["unitframe"]["units"]["raid3"]["enable"] = true
+  E.db["unitframe"]["units"]["party"]["enable"] = true
+
   -- Check if loaded
   if (C_AddOns.IsAddOnLoaded("Cell")) then
     -- Disable ElvUI raid and party frames
