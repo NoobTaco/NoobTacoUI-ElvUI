@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.6.0] - In Development
+
+### Added
+
+-   Starting development for version 1.6.0
+
+### Updated
+
+-   
+
+### Fixed
+
+-   
+
 ## [1.5.9]
 
 ### Updated
