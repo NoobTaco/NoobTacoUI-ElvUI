@@ -78,9 +78,9 @@ function NoobTacoUI:SetupGeneral()
     E.db["general"]["bordercolor"]["b"] = 0.41568630933762
     E.db["general"]["bordercolor"]["g"] = 0.33725491166115
     E.db["general"]["bordercolor"]["r"] = 0.29803922772408
-    E.db["general"]["valuecolor"]["b"] = 0.95686280727386
-    E.db["general"]["valuecolor"]["g"] = 0.93725496530533
-    E.db["general"]["valuecolor"]["r"] = 0.92549026012421
+    E.db["general"]["valuecolor"]["b"] = 0.8156863451004
+    E.db["general"]["valuecolor"]["g"] = 0.75294125080109
+    E.db["general"]["valuecolor"]["r"] = 0.53333336114883
     E.db["general"]["interruptAnnounce"] = "RAID"
     E.db["general"]["bottomPanel"] = false
     E.db["general"]["customGlow"]["style"] = "Action Button Glow"
