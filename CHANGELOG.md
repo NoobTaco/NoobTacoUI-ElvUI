@@ -19,7 +19,9 @@
 
 ### Fixed
 
--   
+-   Fixed "attempt to index field 'classbar' (a nil value)" error in NamePlates module
+-   Corrected database structure to use 'classpower' instead of 'classbar' for ENEMY_NPC and ENEMY_PLAYER units
+-   Aligned nameplate configuration with ElvUI's internal database structure
 
 ## [1.5.9]
 

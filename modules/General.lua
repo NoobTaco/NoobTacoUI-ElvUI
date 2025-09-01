@@ -13,8 +13,8 @@ function NoobTacoUI:SetupGeneral()
     E.private["skins"]["parchmentRemoverEnable"] = true
     E.private["general"]["namefont"] = "Poppins-SemiBold"
     E.private["general"]["dmgfont"] = "Poppins-SemiBold"
-    E.private["general"]["normTex"] = "ElvUI Norm"
-    E.private["general"]["glossTex"] = "ElvUI Norm"
+    E.private["general"]["normTex"] = "NT_Nord8_Gradient"
+    E.private["general"]["glossTex"] = "NT_Nord8_Gradient"
     E.private["general"]["chatBubbleFont"] = "Poppins-SemiBold"
     E.private["general"]["chatBubbleFontSize"] = 14
     E.private["general"]["nameplateLargeFont"] = "Poppins-SemiBold"
