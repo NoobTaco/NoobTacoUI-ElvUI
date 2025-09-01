@@ -5,10 +5,17 @@
 ### Added
 
 -   Starting development for version 1.6.0
+-   Added all NT_Nord texture files (NT_nord0 through NT_nord15) to SharedMedia as status bar textures
+-   Added gradient versions of all NT_Nord textures with "_Gradient" naming convention
+-   Added NT_Bar_nord0 texture to SharedMedia status bar collection
+-   Added new audio file "NT_InfussionOfLight" to SharedMedia sound collection
 
 ### Updated
 
--   
+-   Cleaned up redundant LibSharedMedia-3.0 code by removing embedded library
+-   Optimized addon structure by relying on ElvUI_Libraries for LibSharedMedia-3.0
+-   Removed unnecessary Libraries directory and Load_Libraries.xml file
+-   Updated TOC file to remove commented library references
 
 ### Fixed
 

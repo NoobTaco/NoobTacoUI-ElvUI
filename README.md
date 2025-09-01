@@ -13,6 +13,7 @@ This profile boasts a **dark theme based on the popular Nord palette**, offering
 -   **Reduced Eye Strain:** The theme's balanced contrast prioritizes readability while keeping things dark.
 -   **Modern Fonts:** Enjoy crisp, clean fonts that make information easy to digest.
 -   **Enhanced Unit Frames:** Effortlessly track targets with sleek unit frames, including dedicated boss frame configurations with custom text elements.
+-   **Expanded Media Library:** Comprehensive collection of Nord-themed status bar textures and custom audio files available through LibSharedMedia.
 -   **Smart Addon Integration:** Automatically detects and configures popular addons like Cell, Plater, and XIV Databar for seamless compatibility.
 -   **Role-Specific Layouts:** Optimized setups for DPS, Tanks, and Healers ensure a smooth gameplay experience.
 
