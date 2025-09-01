@@ -64,3 +64,9 @@ LSM:Register("sound", "NT_Chest", [[Interface\AddOns\NoobTacoUI\media\Audio\nt_s
 LSM:Register("sound", "NT_Group", [[Interface\AddOns\NoobTacoUI\media\Audio\nt_sd_groupnpc.ogg]])
 LSM:Register("sound", "NT_Mount", [[Interface\AddOns\NoobTacoUI\media\Audio\nt_sd_mount.ogg]])
 LSM:Register("sound", "NT_NPC", [[Interface\AddOns\NoobTacoUI\media\Audio\nt_sd_npc.ogg]])
+
+-- Status Bar Textures
+LSM:Register("statusbar", "NT_Bar01", [[Interface\AddOns\NoobTacoUI\media\Textures\NT_Bar01.tga]])
+LSM:Register("statusbar", "NT_Bar02", [[Interface\AddOns\NoobTacoUI\media\Textures\NT_Bar02.tga]])
+LSM:Register("statusbar", "NT_Bar03", [[Interface\AddOns\NoobTacoUI\media\Textures\NT_Bar03.tga]])
+LSM:Register("statusbar", "NT_Bar04", [[Interface\AddOns\NoobTacoUI\media\Textures\NT_Bar04.tga]])
