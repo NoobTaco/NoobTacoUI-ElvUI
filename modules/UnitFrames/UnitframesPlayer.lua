@@ -54,7 +54,7 @@ function NoobTacoUI:UnitframePlayer()
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["enable"] = true
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["font"] = "Poppins-SemiBold"
-    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["fontOutline"] = "NONE"
+    E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["fontOutline"] = "SHADOW"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["justifyH"] = "RIGHT"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["size"] = 15
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerHealth"]["text_format"] =

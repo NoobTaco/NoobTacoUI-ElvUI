@@ -21,7 +21,7 @@ function NoobTacoUI:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["enable"] = true
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["font"] = "Poppins-SemiBold"
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["fontOutline"] = "NONE"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["fontOutline"] = "SHADOW"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["size"] = 15
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["text_format"] =
