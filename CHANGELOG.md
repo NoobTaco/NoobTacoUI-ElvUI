@@ -12,6 +12,13 @@
 
 ### Updated
 
+-   Updated raid1 unit frame configuration with enhanced customization options
+-   Increased raid1 buff indicator size from 10 to 15 for better visibility
+-   Enhanced raid1 unit frames with custom text fields for health and name display
+-   Updated raid1 debuffs configuration with improved size, positioning, and priority settings
+-   Changed raid1 growth direction from RIGHT_UP to DOWN_RIGHT for better layout
+-   Increased raid1 frame dimensions (height 45→60, width 90→100) for improved readability
+-   Added proper initialization for raid1 custom text fields to prevent configuration errors
 -   Cleaned up redundant LibSharedMedia-3.0 code by removing embedded library
 -   Optimized addon structure by relying on ElvUI_Libraries for LibSharedMedia-3.0
 -   Removed unnecessary Libraries directory and Load_Libraries.xml file
