@@ -115,7 +115,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
     E.db["unitframe"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
     E.db["unitframe"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
-    E.db["unitframe"]["statusbar"] = "NT_Nord15_Gradient"
+    E.db["unitframe"]["statusbar"] = "NT_Nord08_Gradient"
 end
 
 function NoobTacoUI:SetupUnitFrames(layout, wowver)
