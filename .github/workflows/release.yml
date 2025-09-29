@@ -1,60 +1,117 @@
 name: Release
+
 on:
   push:
     tags:
       - "**"
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to package for testing'
+        required: true
+        default: 'main'
+        type: string
+
+permissions:
+  contents: write
+
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.branch || github.ref }}
+          fetch-depth: 0
 
       - name: Run luacheck
         uses: BigWigsMods/actions/luacheck@master
         with:
-          args: -q --ignore 113 631 211 212 112 311
+          args: -q
 
-      - name: "Generate recent changes"
-        uses: kemayo/actions-recent-changelog@v1
-        with:
-          input: CHANGELOG.md
-          output: RECENT_CHANGES.md
+      - name: Create changelog for packager
+        run: |
+          if [ -f "CHANGELOG.md" ]; then
+            awk '/^## \[[0-9.]+\]/{c++; if(c==2) exit} c>0' CHANGELOG.md > .changelog
+          else
+            echo "## Changes" > .changelog
+            echo "" >> .changelog
+            if git tag --sort=-version:refname | head -2 | tail -1 > /dev/null 2>&1; then
+              LAST_TAG=$(git tag --sort=-version:refname | head -2 | tail -1)
+              if [ ! -z "$LAST_TAG" ]; then
+                echo "Changes since $LAST_TAG:" >> .changelog
+                git log --oneline $LAST_TAG..HEAD --pretty=format:"- %s" >> .changelog
+              else
+                echo "- Latest updates and improvements" >> .changelog
+              fi
+            else
+              echo "- Latest updates and improvements" >> .changelog
+            fi
+          fi
 
-      # - name: Package Classic
-      #   uses: BigWigsMods/packager@master
-      #   with:
-      #     args: -g classic -w 25971
-      #   env:
-      #     CF_API_KEY: ${{ secrets.CF_API_KEY }}
-      #     GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-      #     WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
-      #     WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
-
-      # - name: Package Burning Crusade
-      #   uses: BigWigsMods/packager@master
-      #   with:
-      #     args: -g bcc -w 25970
-      #   env:
-      #     CF_API_KEY: ${{ secrets.CF_API_KEY }}
-      #     GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-      #     WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
-      #     WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
-
-      # - name: Package WOTLK
-      #   uses: BigWigsMods/packager@master
-      #   with:
-      #     args: -g wrath
-      #   env:
-      #     CF_API_KEY: ${{ secrets.CF_API_KEY }}
-      #     GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-      #     WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
-      #     WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
-
-      - name: Package Retail
-        uses: BigWigsMods/packager@master
+      - name: Package and release (on tag push)
+        if: github.event_name == 'push'
+        uses: BigWigsMods/packager@v2
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
           WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
           WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+
+      - name: Package for testing (on manual run)
+        if: github.event_name == 'workflow_dispatch'
+        uses: BigWigsMods/packager@v2
+        with:
+          args: -d
+        env:
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Preserve artifacts before cleanup
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "=== Copying artifacts before any cleanup ==="
+          mkdir -p ./artifacts
+          if [ -d ".release" ]; then
+            echo "Found .release directory, copying zip files..."
+            find .release -name "*.zip" -exec cp {} ./artifacts/ \;
+            echo "Contents of .release directory:"
+            ls -la .release/
+          else
+            echo "No .release directory found"
+          fi
+          if [ -f ".changelog" ]; then
+            echo "Found .changelog file, copying as processed changelog..."
+            cp .changelog ./artifacts/changelog.txt
+            echo "Processed changelog copied as changelog.txt"
+          else
+            echo "No .changelog file found"
+          fi
+          echo "=== Final artifacts directory contents ==="
+          ls -la ./artifacts/
+
+      - name: Show test results
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "=== Test Package Created Successfully ==="
+          echo "Package details:"
+          find ./artifacts -name "*.zip" -ls 2>/dev/null || echo "No zip files found"
+          echo ""
+          echo "=== Processed Changelog (used for upload metadata) ==="
+          cat ./artifacts/changelog.txt 2>/dev/null || echo "No processed changelog found"
+          echo ""
+          echo "=== Artifacts Summary ==="
+          echo "- ZIP file: Clean addon package (no changelog included by design)"
+          echo "- changelog.txt: Processed changelog for current version (used for upload metadata)"
+          echo ""
+          ls -la ./artifacts/
+          echo ""
+          echo "=== Test completed - package ready for download ==="
+
+      - name: Upload test package as artifact
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: NoobTacoUI-Test-Package
+          path: ./artifacts/
+          retention-days: 7
