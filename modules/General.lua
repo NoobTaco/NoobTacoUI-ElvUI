@@ -13,8 +13,8 @@ function NoobTacoUI:SetupGeneral()
     E.private["skins"]["parchmentRemoverEnable"] = true
     E.private["general"]["namefont"] = "Poppins-SemiBold"
     E.private["general"]["dmgfont"] = "Poppins-SemiBold"
-    E.private["general"]["normTex"] = "NT_Nord8_Gradient"
-    E.private["general"]["glossTex"] = "NT_Nord8_Gradient"
+    E.private["general"]["normTex"] = "NT_Nord09_Gradient"
+    E.private["general"]["glossTex"] = "NT_Nord09_Gradient"
     E.private["general"]["chatBubbleFont"] = "Poppins-SemiBold"
     E.private["general"]["chatBubbleFontSize"] = 14
     E.private["general"]["nameplateLargeFont"] = "Poppins-SemiBold"
@@ -75,9 +75,9 @@ function NoobTacoUI:SetupGeneral()
     E.db["general"]["backdropcolor"]["b"] = 0.32156863808632
     E.db["general"]["backdropcolor"]["g"] = 0.258823543787
     E.db["general"]["backdropcolor"]["r"] = 0.23137256503105
-    E.db["general"]["bordercolor"]["b"] = 0.41568630933762
-    E.db["general"]["bordercolor"]["g"] = 0.33725491166115
-    E.db["general"]["bordercolor"]["r"] = 0.29803922772408
+    E.db["general"]["bordercolor"]["b"] = 0.34509804844856
+    E.db["general"]["bordercolor"]["g"] = 0.34509804844856
+    E.db["general"]["bordercolor"]["r"] = 0.34509804844856
     E.db["general"]["valuecolor"]["b"] = 0.8156863451004
     E.db["general"]["valuecolor"]["g"] = 0.75294125080109
     E.db["general"]["valuecolor"]["r"] = 0.53333336114883

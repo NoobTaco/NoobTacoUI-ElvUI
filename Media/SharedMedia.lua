@@ -106,8 +106,6 @@ LSM:Register("statusbar", "NT_Nord15", [[Interface\AddOns\NoobTacoUI\media\Textu
 LSM:Register("statusbar", "NT_Nord15_Gradient", [[Interface\AddOns\NoobTacoUI\media\Textures\NT_nord15_grd.tga]])
 
 -- Register new graphics
-LSM:Register("statusbar", "NT_Template", [[Interface\AddOns\NoobTacoUI\media\Textures\NT_Template.afdesign]])
-LSM:Register("statusbar", "NT_Bar_Template", [[Interface\AddOns\NoobTacoUI\media\Textures\NT_Bar_Template.afphoto]])
 LSM:Register("statusbar", "elite_df", [[Interface\AddOns\NoobTacoUI\media\Textures\elite_df.tga]])
 LSM:Register("statusbar", "logo", [[Interface\AddOns\NoobTacoUI\media\Textures\logo.tga]])
 LSM:Register("statusbar", "noobtaco", [[Interface\AddOns\NoobTacoUI\media\Textures\noobtaco.tga]])
