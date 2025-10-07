@@ -1,4 +1,17 @@
-## NoobTacoUI: A Comfortable Dark Theme for ElvUI
+
+## Project Status & Transition Notice
+
+**NoobTacoUI has been renamed to NoobTacoUI (Elvui Profile).**
+
+Please note that this addon will not receive updates for the upcoming Midnight expansion. Limited maintenance will continue for Classic and non-retail versions for a short period, after which the project will be retired upon the release of Midnight.
+
+For continued access to fonts, textures, and sounds—especially for Midnight—please transition to [NoobTaco-Media](https://www.curseforge.com/wow/addons/noobtacoui-media), which will be actively maintained and updated.
+
+Thank you for your support and understanding.
+
+— NoobTaco
+
+## NoobTacoUI (Elvui Profile): A Comfortable Dark Theme for ElvUI
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/noobtaco/NoobTacoUI/ci.yml?style=for-the-badge&logo=github)
 
@@ -36,23 +49,21 @@ No more juggling separate versions! NoobTacoUI conveniently supports **Retail Wo
 **Easy Installation:**
 
 1. Install the required **ElvUI addon**[[link](https://tukui.org/elvui)]
-2. Download and install NoobTacoUI.
+2. Download and install NoobTacoUI (Elvui Profile).
 3. Launch WoW and follow ElvUI's setup instructions.
 4. Enjoy your new interface! (For best nameplate text, log out and back in after setup.)
 
 **Get Started:**
 
-Download NoobTacoUI from your preferred source:
+Download NoobTacoUI (Elvui Profile) from your preferred source:
 
 -   **GitHub:** [[link](https://github.com/NoobTaco/NoobTacoUI/releases/latest)]
--   **Curse/Overwolf:** [[link](https://www.curseforge.com/wow/addons/noobtacoui)]
--   **Wago.io:** [[link](https://addons.wago.io/addons/noobtacoui)]
--   **WoWup:** [[link](https://wowup.io/addons/2)]
--   **WoW Interface:** [[link](https://www.wowinterface.com/downloads/info25744-NoobTacoUI.html)]
+-   **Curse/Overwolf:** [[link](https://www.curseforge.com/wow/addons/noobtacoui-elvui)]
+-   **Wago.io:** [[link](https://addons.wago.io/addons/noobtacoui-elvui)]
 
 **Need Help? Found a bug? Have a feature request?**
 
-Encountered a bug or have a feature request? Head over to the dedicated issue tracker on the NoobTacoUI GitHub repository: [link](https://github.com/NoobTaco/NoobTacoUI/issues/new)
+Encountered a bug or have a feature request? Head over to the dedicated issue tracker on the NoobTacoUI (Elvui Profile) GitHub repository: [link](https://github.com/NoobTaco/NoobTacoUI/issues/new)
 
 **Let NoobTacoUI enhance your WoW journey!**
 
