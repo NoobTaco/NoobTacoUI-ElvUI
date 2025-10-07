@@ -12,16 +12,14 @@ function NoobTacoUI:UnitframeRaid1()
     if not E.db["unitframe"]["units"]["raid1"]["customTexts"] then
         E.db["unitframe"]["units"]["raid1"]["customTexts"] = {}
     end
-    
     -- Initialize individual custom text tables
     if not E.db["unitframe"]["units"]["raid1"]["customTexts"]["party-health"] then
         E.db["unitframe"]["units"]["raid1"]["customTexts"]["party-health"] = {}
     end
-    
+
     if not E.db["unitframe"]["units"]["raid1"]["customTexts"]["party-name"] then
         E.db["unitframe"]["units"]["raid1"]["customTexts"]["party-name"] = {}
     end
-
     E.db["unitframe"]["units"]["raid1"]["buffIndicator"]["size"] = 15
     E.db["unitframe"]["units"]["raid1"]["buffs"]["perrow"] = 8
     E.db["unitframe"]["units"]["raid1"]["customTexts"]["party-health"]["attachTextTo"] = "Health"

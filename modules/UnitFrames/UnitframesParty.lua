@@ -12,17 +12,15 @@ function NoobTacoUI:UnitframeParty()
     if not E.db["unitframe"]["units"]["party"]["customTexts"] then
         E.db["unitframe"]["units"]["party"]["customTexts"] = {}
     end
-    
     -- Initialize party-health customText if it doesn't exist
     if not E.db["unitframe"]["units"]["party"]["customTexts"]["party-health"] then
         E.db["unitframe"]["units"]["party"]["customTexts"]["party-health"] = {}
     end
-    
     -- Initialize party-name customText if it doesn't exist
     if not E.db["unitframe"]["units"]["party"]["customTexts"]["party-name"] then
         E.db["unitframe"]["units"]["party"]["customTexts"]["party-name"] = {}
     end
-    
+
     E.db["unitframe"]["units"]["party"]["buffIndicator"]["size"] = 15
     E.db["unitframe"]["units"]["party"]["customTexts"]["party-health"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["party"]["customTexts"]["party-health"]["enable"] = true
@@ -74,3 +72,5 @@ function NoobTacoUI:UnitframeParty()
     E.db["unitframe"]["units"]["party"]["visibility"] = "[@raid6,exists][nogroup] hide;show"
     E.db["unitframe"]["units"]["party"]["width"] = 100
 end
+
+E.db["unitframe"]["units"]["party"]["width"] = 100
