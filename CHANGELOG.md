@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.6.0] - In Development
+
+### Added
+
+-   Starting development for version 1.6.0
+-   Added all NT_Nord texture files (NT_nord0 through NT_nord15) to SharedMedia as status bar textures
+-   Added gradient versions of all NT_Nord textures with "_Gradient" naming convention
+-   Added NT_Bar_nord0 texture to SharedMedia status bar collection
+-   Added new audio file "NT_InfussionOfLight" to SharedMedia sound collection
+
+### Updated
+
+-   Updated raid1 unit frame configuration with enhanced customization options
+-   Increased raid1 buff indicator size from 10 to 15 for better visibility
+-   Enhanced raid1 unit frames with custom text fields for health and name display
+-   Updated raid1 debuffs configuration with improved size, positioning, and priority settings
+-   Changed raid1 growth direction from RIGHT_UP to DOWN_RIGHT for better layout
+-   Increased raid1 frame dimensions (height 45→60, width 90→100) for improved readability
+-   Added proper initialization for raid1 custom text fields to prevent configuration errors
+-   Cleaned up redundant LibSharedMedia-3.0 code by removing embedded library
+-   Optimized addon structure by relying on ElvUI_Libraries for LibSharedMedia-3.0
+-   Removed unnecessary Libraries directory and Load_Libraries.xml file
+-   Updated TOC file to remove commented library references
+
+### Fixed
+
+-   Fixed "attempt to index field 'classbar' (a nil value)" error in NamePlates module
+-   Corrected database structure to use 'classpower' instead of 'classbar' for ENEMY_NPC and ENEMY_PLAYER units
+-   Aligned nameplate configuration with ElvUI's internal database structure
+
 ## [1.5.9]
 
 ### Updated

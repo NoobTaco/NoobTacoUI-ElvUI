@@ -1,0 +1,49 @@
+name: Feature Request
+description: See something useful that could be added to NoobTacoUI?
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: wow_version
+    attributes:
+      label: What version(s) of WoW are you using?
+      multiple: true
+      options:
+        - Retail
+        - Classic
+        - Classic Era
+        - Hardcore Classic
+        - All
+    validations:
+      required: true
+  
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: What problem are you experiencing that led to you asking for this feature?
+      description: Describe the issue or limitation you're facing
+    validations:
+      required: true
+  
+  - type: textarea
+    id: solution
+    attributes:
+      label: What solution would you like?
+      description: Describe what you'd like to see added or changed
+    validations:
+      required: true
+  
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Any alternatives you can think of?
+      description: Are there other ways this could be implemented or solved?
+    validations:
+      required: false
+  
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Any other information, mockups, or examples that might be helpful
+    validations:
+      required: false

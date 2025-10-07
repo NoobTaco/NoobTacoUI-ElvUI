@@ -21,11 +21,11 @@ function NoobTacoUI:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["enable"] = true
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["font"] = "Poppins-SemiBold"
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["fontOutline"] = "NONE"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["fontOutline"] = "SHADOW"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["size"] = 15
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["text_format"] =
-        "[health:current-percent:shortvalue]"
+    "[health:current-percent:shortvalue]"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["xOffset"] = 5
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetHealth"]["yOffset"] = -10
     --
@@ -45,16 +45,17 @@ function NoobTacoUI:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["size"] = 13
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["text_format"] =
-        "[name:medium]  [shortclassification]"
+    "[name:medium]  [shortclassification]"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["xOffset"] = 0
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"]["yOffset"] = 40
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["attachTextTo"] = "Power"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["enable"] = true
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["font"] = "Poppins-SemiBold"
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["fontOutline"] = "NONE"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["fontOutline"] = "SHADOW"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["size"] = 13
-    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["text_format"] = "[power:current-percent:shortvalue]"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["text_format"] =
+    "[power:current-percent:shortvalue]"
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["xOffset"] = 5
     E.db["unitframe"]["units"]["target"]["customTexts"]["TargetPower"]["yOffset"] = 0
     E.db["unitframe"]["units"]["target"]["debuffs"]["anchorPoint"] = "TOPLEFT"
