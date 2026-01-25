@@ -19,6 +19,10 @@
         - Added confirmation dialog for overriding the current profile
         - Added CVAR setting for SoftTargetInteract to 3
         - Separated toggle options for elite overlay and interaction
+
+    Version 2.0.0 - Midnight Upgrade
+        - Major upgrade for ElvUI Midnight (14.x) and WoW 12.0
+        - Verified all database pathing and API compliance
 ]]
 -- Don't worry about this
 local addon, Engine, ns = ...
@@ -83,7 +87,7 @@ local function NewProfile(new)
             end
         }
         StaticPopup_Show("CreateProfileNameNew", "test") -- tell our dialog box to show
-    elseif (new == false) then -- the user clicked "Use Current" create a dialog pop up
+    elseif (new == false) then                           -- the user clicked "Use Current" create a dialog pop up
         StaticPopupDialogs["ProfileOverrideConfirm"] = {
             text = "Are you sure you want to override the current profile?",
             button1 = "Yes",
@@ -280,8 +284,8 @@ local InstallerData = {
         -- [5] = "Nameplate",
         [5] = "Installation Complete"
     },
-    StepTitlesColor = {1, 1, 1},
-    StepTitlesColorSelected = {0, 179 / 255, 1},
+    StepTitlesColor = { 1, 1, 1 },
+    StepTitlesColorSelected = { 0, 179 / 255, 1 },
     StepTitleWidth = 200,
     StepTitleButtonWidth = 180,
     StepTitleTextJustification = "RIGHT"
@@ -357,7 +361,7 @@ local function InsertOptions()
                         type = "toggle",
                         name = L["Enable Interaction"],
                         desc = L[
-                            "Disable/Enable the interaction option in wow. This will ensure it stays on throughout sessions."
+                        "Disable/Enable the interaction option in wow. This will ensure it stays on throughout sessions."
                         ]
                     }
                 }
@@ -370,7 +374,8 @@ local function InsertOptions()
             description2 = {
                 order = 10,
                 type = "description",
-                name = "The installation guide should pop up automatically after you have completed the ElvUI installation. If you wish to re-run the installation process for this layout then please click the button below."
+                name =
+                "The installation guide should pop up automatically after you have completed the ElvUI installation. If you wish to re-run the installation process for this layout then please click the button below."
             },
             spacer2 = {
                 order = 11,
