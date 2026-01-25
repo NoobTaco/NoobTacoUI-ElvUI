@@ -25,6 +25,10 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
     - Corrected database structure to use 'classpower' instead of 'classbar' for ENEMY_NPC and ENEMY_PLAYER units
     - Ensured proper initialization of classpower table before setting properties
     - Aligned with ElvUI's internal nameplate database structure
+
+    Version 2.0.0 - Midnight Upgrade
+    - Verified compatibility with ElvUI Midnight (14.x)
+    - Ensured structure aligns with WoW 12.0 API changes
 ]]
 function NoobTacoUI:SetupNamePlates()
     -- NAMEPLATES -------------------------------------------------------------
@@ -50,10 +54,14 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["b"] = 0.96078431372549
     E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["g"] = 0.78823529411765
     E.db["nameplates"]["colors"]["classResources"]["comboPoints"][6]["r"] = 1
-    E.db["nameplates"]["colors"]["reactions"]["good"]["b"] = 0.29
-    E.db["nameplates"]["colors"]["reactions"]["good"]["g"] = 0.67
-    E.db["nameplates"]["colors"]["reactions"]["good"]["r"] = 0.3
-    E.db["nameplates"]["colors"]["reactions"]["neutral"]["g"] = 0.76
+    -- Friendly/Good reactions (Indices 5-8)
+    for i = 5, 8 do
+        E.db["nameplates"]["colors"]["reactions"][i]["b"] = 0.29
+        E.db["nameplates"]["colors"]["reactions"][i]["g"] = 0.67
+        E.db["nameplates"]["colors"]["reactions"][i]["r"] = 0.3
+    end
+    -- Neutral reaction (Index 4)
+    E.db["nameplates"]["colors"]["reactions"][4]["g"] = 0.76
     E.db["nameplates"]["colors"]["selection"][0]["b"] = 0.25
     E.db["nameplates"]["colors"]["selection"][0]["g"] = 0.25
     E.db["nameplates"]["colors"]["selection"][0]["r"] = 0.78
@@ -77,18 +85,23 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["colors"]["threat"]["offTankColorGoodTransition"]["b"] = 0.77647066116333
     E.db["nameplates"]["colors"]["threat"]["offTankColorGoodTransition"]["g"] = 0
     E.db["nameplates"]["colors"]["threat"]["offTankColorGoodTransition"]["r"] = 1
-    E.db["nameplates"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
-    E.db["nameplates"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
-    E.db["nameplates"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
-    E.db["nameplates"]["filters"]["ElvUI_Target"]["triggers"]["enable"] = true
+    if not E.global["nameplates"] then E.global["nameplates"] = {} end
+    if not E.global["nameplates"]["filters"] then E.global["nameplates"]["filters"] = {} end
+
+    if E.global["nameplates"]["filters"]["ElvUI_Target"] then
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["triggers"]["enable"] = true
+    end
     E.db["nameplates"]["font"] = "Poppins-SemiBold"
     E.db["nameplates"]["overlapV"] = 1.3
-    E.db["nameplates"]["plateSize"]["enemyHeight"] = 20
-    E.db["nameplates"]["plateSize"]["enemyWidth"] = 215
-    E.db["nameplates"]["plateSize"]["friendlyHeight"] = 20
-    E.db["nameplates"]["plateSize"]["friendlyWidth"] = 215
-    E.db["nameplates"]["plateSize"]["personalHeight"] = 20
-    E.db["nameplates"]["plateSize"]["personalWidth"] = 215
+    local plateSize = E.db["nameplates"]["plateSize"] or E.db["nameplates"]["clickSize"]
+    if plateSize then
+        plateSize["enemyHeight"] = 20
+        plateSize["enemyWidth"] = 215
+        plateSize["friendlyHeight"] = 20
+        plateSize["friendlyWidth"] = 215
+        plateSize["personalHeight"] = 20
+        plateSize["personalWidth"] = 215
+    end
     E.db["nameplates"]["statusbar"] = "NT_Nord15_Gradient"
     E.db["nameplates"]["smoothbars"] = true
     E.db["nameplates"]["threat"]["indicator"] = true
@@ -135,7 +148,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["growthX"] = "RIGHT"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["numAuras"] = 8
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["priority"] =
-        "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
+    "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["size"] = 25
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["yOffset"] = 0
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["xOffset"] = 0
@@ -164,7 +177,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["format"] = "[name:medium]"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["xOffset"] = 5
     E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["yOffset"] = -18
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["Parent"] = "Health" -- fix for #56
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["Parent"] = "Health"    -- fix for #56
     E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["position"] = "TOPLEFT" -- fix for #56
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = true
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["enable"] = true
@@ -217,7 +230,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["growthX"] = "RIGHT"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["numAuras"] = 8
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["priority"] =
-        "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
+    "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["size"] = 25
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["yOffset"] = 0
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["xOffset"] = 0
@@ -240,10 +253,11 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["font"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["fontOutline"] = "SHADOW"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["fontSize"] = 12
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["format"] = "[difficultycolor][smartlevel] ||cffffffff[name:medium]||r"
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["format"] =
+    "[difficultycolor][smartlevel] ||cffffffff[name:medium]||r"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["xOffset"] = 5
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["yOffset"] = -18
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["Parent"] = "Health" -- fix for #56
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["Parent"] = "Health"    -- fix for #56
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["position"] = "TOPLEFT" -- fix for #56
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["portrait"]["enable"] = true
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["portrait"]["position"] = "LEFT"
@@ -288,7 +302,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["growthX"] = "RIGHT"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["numAuras"] = 8
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["priority"] =
-        "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
+    "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["size"] = 25
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["yOffset"] = 0
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["eliteIcon"]["enable"] = true
@@ -315,7 +329,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["format"] = "[name:medium]"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["xOffset"] = 5
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["yOffset"] = -18
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["Parent"] = "Health" -- fix for #56
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["Parent"] = "Health"    -- fix for #56
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["position"] = "TOPLEFT" -- fix for #56
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["nameOnly"] = false
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = true
@@ -344,7 +358,8 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["attachTo"] = "DEBUFFS"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["countFont"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["countFontOutline"] = "NONE"
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["priority"] = "Blacklist,blockNoDuration,Personal,TurtleBuffs"
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["priority"] =
+    "Blacklist,blockNoDuration,Personal,TurtleBuffs"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["size"] = 30
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["yOffset"] = 0
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["castbar"]["font"] = "Poppins-SemiBold"
@@ -361,7 +376,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["growthX"] = "RIGHT"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["numAuras"] = 8
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["priority"] =
-        "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
+    "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["size"] = 25
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["yOffset"] = 0
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["height"] = 23
@@ -382,10 +397,11 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["font"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["fontOutline"] = "shadow"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["fontSize"] = 14
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["format"] = "[difficultycolor][smartlevel] ||cffffffff[name:medium]||r"
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["format"] =
+    "[difficultycolor][smartlevel] ||cffffffff[name:medium]||r"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["xOffset"] = 5
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["yOffset"] = -18
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["Parent"] = "Health" -- fix for #56
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["Parent"] = "Health"    -- fix for #56
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["position"] = "TOPLEFT" -- fix for #56
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = true
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["enable"] = true
@@ -411,7 +427,7 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["countFontOutline"] = "NONE"
     E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["numAuras"] = 8
     E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["priority"] =
-        "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
+    "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
     E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["size"] = 30
     E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["yOffset"] = 15
     E.db["nameplates"]["units"]["PLAYER"]["health"]["height"] = 16
@@ -445,29 +461,37 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["PLAYER"]["raidTargetIndicator"]["xOffset"] = 0
     E.db["nameplates"]["units"]["PLAYER"]["title"]["format"] = "[guild]"
 
--- Nameplate filters
-E.global["nameplates"]["filters"]["ElvUI_Incorporeal"]["actions"]["texture"]["enable"] = true
-E.global["nameplates"]["filters"]["ElvUI_Incorporeal"]["actions"]["texture"]["texture"] = "Details Flat"
-E.global["nameplates"]["filters"]["ElvUI_NonTarget"]["actions"]["alpha"] = 100
-E.global["nameplates"]["filters"]["ElvUI_NonTarget"]["actions"]["texture"]["enable"] = true
-E.global["nameplates"]["filters"]["ElvUI_NonTarget"]["actions"]["texture"]["texture"] = "Solid"
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["alpha"] = 100
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["color"]["healthClass"] = true
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["color"]["healthColor"]["b"] = 0.8156863451004
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["color"]["healthColor"]["g"] = 0.75294125080109
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["color"]["healthColor"]["r"] = 0.53333336114883
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["flash"]["color"]["b"] = 0.8156863451004
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["flash"]["color"]["g"] = 0.75294125080109
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["flash"]["color"]["r"] = 0.53333336114883
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["color"][1] = 0.53333336114883
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["color"][2] = 0.75294125080109
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["color"][3] = 0.8156863451004
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["color"][4] = 0.89999997615814
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["lines"] = 6
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["speed"] = 0.5
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["health"]["flash"]["color"]["a"] = 0.22023865580559
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["health"]["flash"]["speed"] = 7
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["health"]["glow"]["speed"] = 0.05
-E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["scale"] = 1.05
-E.global["nameplates"]["filters"]["ElvUI_Target"]["triggers"]["bossMods"]["enable"] = false
+    -- Nameplate filters
+    if E.global["nameplates"]["filters"]["ElvUI_Incorporeal"] then
+        E.global["nameplates"]["filters"]["ElvUI_Incorporeal"]["actions"]["texture"]["enable"] = true
+        E.global["nameplates"]["filters"]["ElvUI_Incorporeal"]["actions"]["texture"]["texture"] = "Details Flat"
+    end
+
+    if E.global["nameplates"]["filters"]["ElvUI_NonTarget"] then
+        E.global["nameplates"]["filters"]["ElvUI_NonTarget"]["actions"]["alpha"] = 100
+        E.global["nameplates"]["filters"]["ElvUI_NonTarget"]["actions"]["texture"]["enable"] = true
+        E.global["nameplates"]["filters"]["ElvUI_NonTarget"]["actions"]["texture"]["texture"] = "Solid"
+    end
+
+    if E.global["nameplates"]["filters"]["ElvUI_Target"] then
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["alpha"] = 100
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["color"]["healthClass"] = true
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["color"]["healthColor"]["b"] = 0.8156863451004
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["color"]["healthColor"]["g"] = 0.75294125080109
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["color"]["healthColor"]["r"] = 0.53333336114883
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["flash"]["color"]["b"] = 0.8156863451004
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["flash"]["color"]["g"] = 0.75294125080109
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["flash"]["color"]["r"] = 0.53333336114883
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["color"][1] = 0.53333336114883
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["color"][2] = 0.75294125080109
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["color"][3] = 0.8156863451004
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["color"][4] = 0.89999997615814
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["lines"] = 6
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["glow"]["speed"] = 0.5
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["health"]["flash"]["color"]["a"] = 0.22023865580559
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["health"]["flash"]["speed"] = 7
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["health"]["glow"]["speed"] = 0.05
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["actions"]["scale"] = 1.05
+        E.global["nameplates"]["filters"]["ElvUI_Target"]["triggers"]["bossMods"]["enable"] = false
+    end
 end
