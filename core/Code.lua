@@ -139,8 +139,6 @@ local function InstallComplete()
     -- Set a variable tracking the version of the addon when layout was installed
     E.db[MyPluginName].install_version = Version
 
-    -- Set the key for Overlay
-    E.db[MyPluginName].overlay = true
 
     -- Set the key for Interaction
     E.db[MyPluginName].enableInteraction = true
@@ -324,21 +322,6 @@ local function InsertOptions()
                 order = 4,
                 type = "header",
                 name = "Options"
-            },
-            general = {
-                order = 5,
-                type = "group",
-                -- name = MER:cOption(L["General"]),
-                name = "General",
-                guiInline = true,
-                args = {
-                    overlay = {
-                        order = 1,
-                        type = "toggle",
-                        name = L["Elite Overlay Dragon Flight Style"],
-                        desc = L["Disable/Enable the elite dragon overlay for the target."]
-                    }
-                }
             },
             header3 = {
                 order = 6,

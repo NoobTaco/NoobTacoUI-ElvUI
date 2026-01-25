@@ -13,6 +13,10 @@
 - Verified compatibility with ElvUI 14.x database structure
 - Ensured all unit frame and nameplate hooks are compliant with WoW 12.0 API changes
 
+### Removed
+
+- Removed Elite Overlay functionality (`modules/SimpleRareElite`) and associated options menu entries as requested
+
 ### Fixed
 
 - Fixed `attempt to perform indexed assignment on field 'plateSize' (a nil value)` by adding compatibility for ElvUI 14.x `clickSize`

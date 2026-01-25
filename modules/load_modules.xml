@@ -1,5 +1,4 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
-	<Include file="SimpleRareElite\load_SimpleRareElite.xml"/>
 	<Include file="UnitFrames\load_UnitFrames.xml"/>
 	<Script file="NamePlates.lua"/>
 	<Script file="UnitFrames.lua"/>
