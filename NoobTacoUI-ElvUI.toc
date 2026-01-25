@@ -1,10 +1,9 @@
-## Interface: 11506, 40402, 50407, 110205
-## Title: |cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r
+## Interface: 120000, 110205, 11506, 40402, 50407
+## Title: |cFF16C3F2NoobTacoUI|r |cFFFFFFFF- ElvUI|r
 ## Author: NoobTaco
-## Version: 1.6.0
+## Version: 2.0.0
 ## Notes: Contains layouts from NoobTaco
-## RequiredDeps: ElvUI
-## RequiredDeps: ElvUI_Libraries
+## RequiredDeps: ElvUI, ElvUI_Libraries
 ## DefaultState: enabled
 ## IconTexture: Interface\AddOns\NoobTacoUI-ElvUI\media\Textures\logo.tga
 ## Category-enUS: UI Overhaul
