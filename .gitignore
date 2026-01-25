@@ -39,7 +39,18 @@ luac.out
 *.x86_64
 *.hex
 
-.vscode
-.editorconfig
-.pkgmeta
-.README.bbc
+# IDE / Editors
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# System
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Project Specific
+README.bbc
+# .pkgmeta and .editorconfig should generally be tracked, untracked them from gitignore
