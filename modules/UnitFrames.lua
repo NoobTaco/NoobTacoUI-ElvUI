@@ -6,6 +6,10 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Updated the font used for unitframes to "Poppins-SemiBold"
         - Adjusted the colors for unitframes
         - Increased the font size for unitframes
+
+    Version 2.0.0 - Midnight Upgrade
+        - Verified compatibility with ElvUI Midnight (14.x)
+        - Updated layout initialization for WoW 12.0
 ]]
 function NoobTacoUI:SetupLayout()
     -- CUSTOM TEXTS
@@ -112,9 +116,6 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["fontOutline"] = "NONE"
     E.db["unitframe"]["smoothbars"] = true
     E.db["unitframe"]["targetSound"] = true
-    E.db["unitframe"]["cooldown"]["expiringColor"]["b"] = 0.41176470588235
-    E.db["unitframe"]["cooldown"]["expiringColor"]["g"] = 0.38039215686275
-    E.db["unitframe"]["cooldown"]["expiringColor"]["r"] = 0.74901960784314
     E.db["unitframe"]["statusbar"] = "NT_Nord08_Gradient"
 end
 
