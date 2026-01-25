@@ -18,6 +18,7 @@
 - Fixed `attempt to perform indexed assignment on field 'plateSize' (a nil value)` by adding compatibility for ElvUI 14.x `clickSize`
 - Fixed `attempt to index a nil value (field 'filters')` by properly initializing nameplate filters table and adding existence checks
 - Guaranteed safety guards for removed ElvUI default filters (`ElvUI_Target`, `ElvUI_NonTarget`)
+- Fixed GitHub Actions packager error by correcting `.pkgmeta` to match TOC filename
 
 ## [1.6.0]
 
