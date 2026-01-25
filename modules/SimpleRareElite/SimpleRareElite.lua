@@ -2,7 +2,8 @@ local SimpleRareElite = CreateFrame("Frame", "SimpleRareElite", UIParent)
 local TargetFrame
 
 -- Change this line and use a unique name for your plugin.
-local MyPluginName = "|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r"
+-- Change this line and use a unique name for your plugin.
+local MyPluginName = "NoobTacoUI-ElvUI"
 
 -- Create references to ElvUI internals
 local E = unpack(ElvUI)
@@ -14,7 +15,7 @@ end
 
 -- Set Textures
 local function SetSimpleRareElite(Texture)
-    SimpleRareElite.Texture:SetTexture("Interface\\AddOns\\NoobTacoUI\\Media\\Textures\\" .. Texture)
+    SimpleRareElite.Texture:SetTexture("Interface\\AddOns\\NoobTacoUI-ElvUI\\Media\\Textures\\" .. Texture)
     SimpleRareElite.Texture:SetTexCoord(0, 1, 0, 1)
     SimpleRareElite:ClearAllPoints()
 

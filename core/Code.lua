@@ -38,7 +38,9 @@ local StopMusic = StopMusic
 -- E.Wrath = WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC
 
 -- Change this line and use a unique name for your plugin.
-local MyPluginName = "|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r"
+-- Change this line and use a unique name for your plugin.
+local MyPluginName = "NoobTacoUI-ElvUI"
+local MyPluginTitle = "|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r"
 
 -- Create references to ElvUI internals
 local E, L, V, P, G = unpack(ElvUI)
@@ -46,6 +48,7 @@ local E, L, V, P, G = unpack(ElvUI)
 -- Create reference to LibElvUIPlugin
 local EP = LibStub("LibElvUIPlugin-1.0")
 
+-- Create a new ElvUI module so ElvUI can handle initialization when ready
 -- Create a new ElvUI module so ElvUI can handle initialization when ready
 local mod = E:NewModule(MyPluginName, "AceHook-3.0", "AceEvent-3.0", "AceTimer-3.0")
 local NoobTacoUI = E:NewModule(addon, "AceHook-3.0", "AceEvent-3.0", "AceTimer-3.0")
@@ -70,7 +73,7 @@ local function NewProfile(new)
             hideOnEscape = 1,
             timeout = 0,
             OnShow = function(self, data)
-                self.editBox:SetText("NoobTacoUI") -- default text in the editbox
+                self.editBox:SetText("NoobTacoUI-ElvUI") -- default text in the editbox
             end,
             OnAccept = function(self, data, data2)
                 local text = self.editBox:GetText()
@@ -143,12 +146,12 @@ end
 
 -- PLUGIN INSTALLER -----------------------------------------------------------------
 local InstallerData = {
-    Title = format("|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r |cff4beb2cInstallation|r %s", Version),
+    Title = format("%s |cff4beb2cInstallation|r %s", MyPluginTitle, Version),
     Name = MyPluginName,
-    tutorialImage = "Interface\\AddOns\\NoobTacoUI\\media\\Textures\\noobtaco.tga",
+    tutorialImage = "Interface\\AddOns\\NoobTacoUI-ElvUI\\media\\Textures\\noobtaco.tga",
     Pages = {
         [1] = function()
-            PluginInstallFrame.SubTitle:SetFormattedText("Welcome to the installation for %s.", MyPluginName)
+            PluginInstallFrame.SubTitle:SetFormattedText("Welcome to the installation for %s.", MyPluginTitle)
             PluginInstallFrame.Desc1:SetText(
                 "This installation process will guide you through a few steps and apply settings to your current ElvUI profile. If you want to be able to go back to your original settings then create a new profile before going through this installation process."
             )
@@ -179,7 +182,7 @@ local InstallerData = {
             PluginInstallFrame.Option2:SetScript(
                 "OnClick",
                 function()
-                    NewProfile(true, "NoobTacoUI")
+                    NewProfile(true, "NoobTacoUI-ElvUI")
                 end
             )
             PluginInstallFrame.Option2:SetText("Create New")
@@ -289,7 +292,7 @@ local function InsertOptions()
     E.Options.args.MyPluginName = {
         order = 100,
         type = "group",
-        name = format("|cff4beb2c%s|r", MyPluginName),
+        name = format("|cff4beb2c%s|r", MyPluginTitle),
         get = function(info)
             return E.db[MyPluginName][info[#info]]
         end,
@@ -301,12 +304,12 @@ local function InsertOptions()
             header1 = {
                 order = 1,
                 type = "header",
-                name = format("|cFF16C3F2NoobTaco|r|cFFFFFFFFUI|r - Ver %s", Version)
+                name = format("%s - Ver %s", MyPluginTitle, Version)
             },
             description1 = {
                 order = 2,
                 type = "description",
-                name = format("%s is a layout for ElvUI.", MyPluginName)
+                name = format("%s is a layout for ElvUI.", MyPluginTitle)
             },
             spacer1 = {
                 order = 3,

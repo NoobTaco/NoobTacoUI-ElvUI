@@ -6,7 +6,7 @@
 ## RequiredDeps: ElvUI
 ## RequiredDeps: ElvUI_Libraries
 ## DefaultState: enabled
-## IconTexture: Interface\AddOns\NoobTacoUI\media\Textures\logo.tga
+## IconTexture: Interface\AddOns\NoobTacoUI-ElvUI\media\Textures\logo.tga
 ## Category-enUS: UI Overhaul
 ## Category-deDE: UI-Überholung
 ## Category-esES: Renovación de la UI
