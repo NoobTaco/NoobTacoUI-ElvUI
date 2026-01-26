@@ -105,3 +105,12 @@ If you like what I've built and want to support it, you can do that from any of 
 #### Memory usage
 
 ![image](https://user-images.githubusercontent.com/1172935/98391292-4cca7d80-200b-11eb-8c8b-a247487d85e4.png)
+
+## 📄 License
+
+Code in this repository is licensed under GPL-3.0-or-later. See `LICENSE` for details.
+*Media files (fonts, audio, textures) are included under their respective upstream licenses.*
+
+## 📄 AI Usage
+
+See [AI_USAGE.md](https://github.com/NoobTaco/NoobTacoUI-ElvUI/blob/main/AI_USAGE.md) for more information.
