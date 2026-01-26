@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.0.1-alpha] - 2026-01-26
+
+### Added
+
+- Added AI Usage policy documentation.
+
+### Updated
+
+- Updated Pet unit frame configuration for better consistency.
+- Cleaned up Actionbar and Totem bar settings.
+- Updated media files and paths for better internal organization.
+- Updated funding links to support the project.
+- Updated README with AI Usage policy and general documentation improvements.
+
+### Chore
+
+- Synced `.gitignore` with `NoobTacoUI`.
+- Added `.gitattributes` to enforce LF line endings across the repository.
+
 ## [2.0.0-alpha] - Midnight Upgrade
 
 ### Added

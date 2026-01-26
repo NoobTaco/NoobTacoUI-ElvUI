@@ -2,6 +2,13 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
+    Version 1.6.0 - Unit frame updates
+        - Updated unit frame dimensions and spacing
+        - Configured custom health/power icons and offsets
+        - Improved aura positioning and size overrides
+        - Implemented detached class bar and power bar settings
+        - Added enhanced custom text formats for player info
+        - Updated power bar anchoring and display settings
     Version 1.5.0 - General improvements
         - Updated the font used for general UI to "Poppins-SemiBold"
         - Adjusted the colors for general UI
@@ -45,8 +52,13 @@ function NoobTacoUI:UnitframePlayer()
     E.db["unitframe"]["units"]["player"]["castbar"]["textColor"]["r"] = 0.92549026012421
     E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 400
 
-    E.db["unitframe"]["units"]["player"]["classbar"]["detachedWidth"] = 149
-    E.db["unitframe"]["units"]["player"]["classbar"]["height"] = 8
+    E.db["unitframe"]["units"]["player"]["classbar"]["detachFromFrame"] = true
+    E.db["unitframe"]["units"]["player"]["classbar"]["detachedWidth"] = 301
+    E.db["unitframe"]["units"]["player"]["classbar"]["height"] = 15
+    E.db["unitframe"]["units"]["player"]["classbar"]["spacing"] = 0
+
+    E.db["unitframe"]["units"]["player"]["classAdditional"]["height"] = 10
+    E.db["unitframe"]["units"]["player"]["classAdditional"]["width"] = 301
 
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["player"]["customTexts"]["PlayerName"]["enable"] = true
@@ -74,24 +86,24 @@ function NoobTacoUI:UnitframePlayer()
 
     E.db["unitframe"]["units"]["player"]["power"]["EnergyManaRegen"] = true
     E.db["unitframe"]["units"]["player"]["power"]["attachTextTo"] = "Power"
-    E.db["unitframe"]["units"]["player"]["power"]["height"] = 10
+    E.db["unitframe"]["units"]["player"]["power"]["detachFromFrame"] = true
+    E.db["unitframe"]["units"]["player"]["power"]["detachedWidth"] = 301
+    E.db["unitframe"]["units"]["player"]["power"]["height"] = 15
     E.db["unitframe"]["units"]["player"]["power"]["hideonnpc"] = true
-    E.db["unitframe"]["units"]["player"]["power"]["text_format"] = ""
-    E.db["unitframe"]["units"]["player"]["power"]["xOffset"] = -208
+    E.db["unitframe"]["units"]["player"]["power"]["parent"] = "UIPARENT"
+    E.db["unitframe"]["units"]["player"]["power"]["position"] = "CENTER"
+    E.db["unitframe"]["units"]["player"]["power"]["text_format"] = "[perpp]"
+    E.db["unitframe"]["units"]["player"]["power"]["xOffset"] = 0
 
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["anchorPoint"] = "TOPLEFT"
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["enable"] = true
-    E.db["unitframe"]["units"]["player"]["pvpIcon"]["scale"] = 1.5
-    E.db["unitframe"]["units"]["player"]["pvpIcon"]["xOffset"] = -75
-    E.db["unitframe"]["units"]["player"]["pvpIcon"]["yOffset"] = 27
+    E.db["unitframe"]["units"]["player"]["pvpIcon"]["xOffset"] = -12
+    E.db["unitframe"]["units"]["player"]["pvpIcon"]["yOffset"] = 12
 
-    E.db["unitframe"]["units"]["player"]["CombatIcon"]["anchorPoint"] = "BOTTOMLEFT"
-    E.db["unitframe"]["units"]["player"]["CombatIcon"]["size"] = 60
-    E.db["unitframe"]["units"]["player"]["CombatIcon"]["xOffset"] = -55
-    E.db["unitframe"]["units"]["player"]["CombatIcon"]["yOffset"] = -20
+    E.db["unitframe"]["units"]["player"]["CombatIcon"]["size"] = 25
+    E.db["unitframe"]["units"]["player"]["CombatIcon"]["yOffset"] = 26
 
     E.db["unitframe"]["units"]["player"]["RestIcon"]["size"] = 28
-    E.db["unitframe"]["units"]["player"]["RestIcon"]["texture"] = "Resting0"
     E.db["unitframe"]["units"]["player"]["RestIcon"]["xOffset"] = 4
     E.db["unitframe"]["units"]["player"]["RestIcon"]["yOffset"] = 2
 

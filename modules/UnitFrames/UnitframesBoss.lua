@@ -2,6 +2,8 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
+    Version 1.6.0 - Boss unit frame updates
+        - Enabled and configured power bar height (10)
     Version 1.5.9 - Boss unit frame improvements
         - Extracted boss unit frame configuration into separate module
         - Updated buff sizes to match global standard of 30
@@ -72,6 +74,7 @@ function NoobTacoUI:UnitframeBoss()
     E.db["unitframe"]["units"]["boss"]["infoPanel"]["height"] = 17
     E.db["unitframe"]["units"]["boss"]["name"]["text_format"] = ""
     E.db["unitframe"]["units"]["boss"]["name"]["yOffset"] = 5
-    E.db["unitframe"]["units"]["boss"]["power"]["enable"] = false
+    E.db["unitframe"]["units"]["boss"]["power"]["enable"] = true
+    E.db["unitframe"]["units"]["boss"]["power"]["height"] = 10
     E.db["unitframe"]["units"]["boss"]["width"] = 175
 end
