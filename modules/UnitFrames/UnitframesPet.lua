@@ -1,32 +1,44 @@
 local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 
 function NoobTacoUI:UnitframePet()
-    E.db["unitframe"]["units"]["pet"]["buffs"]["enable"] = true
+    -- Ensure custom text is properly initialized for new installs
+    if not E.db.unitframe.units.pet.customTexts then E.db.unitframe.units.pet.customTexts = {} end
+    if not E.db.unitframe.units.pet.customTexts["pet-name"] then E.db.unitframe.units.pet.customTexts["pet-name"] = {} end
+
+    E.db["unitframe"]["units"]["pet"]["width"] = 175
+    E.db["unitframe"]["units"]["pet"]["height"] = 30
+    E.db["unitframe"]["units"]["pet"]["infoPanel"]["height"] = 14
+    E.db["unitframe"]["units"]["pet"]["disableTargetGlow"] = false
+
+    E.db["unitframe"]["units"]["pet"]["name"]["position"] = "LEFT"
+    E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = ""
+    E.db["unitframe"]["units"]["pet"]["name"]["xOffset"] = 4
+
+    E.db["unitframe"]["units"]["pet"]["power"]["enable"] = false
+
+    E.db["unitframe"]["units"]["pet"]["buffs"]["enable"] = false
     E.db["unitframe"]["units"]["pet"]["buffs"]["sizeOverride"] = 30
     E.db["unitframe"]["units"]["pet"]["buffs"]["yOffset"] = -12
-    E.db["unitframe"]["units"]["pet"]["castbar"]["height"] = 30
-    E.db["unitframe"]["units"]["pet"]["castbar"]["iconSize"] = 32
-    E.db["unitframe"]["units"]["pet"]["castbar"]["overlayOnFrame"] = "Power"
-    E.db["unitframe"]["units"]["pet"]["castbar"]["width"] = 175
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["attachTextTo"] = "Frame"
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["enable"] = true
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["font"] = "2002"
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["fontOutline"] = "THICKOUTLINE"
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["justifyH"] = "LEFT"
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["size"] = 24
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["text_format"] = ""
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["xOffset"] = 131
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["yOffset"] = 0
-    E.db["unitframe"]["units"]["pet"]["debuffs"]["enable"] = true
+
+    E.db["unitframe"]["units"]["pet"]["debuffs"]["enable"] = false
     E.db["unitframe"]["units"]["pet"]["debuffs"]["height"] = 22
     E.db["unitframe"]["units"]["pet"]["debuffs"]["sizeOverride"] = 25
     E.db["unitframe"]["units"]["pet"]["debuffs"]["xOffset"] = -5
     E.db["unitframe"]["units"]["pet"]["debuffs"]["yOffset"] = 27
-    E.db["unitframe"]["units"]["pet"]["disableTargetGlow"] = false
-    E.db["unitframe"]["units"]["pet"]["height"] = 30
-    E.db["unitframe"]["units"]["pet"]["infoPanel"]["height"] = 14
-    E.db["unitframe"]["units"]["pet"]["name"]["position"] = "LEFT"
-    E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[name:medium] - [level]"
-    E.db["unitframe"]["units"]["pet"]["name"]["xOffset"] = 2
-    E.db["unitframe"]["units"]["pet"]["width"] = 200
+
+    E.db["unitframe"]["units"]["pet"]["castbar"]["height"] = 30
+    E.db["unitframe"]["units"]["pet"]["castbar"]["width"] = 175
+    E.db["unitframe"]["units"]["pet"]["castbar"]["iconSize"] = 32
+    E.db["unitframe"]["units"]["pet"]["castbar"]["overlayOnFrame"] = "Power"
+
+    -- Pet Name Custom Text
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["attachTextTo"] = "Health"
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["enable"] = true
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["font"] = "Poppins-SemiBold"
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["fontOutline"] = "NONE"
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["justifyH"] = "LEFT"
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["size"] = 13
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["text_format"] = "[name:medium] [smartlevel]"
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["xOffset"] = 5
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["yOffset"] = 0
 end
