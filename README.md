@@ -9,9 +9,7 @@ Good News! With the release of ElvUI "Midnight" (15.x) and WoW 12.0, NoobTacoUI 
 
 ## NoobTacoUI (Elvui Profile): A Comfortable Dark Theme for ElvUI
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/noobtaco/NoobTacoUI/ci.yml?style=for-the-badge&logo=github)
-
-[![GitHub All Releases](https://img.shields.io/github/downloads/NoobTaco/NoobTacoUI/total?logo=github&style=for-the-badge)](https://github.com/NoobTaco/NoobTacoUI/releases/latest)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/NoobTaco/NoobTacoUI-ElvUI/ci.yml?style=for-the-badge&logo=github&logoColor=white&label=CI%20Status)](https://github.com/NoobTaco/NoobTacoUI-ElvUI/actions/workflows/ci.yml) [![Release Status](https://img.shields.io/github/actions/workflow/status/NoobTaco/NoobTacoUI-ElvUI/release.yml?style=for-the-badge&logo=github&logoColor=white&label=Release%20Status)](https://github.com/NoobTaco/NoobTacoUI-ElvUI/actions/workflows/release.yml) [![Discord](https://img.shields.io/badge/Discord-Taco%20Labs-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Mby5KwkCH9) [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/devnoobtaco)
 
 **Elevate your World of Warcraft experience with NoobTacoUI, a sleek and user-friendly ElvUI profile.**
 
@@ -70,14 +68,17 @@ Encountered a bug or have a feature request? Head over to the dedicated issue tr
 - Classic
 - Cata
 
-**Support my addon development**
+### Support
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G01GM9G)
+If you're looking for help, have questions, or want to join the community, join us on Discord!
+
+[![Discord](https://img.shields.io/badge/Discord-Taco%20Labs-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Mby5KwkCH9)
+
+If you like what I've built and want to support it, you can do that from any of these options. Thank you!
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/devnoobtaco)
 [![sponsormeongithub](https://user-images.githubusercontent.com/1172935/97088810-463e0e00-15e8-11eb-8078-f18da01c6e9e.png)](https://github.com/sponsors/NoobTaco)
-
-[![Zygor](https://zygorguides.com/blog/wp-content/uploads/2023/07/df-flat-banner.jpg)](https://zygorguides.com/ref/manorton/)
-
-[![restedXp](https://www.restedxp.com/wp-content/uploads/2021/05/rxp-promo-banner_short.gif)](https://www.restedxp.com/ref/NoobTaco)
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G01GM9G)
 
 # Images
 

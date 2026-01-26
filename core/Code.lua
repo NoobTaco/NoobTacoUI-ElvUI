@@ -25,7 +25,7 @@
         - Verified all database pathing and API compliance
 ]]
 -- Don't worry about this
-local addon, Engine, ns = ...
+local addon, Engine, _ = ...
 -- local Version = GetAddOnMetadata(addon, "Version")
 local Version = C_AddOns.GetAddOnMetadata(addon, "Version")
 

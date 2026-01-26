@@ -7,14 +7,16 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'Branch to package for testing'
+        description: "Branch to package for testing"
         required: true
-        default: 'main'
+        default: "main"
         type: string
 
+# Required for creating GitHub releases
 permissions:
   contents: write
 
+# Force workflow update
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -22,6 +24,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          # On manual runs, checkout the branch from the input. On tag pushes, checkout the tag.
           ref: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.branch || github.ref }}
           fetch-depth: 0
 
@@ -32,12 +35,17 @@ jobs:
 
       - name: Create changelog for packager
         run: |
+          # Since we no longer maintain a CHANGELOG.md file, create a simple changelog
+          # from recent commit messages or use a default message
           if [ -f "CHANGELOG.md" ]; then
-            awk '/^## \[[0-9.]+\]/{c++; if(c==2) exit} c>0' CHANGELOG.md > .changelog
+            # Legacy support if CHANGELOG.md exists
+            awk '/^## \[[0-9.a-zA-Z-]+\]/{c++; if(c==2) exit} c>0' CHANGELOG.md > .changelog
           else
+            # Generate changelog from recent commits or use default
             echo "## Changes" > .changelog
             echo "" >> .changelog
             if git tag --sort=-version:refname | head -2 | tail -1 > /dev/null 2>&1; then
+              # Get commits since last tag
               LAST_TAG=$(git tag --sort=-version:refname | head -2 | tail -1)
               if [ ! -z "$LAST_TAG" ]; then
                 echo "Changes since $LAST_TAG:" >> .changelog
@@ -55,14 +63,14 @@ jobs:
         uses: BigWigsMods/packager@v2
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
-          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }} # Automatically provided by GitHub
           WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
 
       - name: Package for testing (on manual run)
         if: github.event_name == 'workflow_dispatch'
         uses: BigWigsMods/packager@v2
         with:
-          args: -d
+          args: -d # Don't upload to external sites
         env:
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
 
@@ -71,6 +79,8 @@ jobs:
         run: |
           echo "=== Copying artifacts before any cleanup ==="
           mkdir -p ./artifacts
+
+          # Copy the zip file specifically
           if [ -d ".release" ]; then
             echo "Found .release directory, copying zip files..."
             find .release -name "*.zip" -exec cp {} ./artifacts/ \;
@@ -79,6 +89,9 @@ jobs:
           else
             echo "No .release directory found"
           fi
+
+          # The BigWigs packager doesn't include changelog in the zip file
+          # Copy the processed changelog that was used for packaging metadata
           if [ -f ".changelog" ]; then
             echo "Found .changelog file, copying as processed changelog..."
             cp .changelog ./artifacts/changelog.txt
@@ -86,6 +99,7 @@ jobs:
           else
             echo "No .changelog file found"
           fi
+
           echo "=== Final artifacts directory contents ==="
           ls -la ./artifacts/
 
