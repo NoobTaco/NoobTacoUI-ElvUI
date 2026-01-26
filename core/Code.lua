@@ -120,6 +120,7 @@ local function SetupLayout()
     NoobTacoUI:SetupCooldowns()
     NoobTacoUI:SetupTooltips()
     NoobTacoUI:SetupActionBars()
+    NoobTacoUI:SetupGuildNotes()
 
     NoobTacoUI:SetupMovers()
 
@@ -393,6 +394,9 @@ function mod:Initialize()
 
     -- Insert our options table when ElvUI config is loaded
     EP:RegisterPlugin(addon, InsertOptions)
+
+    -- Initialize GuildNotes
+    NoobTacoUI:SetupGuildNotes()
 
     -- check if enableInteraction is true or false
     if E.db[MyPluginName].enableInteraction then

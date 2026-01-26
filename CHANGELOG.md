@@ -19,6 +19,10 @@
 - Synced `.gitignore` with `NoobTacoUI`.
 - Added `.gitattributes` to enforce LF line endings across the repository.
 
+##    Version 2.0.1 - Guild Note Improvements
+        - Added Guild Notes to the member list in the Guild DataText tooltip
+        - Members will now show as `Charactername (Note)` when hovering over the Guild DataText
+
 ## [2.0.0-alpha] - Midnight Upgrade
 
 ### Added
