@@ -35,27 +35,21 @@ jobs:
 
       - name: Create changelog for packager
         run: |
-          # Since we no longer maintain a CHANGELOG.md file, create a simple changelog
-          # from recent commit messages or use a default message
           if [ -f "CHANGELOG.md" ]; then
-            # Legacy support if CHANGELOG.md exists
+            # Extract the latest version entry from CHANGELOG.md (matches ## [2.0.0-alpha] etc.)
             awk '/^## \[[0-9.a-zA-Z-]+\]/{c++; if(c==2) exit} c>0' CHANGELOG.md > .changelog
-          else
-            # Generate changelog from recent commits or use default
-            echo "## Changes" > .changelog
-            echo "" >> .changelog
-            if git tag --sort=-version:refname | head -2 | tail -1 > /dev/null 2>&1; then
-              # Get commits since last tag
-              LAST_TAG=$(git tag --sort=-version:refname | head -2 | tail -1)
-              if [ ! -z "$LAST_TAG" ]; then
-                echo "Changes since $LAST_TAG:" >> .changelog
-                git log --oneline $LAST_TAG..HEAD --pretty=format:"- %s" >> .changelog
-              else
-                echo "- Latest updates and improvements" >> .changelog
-              fi
-            else
-              echo "- Latest updates and improvements" >> .changelog
+            
+            # Verify the changelog is not empty
+            if [ ! -s .changelog ]; then
+              echo "Error: Failed to extract changelog from CHANGELOG.md"
+              exit 1
             fi
+            
+            echo "Successfully extracted changelog:"
+            cat .changelog
+          else
+            echo "Error: CHANGELOG.md not found! This project requires a manual changelog."
+            exit 1
           fi
 
       - name: Package and release (on tag push)
