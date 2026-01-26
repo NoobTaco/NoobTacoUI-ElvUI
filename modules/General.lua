@@ -97,7 +97,7 @@ function NoobTacoUI:SetupGeneral()
 
     -- Player totembar
     E.db["general"]["totems"]["growthDirection"] = "HORIZONTAL"
-    E.db["general"]["totems"]["size"] = 30
+    E.db["general"]["totems"]["size"] = 25
     E.db["general"]["totems"]["sortDirection"] = "DESCENDING"
-    E.db["general"]["totems"]["spacing"] = 2
+    E.db["general"]["totems"]["spacing"] = 1
 end
