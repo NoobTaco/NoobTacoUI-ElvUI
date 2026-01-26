@@ -4,14 +4,13 @@
 
 ### Added
 
-- Major upgrade for ElvUI "Midnight" (14.x) and WoW 12.0 compatibility
+- Major upgrade for ElvUI "Midnight" (15.x) and WoW 12.0 compatibility
 - Added tracking for new version in installation process
-- Enabled classpower tracking on enemy nameplates by default
 
 ### Updated
 
 - Bumping version to 2.0.0 for major release
-- Verified compatibility with ElvUI 14.x database structure
+- Verified compatibility with ElvUI 15.x database structure
 - Ensured all unit frame and nameplate hooks are compliant with WoW 12.0 API changes
 - Standardized UI textures to `NT_Nord05` across unit frames, nameplates, and general settings
 - Standardized status bar textures to `NT_Nord05` and `NT_Nord04` for gloss.

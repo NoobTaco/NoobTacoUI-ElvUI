@@ -1,13 +1,9 @@
 
-## Project Status & Transition Notice
+## Project Status
 
 **NoobTacoUI has been renamed to NoobTacoUI (Elvui Profile).**
 
-Please note that this addon will not receive updates for the upcoming Midnight expansion. Limited maintenance will continue for Classic and non-retail versions for a short period, after which the project will be retired upon the release of Midnight.
-
-For continued access to fonts, textures, and sounds—especially for Midnight—please transition to [NoobTaco-Media](https://www.curseforge.com/wow/addons/noobtacoui-media), which will be actively maintained and updated.
-
-Thank you for your support and understanding.
+Good News! With the release of ElvUI "Midnight" (15.x) and WoW 12.0, NoobTacoUI is now compatible with the latest version of ElvUI and WoW. NoobTacoUI is now available for download on CurseForge and Wago.io as an alpha version until the final changes and updates are completed.
 
 — NoobTaco
 
@@ -23,22 +19,22 @@ This profile boasts a **dark theme based on the popular Nord palette**, offering
 
 **Key Features:**
 
--   **Reduced Eye Strain:** The theme's balanced contrast prioritizes readability while keeping things dark.
--   **Modern Fonts:** Enjoy crisp, clean fonts that make information easy to digest.
--   **Enhanced Unit Frames:** Effortlessly track targets with sleek unit frames, including dedicated boss frame configurations with custom text elements.
--   **Expanded Media Library:** Comprehensive collection of Nord-themed status bar textures and custom audio files available through LibSharedMedia.
--   **Smart Addon Integration:** Automatically detects and configures popular addons like Cell, Plater, and XIV Databar for seamless compatibility.
--   **Role-Specific Layouts:** Optimized setups for DPS, Tanks, and Healers ensure a smooth gameplay experience.
+- **Reduced Eye Strain:** The theme's balanced contrast prioritizes readability while keeping things dark.
+- **Modern Fonts:** Enjoy crisp, clean fonts that make information easy to digest.
+- **Enhanced Unit Frames:** Effortlessly track targets with sleek unit frames, including dedicated boss frame configurations with custom text elements.
+- **Expanded Media Library:** Comprehensive collection of Nord-themed status bar textures and custom audio files available through LibSharedMedia.
+- **Smart Addon Integration:** Automatically detects and configures popular addons like Cell, Plater, and XIV Databar for seamless compatibility.
+- **Role-Specific Layouts:** Optimized setups for DPS, Tanks, and Healers ensure a smooth gameplay experience.
 
 **Integration with your favorite addons**
 NoobTacoUI seamlessly integrates with your favorite addons, enhancing your World of Warcraft experience. Combine NoobTacoUI with addons like **Details! Damage Meter**, **BigWigs**, **WeakAuras**, and more for a unified and streamlined interface. Customize your gameplay and make the most out of your WoW journey with NoobTacoUI's addon integration.
 
 **Integrated Addons (So far):**
 
--   XVI Databar [link](https://www.curseforge.com/wow/addons/xiv_databar-continued)
--   Cell unit frames [link](https://www.curseforge.com/wow/addons/cell)
--   Baganator [link](https://www.curseforge.com/wow/addons/baganator)
--   Plater nameplates [link](https://www.curseforge.com/wow/addons/plater-nameplates)
+- XVI Databar [link](https://www.curseforge.com/wow/addons/xiv_databar-continued)
+- Cell unit frames [link](https://www.curseforge.com/wow/addons/cell)
+- Baganator [link](https://www.curseforge.com/wow/addons/baganator)
+- Plater nameplates [link](https://www.curseforge.com/wow/addons/plater-nameplates)
 
 Please [add an issue request](https://github.com/NoobTaco/NoobTacoUI/issues/new) if there are any addons you would like to see integrated.
 
@@ -57,9 +53,9 @@ No more juggling separate versions! NoobTacoUI conveniently supports **Retail Wo
 
 Download NoobTacoUI (Elvui Profile) from your preferred source:
 
--   **GitHub:** [[link](https://github.com/NoobTaco/NoobTacoUI/releases/latest)]
--   **Curse/Overwolf:** [[link](https://www.curseforge.com/wow/addons/noobtacoui-elvui)]
--   **Wago.io:** [[link](https://addons.wago.io/addons/noobtacoui-elvui)]
+- **GitHub:** [[link](https://github.com/NoobTaco/NoobTacoUI/releases/latest)]
+- **Curse/Overwolf:** [[link](https://www.curseforge.com/wow/addons/noobtacoui-elvui)]
+- **Wago.io:** [[link](https://addons.wago.io/addons/noobtacoui-elvui)]
 
 **Need Help? Found a bug? Have a feature request?**
 
@@ -69,10 +65,10 @@ Encountered a bug or have a feature request? Head over to the dedicated issue tr
 
 **Supports:**
 
--   Retail (The War Within)
--   MoP Classic
--   Classic
--   Cata
+- Retail (The War Within)
+- MoP Classic
+- Classic
+- Cata
 
 **Support my addon development**
 
