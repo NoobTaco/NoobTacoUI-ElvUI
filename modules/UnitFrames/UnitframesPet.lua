@@ -41,4 +41,6 @@ function NoobTacoUI:UnitframePet()
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["text_format"] = "[name:medium] [smartlevel]"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["xOffset"] = 5
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["yOffset"] = 0
+
+    E.db["unitframe"]["units"]["pet"]["health"]["colorPetByUnitClass"] = true
 end
