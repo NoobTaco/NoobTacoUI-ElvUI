@@ -8,6 +8,13 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Increased the font size for general UI
 ]]
 function NoobTacoUI:UnitframePlayer()
+    if not E.db.unitframe.units.player.customTexts then
+        E.db.unitframe.units.player.customTexts = {}
+    end
+    if not E.db.unitframe.units.player.customTexts.PlayerName then
+        E.db.unitframe.units.player.customTexts.PlayerName = {}
+    end
+
     E.db["unitframe"]["units"]["player"]["width"] = 175
     E.db["unitframe"]["units"]["player"]["height"] = 52
 

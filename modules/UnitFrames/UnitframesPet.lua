@@ -6,7 +6,7 @@ function NoobTacoUI:UnitframePet()
     if not E.db.unitframe.units.pet.customTexts["pet-name"] then E.db.unitframe.units.pet.customTexts["pet-name"] = {} end
 
     E.db["unitframe"]["units"]["pet"]["width"] = 175
-    E.db["unitframe"]["units"]["pet"]["height"] = 30
+    E.db["unitframe"]["units"]["pet"]["height"] = 25
     E.db["unitframe"]["units"]["pet"]["infoPanel"]["height"] = 14
     E.db["unitframe"]["units"]["pet"]["disableTargetGlow"] = false
 
@@ -35,7 +35,7 @@ function NoobTacoUI:UnitframePet()
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["enable"] = true
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["font"] = "Poppins-SemiBold"
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["fontOutline"] = "NONE"
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["fontOutline"] = "Shadowed"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["size"] = 13
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["text_format"] = "[name:medium] [smartlevel]"

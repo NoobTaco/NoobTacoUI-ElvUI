@@ -8,6 +8,22 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Increased the font size for general UI
 ]]
 function NoobTacoUI:UnitframeFocus()
+    if not E.db.unitframe.units.focus.customTexts then
+        E.db.unitframe.units.focus.customTexts = {}
+    end
+    if not E.db.unitframe.units.focus.customTexts.TargetHealth then
+        E.db.unitframe.units.focus.customTexts.TargetHealth = {}
+    end
+    if not E.db.unitframe.units.focus.customTexts.TargetLevel then
+        E.db.unitframe.units.focus.customTexts.TargetLevel = {}
+    end
+    if not E.db.unitframe.units.focus.customTexts.TargetName then
+        E.db.unitframe.units.focus.customTexts.TargetName = {}
+    end
+    if not E.db.unitframe.units.focus.customTexts.TargetPower then
+        E.db.unitframe.units.focus.customTexts.TargetPower = {}
+    end
+
     E.db["unitframe"]["units"]["focus"]["aurabar"]["detachedWidth"] = 270
     E.db["unitframe"]["units"]["focus"]["aurabar"]["maxBars"] = 6
     E.db["unitframe"]["units"]["focus"]["buffs"]["anchorPoint"] = "TOPLEFT"

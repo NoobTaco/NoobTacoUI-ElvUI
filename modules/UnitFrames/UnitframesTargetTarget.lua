@@ -8,6 +8,13 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Increased the font size for general UI
 ]]
 function NoobTacoUI:UnitframeTargetTarget()
+    if not E.db.unitframe.units.targettarget.customTexts then
+        E.db.unitframe.units.targettarget.customTexts = {}
+    end
+    if not E.db.unitframe.units.targettarget.customTexts.TargetTargetName then
+        E.db.unitframe.units.targettarget.customTexts.TargetTargetName = {}
+    end
+
     E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"]["enable"] = false
     E.db["unitframe"]["units"]["targettarget"]["customTexts"]["TargetTargetName"]["font"] = "Poppins-SemiBold"
