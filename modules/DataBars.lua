@@ -37,7 +37,7 @@ function NoobTacoUI:SetupDatabars()
     E.db["databars"]["threat"]["width"] = 200
 
     E.db["databars"]["experience"]["textFormat"] = "NONE"
-    E.db["databars"]["experience"]["font"] = "Poppins-SemiBold"
+    E.db["databars"]["experience"]["font"] = "Poppins-Medium"
     E.db["databars"]["experience"]["height"] = 222
     E.db["databars"]["experience"]["hideAtMaxLevel"] = false
     E.db["databars"]["experience"]["hideInCombat"] = false
@@ -46,7 +46,7 @@ function NoobTacoUI:SetupDatabars()
     E.db["databars"]["experience"]["showBubbles"] = false
     E.db["databars"]["experience"]["width"] = 8
     E.db["databars"]["reputation"]["enable"] = true
-    E.db["databars"]["reputation"]["font"] = "Poppins-SemiBold"
+    E.db["databars"]["reputation"]["font"] = "Poppins-Medium"
     E.db["databars"]["reputation"]["height"] = 222
     E.db["databars"]["reputation"]["hideInCombat"] = false
     E.db["databars"]["reputation"]["orientation"] = "VERTICAL"

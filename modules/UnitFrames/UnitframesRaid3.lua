@@ -24,7 +24,5 @@ function NoobTacoUI:UnitframeRaid3()
     E.db["unitframe"]["units"]["raid3"]["roleIcon"]["damager"] = false
     E.db["unitframe"]["units"]["raid3"]["roleIcon"]["enable"] = true
     E.db["unitframe"]["units"]["raid3"]["visibility"] = "[@raid26,noexists] hide;show"
-    E.db["unitframe"]["units"]["raid3"]["width"] = 100
-    E.db["unitframe"]["units"]["raid3"]["width"] = 75
     E.db["unitframe"]["units"]["raid3"]["width"] = 90
 end

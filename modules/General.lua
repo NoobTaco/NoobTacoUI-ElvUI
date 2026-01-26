@@ -11,10 +11,10 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
 function NoobTacoUI:SetupGeneral()
     --	PrivateDB
     E.private["skins"]["parchmentRemoverEnable"] = true
-    E.private["general"]["namefont"] = "Poppins-SemiBold"
+    E.private["general"]["namefont"] = "Poppins-Medium"
     E.private["general"]["dmgfont"] = "Poppins-SemiBold"
-    E.private["general"]["normTex"] = "NT_Nord09_Gradient"
-    E.private["general"]["glossTex"] = "NT_Nord09_Gradient"
+    E.private["general"]["normTex"] = "NT_Nord05"
+    E.private["general"]["glossTex"] = "NT_Nord04"
     E.private["general"]["chatBubbleFont"] = "Poppins-SemiBold"
     E.private["general"]["chatBubbleFontSize"] = 14
     E.private["general"]["nameplateLargeFont"] = "Poppins-SemiBold"
@@ -34,7 +34,10 @@ function NoobTacoUI:SetupGeneral()
         E.db["general"]["altPowerBar"]["width"] = 417
     end
 
-    E.db["general"]["font"] = "Poppins-SemiBold"
+    E.db["general"]["addonCompartment"]["font"] = "Poppins-SemiBold"
+
+    E.db["general"]["font"] = "Poppins-Medium"
+    E.db["general"]["fontStyle"] = "NONE"
     E.db["general"]["fonts"]["cooldown"]["font"] = "Poppins-Bold"
     E.db["general"]["fonts"]["errortext"]["font"] = "Poppins-Bold"
     E.db["general"]["fonts"]["mailbody"]["enable"] = true
@@ -60,6 +63,9 @@ function NoobTacoUI:SetupGeneral()
     E.db["general"]["fonts"]["worldzone"]["enable"] = true
     E.db["general"]["fonts"]["worldzone"]["font"] = "Poppins-Bold"
     E.db["general"]["lootRoll"]["nameFont"] = "Poppins-SemiBold"
+    E.db["general"]["itemLevel"]["itemLevelFont"] = "Poppins-SemiBold"
+    E.db["general"]["itemLevel"]["itemLevelFontSize"] = 15
+    E.db["general"]["itemLevel"]["totalLevelFont"] = "Poppins-SemiBold"
     E.db["general"]["fontSize"] = 14
     E.db["general"]["autoTrackReputation"] = true
     E.db["general"]["autoRepair"] = "PLAYER"
@@ -67,20 +73,24 @@ function NoobTacoUI:SetupGeneral()
     E.db["general"]["minimap"]["locationFont"] = "Poppins-SemiBold"
     E.db["general"]["talkingHeadFrameBackdrop"] = true
     E.db["general"]["resurrectSound"] = true
-    E.db["general"]["backdropfadecolor"]["a"] = 0.88814455270767
-    E.db["general"]["backdropfadecolor"]["b"] = 0.25098040699959
-    E.db["general"]["backdropfadecolor"]["g"] = 0.2039215862751
-    E.db["general"]["backdropfadecolor"]["r"] = 0.1803921610117
+    E.db["general"]["backdropfadecolor"]["a"] = 1
+    E.db["general"]["backdropfadecolor"]["b"] = 0.22352942824364
+    E.db["general"]["backdropfadecolor"]["g"] = 0.1803921610117
+    E.db["general"]["backdropfadecolor"]["r"] = 0.16078431904316
     E.db["general"]["objectiveFrameHeight"] = 400
     E.db["general"]["backdropcolor"]["b"] = 0.32156863808632
     E.db["general"]["backdropcolor"]["g"] = 0.258823543787
     E.db["general"]["backdropcolor"]["r"] = 0.23137256503105
-    E.db["general"]["bordercolor"]["b"] = 0.34509804844856
-    E.db["general"]["bordercolor"]["g"] = 0.34509804844856
-    E.db["general"]["bordercolor"]["r"] = 0.34509804844856
-    E.db["general"]["valuecolor"]["b"] = 0.8156863451004
-    E.db["general"]["valuecolor"]["g"] = 0.75294125080109
-    E.db["general"]["valuecolor"]["r"] = 0.53333336114883
+    E.db["general"]["bordercolor"]["b"] = 0.41568630933762
+    E.db["general"]["bordercolor"]["g"] = 0.33725491166115
+    E.db["general"]["bordercolor"]["r"] = 0.29803922772408
+    E.db["general"]["valuecolor"]["b"] = 0.75686281919479
+    E.db["general"]["valuecolor"]["g"] = 0.63137257099152
+    E.db["general"]["valuecolor"]["r"] = 0.50588238239288
+    E.db["general"]["bonusObjectivePosition"] = "AUTO"
+    E.db["general"]["cooldownManager"]["nameFont"] = "Poppins-SemiBold"
+    E.db["general"]["queueStatus"]["font"] = "Poppins-SemiBold"
+    E.db["general"]["talkingHeadFrameScale"] = 1
     E.db["general"]["interruptAnnounce"] = "RAID"
     E.db["general"]["bottomPanel"] = false
     E.db["general"]["customGlow"]["style"] = "Action Button Glow"

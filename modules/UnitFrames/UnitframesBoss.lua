@@ -13,7 +13,7 @@ function NoobTacoUI:UnitframeBoss()
         return
     end
 
-        -- CUSTOM TEXTS
+    -- CUSTOM TEXTS
     -- Boss Unit Frame
     if not E.db.unitframe.units.boss.customTexts then
         E.db.unitframe.units.boss.customTexts = {}
@@ -73,6 +73,5 @@ function NoobTacoUI:UnitframeBoss()
     E.db["unitframe"]["units"]["boss"]["name"]["text_format"] = ""
     E.db["unitframe"]["units"]["boss"]["name"]["yOffset"] = 5
     E.db["unitframe"]["units"]["boss"]["power"]["enable"] = false
-    E.db["unitframe"]["units"]["boss"]["spacing"] = 25
     E.db["unitframe"]["units"]["boss"]["width"] = 175
 end

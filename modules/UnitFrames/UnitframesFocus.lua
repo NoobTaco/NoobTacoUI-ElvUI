@@ -47,7 +47,7 @@ function NoobTacoUI:UnitframeFocus()
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["size"] = 13
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["text_format"] =
-        "[name:medium]  [shortclassification]"
+    "[name:medium]  [shortclassification]"
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["xOffset"] = 0
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetName"]["yOffset"] = 40
     E.db["unitframe"]["units"]["focus"]["customTexts"]["TargetPower"]["attachTextTo"] = "Power"
@@ -67,7 +67,7 @@ function NoobTacoUI:UnitframeFocus()
     E.db["unitframe"]["units"]["focus"]["debuffs"]["numrows"] = 2
     E.db["unitframe"]["units"]["focus"]["debuffs"]["perrow"] = 8
     E.db["unitframe"]["units"]["focus"]["debuffs"]["priority"] =
-        "Blacklist,Personal,RaidDebuffs,CCDebuffs,Friendly:Dispellable"
+    "Blacklist,Personal,RaidDebuffs,CCDebuffs,Friendly:Dispellable"
     E.db["unitframe"]["units"]["focus"]["debuffs"]["yOffset"] = 5
     E.db["unitframe"]["units"]["focus"]["disableMouseoverGlow"] = true
     E.db["unitframe"]["units"]["focus"]["disableTargetGlow"] = true
@@ -83,9 +83,7 @@ function NoobTacoUI:UnitframeFocus()
     E.db["unitframe"]["units"]["focus"]["name"]["yOffset"] = -85
     E.db["unitframe"]["units"]["focus"]["orientation"] = "RIGHT"
     E.db["unitframe"]["units"]["focus"]["portrait"]["camDistanceScale"] = 1.04
-    E.db["unitframe"]["units"]["focus"]["portrait"]["desaturation"] = 0
     E.db["unitframe"]["units"]["focus"]["portrait"]["enable"] = true
-    E.db["unitframe"]["units"]["focus"]["portrait"]["overlay"] = false
     E.db["unitframe"]["units"]["focus"]["portrait"]["width"] = 55
     E.db["unitframe"]["units"]["focus"]["power"]["attachTextTo"] = "Power"
     E.db["unitframe"]["units"]["focus"]["power"]["height"] = 20

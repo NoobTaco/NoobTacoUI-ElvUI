@@ -73,13 +73,11 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["colors"]["selection"][3]["r"] = 0.29
     E.db["nameplates"]["colors"]["threat"]["badColor"]["b"] = 0
     E.db["nameplates"]["colors"]["threat"]["badColor"]["g"] = 0.047058828175068
-    E.db["nameplates"]["colors"]["threat"]["badColor"]["r"] = 1
     E.db["nameplates"]["colors"]["threat"]["goodColor"]["b"] = 1
     E.db["nameplates"]["colors"]["threat"]["goodColor"]["g"] = 0.50196081399918
     E.db["nameplates"]["colors"]["threat"]["goodColor"]["r"] = 0.50196081399918
     E.db["nameplates"]["colors"]["threat"]["goodTransition"]["b"] = 0
     E.db["nameplates"]["colors"]["threat"]["goodTransition"]["g"] = 0.70196080207825
-    E.db["nameplates"]["colors"]["threat"]["goodTransition"]["r"] = 1
     E.db["nameplates"]["colors"]["threat"]["offTankColor"]["g"] = 0.91764712333679
     E.db["nameplates"]["colors"]["threat"]["offTankColor"]["r"] = 0.7294117808342
     E.db["nameplates"]["colors"]["threat"]["offTankColorGoodTransition"]["b"] = 0.77647066116333
@@ -93,22 +91,19 @@ function NoobTacoUI:SetupNamePlates()
     end
     E.db["nameplates"]["font"] = "Poppins-SemiBold"
     E.db["nameplates"]["overlapV"] = 1.3
-    local plateSize = E.db["nameplates"]["plateSize"] or E.db["nameplates"]["clickSize"]
-    if plateSize then
-        plateSize["enemyHeight"] = 20
-        plateSize["enemyWidth"] = 215
-        plateSize["friendlyHeight"] = 20
-        plateSize["friendlyWidth"] = 215
-        plateSize["personalHeight"] = 20
-        plateSize["personalWidth"] = 215
-    end
-    E.db["nameplates"]["statusbar"] = "NT_Nord15_Gradient"
+    E.db["nameplates"]["clickSize"]["enemyHeight"] = 20
+    E.db["nameplates"]["clickSize"]["enemyWidth"] = 215
+    E.db["nameplates"]["clickSize"]["friendlyHeight"] = 20
+    E.db["nameplates"]["clickSize"]["friendlyWidth"] = 215
+    E.db["nameplates"]["clickSize"]["personalHeight"] = 20
+    E.db["nameplates"]["clickSize"]["personalWidth"] = 215
+    E.db["nameplates"]["statusbar"] = "NT_Nord05"
     E.db["nameplates"]["smoothbars"] = true
     E.db["nameplates"]["threat"]["indicator"] = true
 
     -- TARGET Settings
     E.db["nameplates"]["units"]["TARGET"]["arrow"] = "ArrowUp"
-    E.db["nameplates"]["units"]["TARGET"]["arrowScale"] = 1.04
+    E.db["nameplates"]["units"]["TARGET"]["arrowScale"] = 1
     E.db["nameplates"]["units"]["TARGET"]["arrowSpacing"] = 0
     -- Initialize classpower table if it doesn't exist
     if not E.db["nameplates"]["units"]["TARGET"]["classpower"] then
@@ -116,7 +111,7 @@ function NoobTacoUI:SetupNamePlates()
     end
     E.db["nameplates"]["units"]["TARGET"]["classpower"]["enable"] = false
     E.db["nameplates"]["units"]["TARGET"]["classpower"]["height"] = 10
-    E.db["nameplates"]["units"]["TARGET"]["classpower"]["width"] = 143
+    E.db["nameplates"]["units"]["TARGET"]["classpower"]["width"] = 146
     E.db["nameplates"]["units"]["TARGET"]["classpower"]["yOffset"] = -18
     E.db["nameplates"]["units"]["TARGET"]["glowStyle"] = "style8"
 
@@ -134,14 +129,13 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_NPC"]["castbar"]["iconOffsetX"] = 5
     E.db["nameplates"]["units"]["ENEMY_NPC"]["castbar"]["iconSize"] = 25
     E.db["nameplates"]["units"]["ENEMY_NPC"]["castbar"]["showIcon"] = false
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["castbar"]["width"] = 215
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["castbar"]["yOffset"] = -20
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["castbar"]["xOffset"] = 0
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["castbar"]["width"] = 140
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["castbar"]["yOffset"] = -16
     -- Initialize classpower table if it doesn't exist
     if not E.db["nameplates"]["units"]["ENEMY_NPC"]["classpower"] then
         E.db["nameplates"]["units"]["ENEMY_NPC"]["classpower"] = {}
     end
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["classpower"]["enable"] = false
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["classpower"]["enable"] = true
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["anchorPoint"] = "TOPLEFT"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["countFont"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["countFontOutline"] = "NONE"
@@ -151,56 +145,50 @@ function NoobTacoUI:SetupNamePlates()
     "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["size"] = 25
     E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["yOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["debuffs"]["xOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["eliteIcon"]["enable"] = false
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["eliteIcon"]["xOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["eliteIcon"]["yOffset"] = 20
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["height"] = 23
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["font"] = "Poppins-SemiBold"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["eliteIcon"]["enable"] = true
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["eliteIcon"]["position"] = "LEFT"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["eliteIcon"]["xOffset"] = 34
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["height"] = 20
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["font"] = "Poppins-Medium"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["fontOutline"] = "SHADOW"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["fontSize"] = 12
     E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["format"] = "[perhp]%"
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["enable"] = true
     E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["parent"] = "Health"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["position"] = "TOPRIGHT"
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["yOffset"] = -19
     E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["xOffset"] = -5
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["text"]["yOffset"] = -18
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["health"]["width"] = 140
     E.db["nameplates"]["units"]["ENEMY_NPC"]["level"]["enable"] = false
     E.db["nameplates"]["units"]["ENEMY_NPC"]["level"]["font"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["level"]["fontSize"] = 12
     E.db["nameplates"]["units"]["ENEMY_NPC"]["level"]["format"] = "[difficultycolor][level]"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["level"]["yOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["level"]["xOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["font"] = "Poppins-SemiBold"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["font"] = "Poppins-Medium"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["fontOutline"] = "SHADOW"
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["fontSize"] = 14
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["format"] = "[name:medium]"
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["xOffset"] = 5
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["fontSize"] = 12
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["format"] = "[name:short]"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["parent"] = "Health"
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["xOffset"] = 2
     E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["yOffset"] = -18
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["Parent"] = "Health"    -- fix for #56
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["name"]["position"] = "TOPLEFT" -- fix for #56
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["displayAltPower"] = true
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["enable"] = true
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["height"] = 5
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["hideWhenEmpty"] = true
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["width"] = 215
     E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["yOffset"] = -11
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["power"]["xOffset"] = 0
     E.db["nameplates"]["units"]["ENEMY_NPC"]["raidTargetIndicator"]["position"] = "CENTER"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["raidTargetIndicator"]["size"] = 30
     E.db["nameplates"]["units"]["ENEMY_NPC"]["raidTargetIndicator"]["xOffset"] = 0
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["raidTargetIndicator"]["yOffset"] = 40
     E.db["nameplates"]["units"]["ENEMY_NPC"]["title"]["format"] = "[guild]"
 
     E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["font"] = "Poppins-Medium"
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["position"] = "LEFT"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["fontOutline"] = "SHADOW"
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["size"] = 20
+    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["position"] = "LEFT"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["spacing"] = 0
     E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textPosition"] = "TOP"
     E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textXOffset"] = 0
     E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["textYOffset"] = 5
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["yOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_NPC"]["questIcon"]["xOffset"] = 0
 
     -- Enemy Player
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["buffs"]["attachTo"] = "DEBUFFS"
@@ -216,14 +204,13 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["castbar"]["iconOffsetX"] = 5
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["castbar"]["iconSize"] = 25
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["castbar"]["showIcon"] = false
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["castbar"]["width"] = 215
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["castbar"]["yOffset"] = -20
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["castbar"]["xOffset"] = 0
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["castbar"]["width"] = 140
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["castbar"]["yOffset"] = -16
     -- Initialize classpower table if it doesn't exist
     if not E.db["nameplates"]["units"]["ENEMY_PLAYER"]["classpower"] then
         E.db["nameplates"]["units"]["ENEMY_PLAYER"]["classpower"] = {}
     end
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["classpower"]["enable"] = false
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["classpower"]["enable"] = true
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["anchorPoint"] = "TOPLEFT"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["countFont"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["countFontOutline"] = "NONE"
@@ -233,36 +220,27 @@ function NoobTacoUI:SetupNamePlates()
     "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["size"] = 25
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["yOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["debuffs"]["xOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["height"] = 23
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["font"] = "Poppins-SemiBold"
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["text_format"] = "[perhp]%"
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["height"] = 20
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["font"] = "Poppins-Medium"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["fontOutline"] = "SHADOW"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["fontSize"] = 12
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["format"] = "[perhp]%"
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["enable"] = true
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["parent"] = "Health"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["position"] = "TOPRIGHT"
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["yOffset"] = -19
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["xOffset"] = -5
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["text"]["yOffset"] = -18
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["health"]["width"] = 140
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["level"]["enable"] = false
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["level"]["font"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["level"]["fontSize"] = 12
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["level"]["yOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["enable"] = true
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["font"] = "Poppins-SemiBold"
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["font"] = "Poppins-Medium"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["fontOutline"] = "SHADOW"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["fontSize"] = 12
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["format"] =
-    "[difficultycolor][smartlevel] ||cffffffff[name:medium]||r"
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["xOffset"] = 5
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["format"] = "[name:short]"
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["parent"] = "Health"
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["xOffset"] = 2
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["yOffset"] = -18
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["Parent"] = "Health"    -- fix for #56
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["name"]["position"] = "TOPLEFT" -- fix for #56
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["portrait"]["enable"] = true
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["portrait"]["position"] = "LEFT"
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["portrait"]["xOffset"] = 0
-    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["portrait"]["yOffset"] = 0
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["displayAltPower"] = true
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["enable"] = true
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["power"]["height"] = 5
@@ -272,12 +250,14 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["raidTargetIndicator"]["position"] = "CENTER"
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["raidTargetIndicator"]["size"] = 30
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["raidTargetIndicator"]["xOffset"] = 0
+    E.db["nameplates"]["units"]["ENEMY_PLAYER"]["raidTargetIndicator"]["yOffset"] = 40
     E.db["nameplates"]["units"]["ENEMY_PLAYER"]["title"]["format"] = "[guild]"
 
     -- FRIENDLY_NPC
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["auras"]["anchorPoint"] = "RIGHT"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["auras"]["enable"] = true
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["auras"]["filter"] = "HARMFUL"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["auras"]["isAuraDefensive"] = true
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["auras"]["numAuras"] = 2
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["auras"]["priority"] = "Blacklist,CCDebuffs"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["auras"]["xOffset"] = 2
@@ -294,43 +274,44 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["iconOffsetX"] = 5
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["iconSize"] = 25
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["showIcon"] = false
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["width"] = 215
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["yOffset"] = -20
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["width"] = 140
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["castbar"]["yOffset"] = -16
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["anchorPoint"] = "TOPLEFT"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["countFont"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["countFontOutline"] = "NONE"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["growthX"] = "RIGHT"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["isAuraPlayer"] = true
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["isAuraRaid"] = false
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["numAuras"] = 8
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["priority"] =
     "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["size"] = 25
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["debuffs"]["yOffset"] = 0
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["eliteIcon"]["enable"] = true
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["eliteIcon"]["xOffset"] = 0
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["eliteIcon"]["yOffset"] = 20
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["height"] = 23
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["font"] = "Poppins-SemiBold"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["eliteIcon"]["position"] = "LEFT"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["eliteIcon"]["xOffset"] = 34
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["height"] = 20
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["font"] = "Poppins-Medium"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["fontOutline"] = "SHADOW"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["fontSize"] = 12
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["format"] = "[perhp]%"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["parent"] = "Health"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["position"] = "TOPRIGHT"
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["yOffset"] = -19
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["xOffset"] = -5
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["format"] = "[perhp]%"
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["enable"] = true
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["text"]["yOffset"] = -18
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["health"]["width"] = 140
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["enable"] = false
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["font"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["fontSize"] = 12
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["format"] = "[difficultycolor][level]"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["level"]["yOffset"] = 0
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["font"] = "Poppins-SemiBold"
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["fontOutline"] = "shadow"
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["fontSize"] = 14
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["format"] = "[name:medium]"
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["xOffset"] = 5
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["font"] = "Poppins-Medium"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["fontOutline"] = "SHADOW"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["fontSize"] = 12
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["format"] = "[name:short]"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["parent"] = "Health"
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["xOffset"] = 2
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["yOffset"] = -18
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["Parent"] = "Health"    -- fix for #56
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["name"]["position"] = "TOPLEFT" -- fix for #56
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["nameOnly"] = false
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["displayAltPower"] = true
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["power"]["enable"] = true
@@ -341,18 +322,16 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["raidTargetIndicator"]["position"] = "CENTER"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["raidTargetIndicator"]["size"] = 30
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["raidTargetIndicator"]["xOffset"] = 0
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["raidTargetIndicator"]["yOffset"] = 40
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["title"]["format"] = "[guild]"
 
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["font"] = "Poppins-Medium"
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["position"] = "LEFT"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["fontOutline"] = "SHADOW"
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["size"] = 20
+    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["position"] = "LEFT"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["spacing"] = 0
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["textPosition"] = "TOP"
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["textXOffset"] = 0
     E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["textYOffset"] = 5
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["yOffset"] = 0
-    E.db["nameplates"]["units"]["FRIENDLY_NPC"]["questIcon"]["xOffset"] = 0
 
     -- FRIENDLY_PLAYER
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["buffs"]["attachTo"] = "DEBUFFS"
@@ -368,41 +347,40 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["castbar"]["iconOffsetX"] = 5
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["castbar"]["iconSize"] = 25
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["castbar"]["showIcon"] = false
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["castbar"]["width"] = 215
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["castbar"]["yOffset"] = -20
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["castbar"]["width"] = 140
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["castbar"]["yOffset"] = -16
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["anchorPoint"] = "TOPLEFT"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["countFont"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["countFontOutline"] = "NONE"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["growthX"] = "RIGHT"
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["isAuraPlayer"] = true
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["isAuraRaid"] = false
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["numAuras"] = 8
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["priority"] =
     "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["size"] = 25
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["debuffs"]["yOffset"] = 0
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["height"] = 23
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["font"] = "Poppins-SemiBold"
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["height"] = 20
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["font"] = "Poppins-Medium"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["fontOutline"] = "SHADOW"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["fontSize"] = 12
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["format"] = "[perhp]%"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["parent"] = "Health"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["position"] = "TOPRIGHT"
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["yOffset"] = -19
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["xOffset"] = -5
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["format"] = "[perhp]%"
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["enable"] = true
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["enable"] = true
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["text"]["yOffset"] = -18
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["health"]["width"] = 140
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["level"]["enable"] = false
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["level"]["font"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["level"]["fontSize"] = 12
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["level"]["yOffset"] = 0
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["font"] = "Poppins-SemiBold"
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["fontOutline"] = "shadow"
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["fontSize"] = 14
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["format"] =
-    "[difficultycolor][smartlevel] ||cffffffff[name:medium]||r"
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["xOffset"] = 5
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["font"] = "Poppins-Medium"
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["fontOutline"] = "SHADOW"
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["fontSize"] = 12
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["format"] = "[name:short]"
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["parent"] = "Health"
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["xOffset"] = 2
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["yOffset"] = -18
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["Parent"] = "Health"    -- fix for #56
-    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["name"]["position"] = "TOPLEFT" -- fix for #56
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["displayAltPower"] = true
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["enable"] = true
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["power"]["height"] = 5
@@ -412,53 +390,76 @@ function NoobTacoUI:SetupNamePlates()
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["raidTargetIndicator"]["position"] = "CENTER"
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["raidTargetIndicator"]["size"] = 30
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["raidTargetIndicator"]["xOffset"] = 0
+    E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["raidTargetIndicator"]["yOffset"] = 40
     E.db["nameplates"]["units"]["FRIENDLY_PLAYER"]["title"]["format"] = "[guild]"
 
     -- PLAYER
+    E.db["nameplates"]["units"]["PLAYER"]["auras"]["anchorPoint"] = "RIGHT"
+    E.db["nameplates"]["units"]["PLAYER"]["auras"]["enable"] = true
+    E.db["nameplates"]["units"]["PLAYER"]["auras"]["filter"] = "HARMFUL"
+    E.db["nameplates"]["units"]["PLAYER"]["auras"]["isAuraDefensive"] = true
+    E.db["nameplates"]["units"]["PLAYER"]["auras"]["numAuras"] = 2
+    E.db["nameplates"]["units"]["PLAYER"]["auras"]["priority"] = "Blacklist,CCDebuffs"
+    E.db["nameplates"]["units"]["PLAYER"]["auras"]["xOffset"] = 2
+    E.db["nameplates"]["units"]["PLAYER"]["auras"]["yOffset"] = 0
+    E.db["nameplates"]["units"]["PLAYER"]["buffs"]["attachTo"] = "DEBUFFS"
     E.db["nameplates"]["units"]["PLAYER"]["buffs"]["countFont"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["PLAYER"]["buffs"]["countFontOutline"] = "NONE"
+    E.db["nameplates"]["units"]["PLAYER"]["buffs"]["isAuraDefensive"] = true
+    E.db["nameplates"]["units"]["PLAYER"]["buffs"]["isAuraRaid"] = true
     E.db["nameplates"]["units"]["PLAYER"]["buffs"]["maxDuration"] = 0
     E.db["nameplates"]["units"]["PLAYER"]["buffs"]["priority"] = "Blacklist,blockNoDuration,Personal,TurtleBuffs"
+    E.db["nameplates"]["units"]["PLAYER"]["buffs"]["size"] = 30
+    E.db["nameplates"]["units"]["PLAYER"]["buffs"]["yOffset"] = 0
     E.db["nameplates"]["units"]["PLAYER"]["castbar"]["font"] = "Poppins-SemiBold"
-    E.db["nameplates"]["units"]["PLAYER"]["castbar"]["height"] = 12
+    E.db["nameplates"]["units"]["PLAYER"]["castbar"]["fontSize"] = 15
+    E.db["nameplates"]["units"]["PLAYER"]["castbar"]["height"] = 15
     E.db["nameplates"]["units"]["PLAYER"]["castbar"]["iconOffsetX"] = 5
     E.db["nameplates"]["units"]["PLAYER"]["castbar"]["iconSize"] = 25
+    E.db["nameplates"]["units"]["PLAYER"]["castbar"]["showIcon"] = false
+    E.db["nameplates"]["units"]["PLAYER"]["castbar"]["width"] = 140
+    E.db["nameplates"]["units"]["PLAYER"]["castbar"]["yOffset"] = -16
+    E.db["nameplates"]["units"]["PLAYER"]["classpower"]["enable"] = false
+    E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["anchorPoint"] = "TOPLEFT"
     E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["countFont"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["countFontOutline"] = "NONE"
+    E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["growthX"] = "RIGHT"
+    E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["isAuraPlayer"] = true
     E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["numAuras"] = 8
     E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["priority"] =
     "Blacklist,Dispellable,blockNoDuration,Personal,Boss,CCDebuffs"
-    E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["size"] = 30
-    E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["yOffset"] = 15
-    E.db["nameplates"]["units"]["PLAYER"]["health"]["height"] = 16
-    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["font"] = "Poppins-SemiBold"
+    E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["size"] = 25
+    E.db["nameplates"]["units"]["PLAYER"]["debuffs"]["yOffset"] = 0
+    E.db["nameplates"]["units"]["PLAYER"]["health"]["height"] = 20
+    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["font"] = "Poppins-Medium"
     E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["fontOutline"] = "SHADOW"
-    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["fontSize"] = 10
+    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["fontSize"] = 12
+    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["format"] = "[perhp]%"
     E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["parent"] = "Health"
-    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["position"] = "BOTTOMRIGHT"
-    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["yOffset"] = 13
-    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["xOffset"] = 0
-    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["format"] = "[health:percent]"
-    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["enable"] = true
-    E.db["nameplates"]["units"]["PLAYER"]["health"]["enable"] = true
-    E.db["nameplates"]["units"]["PLAYER"]["level"]["enable"] = true
+    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["position"] = "TOPRIGHT"
+    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["xOffset"] = -5
+    E.db["nameplates"]["units"]["PLAYER"]["health"]["text"]["yOffset"] = -18
+    E.db["nameplates"]["units"]["PLAYER"]["health"]["width"] = 140
     E.db["nameplates"]["units"]["PLAYER"]["level"]["font"] = "Poppins-SemiBold"
     E.db["nameplates"]["units"]["PLAYER"]["level"]["fontSize"] = 12
     E.db["nameplates"]["units"]["PLAYER"]["level"]["yOffset"] = 0
     E.db["nameplates"]["units"]["PLAYER"]["name"]["enable"] = true
-    E.db["nameplates"]["units"]["PLAYER"]["name"]["font"] = "Poppins-SemiBold"
-    E.db["nameplates"]["units"]["PLAYER"]["name"]["fontSize"] = 14
-    E.db["nameplates"]["units"]["PLAYER"]["name"]["format"] = "[name:medium]"
-    E.db["nameplates"]["units"]["PLAYER"]["name"]["yOffset"] = 0
-    E.db["nameplates"]["units"]["PLAYER"]["name"]["position"] = "TOPLEFT" -- fix for #56
-    E.db["nameplates"]["units"]["PLAYER"]["name"]["Parent"] = "Nameplate" -- fix for #56
+    E.db["nameplates"]["units"]["PLAYER"]["name"]["font"] = "Poppins-Medium"
+    E.db["nameplates"]["units"]["PLAYER"]["name"]["fontOutline"] = "SHADOW"
+    E.db["nameplates"]["units"]["PLAYER"]["name"]["fontSize"] = 12
+    E.db["nameplates"]["units"]["PLAYER"]["name"]["format"] = "[name:short]"
+    E.db["nameplates"]["units"]["PLAYER"]["name"]["parent"] = "Health"
+    E.db["nameplates"]["units"]["PLAYER"]["name"]["xOffset"] = 2
+    E.db["nameplates"]["units"]["PLAYER"]["name"]["yOffset"] = -18
     E.db["nameplates"]["units"]["PLAYER"]["power"]["displayAltPower"] = true
     E.db["nameplates"]["units"]["PLAYER"]["power"]["height"] = 5
     E.db["nameplates"]["units"]["PLAYER"]["power"]["hideWhenEmpty"] = true
+    E.db["nameplates"]["units"]["PLAYER"]["power"]["width"] = 215
     E.db["nameplates"]["units"]["PLAYER"]["power"]["yOffset"] = -11
     E.db["nameplates"]["units"]["PLAYER"]["raidTargetIndicator"]["position"] = "CENTER"
     E.db["nameplates"]["units"]["PLAYER"]["raidTargetIndicator"]["size"] = 30
     E.db["nameplates"]["units"]["PLAYER"]["raidTargetIndicator"]["xOffset"] = 0
+    E.db["nameplates"]["units"]["PLAYER"]["raidTargetIndicator"]["yOffset"] = 40
     E.db["nameplates"]["units"]["PLAYER"]["title"]["format"] = "[guild]"
 
     -- Nameplate filters

@@ -70,6 +70,9 @@ function NoobTacoUI:SetupLayout()
     if E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"] == nil then
         E.db["unitframe"]["units"]["target"]["customTexts"]["TargetName"] = {}
     end
+    if E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerName"] == nil then
+        E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerName"] = {}
+    end
     if E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"] == nil then
         E.db["unitframe"]["units"]["target"]["customTexts"]["TargetLevel"] = {}
     end
@@ -110,13 +113,18 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["colors"]["borderColor"]["b"] = 0.32156862745098
     E.db["unitframe"]["colors"]["borderColor"]["g"] = 0.25882352941176
     E.db["unitframe"]["colors"]["borderColor"]["r"] = 0.23137254901961
+    E.db["unitframe"]["colors"]["customhealthbackdrop"] = true
+    E.db["unitframe"]["colors"]["health_backdrop"]["r"] = 0.1803921610117
+    E.db["unitframe"]["colors"]["health_backdrop"]["g"] = 0.2039215862751
+    E.db["unitframe"]["colors"]["health_backdrop"]["b"] = 0.25098040699959
+    E.db["unitframe"]["colors"]["healthbackdropbyvalue"] = true
     E.db["unitframe"]["colors"]["castNoInterrupt"]["b"] = 0.4156862745098
     E.db["unitframe"]["colors"]["castNoInterrupt"]["g"] = 0.38039215686275
     E.db["unitframe"]["colors"]["castNoInterrupt"]["r"] = 0.74901960784314
     E.db["unitframe"]["fontOutline"] = "NONE"
     E.db["unitframe"]["smoothbars"] = true
     E.db["unitframe"]["targetSound"] = true
-    E.db["unitframe"]["statusbar"] = "NT_Nord08_Gradient"
+    E.db["unitframe"]["statusbar"] = "NT_Nord04"
 end
 
 function NoobTacoUI:SetupUnitFrames(layout, wowver)
@@ -126,12 +134,12 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         E.db.unitframes = nil
 
         E.db["movers"]["ElvUF_PetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-240,158"
-        E.db["movers"]["ElvUF_PetMover"] = "BOTTOM,ElvUIParent,BOTTOM,-240,158"
+        E.db["movers"]["ElvUF_PetMover"] = "BOTTOM,ElvUIParent,BOTTOM,-245,203"
         E.db["movers"]["PetExperienceBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-240,150"
-        E.db["movers"]["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-240,192"
-        E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
-        E.db["movers"]["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,192"
-        E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,240,158"
+        E.db["movers"]["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-245,231"
+        E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,245,203"
+        E.db["movers"]["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,245,231"
+        E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,245,203"
 
         E.db["unitframe"]["units"]["party"]["width"] = 100
         E.db["unitframe"]["units"]["party"]["growthDirection"] = "UP_RIGHT"
@@ -139,6 +147,7 @@ function NoobTacoUI:SetupUnitFrames(layout, wowver)
         -- Raid Frame Movers
         E.db["movers"]["ElvUF_PartyMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,275"
         E.db["movers"]["ElvUF_Raid3Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
+        E.db["movers"]["ElvUF_Raid2Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,269"
         E.db["movers"]["ElvUF_Raid1Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
 
         -- Enable Castbar

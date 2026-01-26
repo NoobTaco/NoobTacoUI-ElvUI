@@ -6,12 +6,25 @@
 
 - Major upgrade for ElvUI "Midnight" (14.x) and WoW 12.0 compatibility
 - Added tracking for new version in installation process
+- Enabled classpower tracking on enemy nameplates by default
 
 ### Updated
 
 - Bumping version to 2.0.0 for major release
 - Verified compatibility with ElvUI 14.x database structure
 - Ensured all unit frame and nameplate hooks are compliant with WoW 12.0 API changes
+- Standardized UI textures to `NT_Nord05` across unit frames, nameplates, and general settings
+- Standardized status bar textures to `NT_Nord05` and `NT_Nord04` for gloss.
+- Refined typography by transitioning General, DataBars, and Nameplate elements to `Poppins-Medium` for improved readability
+- Standardized health and name text formatting and positioning across all unit frames.
+- Standardized cooldown fonts to `Poppins-SemiBold` across all UI modules (Actionbar, Auras, Bags, Unitframes, etc.)
+- Optimized Nameplate configuration with refined click dimensions (20 height, 215 width), castbar positioning, and text formatting
+- Enabled `classpower` for enemy NPC and Player nameplates by default
+- Updated General UI color palette including backdrop, border, and value colors for better visual consistency
+- Added Talking Head Frame scaling and missing item level font configurations
+- Updated mover positions, including `VehicleLeaveButton` for improved layout.
+- Enabled `aurabar` for the player unit frame.
+- Standardized `disableMouseoverGlow` and height/width settings across unit frames.
 
 ### Removed
 

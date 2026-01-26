@@ -7,7 +7,7 @@ function NoobTacoUI:UnitframePet()
     E.db["unitframe"]["units"]["pet"]["castbar"]["height"] = 30
     E.db["unitframe"]["units"]["pet"]["castbar"]["iconSize"] = 32
     E.db["unitframe"]["units"]["pet"]["castbar"]["overlayOnFrame"] = "Power"
-    E.db["unitframe"]["units"]["pet"]["castbar"]["width"] = 200
+    E.db["unitframe"]["units"]["pet"]["castbar"]["width"] = 175
     E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["enable"] = true
     E.db["unitframe"]["units"]["pet"]["customTexts"]["Pet Health"]["font"] = "2002"
@@ -26,10 +26,7 @@ function NoobTacoUI:UnitframePet()
     E.db["unitframe"]["units"]["pet"]["height"] = 30
     E.db["unitframe"]["units"]["pet"]["infoPanel"]["height"] = 14
     E.db["unitframe"]["units"]["pet"]["name"]["position"] = "LEFT"
-    E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[happiness:discord] [name:medium] - [level]"
+    E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[name:medium] - [level]"
     E.db["unitframe"]["units"]["pet"]["name"]["xOffset"] = 2
     E.db["unitframe"]["units"]["pet"]["width"] = 200
-    if E.Retail then -- Retail
-        E.db["unitframe"]["units"]["pet"]["name"]["text_format"] = "[name:medium] - [level]"
-    end
 end

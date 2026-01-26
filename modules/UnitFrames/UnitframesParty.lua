@@ -72,5 +72,3 @@ function NoobTacoUI:UnitframeParty()
     E.db["unitframe"]["units"]["party"]["visibility"] = "[@raid6,exists][nogroup] hide;show"
     E.db["unitframe"]["units"]["party"]["width"] = 100
 end
-
-E.db["unitframe"]["units"]["party"]["width"] = 100

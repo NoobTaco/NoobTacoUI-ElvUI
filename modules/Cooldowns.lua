@@ -20,7 +20,17 @@ function NoobTacoUI:SetupCooldowns()
     E.db["cooldown"]["global"]["colors"]["text"]["r"] = 0.92156862745098
     E.db["cooldown"]["global"]["colors"]["text"]["g"] = 0.79607843137255
     E.db["cooldown"]["global"]["colors"]["text"]["b"] = 0.54509803921569
-
     E.db["cooldown"]["global"]["font"] = "Poppins-SemiBold"
     E.db["cooldown"]["global"]["enable"] = true
+
+    E.db["cooldown"]["actionbar"]["font"] = "Poppins-SemiBold"
+    E.db["cooldown"]["aurabars"]["font"] = "Poppins-SemiBold"
+    E.db["cooldown"]["auras"]["font"] = "Poppins-SemiBold"
+    E.db["cooldown"]["bags"]["font"] = "Poppins-SemiBold"
+    E.db["cooldown"]["bossbutton"]["font"] = "Poppins-SemiBold"
+    E.db["cooldown"]["cdmanager"]["font"] = "Poppins-SemiBold"
+    E.db["cooldown"]["nameplates"]["font"] = "Poppins-SemiBold"
+    E.db["cooldown"]["totemtracker"]["font"] = "Poppins-SemiBold"
+    E.db["cooldown"]["unitframe"]["font"] = "Poppins-SemiBold"
+    E.db["cooldown"]["zonebutton"]["font"] = "Poppins-SemiBold"
 end
