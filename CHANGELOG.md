@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.0] - Midnight Upgrade
+## [2.0.0-alpha] - Midnight Upgrade
 
 ### Added
 
