@@ -150,7 +150,7 @@ end
 local InstallerData = {
     Title = format("%s |cff4beb2cInstallation|r %s", MyPluginTitle, Version),
     Name = MyPluginName,
-    tutorialImage = "Interface\\AddOns\\NoobTacoUI-ElvUI\\media\\Textures\\noobtaco.tga",
+    tutorialImage = "Interface\\AddOns\\NoobTacoUI-ElvUI\\Media\\Textures\\noobtaco.tga",
     Pages = {
         [1] = function()
             PluginInstallFrame.SubTitle:SetFormattedText("Welcome to the installation for %s.", MyPluginTitle)

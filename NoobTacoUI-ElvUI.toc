@@ -5,7 +5,7 @@
 ## Notes: Contains layouts from NoobTaco
 ## RequiredDeps: ElvUI, ElvUI_Libraries
 ## DefaultState: enabled
-## IconTexture: Interface\AddOns\NoobTacoUI-ElvUI\media\Textures\logo.tga
+## IconTexture: Interface\AddOns\NoobTacoUI-ElvUI\Media\Textures\logo.tga
 ## Category-enUS: UI Overhaul
 ## Category-deDE: UI-Überholung
 ## Category-esES: Renovación de la UI
@@ -21,7 +21,7 @@
 ## X-Curse-Project-ID: 414874
 ## X-Wago-ID: 9rN49x6D
 
-media\Load_Media.xml
+Media\Load_Media.xml
 core\Code.lua
 modules\load_modules.xml
 integrations\load_integrations.xml
