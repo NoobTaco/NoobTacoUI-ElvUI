@@ -54,3 +54,13 @@ Desktop.ini
 # Project Specific
 README.bbc
 # .pkgmeta and .editorconfig should generally be tracked, untracked them from gitignore
+# Design files
+*.afdesign
+*.psd
+*.ai
+
+# Build directories
+.release/
+
+# Local Libraries
+Libraries/
