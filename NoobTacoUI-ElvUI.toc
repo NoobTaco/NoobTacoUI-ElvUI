@@ -1,4 +1,4 @@
-## Interface: 120000, 110205, 11506, 40402, 50407
+## Interface: 120001, 120000, 110205, 11506, 40402, 50407
 ## Title: |cFF16C3F2NoobTacoUI|r |cFFFFFFFF- ElvUI|r
 ## Author: NoobTaco
 ## Version: 2.0.0
