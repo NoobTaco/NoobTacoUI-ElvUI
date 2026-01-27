@@ -54,9 +54,14 @@ function NoobTacoUIElv:UnitframePlayer()
     E.db["unitframe"]["units"]["player"]["castbar"]["textColor"]["r"] = 0.92549026012421
     E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 400
 
-    E.db["unitframe"]["units"]["player"]["classbar"]["detachFromFrame"] = true
+    if NoobTacoUIElv.IsClassic then
+        E.db["unitframe"]["units"]["player"]["classbar"]["detachFromFrame"] = false
+        E.db["unitframe"]["units"]["player"]["classbar"]["height"] = 10
+    else
+        E.db["unitframe"]["units"]["player"]["classbar"]["detachFromFrame"] = true
+        E.db["unitframe"]["units"]["player"]["classbar"]["height"] = 15
+    end
     E.db["unitframe"]["units"]["player"]["classbar"]["detachedWidth"] = 301
-    E.db["unitframe"]["units"]["player"]["classbar"]["height"] = 15
     E.db["unitframe"]["units"]["player"]["classbar"]["spacing"] = 0
 
     E.db["unitframe"]["units"]["player"]["classAdditional"]["height"] = 10
@@ -88,7 +93,7 @@ function NoobTacoUIElv:UnitframePlayer()
 
     E.db["unitframe"]["units"]["player"]["power"]["EnergyManaRegen"] = true
     E.db["unitframe"]["units"]["player"]["power"]["attachTextTo"] = "Power"
-    if E.Classic or E.TBC or E.Wrath then
+    if NoobTacoUIElv.IsClassic then
         E.db["unitframe"]["units"]["player"]["power"]["detachFromFrame"] = false
         E.db["unitframe"]["units"]["player"]["power"]["height"] = 10
         E.db["unitframe"]["units"]["player"]["power"]["text_format"] = ""

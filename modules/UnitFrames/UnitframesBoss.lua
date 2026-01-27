@@ -13,7 +13,7 @@ local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 ]]
 function NoobTacoUIElv:UnitframeBoss()
     -- Boss frames are only available in MoP Classic and Retail (not Classic, TBC, or Wrath)
-    if E.Classic or E.TBC or E.Wrath then
+    if NoobTacoUIElv.IsClassic then
         return
     end
 

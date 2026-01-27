@@ -25,6 +25,13 @@
 - **Castbars**: Player castbar is now enabled by default in the consolidated layout.
 - **Code Maintenance**: Removed the deprecated `SetupUnitFrames` function and cleaned up redundant mover definitions.
 
+### Expansion Detection Refactor
+
+- **Centralized Detection**: Implemented `IsClassic` and `IsRetail` flags in `core/Code.lua` to streamline expansion-specific logic across all modules.
+- **MOP Classic Support**: Added support for MOP Classic (build 50503) via the new `IsClassic` flag, ensuring correct layout settings without hardcoded build checks.
+- **Code Consolidation**: Refactored `UnitframesPlayer.lua`, `UnitframesPet.lua`, and `UnitframesBoss.lua` to use the new flags and consolidated redundant conditional blocks.
+- **Unit Frame Adjustments**: Set `classbar` height to 10 for Classic versions to align with power bar dimensions.
+
 ### Chore
 
 - Synced `.gitignore` with `NoobTacoUI`.

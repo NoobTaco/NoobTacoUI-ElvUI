@@ -40,7 +40,7 @@ function NoobTacoUIElv:UnitframePet()
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["fontOutline"] = "Shadowed"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["size"] = 13
-    if (E.Classic or E.TBC or E.Wrath) and E.myclass == "HUNTER" then
+    if NoobTacoUIElv.IsClassic and E.myclass == "HUNTER" then
         E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["text_format"] =
         "[happiness:discord] [name:medium] [smartlevel]"
     else

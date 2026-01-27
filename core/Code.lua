@@ -40,11 +40,6 @@ local GetCVarBool = GetCVarBool
 local ReloadUI = ReloadUI
 local StopMusic = StopMusic
 
--- Expansions
--- E.Retail = E.Retail
--- E.Classic = E.Classic
--- E.TBC = E.TBC
--- E.Wrath = WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC
 
 -- Change this line and use a unique name for your plugin.
 -- Change this line and use a unique name for your plugin.
@@ -60,6 +55,10 @@ local EP = LibStub("LibElvUIPlugin-1.0")
 -- Create a new ElvUI module so ElvUI can handle initialization when ready
 local mod = E:NewModule(MyPluginName, "AceHook-3.0", "AceEvent-3.0", "AceTimer-3.0")
 local NoobTacoUIElv = mod -- Use the same module instance
+
+-- Expansions
+NoobTacoUIElv.IsClassic = E.Classic or E.Cata or E.Mists
+NoobTacoUIElv.IsRetail = E.Retail
 
 Engine.NoobTacoUIElv = NoobTacoUIElv
 Engine.E = E
