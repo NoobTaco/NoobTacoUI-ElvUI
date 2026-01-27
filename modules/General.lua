@@ -1,4 +1,6 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
@@ -8,7 +10,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Increased the font size for general UI
         - Adjusted the size pvpsubzone, pvpzone, questsmall, questtext, questtitle, talkingtext, talkingtitle, worldsubzone, worldzone fonts
 ]]
-function NoobTacoUI:SetupGeneral()
+function NoobTacoUIElv:SetupGeneral()
     --	PrivateDB
     E.private["skins"]["parchmentRemoverEnable"] = true
     E.private["general"]["namefont"] = "Poppins-Medium"

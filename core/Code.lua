@@ -23,6 +23,11 @@
     Version 2.0.0 - Midnight Upgrade
         - Major upgrade for ElvUI Midnight (14.x) and WoW 12.0
         - Verified all database pathing and API compliance
+
+    Version 2.0.1 - Modernization Refactor
+        - Implemented modern ElvUI Engine access pattern using named keys
+        - Renamed internal module reference to NoobTacoUIElv for clarity
+        - Standardized core, modules, and integrations with new patterns
 ]]
 -- Don't worry about this
 local addon, Engine, _ = ...
@@ -54,14 +59,14 @@ local EP = LibStub("LibElvUIPlugin-1.0")
 
 -- Create a new ElvUI module so ElvUI can handle initialization when ready
 local mod = E:NewModule(MyPluginName, "AceHook-3.0", "AceEvent-3.0", "AceTimer-3.0")
-local NoobTacoUI = mod -- Use the same module instance
+local NoobTacoUIElv = mod -- Use the same module instance
 
-Engine[1] = NoobTacoUI
-Engine[2] = E
-Engine[3] = L
-Engine[4] = V
-Engine[5] = P
-Engine[6] = G
+Engine.NoobTacoUIElv = NoobTacoUIElv
+Engine.E = E
+Engine.L = L
+Engine.V = V
+Engine.P = P
+Engine.G = G
 _G[addon] = Engine
 
 -- Runs for the step questioning the user if they want a new ElvUI profile
@@ -109,19 +114,19 @@ local function SetupLayout()
     SetCVar("equipmentManager", 1)
     SetCVar("previewTalents", 1)
 
-    NoobTacoUI:SetupNamePlates()
-    NoobTacoUI:SetupLayout()
-    NoobTacoUI:SetupDatabars()
-    NoobTacoUI:SetupBags()
-    NoobTacoUI:SetupChat()
-    NoobTacoUI:SetupGeneral()
-    NoobTacoUI:SetupAuras()
-    NoobTacoUI:SetupCooldowns()
-    NoobTacoUI:SetupTooltips()
-    NoobTacoUI:SetupActionBars()
-    NoobTacoUI:SetupGuildNotes()
+    NoobTacoUIElv:SetupNamePlates()
+    NoobTacoUIElv:SetupLayout()
+    NoobTacoUIElv:SetupDatabars()
+    NoobTacoUIElv:SetupBags()
+    NoobTacoUIElv:SetupChat()
+    NoobTacoUIElv:SetupGeneral()
+    NoobTacoUIElv:SetupAuras()
+    NoobTacoUIElv:SetupCooldowns()
+    NoobTacoUIElv:SetupTooltips()
+    NoobTacoUIElv:SetupActionBars()
+    NoobTacoUIElv:SetupGuildNotes()
 
-    NoobTacoUI:SetupMovers()
+    NoobTacoUIElv:SetupMovers()
 
     E:UpdateAll(true)
 
@@ -243,7 +248,7 @@ local InstallerData = {
             PluginInstallFrame.Option1:SetScript(
                 "OnClick",
                 function()
-                    NoobTacoUI:SetupUnitFrames("v1")
+                    NoobTacoUIElv:SetupUnitFrames("v1")
                 end
             )
             PluginInstallFrame.Option1:SetText("DPS or Tank")
@@ -253,13 +258,13 @@ local InstallerData = {
             PluginInstallFrame.Option2:SetScript(
                 "OnClick",
                 function()
-                    NoobTacoUI:SetupUnitFrames("v2")
+                    NoobTacoUIElv:SetupUnitFrames("v2")
                 end
             )
             PluginInstallFrame.Option2:SetText("Healer")
 
             -- Integration Check
-            NoobTacoUI:SetupIntegration()
+            NoobTacoUIElv:SetupIntegration()
         end,
         [5] = function()
             PluginInstallFrame.SubTitle:SetText("Installation Complete")
@@ -395,7 +400,7 @@ function mod:Initialize()
     EP:RegisterPlugin(addon, InsertOptions)
 
     -- Initialize GuildNotes
-    NoobTacoUI:SetupGuildNotes()
+    NoobTacoUIElv:SetupGuildNotes()
 
     -- check if enableInteraction is true or false
     if E.db[MyPluginName].enableInteraction then

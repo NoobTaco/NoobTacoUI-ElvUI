@@ -1,6 +1,8 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
-function NoobTacoUI:SetupMovers()
+function NoobTacoUIElv:SetupMovers()
     -- MOVERS -----------------------------------------------------------------
     -- PowerBarWidget for flight bar and more?
     E.db["movers"]["PowerBarContainerMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,80"

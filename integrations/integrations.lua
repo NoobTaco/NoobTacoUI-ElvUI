@@ -1,8 +1,10 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
-function NoobTacoUI:SetupIntegration(layout, wowver)
-  NoobTacoUI:IntegrationBag()
-  NoobTacoUI:XIV_Databar()
-  NoobTacoUI:CellIntegration()
-  NoobTacoUI:PlatterIntegration()
+function NoobTacoUIElv:SetupIntegration(layout, wowver)
+  NoobTacoUIElv:IntegrationBag()
+  NoobTacoUIElv:XIV_Databar()
+  NoobTacoUIElv:CellIntegration()
+  NoobTacoUIElv:PlatterIntegration()
 end

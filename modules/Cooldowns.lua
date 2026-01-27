@@ -1,4 +1,6 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
@@ -6,7 +8,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Updated the font used for cooldowns to "Poppins-SemiBold"
         - Adjusted the colors for cooldowns
 ]]
-function NoobTacoUI:SetupCooldowns()
+function NoobTacoUIElv:SetupCooldowns()
     -- COOLDOWN --------------------------------------------------------------------
     -- COOLDOWN --------------------------------------------------------------------
     -- ElvUI 14.x uses E.db["cooldown"][module] structure.

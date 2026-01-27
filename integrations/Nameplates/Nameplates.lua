@@ -1,15 +1,16 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
-function NoobTacoUI:PlatterIntegration()
-
+function NoobTacoUIElv:PlatterIntegration()
   -- Defaults On
-    E.private["nameplates"]["enable"] = true
+  E.private["nameplates"]["enable"] = true
 
   -- Check if loaded
   if (C_AddOns.IsAddOnLoaded("Plater")) then
     -- Disable ElvUI nameplates
     E.private["nameplates"]["enable"] = false
 
-    print("NoobTacoUI: Plater is active. ElvUI nameplates will be disabled.")
+    print("NoobTacoUI-ElvUI: Plater is active. ElvUI nameplates will be disabled.")
   end
 end

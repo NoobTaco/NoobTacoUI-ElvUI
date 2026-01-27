@@ -1,6 +1,8 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
-function NoobTacoUI:UnitframePet()
+function NoobTacoUIElv:UnitframePet()
     -- Ensure custom text is properly initialized for new installs
     if not E.db.unitframe.units.pet.customTexts then E.db.unitframe.units.pet.customTexts = {} end
     if not E.db.unitframe.units.pet.customTexts["pet-name"] then E.db.unitframe.units.pet.customTexts["pet-name"] = {} end

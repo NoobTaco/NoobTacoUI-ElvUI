@@ -1,7 +1,8 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
-function NoobTacoUI:CellIntegration()
-
+function NoobTacoUIElv:CellIntegration()
   -- Defaults On
   E.db["unitframe"]["units"]["raid1"]["enable"] = true
   E.db["unitframe"]["units"]["raid2"]["enable"] = true
@@ -16,6 +17,6 @@ function NoobTacoUI:CellIntegration()
     E.db["unitframe"]["units"]["raid3"]["enable"] = false
     E.db["unitframe"]["units"]["party"]["enable"] = false
 
-    print("NoobTacoUI: Cell is active. ElvUI raid and party frames will be disabled.")
+    print("NoobTacoUI-ElvUI: Cell is active. ElvUI raid and party frames will be disabled.")
   end
 end

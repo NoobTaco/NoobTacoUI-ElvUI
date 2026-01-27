@@ -1,4 +1,6 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
@@ -13,7 +15,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Adjusted the colors for general UI
         - Increased the font size for general UI
 ]]
-function NoobTacoUI:UnitframeTarget()
+function NoobTacoUIElv:UnitframeTarget()
     if not E.db.unitframe.units.target.customTexts then
         E.db.unitframe.units.target.customTexts = {}
     end

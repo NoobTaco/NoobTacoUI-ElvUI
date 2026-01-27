@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.1-alpha] - 2026-01-26
+## [2.0.1-alpha.2] - 2026-01-27
 
 ### Added
 
@@ -8,6 +8,8 @@
 
 ### Updated
 
+- **Modernization Refactor**: Implemented modern ElvUI Engine access pattern using named keys across the entire codebase.
+- **Naming Redesign**: Renamed internal module references from `NoobTacoUI` to `NoobTacoUIElv` to improve clarity and prevent conflicts with the standalone addon.
 - Updated Pet unit frame configuration for better consistency.
 - Cleaned up Actionbar and Totem bar settings.
 - Updated media files and paths for better internal organization.
@@ -18,10 +20,14 @@
 
 - Synced `.gitignore` with `NoobTacoUI`.
 - Added `.gitattributes` to enforce LF line endings across the repository.
+- Refactored all data modules and integrations to use the new Engine access pattern.
 
-##    Version 2.0.1 - Guild Note Improvements
-        - Added Guild Notes to the member list in the Guild DataText tooltip
-        - Members will now show as `Charactername (Note)` when hovering over the Guild DataText
+## [2.0.1-alpha.1] - 2026-01-26
+
+### Updated
+
+- Added Guild Notes to the member list in the Guild DataText tooltip
+- Members will now show as `Charactername (Note)` when hovering over the Guild DataText
 
 ## [2.0.0-alpha] - Midnight Upgrade
 

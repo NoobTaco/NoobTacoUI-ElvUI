@@ -1,4 +1,6 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
@@ -7,7 +9,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Adjusted the colors for general UI
         - Increased the font size for general UI
 ]]
-function NoobTacoUI:UnitframeRaid3()
+function NoobTacoUIElv:UnitframeRaid3()
     E.db["unitframe"]["units"]["raid3"]["buffIndicator"]["enable"] = true
     E.db["unitframe"]["units"]["raid3"]["buffIndicator"]["size"] = 10
     E.db["unitframe"]["units"]["raid3"]["debuffs"]["anchorPoint"] = "TOP"

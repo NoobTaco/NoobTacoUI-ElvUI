@@ -1,4 +1,6 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
@@ -7,7 +9,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Adjusted the colors for experience and rested
         - Increased the font size for datatexts
 ]]
-function NoobTacoUI:SetupDatabars()
+function NoobTacoUIElv:SetupDatabars()
     if E.Retail then -- Retail
         E.db["databars"]["honor"]["enable"] = false
         E.db["databars"]["colors"]["quest"]["a"] = 0.99000000022352

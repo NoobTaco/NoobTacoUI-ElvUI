@@ -1,4 +1,6 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
@@ -9,7 +11,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Updated buff sizes to match global standard of 30
         - Optimized boss unit frame dimensions and spacing
 ]]
-function NoobTacoUI:UnitframeBoss()
+function NoobTacoUIElv:UnitframeBoss()
     -- Boss frames are only available in MoP Classic and Retail (not Classic, TBC, or Wrath)
     if E.Classic or E.TBC or E.Wrath then
         return

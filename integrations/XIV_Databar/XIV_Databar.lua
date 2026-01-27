@@ -1,6 +1,8 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
-function NoobTacoUI:XIV_Databar()
+function NoobTacoUIElv:XIV_Databar()
   -- Defaults On
   E.db["datatexts"]["panels"]["LeftChatDataPanel"]["enable"] = true
   E.db["datatexts"]["panels"]["RightChatDataPanel"]["enable"] = true
@@ -33,6 +35,6 @@ function NoobTacoUI:XIV_Databar()
     -- PowerBarContainerMover
     E.db["movers"]["PowerBarContainerMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,105"
 
-    print("NoobTacoUI: XIV Databar Continued.")
+    print("NoobTacoUI-ElvUI: XIV Databar Continued.")
   end
 end

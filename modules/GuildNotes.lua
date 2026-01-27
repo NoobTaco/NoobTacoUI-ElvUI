@@ -1,4 +1,7 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
+
 local DT = E:GetModule('DataTexts')
 
 --[[
@@ -7,7 +10,7 @@ local DT = E:GetModule('DataTexts')
     Format: Charactername (Note)
 ]]
 
-function NoobTacoUI:SetupGuildNotes()
+function NoobTacoUIElv:SetupGuildNotes()
   local data = DT.RegisteredDataTexts['Guild']
   if not data or not data.onEnter then return end
 

@@ -1,4 +1,7 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
+
 -- CHANGELOG --------------------------------------------------------------------
 --[[
     Version 1.5.0 - Chat improvements
@@ -6,7 +9,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Adjusted the colors for chat panels
         - Increased the font size for chat
 ]]
-function NoobTacoUI:SetupChat()
+function NoobTacoUIElv:SetupChat()
     E.db["chat"]["useCustomTimeColor"] = false
     E.db["chat"]["fontSize"] = 14
     E.db["chat"]["keywordSound"] = "Simon Chime"

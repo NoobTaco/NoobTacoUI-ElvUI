@@ -1,9 +1,12 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
+
 -- Changes made in release 1.5.0:
 -- - Enabled and configured Main Actionbar (bar1)
 -- - Enabled and configured Top Actionbar - BottomLeft (bar6)
 -- - Enabled and configured Left Actionbar Cluster (bar3)
-function NoobTacoUI:SetupActionBars()
+function NoobTacoUIElv:SetupActionBars()
     -- Main Actionbar
     E.db["actionbar"]["bar1"]["enabled"] = true
     E.db["actionbar"]["bar1"]["buttons"] = 12

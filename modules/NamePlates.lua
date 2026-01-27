@@ -1,4 +1,6 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
@@ -30,7 +32,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
     - Verified compatibility with ElvUI Midnight (14.x)
     - Ensured structure aligns with WoW 12.0 API changes
 ]]
-function NoobTacoUI:SetupNamePlates()
+function NoobTacoUIElv:SetupNamePlates()
     -- NAMEPLATES -------------------------------------------------------------
     -- Global Nameplate Settings
     E.db["nameplates"]["colors"]["castInterruptedColor"]["b"] = 0.10196079313755

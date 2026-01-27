@@ -1,4 +1,6 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
@@ -7,7 +9,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Adjusted the colors for expiring auras
         - Increased the font size for auras
 ]]
-function NoobTacoUI:SetupAuras()
+function NoobTacoUIElv:SetupAuras()
     -- AURAS -------------------------------------------------------------------
     E.db["auras"]["font"] = "Poppins-SemiBold"
     E.db["auras"]["buffs"]["countFont"] = "Poppins-SemiBold"

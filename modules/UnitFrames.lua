@@ -1,4 +1,6 @@
-local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
+local addonName, Engine = ...
+local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
@@ -11,7 +13,7 @@ local NoobTacoUI, E, L, V, P, G = unpack(select(2, ...))
         - Verified compatibility with ElvUI Midnight (14.x)
         - Updated layout initialization for WoW 12.0
 ]]
-function NoobTacoUI:SetupLayout()
+function NoobTacoUIElv:SetupLayout()
     -- -- Fix Movers ??
     if E.db["movers"] == nil then
         E.db["movers"] = {}
@@ -26,15 +28,15 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["fontSize"] = 13
     E.db["unitframe"]["smartRaidFilter"] = false
 
-    NoobTacoUI:UnitframePlayer()
-    NoobTacoUI:UnitframeFocus()
-    NoobTacoUI:UnitframePet()
-    NoobTacoUI:UnitframeParty()
-    NoobTacoUI:UnitframeTarget()
-    NoobTacoUI:UnitframeTargetTarget()
-    NoobTacoUI:UnitframeBoss()
-    NoobTacoUI:UnitframeRaid1()
-    NoobTacoUI:UnitframeRaid3()
+    NoobTacoUIElv:UnitframePlayer()
+    NoobTacoUIElv:UnitframeFocus()
+    NoobTacoUIElv:UnitframePet()
+    NoobTacoUIElv:UnitframeParty()
+    NoobTacoUIElv:UnitframeTarget()
+    NoobTacoUIElv:UnitframeTargetTarget()
+    NoobTacoUIElv:UnitframeBoss()
+    NoobTacoUIElv:UnitframeRaid1()
+    NoobTacoUIElv:UnitframeRaid3()
 
     E.db["unitframe"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["colors"]["auraBarBuff"]["r"] = 0.96
@@ -59,7 +61,7 @@ function NoobTacoUI:SetupLayout()
     E.db["unitframe"]["statusbar"] = "NT_Nord04"
 end
 
-function NoobTacoUI:SetupUnitFrames(layout, wowver)
+function NoobTacoUIElv:SetupUnitFrames(layout, wowver)
     -- DPS and TANK Layout
     if layout == "v1" then
         -- Option2
