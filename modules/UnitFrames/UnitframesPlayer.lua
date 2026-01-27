@@ -88,13 +88,19 @@ function NoobTacoUIElv:UnitframePlayer()
 
     E.db["unitframe"]["units"]["player"]["power"]["EnergyManaRegen"] = true
     E.db["unitframe"]["units"]["player"]["power"]["attachTextTo"] = "Power"
-    E.db["unitframe"]["units"]["player"]["power"]["detachFromFrame"] = true
+    if E.Classic or E.TBC or E.Wrath then
+        E.db["unitframe"]["units"]["player"]["power"]["detachFromFrame"] = false
+        E.db["unitframe"]["units"]["player"]["power"]["height"] = 10
+        E.db["unitframe"]["units"]["player"]["power"]["text_format"] = ""
+    else
+        E.db["unitframe"]["units"]["player"]["power"]["detachFromFrame"] = true
+        E.db["unitframe"]["units"]["player"]["power"]["height"] = 15
+        E.db["unitframe"]["units"]["player"]["power"]["text_format"] = "[perpp]"
+    end
     E.db["unitframe"]["units"]["player"]["power"]["detachedWidth"] = 301
-    E.db["unitframe"]["units"]["player"]["power"]["height"] = 15
     E.db["unitframe"]["units"]["player"]["power"]["hideonnpc"] = true
     E.db["unitframe"]["units"]["player"]["power"]["parent"] = "UIPARENT"
     E.db["unitframe"]["units"]["player"]["power"]["position"] = "CENTER"
-    E.db["unitframe"]["units"]["player"]["power"]["text_format"] = "[perpp]"
     E.db["unitframe"]["units"]["player"]["power"]["xOffset"] = 0
 
     E.db["unitframe"]["units"]["player"]["pvpIcon"]["anchorPoint"] = "TOPLEFT"

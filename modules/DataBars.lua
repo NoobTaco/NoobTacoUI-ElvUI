@@ -64,5 +64,5 @@ function NoobTacoUIElv:SetupDatabars()
     E.db["databars"]["colors"]["rested"]["g"] = 0.29803921568627
     E.db["databars"]["colors"]["rested"]["b"] = 0.56078431372549
 
-    E.db["databars"]["petExperience"]["width"] = 200
+    E.db["databars"]["petExperience"]["width"] = 175
 end
