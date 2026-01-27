@@ -16,6 +16,15 @@
 - Updated funding links to support the project.
 - Updated README with AI Usage policy and general documentation improvements.
 
+### Consolidate Unit Frame Layouts
+
+- **One Layout to Rule Them All**: Consolidated unit frame layouts into a single, optimized DPS/Tank-based version.
+- **Installer Cleanup**: Removed Step 4 ("Layouts") from the setup process. Step 3 ("General Layout") now applies all layout and mover settings.
+- **Movers Optimization**: Standardized mover positions for all unit frames, raid frames, and class bars.
+- **Party Frames**: Set default growth direction to `UP_RIGHT` for party frames.
+- **Castbars**: Player castbar is now enabled by default in the consolidated layout.
+- **Code Maintenance**: Removed the deprecated `SetupUnitFrames` function and cleaned up redundant mover definitions.
+
 ### Chore
 
 - Synced `.gitignore` with `NoobTacoUI`.

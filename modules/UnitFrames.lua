@@ -38,6 +38,9 @@ function NoobTacoUIElv:SetupLayout()
     NoobTacoUIElv:UnitframeRaid1()
     NoobTacoUIElv:UnitframeRaid3()
 
+    -- Consolidated Settings from DPS/Tank Layout
+    E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = true
+
     E.db["unitframe"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["colors"]["auraBarBuff"]["r"] = 0.96
     E.db["unitframe"]["colors"]["auraBarBuff"]["g"] = 0.55
@@ -59,92 +62,4 @@ function NoobTacoUIElv:SetupLayout()
     E.db["unitframe"]["smoothbars"] = true
     E.db["unitframe"]["targetSound"] = true
     E.db["unitframe"]["statusbar"] = "NT_Nord04"
-end
-
-function NoobTacoUIElv:SetupUnitFrames(layout, wowver)
-    -- DPS and TANK Layout
-    if layout == "v1" then
-        -- Option2
-        E.db.unitframes = nil
-
-        E.db["movers"]["ElvUF_PetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-240,158"
-        E.db["movers"]["ElvUF_PetMover"] = "BOTTOM,ElvUIParent,BOTTOM,-245,203"
-        E.db["movers"]["PetExperienceBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-240,150"
-        E.db["movers"]["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-245,231"
-        E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,245,203"
-        E.db["movers"]["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,245,231"
-        E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,245,203"
-
-        E.db["unitframe"]["units"]["party"]["width"] = 100
-        E.db["unitframe"]["units"]["party"]["growthDirection"] = "UP_RIGHT"
-
-        -- Raid Frame Movers
-        E.db["movers"]["ElvUF_PartyMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,275"
-        E.db["movers"]["ElvUF_Raid3Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
-        E.db["movers"]["ElvUF_Raid2Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,269"
-        E.db["movers"]["ElvUF_Raid1Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
-
-        -- Enable Castbar
-        E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = true
-
-        -- Totem tracker mover DK pet as well
-        E.db["movers"]["TotemTrackerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-205,155"
-    elseif layout == "v2" then
-        -- Luxothe Weak Aura layout
-        E.db.unitframes = nil
-
-        E.db["movers"]["ElvUF_PartyMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,285"
-        E.db["movers"]["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,250"
-        E.db["movers"]["ElvUF_PetMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,250"
-        E.db["movers"]["PetExperienceBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,239"
-        E.db["movers"]["ElvUF_PlayerMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,285"
-        E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
-        E.db["movers"]["ElvUF_TargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,285"
-        E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
-
-        E.db["unitframe"]["units"]["party"]["width"] = 90
-        E.db["unitframe"]["units"]["party"]["growthDirection"] = "RIGHT_UP"
-
-        -- Raid Frame Movers
-
-        E.db["movers"]["ElvUF_Raid3Mover"] = "BOTTOM,ElvUIParent,BOTTOM,0,115"
-        E.db["movers"]["ElvUF_Raid1Mover"] = "BOTTOM,ElvUIParent,BOTTOM,0,115"
-
-        -- Enable Castbar
-        E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = true
-
-        -- Totem tracker mover DK pet as well
-        E.db["movers"]["TotemTrackerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-300,244"
-    elseif layout == "v3" then
-        E.db.unitframes = nil
-
-        -- Movers
-        E.db["movers"]["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,250"
-        E.db["movers"]["ElvUF_PetMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,250"
-        E.db["movers"]["PetExperienceBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,239"
-        E.db["movers"]["ElvUF_PlayerMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,540,285"
-        E.db["movers"]["ElvUF_TargetCastbarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
-        E.db["movers"]["ElvUF_TargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,285"
-        E.db["movers"]["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-540,250"
-
-        E.db["unitframe"]["units"]["party"]["width"] = 100
-        E.db["unitframe"]["units"]["party"]["growthDirection"] = "UP_RIGHT"
-
-        -- Raid Frame Movers
-        E.db["movers"]["ElvUF_PartyMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,275"
-        E.db["movers"]["ElvUF_Raid3Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
-        E.db["movers"]["ElvUF_Raid1Mover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,274"
-
-        -- disable Castbar
-        E.db["unitframe"]["units"]["player"]["castbar"]["enable"] = true
-
-        -- Totem tracker mover DK pet as well
-        E.db["movers"]["TotemTrackerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-300,244"
-    end
-    -- Update ElvUI --------------------------------------
-    E:UpdateAll(true)
-
-    -- Show message about layout being set
-    PluginInstallStepComplete.message = "Unitframes Set"
-    PluginInstallStepComplete:Show()
 end

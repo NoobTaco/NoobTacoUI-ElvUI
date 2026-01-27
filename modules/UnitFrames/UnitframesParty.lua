@@ -50,7 +50,7 @@ function NoobTacoUIElv:UnitframeParty()
     E.db["unitframe"]["units"]["party"]["debuffs"]["sizeOverride"] = 20
     E.db["unitframe"]["units"]["party"]["debuffs"]["yOffset"] = -50
     E.db["unitframe"]["units"]["party"]["groupBy"] = "GROUP"
-    E.db["unitframe"]["units"]["party"]["growthDirection"] = "DOWN_RIGHT"
+    E.db["unitframe"]["units"]["party"]["growthDirection"] = "UP_RIGHT"
     E.db["unitframe"]["units"]["party"]["healPrediction"]["enable"] = true
     E.db["unitframe"]["units"]["party"]["health"]["position"] = "CENTER"
     E.db["unitframe"]["units"]["party"]["health"]["text_format"] = ""

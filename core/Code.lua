@@ -235,38 +235,11 @@ local InstallerData = {
                 end
             )
             PluginInstallFrame.Option1:SetText("Set Layout")
-        end,
-        [4] = function()
-            PluginInstallFrame.SubTitle:SetText("Layouts")
-            PluginInstallFrame.Desc1:SetText(
-                "These are the layouts that are available. Please click a button below to apply the layout of your choosing."
-            )
-            PluginInstallFrame.Desc2:SetText("Importance: |cff07D400High|r")
-
-            -- Option1
-            PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript(
-                "OnClick",
-                function()
-                    NoobTacoUIElv:SetupUnitFrames("v1")
-                end
-            )
-            PluginInstallFrame.Option1:SetText("DPS or Tank")
-
-            -- Option2
-            PluginInstallFrame.Option2:Show()
-            PluginInstallFrame.Option2:SetScript(
-                "OnClick",
-                function()
-                    NoobTacoUIElv:SetupUnitFrames("v2")
-                end
-            )
-            PluginInstallFrame.Option2:SetText("Healer")
 
             -- Integration Check
             NoobTacoUIElv:SetupIntegration()
         end,
-        [5] = function()
+        [4] = function()
             PluginInstallFrame.SubTitle:SetText("Installation Complete")
             PluginInstallFrame.Desc1:SetText(
                 "You have completed the installation process.\nIf you need help or wish to report a bug, please go to http://tukui.org"
@@ -283,9 +256,7 @@ local InstallerData = {
         [1] = "Welcome",
         [2] = "Profiles",
         [3] = "General Layout",
-        [4] = "Layouts",
-        -- [5] = "Nameplate",
-        [5] = "Installation Complete"
+        [4] = "Installation Complete"
     },
     StepTitlesColor = { 1, 1, 1 },
     StepTitlesColorSelected = { 0, 179 / 255, 1 },
