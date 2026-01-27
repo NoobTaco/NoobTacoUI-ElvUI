@@ -126,6 +126,7 @@ local function SetupLayout()
     NoobTacoUIElv:SetupGuildNotes()
 
     NoobTacoUIElv:SetupMovers()
+    NoobTacoUIElv:ApplyEditModeLayout()
 
     E:UpdateAll(true)
 
@@ -321,6 +322,23 @@ local function InsertOptions()
                         desc = L[
                         "Disable/Enable the interaction option in wow. This will ensure it stays on throughout sessions."
                         ]
+                    }
+                }
+            },
+            editmode = {
+                order = 9,
+                type = "group",
+                name = "Edit Mode",
+                guiInline = true,
+                args = {
+                    applyEditMode = {
+                        order = 1,
+                        type = "execute",
+                        name = "Apply Edit Mode",
+                        desc = "Apply the WoW Edit Mode layout for NoobTacoUI.",
+                        func = function()
+                            NoobTacoUIElv:ApplyEditModeLayout()
+                        end
                     }
                 }
             },
