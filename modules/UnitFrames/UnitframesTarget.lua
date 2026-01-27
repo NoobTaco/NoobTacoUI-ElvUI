@@ -105,6 +105,7 @@ function NoobTacoUIElv:UnitframeTarget()
 
     E.db["unitframe"]["units"]["target"]["power"]["attachTextTo"] = "Power"
     E.db["unitframe"]["units"]["target"]["power"]["detachedWidth"] = 301
+    E.db["unitframe"]["units"]["target"]["power"]["height"] = 10
     E.db["unitframe"]["units"]["target"]["power"]["hideonnpc"] = true
     E.db["unitframe"]["units"]["target"]["power"]["parent"] = "UIPARENT"
     E.db["unitframe"]["units"]["target"]["power"]["position"] = "RIGHT"
