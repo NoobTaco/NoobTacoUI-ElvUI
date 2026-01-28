@@ -21,6 +21,7 @@
 ## X-Curse-Project-ID: 414874
 ## X-Wago-ID: 9rN49x6D
 
+Libs\Load_Libs.xml
 Media\Load_Media.xml
 core\Code.lua
 modules\load_modules.xml
