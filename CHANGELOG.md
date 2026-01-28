@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.1-alpha.3] - 2026-01-27
+
+### Automated Edit Mode Setup (Retail)
+
+- **Granular Frame Control**: Implemented a new programmatic system to automate World of Warcraft's Edit Mode layout.
+- **Direct API Integration**: Switched from fragile UI automation to direct `C_EditMode` API calls via a dedicated integration module.
+- **Edit Mode Override Library**: Integrated and heavily customized `LibEditModeOverride-1.0` to support granular frame positioning and settings.
+- **Stability Fixes**: Patched critical library bugs to prevent "Secret Value" (Taint) crashes on Retail 11.0+ and resolve frame setting validation errors.
+- **Pixel-Perfect Alignment**: Automated the positioning and configuration of Cooldown Manager frames (Essential, Utility, Tracked Bars, Tracked Buffs, External Defensives).
+- **ElvUI Awareness**: Optimized anchor logic to ensure Blizzard frames maintain pixel-perfect alignment relative to ElvUI unit frames.
+- **Cleanup**: Removed over 100 lines of redundant layout strings in favor of a clean, loop-based configuration system.
+
 ## [2.0.1-alpha.2] - 2026-01-27
 
 ### Added
