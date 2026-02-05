@@ -66,6 +66,7 @@ local NoobTacoUIElv = mod -- Use the same module instance
 -- Expansions
 NoobTacoUIElv.IsClassic = E.Classic or E.Cata or E.Mists
 NoobTacoUIElv.IsRetail = E.Retail
+NoobTacoUIElv.IsMidnight = E.Retail and (select(4, GetBuildInfo()) >= 120000)
 
 Engine.NoobTacoUIElv = NoobTacoUIElv
 Engine.E = E
@@ -343,6 +344,7 @@ local function InsertOptions()
                         type = "toggle",
                         name = "Configure Damage Meters",
                         desc = "Enable/Disable custom positioning and sizing for damage meter windows.",
+                        hidden = function() return not NoobTacoUIElv.IsMidnight end,
                     },
                     applyEditMode = {
                         order = 2,
@@ -412,8 +414,8 @@ function mod:Initialize()
         E:SetCVar("SoftTargetInteract", 0)
     end
 
-    -- Enforce Damage Meter layout (persistent on login/reload)
-    if E.db[MyPluginName].configureDamageMeters and NoobTacoUIElv.ConfigureDamageMeters then
+    -- Enforce Damage Meter layout (persistent on login/reload) - Only on Midnight (12.0+)
+    if NoobTacoUIElv.IsMidnight and E.db[MyPluginName].configureDamageMeters and NoobTacoUIElv.ConfigureDamageMeters then
         NoobTacoUIElv:ConfigureDamageMeters()
     end
 end

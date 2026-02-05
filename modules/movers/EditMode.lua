@@ -113,6 +113,7 @@ end
 
 -- Manual configuration for Damage Meter Windows (bypassing LibEditMode if it doesn't recognize them)
 function NoobTacoUIElv:ConfigureDamageMeters()
+  if not NoobTacoUIElv.IsMidnight then return end
   if not E.db[MyPluginName].configureDamageMeters then return end
 
   local mainFrame = _G.DamageMeterSessionWindow1
