@@ -80,7 +80,7 @@ function NoobTacoUIElv:UnitframeFocus()
     E.db["unitframe"]["units"]["focus"]["orientation"] = "RIGHT"
 
     E.db["unitframe"]["units"]["focus"]["portrait"]["camDistanceScale"] = 1.04
-    E.db["unitframe"]["units"]["focus"]["portrait"]["enable"] = true
+    E.db["unitframe"]["units"]["focus"]["portrait"]["enable"] = false
     E.db["unitframe"]["units"]["focus"]["portrait"]["width"] = 55
 
     E.db["unitframe"]["units"]["focus"]["power"]["attachTextTo"] = "Power"

@@ -100,7 +100,7 @@ function NoobTacoUIElv:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["name"]["xOffset"] = 5
 
     E.db["unitframe"]["units"]["target"]["portrait"]["camDistanceScale"] = 1.04
-    E.db["unitframe"]["units"]["target"]["portrait"]["enable"] = true
+    E.db["unitframe"]["units"]["target"]["portrait"]["enable"] = false
     E.db["unitframe"]["units"]["target"]["portrait"]["width"] = 55
 
     E.db["unitframe"]["units"]["target"]["power"]["attachTextTo"] = "Power"

@@ -88,7 +88,7 @@ function NoobTacoUIElv:UnitframePlayer()
     E.db["unitframe"]["units"]["player"]["name"]["xOffset"] = 5
 
     E.db["unitframe"]["units"]["player"]["portrait"]["camDistanceScale"] = 1.04
-    E.db["unitframe"]["units"]["player"]["portrait"]["enable"] = true
+    E.db["unitframe"]["units"]["player"]["portrait"]["enable"] = false
     E.db["unitframe"]["units"]["player"]["portrait"]["width"] = 55
 
     E.db["unitframe"]["units"]["player"]["power"]["EnergyManaRegen"] = true
