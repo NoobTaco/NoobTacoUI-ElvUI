@@ -302,11 +302,6 @@ local function InsertOptions()
                 type = "header",
                 name = "Options"
             },
-            header3 = {
-                order = 6,
-                type = "header",
-                name = "Tweaks"
-            },
             description3 = {
                 order = 7,
                 type = "description",
@@ -334,12 +329,12 @@ local function InsertOptions()
                 name = "Edit Mode",
                 guiInline = true,
                 args = {
-                    configureDamageMeters = {
+                    description = {
                         order = 1,
-                        type = "toggle",
-                        name = "Configure Damage Meters",
-                        desc = "Enable/Disable custom positioning and sizing for damage meter windows.",
-                        hidden = function() return not NoobTacoUIElv.IsMidnight end,
+                        type = "description",
+                        name =
+                        "If you need to re-apply changes to line up the cooldown manager or damage meters after installation, you can press the Apply Edit Mode button below.",
+                        width = "full",
                     },
                     applyEditMode = {
                         order = 2,
@@ -349,7 +344,27 @@ local function InsertOptions()
                         func = function()
                             NoobTacoUIElv:ApplyEditModeLayout()
                         end
-                    }
+                    },
+                    spacer1 = {
+                        order = 3,
+                        type = "description",
+                        name = "\n",
+                    },
+                    configureDamageMeters = {
+                        order = 4,
+                        type = "toggle",
+                        name = "Configure Damage Meters",
+                        desc = "Enable/Disable custom positioning and sizing for damage meter windows.",
+                        hidden = function() return not NoobTacoUIElv.IsMidnight end,
+                    },
+                    noteDamageMeters = {
+                        order = 5,
+                        type = "description",
+                        name =
+                        "|cffFF0000Note:|r Creating a second damage meter window allows for proper side-by-side skinning and alignment. Click Apply Edit Mode again to setup",
+                        width = "full",
+                        hidden = function() return not NoobTacoUIElv.IsMidnight end,
+                    },
                 }
             },
             header4 = {

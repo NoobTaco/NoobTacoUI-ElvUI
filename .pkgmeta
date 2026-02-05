@@ -6,6 +6,7 @@ ignore:
     - README.md
     - CHANGELOG.md
     - README.bbc
+    - Screenshots
 
 manual-changelog:
     filename: RECENT_CHANGES.md
