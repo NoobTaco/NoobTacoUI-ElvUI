@@ -52,7 +52,7 @@ function NoobTacoUIElv:UnitframePlayer()
     E.db["unitframe"]["units"]["player"]["castbar"]["textColor"]["b"] = 0.95686280727386
     E.db["unitframe"]["units"]["player"]["castbar"]["textColor"]["g"] = 0.93725496530533
     E.db["unitframe"]["units"]["player"]["castbar"]["textColor"]["r"] = 0.92549026012421
-    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 400
+    E.db["unitframe"]["units"]["player"]["castbar"]["width"] = 383
 
     if NoobTacoUIElv.IsClassic then
         E.db["unitframe"]["units"]["player"]["classbar"]["detachFromFrame"] = false

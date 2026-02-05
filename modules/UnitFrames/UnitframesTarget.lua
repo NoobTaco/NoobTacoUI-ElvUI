@@ -70,15 +70,15 @@ function NoobTacoUIElv:UnitframeTarget()
     E.db["unitframe"]["units"]["target"]["castbar"]["textColor"]["r"] = 0.92549026012421
     E.db["unitframe"]["units"]["target"]["castbar"]["width"] = 175
 
-    E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["attachTextTo"] = "Health"
+    E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["enable"] = true
     E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["font"] = "Poppins-SemiBold"
     E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["fontOutline"] = "SHADOW"
     E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["justifyH"] = "LEFT"
-    E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["size"] = 20
+    E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["size"] = 16
     E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["text_format"] = " [difficultycolor][smartlevel]"
-    E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["xOffset"] = -2
-    E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["yOffset"] = 5
+    E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["xOffset"] = 0
+    E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerLevel"]["yOffset"] = -10
 
     E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerName"]["attachTextTo"] = "Frame"
     E.db["unitframe"]["units"]["target"]["customTexts"]["PlayerName"]["enable"] = true

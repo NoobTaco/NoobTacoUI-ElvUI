@@ -49,6 +49,7 @@ function NoobTacoUIElv:SetupActionBars()
     E.db["actionbar"]["bar3"]["hotkeyFontSize"] = 9
     E.db["actionbar"]["bar3"]["hotkeyTextXOffset"] = -2
     E.db["actionbar"]["bar3"]["inheritGlobalFade"] = true
+    E.db["actionbar"]["bar3"]["mouseover"] = true
     E.db["actionbar"]["bar3"]["visibility"] = "[vehicleui] hide; [overridebar] hide; [petbattle] hide; show"
     E.db["actionbar"]["bar3"]["backdrop"] = false
 
@@ -68,6 +69,7 @@ function NoobTacoUIElv:SetupActionBars()
     E.db["actionbar"]["bar5"]["hotkeyFontSize"] = 9
     E.db["actionbar"]["bar5"]["hotkeyTextXOffset"] = -2
     E.db["actionbar"]["bar5"]["inheritGlobalFade"] = true
+    E.db["actionbar"]["bar5"]["mouseover"] = true
     E.db["actionbar"]["bar5"]["visibility"] = "[vehicleui] hide; [overridebar] hide; [petbattle] hide; show"
     E.db["actionbar"]["bar5"]["backdrop"] = false
 
