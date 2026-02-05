@@ -161,124 +161,106 @@ local function InstallComplete()
 end
 
 -- PLUGIN INSTALLER -----------------------------------------------------------------
+local Pages = {
+    [1] = function()
+        PluginInstallFrame.SubTitle:SetFormattedText("Welcome to the installation for %s.", MyPluginTitle)
+        PluginInstallFrame.Desc1:SetText(
+            "This installation process will guide you through a few steps and apply settings to your current ElvUI profile. If you want to be able to go back to your original settings then create a new profile before going through this installation process."
+        )
+        PluginInstallFrame.Desc2:SetText(
+            "Please press the continue button if you wish to go through the installation process, otherwise click the 'Skip Process' button."
+        )
+        PluginInstallFrame.Option1:Show()
+        PluginInstallFrame.Option1:SetScript("OnClick", InstallComplete)
+        PluginInstallFrame.Option1:SetText("Skip Process")
+    end,
+    [2] = function()
+        PluginInstallFrame.SubTitle:SetText("Profiles")
+        PluginInstallFrame.Desc1:SetText(
+            "You have the option to either create a new profile specifically for NoobTacoUI installation or apply NoobTacoUI settings to your current profile"
+        )
+        PluginInstallFrame.Desc3:SetText(
+            "Your currently active ElvUI profile is: |cffc41f3b" .. ElvUI[1].data:GetCurrentProfile() .. "|r"
+        )
+        PluginInstallFrame.Option1:Show()
+        PluginInstallFrame.Option1:SetScript(
+            "OnClick",
+            function()
+                NewProfile(false)
+            end
+        )
+        PluginInstallFrame.Option1:SetText("Update Current")
+        PluginInstallFrame.Option2:Show()
+        PluginInstallFrame.Option2:SetScript(
+            "OnClick",
+            function()
+                NewProfile(true, "NoobTacoUI-ElvUI")
+            end
+        )
+        PluginInstallFrame.Option2:SetText("Create New")
+    end,
+    [3] = function()
+        PluginInstallFrame.SubTitle:SetText(L["General Layout of NoobTacoUI"])
+        PluginInstallFrame.Desc1:SetText(L["This is the recommended base layout for NoobTacoUI."])
+        PluginInstallFrame.Desc2:SetText(L["This will set some general settings for the layout installation"])
+        PluginInstallFrame.Desc3:SetFormattedText(L["Importance: |cffFF0000High|r"])
+
+        PluginInstallFrame.Option1:Show()
+        PluginInstallFrame.Option1:SetScript(
+            "OnClick",
+            function()
+                SetupLayout()
+            end
+        )
+        PluginInstallFrame.Option1:SetText("Set Layout")
+
+        -- Integration Check
+        NoobTacoUIElv:SetupIntegration()
+    end,
+}
+
+local StepTitles = {
+    [1] = "Welcome",
+    [2] = "Profiles",
+    [3] = "General Layout",
+}
+
+if NoobTacoUIElv.IsMidnight then
+    Pages[4] = function()
+        PluginInstallFrame.SubTitle:SetText("Damage Meters")
+        PluginInstallFrame.Desc1:SetText(
+            "Would you like to format your damage meter windows? \n\n|cffFF0000Warning:|r This will disable the right chat box and move all channels to the main chat box.")
+        PluginInstallFrame.Desc2:SetText(
+            "If you choose not to skin the meters, you will retain the default ElvUI chat layout.")
+
+        PluginInstallFrame.Option1:Show()
+        PluginInstallFrame.Option1:SetScript("OnClick", function() NoobTacoUIElv:SkinDamageMeters() end)
+        PluginInstallFrame.Option1:SetText("Skin Meters")
+    end
+    StepTitles[4] = "Damage Meters"
+end
+
+local lastPage = #StepTitles + 1
+Pages[lastPage] = function()
+    PluginInstallFrame.SubTitle:SetText("Installation Complete")
+    PluginInstallFrame.Desc1:SetText(
+        "You have completed the installation process.\nIf you need help or wish to report a bug, please go to http://tukui.org"
+    )
+    PluginInstallFrame.Desc2:SetText(
+        "Please click the button below in order to finalize the process and automatically reload your UI. \nLog out of character is needed for all fonts to update."
+    )
+    PluginInstallFrame.Option1:Show()
+    PluginInstallFrame.Option1:SetScript("OnClick", InstallComplete)
+    PluginInstallFrame.Option1:SetText("Finished")
+end
+StepTitles[lastPage] = "Installation Complete"
+
 local InstallerData = {
     Title = format("%s |cff4beb2cInstallation|r %s", MyPluginTitle, Version),
     Name = MyPluginName,
     tutorialImage = "Interface\\AddOns\\NoobTacoUI-ElvUI\\Media\\Textures\\noobtaco.tga",
-    Pages = {
-        [1] = function()
-            PluginInstallFrame.SubTitle:SetFormattedText("Welcome to the installation for %s.", MyPluginTitle)
-            PluginInstallFrame.Desc1:SetText(
-                "This installation process will guide you through a few steps and apply settings to your current ElvUI profile. If you want to be able to go back to your original settings then create a new profile before going through this installation process."
-            )
-            PluginInstallFrame.Desc2:SetText(
-                "Please press the continue button if you wish to go through the installation process, otherwise click the 'Skip Process' button."
-            )
-            PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript("OnClick", InstallComplete)
-            PluginInstallFrame.Option1:SetText("Skip Process")
-        end,
-        [2] = function()
-            PluginInstallFrame.SubTitle:SetText("Profiles")
-            PluginInstallFrame.Desc1:SetText(
-                "You have the option to either create a new profile specifically for NoobTacoUI installation or apply NoobTacoUI settings to your current profile"
-            )
-            PluginInstallFrame.Desc3:SetText(
-                "Your currently active ElvUI profile is: |cffc41f3b" .. ElvUI[1].data:GetCurrentProfile() .. "|r"
-            )
-            PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript(
-                "OnClick",
-                function()
-                    NewProfile(false)
-                end
-            )
-            PluginInstallFrame.Option1:SetText("Use Current")
-            PluginInstallFrame.Option2:Show()
-            PluginInstallFrame.Option2:SetScript(
-                "OnClick",
-                function()
-                    NewProfile(true, "NoobTacoUI-ElvUI")
-                end
-            )
-            PluginInstallFrame.Option2:SetText("Create New")
-
-            PluginInstallFrame.SubTitle:SetText("Profiles")
-            PluginInstallFrame.Desc1:SetText(
-                'Press "Update Current" to update your current profile with the NoobTacoUI changes.'
-            )
-            PluginInstallFrame.Desc2:SetText(
-                'If you\'d like to check out what the changes are, without overwriting your current settings, you can press "Create New"'
-            )
-            PluginInstallFrame.Desc3:SetText(
-                "Your currently active ElvUI profile is: |cffc41f3b" .. ElvUI[1].data:GetCurrentProfile() .. "|r"
-            )
-            PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript(
-                "OnClick",
-                function()
-                    NewProfile(false)
-                end
-            )
-            PluginInstallFrame.Option1:SetText("Update Current")
-            PluginInstallFrame.Option2:Show()
-            PluginInstallFrame.Option2:SetScript(
-                "OnClick",
-                function()
-                    NewProfile(true, "ThinkTankkUI-Update")
-                end
-            )
-            PluginInstallFrame.Option2:SetText("Create New")
-        end,
-        [3] = function()
-            PluginInstallFrame.SubTitle:SetText(L["General Layout of NoobTacoUI"])
-            PluginInstallFrame.Desc1:SetText(L["This is the recommended base layout for NoobTacoUI."])
-            PluginInstallFrame.Desc2:SetText(L["This will set some general settings for the layout installation"])
-            PluginInstallFrame.Desc3:SetFormattedText(L["Importance: |cffFF0000High|r"])
-
-            PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript(
-                "OnClick",
-                function()
-                    SetupLayout()
-                end
-            )
-            PluginInstallFrame.Option1:SetText("Set Layout")
-
-            -- Integration Check
-            NoobTacoUIElv:SetupIntegration()
-        end,
-        [4] = function()
-            PluginInstallFrame.SubTitle:SetText("Damage Meters")
-            PluginInstallFrame.Desc1:SetText(
-                "Would you like to format your damage meter windows? \n\n|cffFF0000Warning:|r This will disable the right chat box and move all channels to the main chat box.")
-            PluginInstallFrame.Desc2:SetText(
-                "If you choose not to skin the meters, you will retain the default ElvUI chat layout.")
-
-            PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript("OnClick", function() NoobTacoUIElv:SkinDamageMeters() end)
-            PluginInstallFrame.Option1:SetText("Skin Meters")
-        end,
-        [5] = function()
-            PluginInstallFrame.SubTitle:SetText("Installation Complete")
-            PluginInstallFrame.Desc1:SetText(
-                "You have completed the installation process.\nIf you need help or wish to report a bug, please go to http://tukui.org"
-            )
-            PluginInstallFrame.Desc2:SetText(
-                "Please click the button below in order to finalize the process and automatically reload your UI. \nLog out of character is needed for all fonts to update."
-            )
-            PluginInstallFrame.Option1:Show()
-            PluginInstallFrame.Option1:SetScript("OnClick", InstallComplete)
-            PluginInstallFrame.Option1:SetText("Finished")
-        end
-    },
-    StepTitles = {
-        [1] = "Welcome",
-        [2] = "Profiles",
-        [3] = "General Layout",
-        [4] = "Damage Meters",
-        [5] = "Installation Complete"
-    },
+    Pages = Pages,
+    StepTitles = StepTitles,
     StepTitlesColor = { 1, 1, 1 },
     StepTitlesColorSelected = { 0, 179 / 255, 1 },
     StepTitleWidth = 200,

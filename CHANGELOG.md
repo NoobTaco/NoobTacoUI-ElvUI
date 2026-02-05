@@ -4,7 +4,7 @@
 
 ### Damage Meter Integration & Chat Unification
 
-- **Installer Option**: Added a new "Damage Meters" step to the installer to guide users through skinning damage meters and unifying chat.
+- **Installer Option**: Added a new "Damage Meters" step to the installer to guide users through skinning damage meters and unifying chat. Restricted this step specifically to the "Midnight" (12.0+) client.
 - **Improved Chat Unification**:
     - Automatically disables the right chat panel backdrop when skinning meters.
     - Consolidates Loot, Experience, Honor, Reputation, Currency, Money, and Tradeskills into the "General" chat window.
