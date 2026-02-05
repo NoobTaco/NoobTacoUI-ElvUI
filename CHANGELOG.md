@@ -1,5 +1,15 @@
 # Changelog
-
+ 
+## [2.0.2] - 2026-02-05
+ 
+### Damage Meter Positioning (Retail)
+ 
+- **Persistent Positioning**: Implemented customized, shared positioning and sizing for Blizzard and Details! damage meter windows.
+- **Relative Anchoring**: Second damage meter windows are now anchored relatively to the main window for perfect side-by-side alignment.
+- **Unclamping**: Enforced unclamping for damage meter windows to allow placement closer to the screen edges.
+- **Feature Toggle**: Added a "Configure Damage Meters" toggle in the Edit Mode options to allow users to opt-out of custom positioning.
+- **Persistence**: Optimized layout enforcement to fire automatically on login, reload, and Edit Mode saves without memory leaks.
+ 
 ## [2.0.1-alpha.3] - 2026-01-27
 
 ### Automated Edit Mode Setup (Retail)

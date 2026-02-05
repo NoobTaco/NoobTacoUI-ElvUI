@@ -28,6 +28,13 @@
         - Implemented modern ElvUI Engine access pattern using named keys
         - Renamed internal module reference to NoobTacoUIElv for clarity
         - Standardized core, modules, and integrations with new patterns
+
+    Version 2.0.2 - Damage Meter Positioning
+        - Implemented customized, shared positioning and sizing for Blizzard and Details! damage meter windows.
+        - Second damage meter windows are now anchored relatively to the main window for perfect side-by-side alignment.
+        - Enforced unclamping for damage meter windows to allow placement closer to the screen edges.
+        - Added a "Configure Damage Meters" toggle in the Edit Mode options.
+        - Optimized layout enforcement to fire automatically on login, reload, and Edit Mode saves.
 ]]
 -- Don't worry about this
 local addon, Engine, _ = ...
@@ -331,8 +338,14 @@ local function InsertOptions()
                 name = "Edit Mode",
                 guiInline = true,
                 args = {
-                    applyEditMode = {
+                    configureDamageMeters = {
                         order = 1,
+                        type = "toggle",
+                        name = "Configure Damage Meters",
+                        desc = "Enable/Disable custom positioning and sizing for damage meter windows.",
+                    },
+                    applyEditMode = {
+                        order = 2,
                         type = "execute",
                         name = "Apply Edit Mode",
                         desc = "Apply the WoW Edit Mode layout for NoobTacoUI.",
@@ -373,7 +386,9 @@ local function InsertOptions()
 end
 
 -- Create a unique table for our plugin
-P[MyPluginName] = {}
+P[MyPluginName] = {
+    configureDamageMeters = true,
+}
 
 -- This function will handle initialization of the addon
 function mod:Initialize()
@@ -395,6 +410,11 @@ function mod:Initialize()
         E:SetCVar("SoftTargetInteract", 3)
     else
         E:SetCVar("SoftTargetInteract", 0)
+    end
+
+    -- Enforce Damage Meter layout (persistent on login/reload)
+    if E.db[MyPluginName].configureDamageMeters and NoobTacoUIElv.ConfigureDamageMeters then
+        NoobTacoUIElv:ConfigureDamageMeters()
     end
 end
 

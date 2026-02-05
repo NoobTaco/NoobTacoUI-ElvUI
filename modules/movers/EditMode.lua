@@ -1,5 +1,7 @@
 local addonName, Engine = ...
 local NoobTacoUIElv = Engine.NoobTacoUIElv
+local E = Engine.E
+local MyPluginName = "NoobTacoUI-ElvUI"
 
 local EditModeLayoutName = "NoobTacoUIElv"
 
@@ -101,6 +103,51 @@ function NoobTacoUIElv:ApplyEditModeLayout()
     end
   end
 
+  if E.db[MyPluginName].configureDamageMeters then
+    NoobTacoUIElv:ConfigureDamageMeters()
+  end
+
   -- Save and Apply
   LibEditMode:ApplyChanges()
+end
+
+-- Manual configuration for Damage Meter Windows (bypassing LibEditMode if it doesn't recognize them)
+function NoobTacoUIElv:ConfigureDamageMeters()
+  if not E.db[MyPluginName].configureDamageMeters then return end
+
+  local mainFrame = _G.DamageMeterSessionWindow1
+  if mainFrame then
+    -- Unclamp to allow movement closer to edges
+    mainFrame:SetClampedToScreen(false)
+    mainFrame:SetClampRectInsets(0, 0, 0, 0)
+
+    -- Apply position manually (User's perfect settings)
+    mainFrame:ClearAllPoints()
+    mainFrame:SetPoint("TOPLEFT", _G.UIParent, "TOPLEFT", 1685, -870)
+
+    -- Apply size
+    mainFrame:SetSize(280, 200)
+  end
+
+  -- Position the "second window" (Blizzard window 2 or a common Addon window)
+  local secondFrame = _G.DamageMeterSessionWindow2 or _G.DetailsBaseFrame1 or _G.DetailsBaseFrame2
+  if secondFrame and mainFrame then
+    secondFrame:SetClampedToScreen(false)
+    secondFrame:SetClampRectInsets(0, 0, 0, 0)
+
+    -- Anchor exactly to the left of the main window
+    secondFrame:ClearAllPoints()
+    secondFrame:SetPoint("TOPRIGHT", mainFrame, "TOPLEFT", 30, 0)
+
+    -- Match the size for a uniform look
+    secondFrame:SetSize(280, 200)
+  end
+
+  -- Hook Edit Mode save to re-apply logic (since Blizzard often resets this)
+  if not NoobTacoUIElv.DamageMeterHooked then
+    hooksecurefunc(C_EditMode, "SaveLayouts", function()
+      NoobTacoUIElv:ConfigureDamageMeters()
+    end)
+    NoobTacoUIElv.DamageMeterHooked = true
+  end
 end
