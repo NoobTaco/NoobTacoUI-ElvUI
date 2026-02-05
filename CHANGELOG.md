@@ -1,102 +1,57 @@
 # Changelog
 
-## [2.0.3] - 2026-02-05
+## [2.0.1] - 2026-02-05
 
-### Damage Meter Integration & Chat Unification
-
-- **Installer Option**: Added a new "Damage Meters" step to the installer to guide users through skinning damage meters and unifying chat. Restricted this step specifically to the "Midnight" (12.0+) client.
-- **Improved Chat Unification**:
-    - Automatically disables the right chat panel backdrop when skinning meters.
-    - Consolidates Loot, Experience, Honor, Reputation, Currency, Money, and Tradeskills into the "General" chat window.
-    - Robustly identifies and removes the redundant "Loot / Trade" chat tab using Blizzard global strings for locale independence.
-- **Bug Fixes**:
-    - Resolved Lua error "attempt to call method 'UpdateAnchors' (a nil value)" by replacing it with the correct `PositionChats()` method.
-    - Fixed database indexing error in `SkinDamageMeters` by using the consistently registered plugin name key.
-    - Ensured `SetupChat()` is called correctly on the `NoobTacoUIElv` module instance.
- 
-## [2.0.2] - 2026-02-05
- 
-### Damage Meter Positioning (Retail)
- 
-- **Persistent Positioning**: Implemented customized, shared positioning and sizing for Blizzard and Details! damage meter windows.
-- **Relative Anchoring**: Second damage meter windows are now anchored relatively to the main window for perfect side-by-side alignment.
-- **Unclamping**: Enforced unclamping for damage meter windows to allow placement closer to the screen edges.
-- **Feature Toggle**: Added a "Configure Damage Meters" toggle in the Edit Mode options to allow users to opt-out of custom positioning.
-- **Persistence**: Optimized layout enforcement to fire automatically on login, reload, and Edit Mode saves without memory leaks.
- 
-## [2.0.1-alpha.3] - 2026-01-27
-
-### Automated Edit Mode Setup (Retail)
-
-- **Granular Frame Control**: Implemented a new programmatic system to automate World of Warcraft's Edit Mode layout.
-- **Direct API Integration**: Switched from fragile UI automation to direct `C_EditMode` API calls via a dedicated integration module.
-- **Edit Mode Override Library**: Integrated and heavily customized `LibEditModeOverride-1.0` to support granular frame positioning and settings.
-- **Stability Fixes**: Patched critical library bugs to prevent "Secret Value" (Taint) crashes on Retail 11.0+ and resolve frame setting validation errors.
-- **Pixel-Perfect Alignment**: Automated the positioning and configuration of Cooldown Manager frames (Essential, Utility, Tracked Bars, Tracked Buffs, External Defensives).
-- **ElvUI Awareness**: Optimized anchor logic to ensure Blizzard frames maintain pixel-perfect alignment relative to ElvUI unit frames.
-- **Cleanup**: Removed over 100 lines of redundant layout strings in favor of a clean, loop-based configuration system.
-
-## [2.0.1-alpha.2] - 2026-01-27
-
-### Added
-
-- Added AI Usage policy documentation.
-
-### Updated
-
+### Midnight Upgrade (12.0)
+- **Major Compatibility**: Full compatibility with ElvUI "Midnight" (15.x) and World of Warcraft 12.0.
 - **Modernization Refactor**: Implemented modern ElvUI Engine access pattern using named keys across the entire codebase.
 - **Naming Redesign**: Renamed internal module references from `NoobTacoUI` to `NoobTacoUIElv` to improve clarity and prevent conflicts with the standalone addon.
-- Updated Pet unit frame configuration for better consistency.
-- Cleaned up Actionbar and Totem bar settings.
-- Updated media files and paths for better internal organization.
-- Updated funding links to support the project.
-- Updated README with AI Usage policy and general documentation improvements.
+- **Visual Standardization**:
+    - Standardized UI textures to `NT_Nord05` across unit frames, nameplates, and general settings.
+    - Transitioned typography to `Poppins-Medium` and `Poppins-SemiBold` across all UI modules (General, DataBars, Nameplates, Actionbar, Auras, Bags, etc.).
+    - Standardized health/name text formatting and positioning across unit frames.
+    - Updated general UI color palette for better visual consistency.
 
-### Consolidate Unit Frame Layouts
-
-- **One Layout to Rule Them All**: Consolidated unit frame layouts into a single, optimized DPS/Tank-based version.
-- **Installer Cleanup**: Removed Step 4 ("Layouts") from the setup process. Step 3 ("General Layout") now applies all layout and mover settings.
-- **Movers Optimization**: Standardized mover positions for all unit frames, raid frames, and class bars.
-- **Party Frames**: Set default growth direction to `UP_RIGHT` for party frames.
-- **Castbars**: Player castbar is now enabled by default in the consolidated layout.
-- **Code Maintenance**: Removed the deprecated `SetupUnitFrames` function and cleaned up redundant mover definitions.
+### Damage Meter Integration & Chat Unification
+- **Installer Step (Retail/Midnight)**: Added a new "Damage Meters" step to the installer.
+    - Automatically skins damage meters and unifies the chat layout.
+    - Restricted to the "Midnight" (12.0+) client to ensure API compatibility.
+- **Persistent Positioning**: Shared positioning and sizing for Blizzard and Details! damage meter windows.
+- **Relative Anchoring**: Second damage meter windows are now anchored relatively to the main window for perfect side-by-side alignment.
+- **Unclamping**: Damage meter windows can now be placed closer to screen edges.
+- **Feature Toggle**: Added a "Configure Damage Meters" toggle in Edit Mode options.
+- **Chat Consolidation**:
+    - Automatically disables the right chat panel backdrop when skinning meters.
+    - Consolidates Loot, Experience, Honor, Reputation, Currency, Money, and Tradeskills into the "General" chat window.
+    - Robustly removes the redundant localized "Loot / Trade" chat tab.
 
 ### Automated Edit Mode Setup (Retail)
+- **Granular Frame Control**: Programmatic system to automate World of Warcraft's Edit Mode layout via `C_EditMode` API.
+- **LibEditModeOverride**: Integrated and customized library to support granular frame positioning and fix "Secret Value" (Taint) crashes on Retail 11.0+.
+- **Pixel-Perfect Alignment**: Automated positioning for Cooldown Manager frames (Essential, Utility, etc.).
 
-- **Granular Frame Control**: Implemented a new programmatic system to automate World of Warcraft's Edit Mode layout.
-- **Direct API Integration**: Switched from fragile UI automation to direct `C_EditMode` API calls via a dedicated integration module.
-- **Edit Mode Override Library**: Integrated and heavily customized `LibEditModeOverride-1.0` to support granular frame positioning and settings.
-- **Stability Fixes**: Patched critical library bugs to prevent "Secret Value" (Taint) crashes on Retail 11.0+ and resolve frame setting validation errors.
-- **Pixel-Perfect Alignment**: Automated the positioning and configuration of Cooldown Manager frames (Essential, Utility, Tracked Bars, Tracked Buffs, External Defensives).
-- **ElvUI Awareness**: Optimized anchor logic to ensure Blizzard frames maintain pixel-perfect alignment relative to ElvUI unit frames.
-- **Cleanup**: Removed over 100 lines of redundant layout strings in favor of a clean, loop-based configuration system.
+### Layout & Unit Frames
+- **Consolidated Layouts**: Merged unit frame layouts into a single optimized DPS/Tank-based version.
+- **Installer Cleanup**: Step 3 ("General Layout") now handles all layout and mover settings.
+- **Unit Frame Enhancements**: Standardized Pet unit frames, enabled `classpower` for NPC nameplates, and enabled `aurabar` for the player frame.
+- **Growth Directions**: Standardized mover positions and party frame growth directions.
 
-### Expansion Detection Refactor
+### Expansion Detection
+- **Centralized Logic**: Implemented `IsClassic`, `IsRetail`, and `IsMidnight` flags in `core/Code.lua` to streamline expansion-specific logic.
+- **MOP Classic Support**: Added support for MOP Classic (build 50503).
 
-- **Centralized Detection**: Implemented `IsClassic` and `IsRetail` flags in `core/Code.lua` to streamline expansion-specific logic across all modules.
-- **MOP Classic Support**: Added support for MOP Classic (build 50503) via the new `IsClassic` flag, ensuring correct layout settings without hardcoded build checks.
-- **Code Consolidation**: Refactored `UnitframesPlayer.lua`, `UnitframesPet.lua`, and `UnitframesBoss.lua` to use the new flags and consolidated redundant conditional blocks.
-- **Unit Frame Adjustments**: Set `classbar` height to 10 for Classic versions to align with power bar dimensions.
-
-### Chore
-
-- Synced `.gitignore` with `NoobTacoUI`.
-- Added `.gitattributes` to enforce LF line endings across the repository.
-- Refactored all data modules and integrations to use the new Engine access pattern.
-
-## [2.0.1-alpha.1] - 2026-01-26
-
-### Updated
-
-- Added Guild Notes to the member list in the Guild DataText tooltip
-- Members will now show as `Charactername (Note)` when hovering over the Guild DataText
-
-## [2.0.0-alpha] - Midnight Upgrade
+### Bug Fixes
+- **Chat Modules**: Resolved "UpdateAnchors" nil value error by replacing with `PositionChats()`.
+- **Installer**: Fixed database indexing errors and ensured correct module initialization.
+- **Nameplates**: Fixed various nil value errors (`plateSize`, `filters`) during initialization.
 
 ### Added
+- **Guild Details**: Added Guild Notes to the member list in the Guild DataText tooltip.
+- **Documentation**: Added AI Usage policy documentation.
 
-- Major upgrade for ElvUI "Midnight" (15.x) and WoW 12.0 compatibility
-- Added tracking for new version in installation process
+### Chore
+- Synced `.gitignore` and added `.gitattributes` for LF line endings.
+- Refactored all data modules and integrations to use the new Engine access pattern.
 
 ### Updated
 
