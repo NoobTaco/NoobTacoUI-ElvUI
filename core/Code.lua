@@ -62,6 +62,7 @@ local EP = LibStub("LibElvUIPlugin-1.0")
 -- Create a new ElvUI module so ElvUI can handle initialization when ready
 local mod = E:NewModule(MyPluginName, "AceHook-3.0", "AceEvent-3.0", "AceTimer-3.0")
 local NoobTacoUIElv = mod -- Use the same module instance
+NoobTacoUIElv.MyPluginName = MyPluginName
 
 -- Expansions
 NoobTacoUIElv.IsClassic = E.Classic or E.Cata or E.Mists
@@ -248,6 +249,17 @@ local InstallerData = {
             NoobTacoUIElv:SetupIntegration()
         end,
         [4] = function()
+            PluginInstallFrame.SubTitle:SetText("Damage Meters")
+            PluginInstallFrame.Desc1:SetText(
+                "Would you like to format your damage meter windows? \n\n|cffFF0000Warning:|r This will disable the right chat box and move all channels to the main chat box.")
+            PluginInstallFrame.Desc2:SetText(
+                "If you choose not to skin the meters, you will retain the default ElvUI chat layout.")
+
+            PluginInstallFrame.Option1:Show()
+            PluginInstallFrame.Option1:SetScript("OnClick", function() NoobTacoUIElv:SkinDamageMeters() end)
+            PluginInstallFrame.Option1:SetText("Skin Meters")
+        end,
+        [5] = function()
             PluginInstallFrame.SubTitle:SetText("Installation Complete")
             PluginInstallFrame.Desc1:SetText(
                 "You have completed the installation process.\nIf you need help or wish to report a bug, please go to http://tukui.org"
@@ -264,7 +276,8 @@ local InstallerData = {
         [1] = "Welcome",
         [2] = "Profiles",
         [3] = "General Layout",
-        [4] = "Installation Complete"
+        [4] = "Damage Meters",
+        [5] = "Installation Complete"
     },
     StepTitlesColor = { 1, 1, 1 },
     StepTitlesColorSelected = { 0, 179 / 255, 1 },

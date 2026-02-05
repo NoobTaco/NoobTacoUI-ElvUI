@@ -1,4 +1,18 @@
 # Changelog
+
+## [2.0.3] - 2026-02-05
+
+### Damage Meter Integration & Chat Unification
+
+- **Installer Option**: Added a new "Damage Meters" step to the installer to guide users through skinning damage meters and unifying chat.
+- **Improved Chat Unification**:
+    - Automatically disables the right chat panel backdrop when skinning meters.
+    - Consolidates Loot, Experience, Honor, Reputation, Currency, Money, and Tradeskills into the "General" chat window.
+    - Robustly identifies and removes the redundant "Loot / Trade" chat tab using Blizzard global strings for locale independence.
+- **Bug Fixes**:
+    - Resolved Lua error "attempt to call method 'UpdateAnchors' (a nil value)" by replacing it with the correct `PositionChats()` method.
+    - Fixed database indexing error in `SkinDamageMeters` by using the consistently registered plugin name key.
+    - Ensured `SetupChat()` is called correctly on the `NoobTacoUIElv` module instance.
  
 ## [2.0.2] - 2026-02-05
  

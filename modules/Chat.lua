@@ -30,3 +30,48 @@ function NoobTacoUIElv:SetupChat()
     -- Chat Panel Width
     E.db["chat"]["panelWidth"] = 500
 end
+
+function NoobTacoUIElv:SkinDamageMeters()
+    -- Consolidate chat channels
+    E.db.chat.separateLootTab = false
+    E.db.chat.panelBackdrop = 'LEFT'
+    E.db.chat.copyChatLines = true
+
+    -- Prepare damage meter settings
+    if NoobTacoUIElv.IsMidnight then
+        E.db[NoobTacoUIElv.MyPluginName].configureDamageMeters = true
+        NoobTacoUIElv:ConfigureDamageMeters()
+    end
+
+    -- Trigger chat update
+    local CH = E:GetModule('Chat')
+    CH:PositionChats()
+
+    -- Remove redundant 'Loot' tab if it exists
+    local lootName = _G.LOOT
+    local tradeName = _G.TRADE
+    local combinedName = lootName .. " / " .. tradeName
+
+    for _, frameName in ipairs(_G.CHAT_FRAMES) do
+        local frame = _G[frameName]
+        if frame then
+            local name = _G.FCF_GetChatWindowInfo(frame:GetID())
+            if name == lootName or name == combinedName then
+                _G.FCF_Close(frame)
+            end
+        end
+    end
+
+    -- Add channels to General (ChatFrame1)
+    local chatGroup = { 'COMBAT_XP_GAIN', 'COMBAT_HONOR_GAIN', 'COMBAT_FACTION_CHANGE', 'SKILL', 'LOOT', 'CURRENCY',
+        'MONEY', 'TRADESKILLS' }
+    for _, v in ipairs(chatGroup) do
+        _G.ChatFrame_AddMessageGroup(_G.ChatFrame1, v)
+    end
+
+    NoobTacoUIElv:SetupChat()
+
+    -- Show message
+    PluginInstallStepComplete.message = "Meters Skinned & Chat Unified"
+    PluginInstallStepComplete:Show()
+end
