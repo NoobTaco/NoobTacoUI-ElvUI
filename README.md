@@ -28,6 +28,10 @@ This profile boasts a **dark theme based on the popular Nord palette**, offering
 **Integration with your favorite addons**
 NoobTacoUI seamlessly integrates with your favorite addons, enhancing your World of Warcraft experience. Combine NoobTacoUI with addons like **damage meters**, **BigWigs**, **WeakAuras**, and more for a unified and streamlined interface. Customize your gameplay and make the most out of your WoW journey with NoobTacoUI's addon integration.
 
+![Damage Meters](https://raw.githubusercontent.com/NoobTaco/NoobTacoUI-ElvUI/dev/Screenshots/NoobTacoUI-Install-DamageMeters.png)
+
+![DM Skinning](https://raw.githubusercontent.com/NoobTaco/NoobTacoUI-ElvUI/dev/Screenshots/NoobTacoUI-DM-Skinning.png)
+
 **Integrated Addons (So far):**
 
 - XVI Databar [link](https://www.curseforge.com/wow/addons/xiv_databar-continued)
@@ -49,6 +53,8 @@ No more juggling separate versions! NoobTacoUI conveniently supports **Retail Wo
 2. Download and install NoobTacoUI (Elvui Profile).
 3. Launch WoW and follow ElvUI's setup instructions.
 4. Enjoy your new interface! (For best nameplate text, log out and back in after setup.)
+
+![Installation](https://raw.githubusercontent.com/NoobTaco/NoobTacoUI-ElvUI/dev/Screenshots/NoobTacoUI-Install-01.png)
 
 **Get Started:**
 
@@ -85,29 +91,11 @@ If you like what I've built and want to support it, you can do that from any of 
 
 # Images
 
-![image](https://user-images.githubusercontent.com/1172935/98390782-b1d1a380-200a-11eb-901c-9c772adc8987.png)
-
-![image](https://user-images.githubusercontent.com/1172935/98391018-f78e6c00-200a-11eb-971b-88969775d12c.png)
-
-### Nord Theme Colors
-
-![image](https://user-images.githubusercontent.com/1172935/98390923-d7f74380-200a-11eb-9e62-cdfdedd168b0.png)
-
-#### Healing 25 man layout
-
-![image](https://user-images.githubusercontent.com/1172935/98392199-86e84f00-200c-11eb-9504-0d04fc4bb902.png)
-
-#### Healing 40 man layout
-
-![image](https://user-images.githubusercontent.com/1172935/98391578-acc12400-200b-11eb-93f8-cdc7a4e05a7b.png)
+![image](https://raw.githubusercontent.com/NoobTaco/NoobTacoUI-ElvUI/dev/Screenshots/NoobTacoUI-ElvUI-Main.jpg)
 
 #### NobTacoUI Settings
 
-![image](https://user-images.githubusercontent.com/1172935/98392414-d2026200-200c-11eb-9d42-8f49597056bd.png)
-
-#### Memory usage
-
-![image](https://user-images.githubusercontent.com/1172935/98391292-4cca7d80-200b-11eb-8c8b-a247487d85e4.png)
+![image](https://raw.githubusercontent.com/NoobTaco/NoobTacoUI-ElvUI/dev/Screenshots/NoobTacoUI-Options.png)
 
 ## 📄 License
 
