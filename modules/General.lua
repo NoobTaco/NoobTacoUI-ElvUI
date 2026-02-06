@@ -94,7 +94,9 @@ function NoobTacoUIElv:SetupGeneral()
     E.db["general"]["queueStatus"]["font"] = "Poppins-SemiBold"
     E.db["general"]["talkingHeadFrameScale"] = 1
     E.db["general"]["interruptAnnounce"] = "RAID"
-    E.db["general"]["bottomPanel"] = false
+    E.db["general"]["bottomPanel"] = true
+    E.db["general"]["bottomPanelSettings"]["transparent"] = true
+    E.db["general"]["bottomPanelSettings"]["height"] = 27
     E.db["general"]["customGlow"]["style"] = "Action Button Glow"
 
     -- Player totembar
