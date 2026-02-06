@@ -64,7 +64,7 @@ function NoobTacoUIElv:SkinDamageMeters()
 
     -- Add channels to General (ChatFrame1)
     local chatGroup = { 'COMBAT_XP_GAIN', 'COMBAT_HONOR_GAIN', 'COMBAT_FACTION_CHANGE', 'SKILL', 'LOOT', 'CURRENCY',
-        'MONEY', 'TRADESKILLS' }
+        'MONEY' }
     for _, v in ipairs(chatGroup) do
         _G.ChatFrame_AddMessageGroup(_G.ChatFrame1, v)
     end
