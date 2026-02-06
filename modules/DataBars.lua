@@ -24,13 +24,31 @@ function NoobTacoUIElv:SetupDatabars()
 
     -- DATATEXT ------------------------------------------------------------------
     E.db["datatexts"]["font"] = "Poppins-SemiBold"
-    E.db["datatexts"]["panels"]["RightMiniPanel"] = "Bags"
-    E.db["datatexts"]["panels"]["LeftCoordDtPanel"] = "Coords"
-    E.db["datatexts"]["panels"]["RightCoordDtPanel"] = "Broker_RunSpeed"
+    E.db["datatexts"]["fontSize"] = 13
+    E.db["datatexts"]["panels"]["Center"][1] = "Talent/Loot Specialization"
+    E.db["datatexts"]["panels"]["Center"][2] = ""
+    E.db["datatexts"]["panels"]["Center"][3] = "Time"
+    E.db["datatexts"]["panels"]["Center"][4] = ""
+    E.db["datatexts"]["panels"]["Center"][5] = "Volume"
+    E.db["datatexts"]["panels"]["Center"]["battleground"] = false
+    E.db["datatexts"]["panels"]["Center"]["enable"] = true
+    E.db["datatexts"]["panels"]["LeftChatDataPanel"][1] = "Guild"
+    E.db["datatexts"]["panels"]["LeftChatDataPanel"][2] = "Friends"
     E.db["datatexts"]["panels"]["LeftChatDataPanel"][3] = "Item Level"
-    E.db["datatexts"]["panels"]["LeftChatDataPanel"]["right"] = "Mana Regen"
-    E.db["datatexts"]["panels"]["LeftChatDataPanel"]["left"] = "Broker_RunSpeed"
-    E.db["datatexts"]["fontSize"] = 14
+    E.db["datatexts"]["panels"]["LeftChatDataPanel"]["backdrop"] = false
+    E.db["datatexts"]["panels"]["MinimapPanel"][1] = "Coords"
+    E.db["datatexts"]["panels"]["MinimapPanel"][2] = "MovementSpeed"
+    E.db["datatexts"]["panels"]["RightChatDataPanel"][1] = "Experience"
+    E.db["datatexts"]["panels"]["RightChatDataPanel"][2] = "System"
+    E.db["datatexts"]["panels"]["RightChatDataPanel"][3] = "Gold"
+    E.db["datatexts"]["panels"]["RightChatDataPanel"]["backdrop"] = false
+
+    E.global["datatexts"]["customPanels"]["Center"]["backdrop"] = false
+    E.global["datatexts"]["customPanels"]["Center"]["name"] = "Center"
+    E.global["datatexts"]["customPanels"]["Center"]["numPoints"] = 5
+    E.global["datatexts"]["customPanels"]["Center"]["width"] = 945
+    E.global["datatexts"]["settings"]["MovementSpeed"]["Label"] = "Speed"
+    E.global["datatexts"]["settings"]["MovementSpeed"]["decimalLength"] = 0
 
     -- DATABARS ------------------------------------------
     E.db["databars"]["threat"]["enable"] = false
