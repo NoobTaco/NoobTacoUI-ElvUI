@@ -113,4 +113,7 @@ function NoobTacoUIElv:SetupMovers()
 
     -- Totem tracker mover
     E.db["movers"]["TotemTrackerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-205,155"
+
+    -- Bottom Data Text mover
+    E.db["movers"]["DTPanelCenterMover"] = "BOTTOM,UIParent,BOTTOM,0,4"
 end
