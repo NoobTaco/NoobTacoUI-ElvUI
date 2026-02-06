@@ -47,13 +47,14 @@ function NoobTacoUIElv:SetupDatabars()
     E.db["databars"]["experience"]["questCompletedOnly"] = true
     E.db["databars"]["experience"]["showBubbles"] = false
     E.db["databars"]["experience"]["width"] = 8
+
     E.db["databars"]["reputation"]["enable"] = true
     E.db["databars"]["reputation"]["font"] = "Poppins-Medium"
-    E.db["databars"]["reputation"]["height"] = 222
+    E.db["databars"]["reputation"]["height"] = 8
     E.db["databars"]["reputation"]["hideInCombat"] = false
-    E.db["databars"]["reputation"]["orientation"] = "VERTICAL"
+    E.db["databars"]["reputation"]["orientation"] = "Automatic"
     E.db["databars"]["reputation"]["showBubbles"] = false
-    E.db["databars"]["reputation"]["width"] = 8
+    E.db["databars"]["reputation"]["width"] = 200
 
     E.db["databars"]["colors"]["experience"]["a"] = 1
     E.db["databars"]["colors"]["experience"]["r"] = 0.14901960784314
