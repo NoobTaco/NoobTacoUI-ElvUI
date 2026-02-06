@@ -25,7 +25,7 @@ function NoobTacoUIElv:SetupChat()
     E.db["chat"]["tabSelectorColor"]["r"] = 0.53333333333333
     E.db["chat"]["tabSelectorColor"]["g"] = 0.75294117647059
     E.db["chat"]["tabSelectorColor"]["b"] = 0.8156862745098
-    E.db["chat"]["tabSelector"] = "BOX1"
+    E.db["chat"]["tabSelector"] = "ARROW2"
 
     -- Chat Panel Width
     E.db["chat"]["panelWidth"] = 500
