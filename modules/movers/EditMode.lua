@@ -149,6 +149,43 @@ function NoobTacoUIElv:ConfigureDamageMeters()
     hooksecurefunc(C_EditMode, "SaveLayouts", function()
       NoobTacoUIElv:ConfigureDamageMeters()
     end)
+
+    -- Tie visibility to RightChatPanel
+    if _G.RightChatPanel then
+      _G.RightChatPanel:HookScript("OnShow", function() NoobTacoUIElv:UpdateDamageMeterVisibility() end)
+      _G.RightChatPanel:HookScript("OnHide", function() NoobTacoUIElv:UpdateDamageMeterVisibility() end)
+    end
+
+    -- Persistent Data Texts: Reparent to E.UIParent so they stay visible when panels hide
+    if _G.LeftChatDataPanel then
+      _G.LeftChatDataPanel:SetParent(E.UIParent)
+    end
+    if _G.RightChatDataPanel then
+      _G.RightChatDataPanel:SetParent(E.UIParent)
+    end
+
     NoobTacoUIElv.DamageMeterHooked = true
+  end
+
+  -- Initial visibility sync
+  NoobTacoUIElv:UpdateDamageMeterVisibility()
+end
+
+function NoobTacoUIElv:UpdateDamageMeterVisibility()
+  local rcp = _G.RightChatPanel
+  if not rcp then return end
+
+  local show = rcp:IsShown()
+  local frames = {
+    _G.DamageMeterSessionWindow1,
+    _G.DamageMeterSessionWindow2,
+    _G.DetailsBaseFrame1,
+    _G.DetailsBaseFrame2
+  }
+
+  for _, frame in ipairs(frames) do
+    if frame then
+      frame:SetShown(show)
+    end
   end
 end
