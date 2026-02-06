@@ -4,6 +4,11 @@ local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
+    Version 2.1.0 - Blizzard Damage Meter Integration
+        - Added official damage meter enablement with initialization delay
+        - Implemented robust window creation loop for multiple session windows
+        - Integrated damage meter alignment with chat unification logic
+
     Version 1.5.0 - Chat improvements
         - Updated the font used for chat to "Poppins-SemiBold"
         - Adjusted the colors for chat panels
@@ -39,8 +44,34 @@ function NoobTacoUIElv:SkinDamageMeters()
 
     -- Prepare damage meter settings
     if NoobTacoUIElv.IsMidnight then
-        E.db[NoobTacoUIElv.MyPluginName].configureDamageMeters = true
-        NoobTacoUIElv:ConfigureDamageMeters()
+        -- Load the Blizzard Damage Meter addon if not already loaded
+        if not _G.C_AddOns.IsAddOnLoaded("Blizzard_DamageMeter") then
+            _G.C_AddOns.LoadAddOn("Blizzard_DamageMeter")
+        end
+
+        -- Enable the feature and ensure at least two windows exist
+        _G.SetCVar("damageMeterEnabled", "1")
+
+        -- Delay to allow Blizzard UI to initialize the damage meter system
+        E:Delay(1, function()
+            if _G.DamageMeter then
+                -- Ensure at least 2 session windows exist
+                local windowCount = 0
+                if _G.DamageMeter.ForEachSessionWindow then
+                    _G.DamageMeter:ForEachSessionWindow(function() windowCount = windowCount + 1 end)
+                end
+
+                if _G.DamageMeter.AddSessionWindow then
+                    while windowCount < 2 do
+                        _G.DamageMeter:AddSessionWindow()
+                        windowCount = windowCount + 1
+                    end
+                end
+
+                E.db[NoobTacoUIElv.MyPluginName].configureDamageMeters = true
+                NoobTacoUIElv:ConfigureDamageMeters()
+            end
+        end)
     end
 
     -- Trigger chat update
