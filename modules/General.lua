@@ -13,7 +13,7 @@ local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 function NoobTacoUIElv:SetupGeneral()
     --	PrivateDB
     E.private["skins"]["parchmentRemoverEnable"] = true
-    E.private["general"]["namefont"] = "Poppins-Medium"
+    E.private["general"]["namefont"] = "Poppins-SemiBold"
     E.private["general"]["dmgfont"] = "Poppins-SemiBold"
     E.private["general"]["normTex"] = "NT_Nord05"
     E.private["general"]["glossTex"] = "NT_Nord04"

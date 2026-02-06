@@ -1,0 +1,82 @@
+## [2.0.1] - 2026-02-05
+
+### Midnight Upgrade (12.0)
+- **Major Compatibility**: Full compatibility with ElvUI "Midnight" (15.x) and World of Warcraft 12.0.
+- **Modernization Refactor**: Implemented modern ElvUI Engine access pattern using named keys across the entire codebase.
+- **Naming Redesign**: Renamed internal module references from `NoobTacoUI` to `NoobTacoUIElv` to improve clarity and prevent conflicts with the standalone addon.
+- **Visual Standardization**:
+    - Standardized UI textures to `NT_Nord05` across unit frames, nameplates, and general settings.
+    - Transitioned typography to `Poppins-Medium` and `Poppins-SemiBold` across all UI modules (General, DataBars, Nameplates, Actionbar, Auras, Bags, etc.).
+    - Standardized health/name text formatting and positioning across unit frames.
+    - Updated general UI color palette for better visual consistency.
+
+### Damage Meter Integration & Chat Unification
+- **Installer Step (Retail/Midnight)**: Added a new "Damage Meters" step to the installer.
+    - Automatically skins damage meters and unifies the chat layout.
+    - Restricted to the "Midnight" (12.0+) client to ensure API compatibility.
+- **Persistent Positioning**: Shared positioning and sizing for Blizzard and Details! damage meter windows.
+- **Relative Anchoring**: Second damage meter windows are now anchored relatively to the main window for perfect side-by-side alignment.
+- **Unclamping**: Damage meter windows can now be placed closer to screen edges.
+- **Feature Toggle**: Added a "Configure Damage Meters" toggle in Edit Mode options.
+- **Chat Consolidation**:
+    - Automatically disables the right chat panel backdrop when skinning meters.
+    - Consolidates Loot, Experience, Honor, Reputation, Currency, Money, and Tradeskills into the "General" chat window.
+    - Robustly removes the redundant localized "Loot / Trade" chat tab.
+
+### Automated Edit Mode Setup (Retail)
+- **Granular Frame Control**: Programmatic system to automate World of Warcraft's Edit Mode layout via `C_EditMode` API.
+- **LibEditModeOverride**: Integrated and customized library to support granular frame positioning and fix "Secret Value" (Taint) crashes on Retail 11.0+.
+- **Pixel-Perfect Alignment**: Automated positioning for Cooldown Manager frames (Essential, Utility, etc.).
+
+### Layout & Unit Frames
+- **Consolidated Layouts**: Merged unit frame layouts into a single optimized DPS/Tank-based version.
+- **Installer Cleanup**: Step 3 ("General Layout") now handles all layout and mover settings.
+- **Unit Frame Enhancements**: Standardized Pet unit frames, enabled `classpower` for NPC nameplates, and enabled `aurabar` for the player frame.
+- **Growth Directions**: Standardized mover positions and party frame growth directions.
+
+### Expansion Detection
+- **Centralized Logic**: Implemented `IsClassic`, `IsRetail`, and `IsMidnight` flags in `core/Code.lua` to streamline expansion-specific logic.
+- **MOP Classic Support**: Added support for MOP Classic (build 50503).
+
+### Bug Fixes
+- **Chat Modules**: Resolved "UpdateAnchors" nil value error by replacing with `PositionChats()`.
+- **Installer**: Fixed database indexing errors and ensured correct module initialization.
+- **Nameplates**: Fixed various nil value errors (`plateSize`, `filters`) during initialization.
+
+### Added
+- **Guild Details**: Added Guild Notes to the member list in the Guild DataText tooltip.
+- **Documentation**: Added AI Usage policy documentation.
+
+### Chore
+- Synced `.gitignore` and added `.gitattributes` for LF line endings.
+- Refactored all data modules and integrations to use the new Engine access pattern.
+
+### Updated
+
+- Bumping version to 2.0.0 for major release
+- Verified compatibility with ElvUI 15.x database structure
+- Ensured all unit frame and nameplate hooks are compliant with WoW 12.0 API changes
+- Standardized UI textures to `NT_Nord05` across unit frames, nameplates, and general settings
+- Standardized status bar textures to `NT_Nord05` and `NT_Nord04` for gloss.
+- Refined typography by transitioning General, DataBars, and Nameplate elements to `Poppins-Medium` for improved readability
+- Standardized health and name text formatting and positioning across all unit frames.
+- Standardized cooldown fonts to `Poppins-SemiBold` across all UI modules (Actionbar, Auras, Bags, Unitframes, etc.)
+- Optimized Nameplate configuration with refined click dimensions (20 height, 215 width), castbar positioning, and text formatting
+- Enabled `classpower` for enemy NPC and Player nameplates by default
+- Updated General UI color palette including backdrop, border, and value colors for better visual consistency
+- Added Talking Head Frame scaling and missing item level font configurations
+- Updated mover positions, including `VehicleLeaveButton` for improved layout.
+- Enabled `aurabar` for the player unit frame.
+- Standardized `disableMouseoverGlow` and height/width settings across unit frames.
+
+### Removed
+
+- Removed Elite Overlay functionality (`modules/SimpleRareElite`) and associated options menu entries as requested
+
+### Fixed
+
+- Fixed `attempt to perform indexed assignment on field 'plateSize' (a nil value)` by adding compatibility for ElvUI 14.x `clickSize`
+- Fixed `attempt to index a nil value (field 'filters')` by properly initializing nameplate filters table and adding existence checks
+- Guaranteed safety guards for removed ElvUI default filters (`ElvUI_Target`, `ElvUI_NonTarget`)
+- Fixed GitHub Actions packager error by correcting `.pkgmeta` to match TOC filename
+
