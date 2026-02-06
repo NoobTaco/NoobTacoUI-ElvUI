@@ -9,7 +9,7 @@ With the release of ElvUI "Midnight" (15.x) and WoW 12.0, NoobTacoUI is fully co
 
 ## NoobTacoUI (Elvui Profile): A Comfortable Dark Theme for ElvUI
 
-[![CI Status](https://img.shields.io/github/actions/workflow/status/NoobTaco/NoobTacoUI-ElvUI/ci.yml?style=for-the-badge&logo=github&logoColor=white&label=CI%20Status)](https://github.com/NoobTaco/NoobTacoUI-ElvUI/actions/workflows/ci.yml) [![Release Status](https://img.shields.io/github/actions/workflow/status/NoobTaco/NoobTacoUI-ElvUI/release.yml?style=for-the-badge&logo=github&logoColor=white&label=Release%20Status)](https://github.com/NoobTaco/NoobTacoUI-ElvUI/actions/workflows/release.yml) [![Discord](https://img.shields.io/badge/Discord-Taco%20Labs-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Mby5KwkCH9) [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/devnoobtaco)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/NoobTaco/NoobTacoUI-ElvUI/ci.yml?branch=main&style=for-the-badge&logo=github&logoColor=white&label=CI%20Status)](https://github.com/NoobTaco/NoobTacoUI-ElvUI/actions/workflows/ci.yml) [![Release Status](https://img.shields.io/github/actions/workflow/status/NoobTaco/NoobTacoUI-ElvUI/release.yml?style=for-the-badge&logo=github&logoColor=white&label=Release%20Status)](https://github.com/NoobTaco/NoobTacoUI-ElvUI/actions/workflows/release.yml) [![Discord](https://img.shields.io/badge/Discord-Taco%20Labs-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Mby5KwkCH9) [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/devnoobtaco)
 
 This profile boasts a **dark theme based on the popular Nord palette**, offering a stylish yet comfortable interface that reduces eye strain during extended play sessions.
 
@@ -39,7 +39,7 @@ NoobTacoUI seamlessly integrates with your favorite addons, enhancing your World
 - Platynator nameplates [link](https://www.curseforge.com/wow/addons/platynator)
 - Chatanator [link](https://www.curseforge.com/wow/addons/chatanator)
 
-Please [add an issue request](https://github.com/NoobTaco/NoobTacoUI/issues/new) if there are any addons you would like to see integrated.
+Please [add an issue request](https://github.com/NoobTaco/NoobTacoUI-ElvUI/issues/new) if there are any addons you would like to see integrated.
 
 **One Download for All:**
 
@@ -58,13 +58,13 @@ No more juggling separate versions! NoobTacoUI conveniently supports **Retail Wo
 
 Download NoobTacoUI (Elvui Profile) from your preferred source:
 
-- **GitHub:** [[link](https://github.com/NoobTaco/NoobTacoUI/releases/latest)]
+- **GitHub:** [[link](https://github.com/NoobTaco/NoobTacoUI-ElvUI/releases/latest)]
 - **Curse/Overwolf:** [[link](https://www.curseforge.com/wow/addons/noobtacoui-elvui)]
 - **Wago.io:** [[link](https://addons.wago.io/addons/noobtacoui-elvui)]
 
 **Need Help? Found a bug? Have a feature request?**
 
-Encountered a bug or have a feature request? Head over to the dedicated issue tracker on the NoobTacoUI (Elvui Profile) GitHub repository: [link](https://github.com/NoobTaco/NoobTacoUI/issues/new)
+Encountered a bug or have a feature request? Head over to the dedicated issue tracker on the NoobTacoUI (Elvui Profile) GitHub repository: [link](https://github.com/NoobTaco/NoobTacoUI-ElvUI/issues/new)
 
 **Supports:**
 

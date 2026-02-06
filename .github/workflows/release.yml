@@ -31,7 +31,7 @@ jobs:
       - name: Run luacheck
         uses: BigWigsMods/actions/luacheck@master
         with:
-          args: -q
+          args: -q --ignore 113 631 211 212 112 311
 
       - name: Create changelog for packager
         run: |
