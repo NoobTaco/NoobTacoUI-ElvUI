@@ -1,4 +1,18 @@
 # Changelog
+ 
+## [2.1.0] - 2026-02-06
+ 
+### Blizzard Damage Meter Integration (Retail/Midnight)
+- **Official Meter Enablement**: Added a new question to Step 4 of the installer to enable the official Blizzard damage meter.
+- **Improved Window Management**: 
+    - Implemented a 1-second initialization delay to allow the Blizzard UI to correctly boot the meter system.
+    - Added a robust creation loop to ensure at least two session windows are active and available for skinning.
+    - Fixed Lua errors related to incorrect `DamageMeter` API calls by transitioning to the `damageMeterEnabled` CVar.
+- **Skinning & Layout**:
+    - Integrated official windows with the side-by-side layout system.
+    - Automated alignment of multiple session windows in the bottom right corner.
+- **Chat Unification Refinement**: Refined channel consolidation and redundant tab removal when enabling damage meters.
+ 
 
 ## [2.0.1] - 2026-02-05
 

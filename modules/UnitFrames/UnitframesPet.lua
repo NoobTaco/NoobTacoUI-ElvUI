@@ -37,7 +37,7 @@ function NoobTacoUIElv:UnitframePet()
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["attachTextTo"] = "Health"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["enable"] = true
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["font"] = "Poppins-SemiBold"
-    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["fontOutline"] = "Shadowed"
+    E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["fontOutline"] = "SHADOW"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["justifyH"] = "LEFT"
     E.db["unitframe"]["units"]["pet"]["customTexts"]["pet-name"]["size"] = 13
     if NoobTacoUIElv.IsClassic and E.myclass == "HUNTER" then

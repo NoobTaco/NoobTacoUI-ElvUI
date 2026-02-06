@@ -13,7 +13,7 @@ local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 function NoobTacoUIElv:SetupGeneral()
     --	PrivateDB
     E.private["skins"]["parchmentRemoverEnable"] = true
-    E.private["general"]["namefont"] = "Poppins-Medium"
+    E.private["general"]["namefont"] = "Poppins-SemiBold"
     E.private["general"]["dmgfont"] = "Poppins-SemiBold"
     E.private["general"]["normTex"] = "NT_Nord05"
     E.private["general"]["glossTex"] = "NT_Nord04"
@@ -75,7 +75,7 @@ function NoobTacoUIElv:SetupGeneral()
     E.db["general"]["minimap"]["locationFont"] = "Poppins-SemiBold"
     E.db["general"]["talkingHeadFrameBackdrop"] = true
     E.db["general"]["resurrectSound"] = true
-    E.db["general"]["backdropfadecolor"]["a"] = 1
+    E.db["general"]["backdropfadecolor"]["a"] = .7
     E.db["general"]["backdropfadecolor"]["b"] = 0.22352942824364
     E.db["general"]["backdropfadecolor"]["g"] = 0.1803921610117
     E.db["general"]["backdropfadecolor"]["r"] = 0.16078431904316
@@ -94,7 +94,9 @@ function NoobTacoUIElv:SetupGeneral()
     E.db["general"]["queueStatus"]["font"] = "Poppins-SemiBold"
     E.db["general"]["talkingHeadFrameScale"] = 1
     E.db["general"]["interruptAnnounce"] = "RAID"
-    E.db["general"]["bottomPanel"] = false
+    E.db["general"]["bottomPanel"] = true
+    E.db["general"]["bottomPanelSettings"]["transparent"] = true
+    E.db["general"]["bottomPanelSettings"]["height"] = 27
     E.db["general"]["customGlow"]["style"] = "Action Button Glow"
 
     -- Player totembar

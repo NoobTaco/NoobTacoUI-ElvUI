@@ -24,6 +24,8 @@ function NoobTacoUIElv:UnitframePlayer()
         E.db.unitframe.units.player.customTexts.PlayerName = {}
     end
 
+    E.db["unitframe"]["multiplier"] = 1
+
     E.db["unitframe"]["units"]["player"]["width"] = 175
     E.db["unitframe"]["units"]["player"]["height"] = 52
 

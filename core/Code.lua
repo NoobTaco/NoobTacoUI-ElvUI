@@ -1,40 +1,37 @@
 -- CHANGELOG --------------------------------------------------------------------
 --[[
-    Version 1.5.0 - Initial setup and configuration
-        - Added initial setup and configuration for the addon
+    Version 2.1.0 - Blizzard Damage Meter Integration (Retail/Midnight)
+        - Added official damage meter enablement in Step 4 of the installer
+        - Improved window management with initialization delays and creation loops
+        - Fixed Lua errors by transitioning to damageMeterEnabled CVar
+        - Refined chat unification and skinning for Blizzard Damage Meter windows
 
-    Version 1.5.2 - Installation improvements
-        - Refactored installation process
-        - Fixed issues with the installation process
+    Version 2.0.2 - Damage Meter Positioning
+        - Implemented customized, shared positioning and sizing for Blizzard and Details! damage meter windows
+        - Added a "Configure Damage Meters" toggle in the Edit Mode options
 
-    Version 1.5.5 - Nameplates improvements and CVAR setting
-        - Updated the colors for class resources combo points
-        - Adjusted the reaction colors for nameplates
-        - Added support for new nameplate styles
-        - Improved performance of nameplate updates
-        - Fixed an issue with nameplate visibility in certain scenarios
-
-    Version 1.5.6 - Profile management improvements
-        - Added dialog pop-up for creating a new ElvUI profile
-        - Added confirmation dialog for overriding the current profile
-        - Added CVAR setting for SoftTargetInteract to 3
-        - Separated toggle options for elite overlay and interaction
+    Version 2.0.1 - Modernization Refactor
+        - Implemented modern ElvUI Engine access pattern using named keys
+        - Renamed internal module reference to NoobTacoUIElv for clarity
 
     Version 2.0.0 - Midnight Upgrade
         - Major upgrade for ElvUI Midnight (14.x) and WoW 12.0
         - Verified all database pathing and API compliance
 
-    Version 2.0.1 - Modernization Refactor
-        - Implemented modern ElvUI Engine access pattern using named keys
-        - Renamed internal module reference to NoobTacoUIElv for clarity
-        - Standardized core, modules, and integrations with new patterns
+    Version 1.5.6 - Profile management improvements
+        - Added dialog pop-up for creating a new ElvUI profile
+        - Separated toggle options for elite overlay and interaction
 
-    Version 2.0.2 - Damage Meter Positioning
-        - Implemented customized, shared positioning and sizing for Blizzard and Details! damage meter windows.
-        - Second damage meter windows are now anchored relatively to the main window for perfect side-by-side alignment.
-        - Enforced unclamping for damage meter windows to allow placement closer to the screen edges.
-        - Added a "Configure Damage Meters" toggle in the Edit Mode options.
-        - Optimized layout enforcement to fire automatically on login, reload, and Edit Mode saves.
+    Version 1.5.5 - Nameplates improvements
+        - Updated the colors for class resources combo points
+        - Fixed an issue with nameplate visibility in certain scenarios
+
+    Version 1.5.2 - Installation improvements
+        - Refactored installation process
+        - Fixed issues with the installation process
+
+    Version 1.5.0 - Initial setup and configuration
+        - Added initial setup and configuration for the addon
 ]]
 -- Don't worry about this
 local addon, Engine, _ = ...
@@ -229,9 +226,9 @@ if NoobTacoUIElv.IsMidnight then
     Pages[4] = function()
         PluginInstallFrame.SubTitle:SetText("Damage Meters")
         PluginInstallFrame.Desc1:SetText(
-            "Would you like to format your damage meter windows? \n\n|cffFF0000Warning:|r This will disable the right chat box and move all channels to the main chat box.")
+            "Would you like to enable the new Blizzard damage meter? This will also create a second window so we can move and skin it side-by-side. \n\n|cffFF0000Warning:|r This will disable the right chat box and move all channels to the main chat box.")
         PluginInstallFrame.Desc2:SetText(
-            "If you choose not to skin the meters, you will retain the default ElvUI chat layout.")
+            "If you choose not to enable the meters, you will retain the default ElvUI chat layout.")
 
         PluginInstallFrame.Option1:Show()
         PluginInstallFrame.Option1:SetScript("OnClick", function() NoobTacoUIElv:SkinDamageMeters() end)
