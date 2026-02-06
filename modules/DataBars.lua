@@ -58,19 +58,19 @@ function NoobTacoUIElv:SetupDatabars()
 
     E.db["databars"]["experience"]["textFormat"] = "NONE"
     E.db["databars"]["experience"]["font"] = "Poppins-Medium"
-    E.db["databars"]["experience"]["height"] = 222
-    E.db["databars"]["experience"]["hideAtMaxLevel"] = false
+    E.db["databars"]["experience"]["height"] = 10
+    E.db["databars"]["experience"]["hideAtMaxLevel"] = true
     E.db["databars"]["experience"]["hideInCombat"] = false
-    E.db["databars"]["experience"]["orientation"] = "VERTICAL"
+    E.db["databars"]["experience"]["orientation"] = "HORIZONTAL"
     E.db["databars"]["experience"]["questCompletedOnly"] = true
     E.db["databars"]["experience"]["showBubbles"] = false
-    E.db["databars"]["experience"]["width"] = 8
+    E.db["databars"]["experience"]["width"] = 385
 
     E.db["databars"]["reputation"]["enable"] = true
     E.db["databars"]["reputation"]["font"] = "Poppins-Medium"
     E.db["databars"]["reputation"]["height"] = 8
     E.db["databars"]["reputation"]["hideInCombat"] = false
-    E.db["databars"]["reputation"]["orientation"] = "Automatic"
+    E.db["databars"]["reputation"]["orientation"] = "HORIZONTAL"
     E.db["databars"]["reputation"]["showBubbles"] = false
     E.db["databars"]["reputation"]["width"] = 200
 

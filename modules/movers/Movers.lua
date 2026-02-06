@@ -8,15 +8,15 @@ function NoobTacoUIElv:SetupMovers()
     E.db["movers"]["PowerBarContainerMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,80"
 
     -- Center Cluster of Actionbars.
-    E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,4"
-    E.db["movers"]["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,39"
+    E.db["movers"]["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,30"
+    E.db["movers"]["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,62"
 
     -- Right Fade bar
-    E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-514,4"
+    E.db["movers"]["ElvAB_2"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-514,30"
 
     -- Right and Left Clusters
-    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-285,4"
-    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,285,4"
+    E.db["movers"]["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,-285,30"
+    E.db["movers"]["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,285,30"
     E.db["movers"]["ElvAB_8"] = "BOTTOM,ElvUIParent,BOTTOM,27,300"
     E.db["movers"]["ElvAB_9"] = "BOTTOM,ElvUIParent,BOTTOM,27,269"
 
@@ -65,13 +65,12 @@ function NoobTacoUIElv:SetupMovers()
     E.db["movers"]["VehicleLeaveButton"] = "BOTTOM,ElvUIParent,BOTTOM,0,301"
 
     -- Player castbar
-    E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,75"
+    E.db["movers"]["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,93"
     E.db["movers"]["ClassBarMover"] = "BOTTOM,UIParent,BOTTOM,0,283"
     E.db["movers"]["PlayerPowerBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,215"
     E.db["movers"]["AdditionalPowerMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,205"
-    E.db["movers"]["ExperienceBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,4"
-    E.db["movers"]["ReputationBarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-505,4"
-    E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,514,4"
+    E.db["movers"]["ExperienceBarMover"] = "BOTTOM,UIParent,BOTTOM,0,96"
+    E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,30"
     E.db["movers"]["TotemBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,300,230"
     E.db["movers"]["BigButtonsSeedBarMover"] = "TOP,ElvUIParent,TOP,0,-300"
     E.db["movers"]["ElvUIBankMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,230"
