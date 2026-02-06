@@ -75,7 +75,7 @@ function NoobTacoUIElv:SetupGeneral()
     E.db["general"]["minimap"]["locationFont"] = "Poppins-SemiBold"
     E.db["general"]["talkingHeadFrameBackdrop"] = true
     E.db["general"]["resurrectSound"] = true
-    E.db["general"]["backdropfadecolor"]["a"] = 1
+    E.db["general"]["backdropfadecolor"]["a"] = .8
     E.db["general"]["backdropfadecolor"]["b"] = 0.22352942824364
     E.db["general"]["backdropfadecolor"]["g"] = 0.1803921610117
     E.db["general"]["backdropfadecolor"]["r"] = 0.16078431904316
