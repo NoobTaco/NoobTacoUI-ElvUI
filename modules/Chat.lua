@@ -4,6 +4,7 @@ local E, L, V, P, G = Engine.E, Engine.L, Engine.V, Engine.P, Engine.G
 
 -- CHANGELOG --------------------------------------------------------------------
 --[[
+    Version 2.1.1 - Minor upgrade
     Version 2.1.0 - Blizzard Damage Meter Integration
         - Added official damage meter enablement with initialization delay
         - Implemented robust window creation loop for multiple session windows

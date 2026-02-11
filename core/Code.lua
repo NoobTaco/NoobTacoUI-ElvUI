@@ -1,5 +1,6 @@
 -- CHANGELOG --------------------------------------------------------------------
 --[[
+    Version 2.1.1 - Minor upgrade
     Version 2.1.0 - Blizzard Damage Meter Integration (Retail/Midnight)
         - Added official damage meter enablement in Step 4 of the installer
         - Improved window management with initialization delays and creation loops

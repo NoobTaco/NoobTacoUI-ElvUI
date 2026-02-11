@@ -1,5 +1,10 @@
 # Changelog
- 
+
+## [2.1.1] - 2026-02-11
+
+### Updated
+- Bumping version to 2.1.1
+
 ## [2.1.0] - 2026-02-06
  
 ### Blizzard Damage Meter Integration (Retail/Midnight)
