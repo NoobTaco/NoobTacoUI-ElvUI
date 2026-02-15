@@ -78,11 +78,11 @@ _G[addon] = Engine
 -- Runs for the step questioning the user if they want a new ElvUI profile
 local function NewProfile(new)
     if (new) then -- the user clicked "Create New" create a dialog pop up
-        StaticPopupDialogs["CreateProfileNameNew"] = {
+        E.PopupDialogs["CreateProfileNameNew"] = {
             text = L["Name for the new profile"],
             button1 = L["Accept"],
             button2 = L["Cancel"],
-            hasEditBox = 1,
+            hasEditBox = true,
             whileDead = 1,
             hideOnEscape = 1,
             timeout = 0,
@@ -96,9 +96,9 @@ local function NewProfile(new)
                 PluginInstallStepComplete:Show()
             end
         }
-        StaticPopup_Show("CreateProfileNameNew", "test") -- tell our dialog box to show
-    elseif (new == false) then                           -- the user clicked "Use Current" create a dialog pop up
-        StaticPopupDialogs["ProfileOverrideConfirm"] = {
+        E:StaticPopup_Show("CreateProfileNameNew") -- tell our dialog box to show
+    elseif (new == false) then                     -- the user clicked "Use Current" create a dialog pop up
+        E.PopupDialogs["ProfileOverrideConfirm"] = {
             text = "Are you sure you want to override the current profile?",
             button1 = "Yes",
             button2 = "No",
@@ -110,7 +110,7 @@ local function NewProfile(new)
             whileDead = true,
             hideOnEscape = true
         }
-        StaticPopup_Show("ProfileOverrideConfirm", "test") -- tell our dialog box to show
+        E:StaticPopup_Show("ProfileOverrideConfirm") -- tell our dialog box to show
     end
 end
 
@@ -192,7 +192,7 @@ local Pages = {
         PluginInstallFrame.Option2:SetScript(
             "OnClick",
             function()
-                NewProfile(true, "NoobTacoUI-ElvUI")
+                NewProfile(true)
             end
         )
         PluginInstallFrame.Option2:SetText("Create New")

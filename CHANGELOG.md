@@ -4,6 +4,7 @@
 
 ### Fixed
 - Fixed Lua error `attempt to index field 'Center' (a nil value)` in `DataBars.lua` by adding safety checks for datatext panel initialization.
+- Fixed Lua error `attempt to index field 'editBox' (a nil value)` when creating or overriding ElvUI profiles during installation.
 
 ## [2.1.1] - 2026-02-11
 
