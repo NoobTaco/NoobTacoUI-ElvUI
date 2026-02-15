@@ -25,6 +25,7 @@ function NoobTacoUIElv:SetupDatabars()
     -- DATATEXT ------------------------------------------------------------------
     E.db["datatexts"]["font"] = "Poppins-SemiBold"
     E.db["datatexts"]["fontSize"] = 13
+    if not E.db["datatexts"]["panels"]["Center"] then E.db["datatexts"]["panels"]["Center"] = {} end
     E.db["datatexts"]["panels"]["Center"][1] = "Talent/Loot Specialization"
     E.db["datatexts"]["panels"]["Center"][2] = ""
     E.db["datatexts"]["panels"]["Center"][3] = "Time"
@@ -43,6 +44,7 @@ function NoobTacoUIElv:SetupDatabars()
     E.db["datatexts"]["panels"]["RightChatDataPanel"][3] = "Gold"
     E.db["datatexts"]["panels"]["RightChatDataPanel"]["backdrop"] = false
 
+    if not E.global["datatexts"]["customPanels"]["Center"] then E.global["datatexts"]["customPanels"]["Center"] = {} end
     E.global["datatexts"]["customPanels"]["Center"]["backdrop"] = false
     E.global["datatexts"]["customPanels"]["Center"]["name"] = "Center"
     E.global["datatexts"]["customPanels"]["Center"]["numPoints"] = 5
