@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.1.2] - 2026-02-15
+
+### Fixed
+- Fixed Lua error `attempt to index field 'Center' (a nil value)` in `DataBars.lua` by adding safety checks for datatext panel initialization.
+
 ## [2.1.1] - 2026-02-11
 
 ### Updated
