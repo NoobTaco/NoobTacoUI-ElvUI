@@ -1,5 +1,9 @@
 -- CHANGELOG --------------------------------------------------------------------
 --[[
+    Version 2.1.2 - Bug Fixes
+        - Fixed DataBars nil value error for 'Center' panels
+        - Fixed Profile Creation nil value error for 'editBox'
+
     Version 2.1.1 - Minor upgrade
     Version 2.1.0 - Blizzard Damage Meter Integration (Retail/Midnight)
         - Added official damage meter enablement in Step 4 of the installer
