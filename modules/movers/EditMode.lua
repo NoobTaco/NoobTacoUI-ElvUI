@@ -124,7 +124,7 @@ function NoobTacoUIElv:ConfigureDamageMeters()
 
     -- Apply position manually (User's perfect settings)
     mainFrame:ClearAllPoints()
-    mainFrame:SetPoint("TOPLEFT", _G.UIParent, "TOPLEFT", 1685, -870)
+    mainFrame:SetPoint("TOPLEFT", _G.UIParent, "TOPLEFT", 1690, -865)
 
     -- Apply size
     mainFrame:SetSize(280, 200)
