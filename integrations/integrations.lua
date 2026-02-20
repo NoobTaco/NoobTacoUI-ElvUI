@@ -10,4 +10,5 @@ function NoobTacoUIElv:SetupIntegration(layout, wowver)
   NoobTacoUIElv:ChattynatorIntegration()
   NoobTacoUIElv:PlaterIntegration()
   NoobTacoUIElv:PlatynatorIntegration()
+  NoobTacoUIElv:SenseiClassResourceBar()
 end
