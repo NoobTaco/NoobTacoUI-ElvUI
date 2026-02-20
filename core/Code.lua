@@ -137,6 +137,9 @@ local function SetupLayout()
     NoobTacoUIElv:SetupGuildNotes()
 
     NoobTacoUIElv:SetupMovers()
+    -- Ensure integrations are applied AFTER core movers to avoid overwrites
+    NoobTacoUIElv:SetupIntegration()
+
     NoobTacoUIElv:ApplyEditModeLayout()
 
     E:UpdateAll(true)
@@ -215,9 +218,6 @@ local Pages = {
             end
         )
         PluginInstallFrame.Option1:SetText("Set Layout")
-
-        -- Integration Check
-        NoobTacoUIElv:SetupIntegration()
     end,
 }
 

@@ -12,16 +12,17 @@ function NoobTacoUIElv:XIV_Databar()
     -- Disable bottom data bars
     E.db["datatexts"]["panels"]["LeftChatDataPanel"]["enable"] = false
     E.db["datatexts"]["panels"]["RightChatDataPanel"]["enable"] = false
+    E.db["datatexts"]["panels"]["Center"]["enable"] = false
 
     -- Move lower UI elements up
     E.db["movers"]["LeftChatMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,30"
     E.db["movers"]["RightChatMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,30"
 
-    E.db["databars"]["experience"]["height"] = 200
-    E.db["databars"]["reputation"]["height"] = 200
-    -- Experience and Reputation bars
-    E.db["movers"]["ExperienceBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,30"
-    E.db["movers"]["ReputationBarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-505,30"
+    -- E.db["databars"]["experience"]["height"] = 200
+    -- E.db["databars"]["reputation"]["height"] = 200
+    -- -- Experience and Reputation bars
+    -- E.db["movers"]["ExperienceBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,505,30"
+    -- E.db["movers"]["ReputationBarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-505,30"
     -- Stance bar
     E.db["movers"]["ShiftAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,514,30"
     -- Action bars
